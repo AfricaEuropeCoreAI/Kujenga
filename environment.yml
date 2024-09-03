@@ -1,0 +1,34 @@
+name: course
+channels:
+  - conda-forge
+dependencies:
+  - cmasher
+  - jupyter
+  - lxml
+  - pandas
+  - pillow
+  - pyarrow
+  - requests
+  - scipy
+  - seaborn
+  - sphinx
+  - sphinx-gallery
+  - sphinx_rtd_theme
+  - sphinx-togglebutton
+  - matplotlib
+  - numpy
+  - scikit-learn
+  - linkify-it-py
+  - pip
+  - xgboost
+  - pyreadstat
+  - termcolor
+  - time
+  - pip:
+      - adjustText
+      - highlight-text
+      - kloppy
+      - mplsoccer
+      - sphinxcontrib-youtube
+      - myst-parser
+      - ffmpeg
