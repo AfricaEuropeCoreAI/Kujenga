@@ -11,8 +11,8 @@ from sphinx_gallery.sorting import ExampleTitleSortKey
 # -- Project information -----------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
-project = 'Four Ways'
-copyright = '2023, David Sumpter'
+project = 'Kujenga'
+copyright = '2024, David Sumpter'
 author = 'David Sumpter'
 
 # -- General configuration ---------------------------------------------------
@@ -57,9 +57,9 @@ def setup (app):
 
 
 # add logo
-html_logo = "images/logo.png"
+html_logo = "images/CoreAI.png"
 html_theme_options = {'logo_only': True,
-                      'display_version': False}
+                      'display_version': True}
 
 
 # Options for Markdown  -------------------------------------------------

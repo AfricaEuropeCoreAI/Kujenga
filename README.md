@@ -1,5 +1,6 @@
-# Four Ways
-Additional material for the book Four Ways of Thinking
+# Kujenga
+
+The building blocks for learning Data Science, AI and Computational Thinking
 
 # Create the docs locally
 To create the docs run the following commands from the course directory:

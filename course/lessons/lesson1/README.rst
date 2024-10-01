@@ -1,5 +1,5 @@
 --------
-Class I
+Class II
 --------
 
-First part of the book.
+From the book
