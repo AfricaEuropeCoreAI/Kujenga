@@ -5,8 +5,8 @@
 What you will learn
 ===================
 
-The data
---------
+The problem
+-----------
 
 Every year since 2005, the `World Happiness Report <https://worldhappiness.report/ed/2018/>`_ 
 has analysed the results of the Gallup World Poll, 
@@ -30,7 +30,7 @@ The question is what makes people happy? One possible answer is that people are 
 It is this relationship in data that we will explore in this lesson.
 
 The methods
------------
+-----------------
 
 Here we will learn about plotting and looking for relationships in data;
 fitting straight lines through data points; understanding the slope and intercept of the line 
@@ -42,6 +42,27 @@ Before we get to linear regression, we are going to go take detour into another 
 calculus. When you studied calculus at school or university, you probably didn't associate it with finding statsitical
 relationships in data. But in machine learning, we are often interested in finding the minimum value of a function, and for that 
 we need one of the key tools of calculus: differentiation.
+
+How to use this material
+--------------------------------
+
+This material is taught as part of a 6 hour learning session. Your Juenga instructor will have booked 
+a time for an in-person or online two hour session. This means you have two hours to work to do either side of the
+session. Here is what you should do:
+
+*Before coming to the class*: You should read through this entire page. At the section on differentiation, solve the paper and 
+pencil exercise (If you get stuck look `here <https://www.bbc.co.uk/bitesize/guides/zyj77ty/revision/1>`_), but otherwise you should 
+simply read through and try to understand what we are doing. Once you have read through, you should 
+download the `data <https://github.com/AfricaEuropeCoreAI/Kujenga/blob/main/course/lessons/data/HappinessData.csv`_
+ for the exercise. You will need to have a Python environment set up on your computer or access via Google Colab (see here for
+ info on how to set that up). Then you can download this page as a Jupyter notebook or as Python code by clicking the links at
+ the bottom of this page. Run the code and focus on understanding what it does up to and including section `Finding the best fit line`_. 
+
+ *During class*: Your teacher will start by going through the theory for `Finding the best fit line`_. 
+ Please ask them questions and actively engage! 
+
+ 
+
 
 Differentiation
 ===============
@@ -90,8 +111,8 @@ to start using it already now.
 
 If you can solve the problem above, you have the mathematics needed to work through the rest of this lesson.
 But, irrespective of whether you can solve the problem above or not, we recommend you have a look at 
-`Kahn Academy's Calculus 1 course <https://www.khanacademy.org/math/calculus-1>`_. These calculus 
-skills are part of the building blocks you need to complete the Kujenga course.
+`Khan Academy's Calculus 1 course <https://www.khanacademy.org/math/calculus-1>`_. These calculus 
+skills are part of the building blocks needed for the Kujenga course.
 
       
 A line through the data
@@ -182,8 +203,6 @@ plt.show()
 #
 # We can draw this equation in the form of a straight line going 
 # through the cloud of country points, as shown below.
-
-
 
 # Setup parameters: m is the slope of the line
 # And calculate a line with that slope.
@@ -516,6 +535,5 @@ print('The model sum of squares is still %.4f' % Model_Sum_Of_Squares)
 # .. image:: ../../images/lesson1/BeckyExplains.png
 #
 # In the book you can learn more about the dangers on confusing correlation for causation.
-
 
 

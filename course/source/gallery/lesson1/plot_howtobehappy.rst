@@ -23,8 +23,8 @@
 What you will learn
 ===================
 
-The data
---------
+The problem
+-----------
 
 Every year since 2005, the `World Happiness Report <https://worldhappiness.report/ed/2018/>`_ 
 has analysed the results of the Gallup World Poll, 
@@ -48,7 +48,7 @@ The question is what makes people happy? One possible answer is that people are 
 It is this relationship in data that we will explore in this lesson.
 
 The methods
------------
+-----------------
 
 Here we will learn about plotting and looking for relationships in data;
 fitting straight lines through data points; understanding the slope and intercept of the line 
@@ -60,6 +60,27 @@ Before we get to linear regression, we are going to go take detour into another 
 calculus. When you studied calculus at school or university, you probably didn't associate it with finding statsitical
 relationships in data. But in machine learning, we are often interested in finding the minimum value of a function, and for that 
 we need one of the key tools of calculus: differentiation.
+
+How to use this material
+--------------------------------
+
+This material is taught as part of a 6 hour learning session. Your Juenga instructor will have booked 
+a time for an in-person or online two hour session. This means you have two hours to work to do either side of the
+session. Here is what you should do:
+
+*Before coming to the class*: You should read through this entire page. At the section on differentiation, solve the paper and 
+pencil exercise (If you get stuck look `here <https://www.bbc.co.uk/bitesize/guides/zyj77ty/revision/1>`_), but otherwise you should 
+simply read through and try to understand what we are doing. Once you have read through, you should 
+download the `data <https://github.com/AfricaEuropeCoreAI/Kujenga/blob/main/course/lessons/data/HappinessData.csv`_
+ for the exercise. You will need to have a Python environment set up on your computer or access via Google Colab (see here for
+ info on how to set that up). Then you can download this page as a Jupyter notebook or as Python code by clicking the links at
+ the bottom of this page. Run the code and focus on understanding what it does up to and including section `Finding the best fit line`_. 
+
+ *During class*: Your teacher will start by going through the theory for `Finding the best fit line`_. 
+ Please ask them questions and actively engage! 
+
+ 
+
 
 Differentiation
 ===============
@@ -108,8 +129,8 @@ to start using it already now.
 
 If you can solve the problem above, you have the mathematics needed to work through the rest of this lesson.
 But, irrespective of whether you can solve the problem above or not, we recommend you have a look at 
-`Kahn Academy's Calculus 1 course <https://www.khanacademy.org/math/calculus-1>`_. These calculus 
-skills are part of the building blocks you need to complete the Kujenga course.
+`Khan Academy's Calculus 1 course <https://www.khanacademy.org/math/calculus-1>`_. These calculus 
+skills are part of the building blocks needed for the Kujenga course.
 
       
 A line through the data
@@ -118,7 +139,7 @@ A line through the data
 We already discussed looked at how the `World Happiness Report <https://worldhappiness.report/ed/2018/>`_ 
 documents the happiness of people across the world. Now let's load in that data to Python.
 
-.. GENERATED FROM PYTHON SOURCE LINES 104-124
+.. GENERATED FROM PYTHON SOURCE LINES 125-145
 
 .. code-block:: default
 
@@ -168,14 +189,14 @@ documents the happiness of people across the world. Now let's load in that data 
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 125-129
+.. GENERATED FROM PYTHON SOURCE LINES 146-150
 
 Creating the plot 
 -----------------
 The code below plots the average life expectancy of 
 each of these countries against their happiness (life ladder) scores. 
 
-.. GENERATED FROM PYTHON SOURCE LINES 130-159
+.. GENERATED FROM PYTHON SOURCE LINES 151-180
 
 .. code-block:: default
 
@@ -221,13 +242,13 @@ each of these countries against their happiness (life ladder) scores.
 
  .. code-block:: none
 
-    /Users/davidsumpter/Documents/GitHub/Kujenga/course/lessons/lesson1/plot_howtobehappy.py:157: UserWarning: FigureCanvasAgg is non-interactive, and thus cannot be shown
+    /Users/davidsumpter/Documents/GitHub/Kujenga/course/lessons/lesson1/plot_howtobehappy.py:178: UserWarning: FigureCanvasAgg is non-interactive, and thus cannot be shown
       plt.show()
 
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 160-185
+.. GENERATED FROM PYTHON SOURCE LINES 181-206
 
 Each circle in the plot is a country. 
 The x-axis shows the life expectancy in the country and 
@@ -255,11 +276,9 @@ If the life expectancy is 78 then average happiness is predicted to be 78/12=6.5
 We can draw this equation in the form of a straight line going 
 through the cloud of country points, as shown below.
 
-.. GENERATED FROM PYTHON SOURCE LINES 185-203
+.. GENERATED FROM PYTHON SOURCE LINES 206-222
 
 .. code-block:: default
-
-
 
 
     # Setup parameters: m is the slope of the line
@@ -290,13 +309,13 @@ through the cloud of country points, as shown below.
 
  .. code-block:: none
 
-    /Users/davidsumpter/Documents/GitHub/Kujenga/course/lessons/lesson1/plot_howtobehappy.py:201: UserWarning: FigureCanvasAgg is non-interactive, and thus cannot be shown
+    /Users/davidsumpter/Documents/GitHub/Kujenga/course/lessons/lesson1/plot_howtobehappy.py:220: UserWarning: FigureCanvasAgg is non-interactive, and thus cannot be shown
       plt.show()
 
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 204-233
+.. GENERATED FROM PYTHON SOURCE LINES 223-252
 
 .. admonition:: Try it yourself!
 
@@ -328,7 +347,7 @@ The table below shows the predicted value and the squared distance between
 prediction and reality for each country. We then sum these squared distances 
 to get an overall measure of how far our predictions our from reality. This is done below.
 
-.. GENERATED FROM PYTHON SOURCE LINES 233-242
+.. GENERATED FROM PYTHON SOURCE LINES 252-261
 
 .. code-block:: default
 
@@ -368,7 +387,7 @@ to get an overall measure of how far our predictions our from reality. This is d
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 243-336
+.. GENERATED FROM PYTHON SOURCE LINES 262-355
 
 Finding the best fit line 
 =========================
@@ -464,7 +483,7 @@ Moving the :math:`m` to the left hand side gives
 
 Lets now use our newly found equation to calculate the line that best fits the data.
 
-.. GENERATED FROM PYTHON SOURCE LINES 336-343
+.. GENERATED FROM PYTHON SOURCE LINES 355-362
 
 .. code-block:: default
 
@@ -488,14 +507,14 @@ Lets now use our newly found equation to calculate the line that best fits the d
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 344-348
+.. GENERATED FROM PYTHON SOURCE LINES 363-367
 
 Our intial guess of :math:`m = 1/12 = 0.0833` wasn't so far away from the best fitting value. 
 But this new slope is slightly closer to the data. We can now plot this and recalculate 
 the model sum of squares
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 348-366
+.. GENERATED FROM PYTHON SOURCE LINES 367-385
 
 .. code-block:: default
 
@@ -530,14 +549,14 @@ the model sum of squares
 
  .. code-block:: none
 
-    /Users/davidsumpter/Documents/GitHub/Kujenga/course/lessons/lesson1/plot_howtobehappy.py:359: UserWarning: FigureCanvasAgg is non-interactive, and thus cannot be shown
+    /Users/davidsumpter/Documents/GitHub/Kujenga/course/lessons/lesson1/plot_howtobehappy.py:378: UserWarning: FigureCanvasAgg is non-interactive, and thus cannot be shown
       plt.show()
     The model sum of squares is 79.9469
 
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 367-387
+.. GENERATED FROM PYTHON SOURCE LINES 386-406
 
 Again, this sum of squares is slightly smaller than the value we got above 
 for :math:`m = 1/12` 
@@ -560,7 +579,7 @@ We start by shifting the data so that it has a mean (average) of zero.
 To do this we simply take away the mean value from both life expectancy and 
 from happiness. Then replot the data 
 
-.. GENERATED FROM PYTHON SOURCE LINES 387-400
+.. GENERATED FROM PYTHON SOURCE LINES 406-419
 
 .. code-block:: default
 
@@ -590,13 +609,13 @@ from happiness. Then replot the data
 
  .. code-block:: none
 
-    /Users/davidsumpter/Documents/GitHub/Kujenga/course/lessons/lesson1/plot_howtobehappy.py:398: UserWarning: FigureCanvasAgg is non-interactive, and thus cannot be shown
+    /Users/davidsumpter/Documents/GitHub/Kujenga/course/lessons/lesson1/plot_howtobehappy.py:417: UserWarning: FigureCanvasAgg is non-interactive, and thus cannot be shown
       plt.show()
 
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 401-411
+.. GENERATED FROM PYTHON SOURCE LINES 420-430
 
 This graph shows us that, for example, Yemen is almost -2.5 points below the world 
 average for happiness and has a life expectency 8 years shorter than the average over
@@ -609,7 +628,7 @@ of seeing between country differences.
 
 Let's now try to find the best fit line which goes through these data points.
 
-.. GENERATED FROM PYTHON SOURCE LINES 411-432
+.. GENERATED FROM PYTHON SOURCE LINES 430-451
 
 .. code-block:: default
 
@@ -648,20 +667,20 @@ Let's now try to find the best fit line which goes through these data points.
  .. code-block:: none
 
     The best fitting line has slope m = 0.1226
-    /Users/davidsumpter/Documents/GitHub/Kujenga/course/lessons/lesson1/plot_howtobehappy.py:430: UserWarning: FigureCanvasAgg is non-interactive, and thus cannot be shown
+    /Users/davidsumpter/Documents/GitHub/Kujenga/course/lessons/lesson1/plot_howtobehappy.py:449: UserWarning: FigureCanvasAgg is non-interactive, and thus cannot be shown
       plt.show()
 
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 433-437
+.. GENERATED FROM PYTHON SOURCE LINES 452-456
 
 This line appears to fit better than the one we fitted earlier! It lies 
 closer to the points and better capture the relationship in the data.
 To test whether this is indeed the case we can calculate the sum of squares
 between this new line and the shifted data. This is as follows
 
-.. GENERATED FROM PYTHON SOURCE LINES 437-444
+.. GENERATED FROM PYTHON SOURCE LINES 456-463
 
 .. code-block:: default
 
@@ -685,7 +704,7 @@ between this new line and the shifted data. This is as follows
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 445-474
+.. GENERATED FROM PYTHON SOURCE LINES 464-493
 
 This new line through the data is better! It has a smaller sum of squares. 
 
@@ -717,7 +736,7 @@ Notice that this is an equation for a straight line, so we can write
 
 Let's apply this to data and plot the line again
 
-.. GENERATED FROM PYTHON SOURCE LINES 474-498
+.. GENERATED FROM PYTHON SOURCE LINES 493-517
 
 .. code-block:: default
 
@@ -758,7 +777,7 @@ Let's apply this to data and plot the line again
 
  .. code-block:: none
 
-    /Users/davidsumpter/Documents/GitHub/Kujenga/course/lessons/lesson1/plot_howtobehappy.py:487: UserWarning: FigureCanvasAgg is non-interactive, and thus cannot be shown
+    /Users/davidsumpter/Documents/GitHub/Kujenga/course/lessons/lesson1/plot_howtobehappy.py:506: UserWarning: FigureCanvasAgg is non-interactive, and thus cannot be shown
       plt.show()
     The slope of the line is m = 0.1226 and the intercept is k = -2.4252
     An increase in life expectancy of 8.1580 years is associated with one extra point of happiness
@@ -767,7 +786,7 @@ Let's apply this to data and plot the line again
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 499-519
+.. GENERATED FROM PYTHON SOURCE LINES 518-538
 
 Now we have it. By shifting back to the original co-ordinates we
 can find the best fitting line through the data. Notice that the sum of squares is unaffected by
@@ -793,7 +812,7 @@ In the book you can learn more about the dangers on confusing correlation for ca
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  0.893 seconds)
+   **Total running time of the script:** ( 0 minutes  0.985 seconds)
 
 
 .. _sphx_glr_download_gallery_lesson1_plot_howtobehappy.py:
