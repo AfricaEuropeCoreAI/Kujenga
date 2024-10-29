@@ -37,6 +37,7 @@ Contents
    :caption: Are healthier people happier people?
 
    gallery/lesson1/plot_howtobehappy
+   lesson1/alikelyanswer
 
 .. toctree::
    :maxdepth: 1
