@@ -41,18 +41,23 @@ Contents
 
 .. toctree::
    :maxdepth: 1
-   :caption: Can we predict an Ebola outbreak?
+   :caption: Can we predict a disease outbreak?
 
-   gallery/lesson2/plot_rabbitsandfoxes
-   gallery/lesson2/plot_socialepidemic
+   gallery/lesson2/plot_cts2D
+   gallery/lesson2/plot_epidemic
+   gallery/lesson2/plot_SEIR
 
 .. toctree::
    :maxdepth: 1
    :caption: Are Ethiopian or Kenyan runners the fastest?
 
+   gallery/lesson3/plot_runners
+
 .. toctree::
    :maxdepth: 1
    :caption: How did Google make billions of dollars?
+
+   gallery/lesson4/plot_influencer
 
 .. toctree::
    :maxdepth: 1

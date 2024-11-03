@@ -17,14 +17,14 @@ From the book
 
 .. raw:: html
 
-    <div class="sphx-glr-thumbcontainer" tooltip="In this section we will learn how to write `differential equations &lt;https://www.khanacademy.org...">
+    <div class="sphx-glr-thumbcontainer" tooltip="Building the model ------------------">
 
 .. only:: html
 
-  .. image:: /gallery/lesson2/images/thumb/sphx_glr_plot_rabbitsandfoxes_thumb.png
+  .. image:: /gallery/lesson2/images/thumb/sphx_glr_plot_cts2D_thumb.png
     :alt: Rabbits and foxes
 
-  :ref:`sphx_glr_gallery_lesson2_plot_rabbitsandfoxes.py`
+  :ref:`sphx_glr_gallery_lesson2_plot_cts2D.py`
 
 .. raw:: html
 
@@ -34,18 +34,52 @@ From the book
 
 .. raw:: html
 
-    <div class="sphx-glr-thumbcontainer" tooltip="In this section we go on to solve some more differential equations which describe rules of inte...">
+    <div class="sphx-glr-thumbcontainer" tooltip="  .. math::">
 
 .. only:: html
 
-  .. image:: /gallery/lesson2/images/thumb/sphx_glr_plot_socialepidemic_thumb.png
-    :alt: The social epidemic
+  .. image:: /gallery/lesson2/images/thumb/sphx_glr_plot_SEIR_exercise_thumb.png
+    :alt: The SEIR model
 
-  :ref:`sphx_glr_gallery_lesson2_plot_socialepidemic.py`
+  :ref:`sphx_glr_gallery_lesson2_plot_SEIR_exercise.py`
 
 .. raw:: html
 
-      <div class="sphx-glr-thumbnail-title">The social epidemic</div>
+      <div class="sphx-glr-thumbnail-title">The SEIR model</div>
+    </div>
+
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="**Now you should study a model yourself!** Download the page as a  Python notebook and fill in ...">
+
+.. only:: html
+
+  .. image:: /gallery/lesson2/images/thumb/sphx_glr_plot_SEIR_thumb.png
+    :alt: The SEIR model
+
+  :ref:`sphx_glr_gallery_lesson2_plot_SEIR.py`
+
+.. raw:: html
+
+      <div class="sphx-glr-thumbnail-title">The SEIR model</div>
+    </div>
+
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="and the rate of change of infectives is ">
+
+.. only:: html
+
+  .. image:: /gallery/lesson2/images/thumb/sphx_glr_plot_epidemic_thumb.png
+    :alt: The SIR model
+
+  :ref:`sphx_glr_gallery_lesson2_plot_epidemic.py`
+
+.. raw:: html
+
+      <div class="sphx-glr-thumbnail-title">The SIR model</div>
     </div>
 
 
@@ -57,6 +91,8 @@ From the book
 .. toctree::
    :hidden:
 
-   /gallery/lesson2/plot_rabbitsandfoxes
-   /gallery/lesson2/plot_socialepidemic
+   /gallery/lesson2/plot_cts2D
+   /gallery/lesson2/plot_SEIR_exercise
+   /gallery/lesson2/plot_SEIR
+   /gallery/lesson2/plot_epidemic
 
