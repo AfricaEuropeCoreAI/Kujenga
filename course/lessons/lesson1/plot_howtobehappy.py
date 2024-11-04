@@ -46,7 +46,7 @@ we need one of the key tools of calculus: differentiation.
 How to use this material
 --------------------------------
 
-This material is taught as part of a 6 hour learning session. Your Juenga instructor will have booked 
+This material is taught as part of a 6 hour learning session. Your Kujenga instructor will have booked 
 a time for an in-person or online two hour session. This means you have two hours to work to do either side of the
 session. Here is what you should do:
 
