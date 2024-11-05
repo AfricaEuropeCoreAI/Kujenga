@@ -68,7 +68,7 @@ with open('course/lessons/data/runners.pkl', 'rb') as f:
 # Calculation by hand
 # -------------------
 #
-# Calculate by hand the confidence interval for the mean of the following data set:
+# Calculate by hand the confidence interval for the mean of the following times for 10000m runners from Kenya:
 #
 # U
 # 
@@ -81,7 +81,11 @@ with open('course/lessons/data/runners.pkl', 'rb') as f:
 
 a=1
 
-
+# Now for Ethiopian runners
+# -------------------------
+#
+# Here the person should do themselves.
+#
 
 
 
@@ -90,3 +94,10 @@ a=1
 #=================
 
 b=2
+
+#
+#  We will follow test `here https://www.khanacademy.org/math/statistics-probability/significance-tests-one-sample`_. 
+
+
+
+
