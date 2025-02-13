@@ -1,7 +1,8 @@
 
-.. image:: images/GraceAleleWilliams.png
-   :width: 640
-   :align: center
+.. youtube:: acLkDQGRmB4
+    :width: 100% 
+    :align: center 
+
 
 In Swahili, Kujenga means to build. This course teaches how to use mathematical models and AI to build 
 understanding of the world around us. But it also builds your own skills, by working on real world examples. 
@@ -12,13 +13,12 @@ You will build understanding and build your skills
 The course takes six weeks to complete, assuming 6-8 hours of work per week, for a student at (or 
 nearing the end) of an undergraduate degree in a quantitative subject, like 
 computer science, physics, mathematics, economics, bioinformatics, engineering, or similar. Completing this 
-course means that you are considered 'PhD ready' for the Grace Alele-Williams 
-Pan-African Doctoral School in Computational Thinking and AI. This doesn't mean we give you a place 
+course means that you are considered 'PhD ready' for the Doctoral School in Computational Thinking and AI. This doesn't mean we give you a place 
 on the PhD Programme, but it does mean that you have built the skills to apply. 
 
-We run this course February to March every year. To participate you will need to find a study group. Local study groups are located 
+We run this course in October every year. To participate you will need to find a study group. Local study groups are located 
 in Nairobi, Lagos, Stellenbosch, Makarere, and Addis Ababa. If you are not near one of these locations, you can join an online 
-study group. In either case, you need to fill in the `following form <https://forms.gle/7Q6`_ to apply to join. 
+study group. In either case, you need to fill in the `following form <https://forms.gle/>`_ to apply to join. 
 
 Experience with programming is required, but we have added a section to get you started there too. 
 Many of the examples include code in Python. We recommend you either download 
@@ -30,20 +30,14 @@ Contents
 
 .. toctree::
    :maxdepth: 1
-   :caption: Programming in Python
-
-.. toctree::
-   :maxdepth: 1
    :caption: Are healthier people happier people?
 
    gallery/lesson1/plot_howtobehappy
-   lesson1/alikelyanswer
 
 .. toctree::
    :maxdepth: 1
    :caption: Can we predict a disease outbreak?
 
-   gallery/lesson2/plot_cts2D
    gallery/lesson2/plot_epidemic
    gallery/lesson2/plot_SEIR
 

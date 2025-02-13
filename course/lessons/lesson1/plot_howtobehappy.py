@@ -5,6 +5,8 @@
 What you will learn
 ===================
 
+[VIDEO HERE]
+
 The problem
 -----------
 
@@ -29,8 +31,9 @@ The unhappiest country in the world in 2022 is Afghanistan, with an average happ
 The question is what makes people happy? One possible answer is that people are happier when they live longer. 
 It is this relationship in data that we will explore in this lesson.
 
+
 The methods
------------------
+-----------
 
 Here we will learn about plotting and looking for relationships in data;
 fitting straight lines through data points; understanding the slope and intercept of the line 
@@ -38,44 +41,52 @@ as parameters in a mathematical model; and showing that the parameters are the b
 These are all key data science skills and also the first steps towards machine learning. Specifically,
 we will find out more about a method known as linear regression.
 
-Before we get to linear regression, we are going to go take detour into another ware of mathematics: 
+Before we get to linear regression, we are going to go take detour into another part of mathematics: 
 calculus. When you studied calculus at school or university, you probably didn't associate it with finding statsitical
 relationships in data. But in machine learning, we are often interested in finding the minimum value of a function, and for that 
-we need one of the key tools of calculus: differentiation.
+we need to go back to differentiation. Once we have done that, 
+we will use differentiation to find the slope of a line which minimises the distances 
+between points and a line through those points.
 
 How to use this material
---------------------------------
+------------------------
 
 This material is taught as part of a 6 hour learning session. Your Kujenga instructor will have booked 
 a time for an in-person or online two hour session. This means you have two hours to work to do either side of the
 session. Here is what you should do:
 
-*Before coming to the class*: You should read through this entire page. At the section on differentiation, solve the paper and 
+*Before coming to the class*: You should read through this page and get a feeling for the contents and watch the videos. 
+At the section on differentiation, solve the paper and 
 pencil exercise (If you get stuck look `here <https://www.bbc.co.uk/bitesize/guides/zyj77ty/revision/1>`_), but otherwise you should 
-simply read through and try to understand what we are doing. Once you have read through, you should 
-download the `data <https://github.com/AfricaEuropeCoreAI/Kujenga/blob/main/course/lessons/data/HappinessData.csv`_
- for the exercise. You will need to have a Python environment set up on your computer or access via Google Colab (see here for
- info on how to set that up). Then you can download this page as a Jupyter notebook or as Python code by clicking the links at
- the bottom of this page. Run the code and focus on understanding what it does up to and including section `Finding the best fit line`_. 
+simply read through and try to understand what we are doing. Along the way, you should 
+download the `data <https://github.com/AfricaEuropeCoreAI/Kujenga/blob/main/course/lessons/data/HappinessData.csv>`_ 
+for the exercise. You will need to have a Python environment set up on your computer or access via Google Colab (see here for
+info on how to set that up). Then you can download this page as a Jupyter notebook or as Python code by clicking the links at
+the bottom of this page. Run the code and focus on understanding what it does up to and including section `Finding the best fit line`_. 
 
- *During class*: Your teacher will start by going through the theory for `Finding the best fit line`_. 
- Please ask them questions and actively engage! 
+*During class*: Your teacher will start by going through the theory for `Finding the best fit line`_. 
+Please ask them questions and actively engage! This is your chance to really understand what is going on.
 
+*After class*: The section `Exercise: look for other predictors of happiness`_ gives the exercises you will need to hand in to
+your teacher in order to pass the section. Ask your teacher how you should submit your work.
  
-
-
 Differentiation
 ===============
 
 Taking the derivative of a function is about finding an equation for the slope of the curve the function describes. 
 When the derivative is zero, the slope is zero. For a recap on differentiation, 
-`this page <https://www.bbc.co.uk/bitesize/guides/zyj77ty/revision/1>`_ provides a quick review.
+`this page <https://www.bbc.co.uk/bitesize/guides/zyj77ty/revision/1>`_ provides a quick review. And here
+is Blessing from Univeristy of Lagos, Nigeria to lead you through an example!
 
-.. image:: ../../images/lesson1/ILLUSTRATION_DERIVATIVE.png
+.. youtube:: dBCV_cYxZAg
+    :width: 100% 
+    :align: center 
 
-Here is an example of how we make the calculation. Imagine you are asked to find the value 
-of :math:`m` which minimises the function :math:`(4-2m)^2`. To solve this problem, you can first multiply out 
-the brackets to get
+    
+
+In the example Blessing goes through she tries to find the value of :math:`m` 
+which minimises the function :math:`(4-2m)^2`. To solve this problem, 
+you can first multiply out the brackets to get
 
 .. math::
 
@@ -104,22 +115,24 @@ Problem solved.
 
       (9-3m)^2  
 
-Note that I used the letter :math:`m` for the variable  was trying to find, while
-most often in school we use the letter :math:`x` for the variable we are trying to find. In maths it really doesn't 
-matter what letter you use, as long as you are consistent, but we will later use :math:`m` for the slope of a line, so I wanted 
-to start using it already now.
+Note that we use the letter :math:`m` for the variable, while
+most often in school we use the letter :math:`x` for the variable. In maths it really doesn't 
+matter what letter you use, as long as you are consistent, but we will later use :math:`m` for the slope of a line, 
+so we wanted to start using it already now.
 
 If you can solve the problem above, you have the mathematics needed to work through the rest of this lesson.
 But, irrespective of whether you can solve the problem above or not, we recommend you have a look at 
 `Khan Academy's Calculus 1 course <https://www.khanacademy.org/math/calculus-1>`_. These calculus 
 skills are part of the building blocks needed for the Kujenga course.
-
       
 A line through the data
 =======================
 
 We already discussed looked at how the `World Happiness Report <https://worldhappiness.report/ed/2018/>`_ 
-documents the happiness of people across the world. Now let's load in that data to Python.
+documents the happiness of people across the world. Now let's load in that data to Python. In this video, 
+David Sumpter steps through the code. Watch it first then try running the code yourself.
+
+[VIDEO HERE]
 
 """
 
@@ -148,12 +161,11 @@ display(df[['Country name','LifeExp','Happiness']])
 # -----------------
 # The code below plots the average life expectancy of 
 # each of these countries against their happiness (life ladder) scores. 
-
+#
 
 from pylab import rcParams
 rcParams['figure.figsize'] = 14/2.54, 14/2.54
 matplotlib.font_manager.FontProperties(family='Helvetica',size=11)
-
 
 def plotData(df,x,y): 
     fig,ax=plt.subplots(num=1)
@@ -206,6 +218,7 @@ plt.show()
 
 # Setup parameters: m is the slope of the line
 # And calculate a line with that slope.
+
 m=1/12
 Life_Expectancy=np.arange(0.5,100,step=0.01)
 Happiness= m*Life_Expectancy
@@ -261,8 +274,13 @@ print('The model sum of squares is %.4f' % Model_Sum_Of_Squares)
 ##############################################################################
 # Finding the best fit line 
 # =========================
-# We have drawn a line. But the question is what the ‘best’ line is?
-# 
+# We have drawn a line. But the question is what the ‘best’ line is? Blessing goes through the theory 
+# below and then we will calculate the best fitting line for the data above.
+#
+# .. youtube:: 1dsTGNywCjc
+#    :width: 100% 
+#    :align: center 
+#
 # Sum of squares
 # --------------
 #
@@ -532,8 +550,24 @@ print('The model sum of squares is still %.4f' % Model_Sum_Of_Squares)
 # Although there is a relationship between these two variables, this does not mean
 # that life expectancy causes happiness.
 #
-# .. image:: ../../images/lesson1/BeckyExplains.png
 #
-# In the book you can learn more about the dangers on confusing correlation for causation.
+# The dangers on confusing correlation for causation.....
+#
+# Exercise: look for other predictors of happiness
+# ===============================================
+#
+#
+# Find best predictor using sum of squares
+# Give one argument why it causes happiness.
+# Give one argument why it might be correlated with but does not cause happiness.
+# Advanced add 
 
 
+
+
+# Using regression in applications
+# ================================
+# 
+#
+#
+# Need to write about independent and dependent variables. A bit about each applications

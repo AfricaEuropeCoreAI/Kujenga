@@ -21,12 +21,12 @@ Here we will learn about matrices and linear algebra. We will learn about the co
 How to use this material
 ------------------------
 
-This material is taught as part of a 6 hour learning session. Your Juenga instructor will have booked 
+This material is taught as part of a 6 hour learning session. Your Kujenga instructor will have booked 
 a time for an in-person or online two hour session. This means you have two hours to work to do either side of the
 session. Here is what you should do:
 
-*Before coming to the class*: You should read through this entire page. At the section on matrix multiplication, try to solve the example both by hand
-and using Python. If you get stuck look `here <LINK NEEDED>`_), but otherwise you should 
+*Before coming to the class*: You should read through this entire page. At the section on multiplying a matrix and a vector, 
+try to solve the example both by hand and using Python. If you get stuck look `here <LINK NEEDED>`_), but otherwise you should 
 simply read through and try to understand what we are doing. Once you have read through, you should 
 download this page as a Jupyter notebook or as Python code by clicking the links at the bottom of this page.
 You will need to have a Python environment set up on your computer or access via Google Colab (see here for

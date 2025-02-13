@@ -54,12 +54,10 @@ import numpy as np
 
 # Load in times of runners
 
-with open('course/lessons/data/runners.pkl', 'rb') as f:
+#with open('course/lessons/data/runners.pkl', 'rb') as f:
 
 
 # Plot a histogram of the data
-
-
 
 #############################################################
 #Calculating a confidence interval for a mean

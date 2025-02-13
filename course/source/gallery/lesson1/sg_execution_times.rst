@@ -5,8 +5,8 @@
 
 Computation times
 =================
-**00:00.985** total execution time for **gallery_lesson1** files:
+**00:00.892** total execution time for **gallery_lesson1** files:
 
 +---------------------------------------------------------------------------------+-----------+--------+
-| :ref:`sphx_glr_gallery_lesson1_plot_howtobehappy.py` (``plot_howtobehappy.py``) | 00:00.985 | 0.0 MB |
+| :ref:`sphx_glr_gallery_lesson1_plot_howtobehappy.py` (``plot_howtobehappy.py``) | 00:00.892 | 0.0 MB |
 +---------------------------------------------------------------------------------+-----------+--------+
