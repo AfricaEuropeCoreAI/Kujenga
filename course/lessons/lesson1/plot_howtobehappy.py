@@ -129,7 +129,7 @@ A line through the data
 =======================
 
 We already discussed looked at how the `World Happiness Report <https://worldhappiness.report/ed/2018/>`_ 
-documents the happiness of people across the world. Now let's load in that data to Python. In this video, 
+documents the happiness of people across the world. Now, let's load in that data to Python. In this video, 
 David Sumpter steps through the code. Watch it first then try running the code yourself.
 
 [VIDEO HERE]
@@ -369,7 +369,7 @@ print('The model sum of squares is %.4f' % Model_Sum_Of_Squares)
 #
 #  m = \frac{\sum_i^n x_i y_i}{\sum_i^n x_i^2}
 # 
-# Lets now use our newly found equation to calculate the line that best fits the data.
+# Let's use our newly found equation to calculate the line that best fits the data.
 
 df=df.assign(SquaredLifEExp=np.power(df['LifeExp'],2))
 df=df.assign(HappinessLifEExp=df['LifeExp'] * df['Happiness'])
