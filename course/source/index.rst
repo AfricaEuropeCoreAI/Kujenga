@@ -1,5 +1,5 @@
 
-.. youtube:: acLkDQGRmB4
+.. youtube:: QQ0YYR2BhFk
     :width: 100% 
     :align: center 
 
@@ -55,12 +55,11 @@ Contents
 
 .. toctree::
    :maxdepth: 1
-   :caption: Why doesn’t your phone recognise your face?
+   :caption: Bias in machine learning
 
 .. toctree::
    :maxdepth: 1
    :caption: Taking control of your life using data.
 
-.. image:: images/GraceAlleleWilliams.png
-   :width: 200
-   :align: center
+**This course was supported by the 
+`Equal Opportunities Group at the Information Technology Department, Uppasala University<https://www2.it.uu.se/about_us/equality>`_.**
