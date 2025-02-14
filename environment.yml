@@ -2,6 +2,7 @@ name: course
 channels:
   - conda-forge
 dependencies:
+  - lxml
   - cmasher
   - jupyter
   - lxml
