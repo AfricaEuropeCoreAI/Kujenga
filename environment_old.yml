@@ -1,4 +1,4 @@
-name: course4
+name: course
 channels:
   - conda-forge
 dependencies:
@@ -33,8 +33,3 @@ dependencies:
       - sphinxcontrib-youtube
       - myst-parser
       - ffmpeg
-
-
-#    - pyobjc-core=10.2
-#  - pyobjc-framework-cocoa=10.2
-#  - libgfortran=5.0.0
