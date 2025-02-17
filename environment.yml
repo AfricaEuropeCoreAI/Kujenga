@@ -315,4 +315,3 @@ dependencies:
       - ruptures==1.1.9
       - sphinx==7.3.7
       - sphinxcontrib-youtube==1.4.1
-prefix: /Users/davidsumpter/anaconda3/envs/course
