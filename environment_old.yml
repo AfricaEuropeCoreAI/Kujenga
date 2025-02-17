@@ -4,7 +4,6 @@ channels:
 dependencies:
   - cmasher
   - jupyter
-  - lxml
   - pandas
   - pillow
   - pyarrow
