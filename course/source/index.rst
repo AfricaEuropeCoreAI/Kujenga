@@ -62,4 +62,5 @@ Contents
    :caption: Taking control of your life using data.
 
 **This course was supported by the 
-`Equal Opportunities Group at the Information Technology Department, Uppasala University<https://www2.it.uu.se/about_us/equality>`_.**
+`Equal Opportunities Group at the Information Technology Department, Uppasala University <https://www2.it.uu.se/about_us/equality>`_
+**
