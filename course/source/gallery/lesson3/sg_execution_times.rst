@@ -5,8 +5,8 @@
 
 Computation times
 =================
-**00:00.003** total execution time for **gallery_lesson3** files:
+**00:00.000** total execution time for **gallery_lesson3** files:
 
 +-----------------------------------------------------------------------+-----------+--------+
-| :ref:`sphx_glr_gallery_lesson3_plot_runners.py` (``plot_runners.py``) | 00:00.003 | 0.0 MB |
+| :ref:`sphx_glr_gallery_lesson3_plot_runners.py` (``plot_runners.py``) | 00:00.000 | 0.0 MB |
 +-----------------------------------------------------------------------+-----------+--------+

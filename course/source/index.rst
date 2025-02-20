@@ -8,7 +8,7 @@ In Swahili, Kujenga means to build. This course teaches how to use mathematical 
 understanding of the world around us. But it also builds your own skills, by working on real world examples. 
 Here you will learn how to establish statistical relationships between health and happiness; understand how to model 
 disease outbreaks; test hypotheses about the fastest runners in the world; and how Google became so rich and powerful. 
-You will build understanding and build your skills
+
 
 The course takes six weeks to complete, assuming 6-8 hours of work per week, for a student at (or 
 nearing the end) of an undergraduate degree in a quantitative subject, like 

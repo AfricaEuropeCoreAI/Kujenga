@@ -90,20 +90,20 @@ you can first multiply out the brackets to get
 
 .. math::
 
- (4-2m)^2 = 16 - 16m + 4m^2 
+(4-2m)^2 = 16 - 16m + 4m^2 
 
-You can then take a derivative in order to calculate the slope of the function, 
-as follows.
+You can then take a derivative in order to calculate the slope of the function, to get
 
 .. math::
 
- \frac{d}{dm} 16 - 16m + 4m^2= - 16 + 8m
+    -16 + 8m
+
 
 We then solve this equal to zero, because the function is a minimum when it has slope zero.
 
 .. math::
 
-  - 16 + 8m = 0 \Rightarrow 8m = 16 \Rightarrow m = 2
+    - 16 + 8m = 0 \Rightarrow 8m = 16 \Rightarrow m = 2
 
 Problem solved. 
 

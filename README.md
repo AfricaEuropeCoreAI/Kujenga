@@ -5,13 +5,13 @@ The building blocks for learning Data Science, AI and Computational Thinking. Th
 # Installation
 
 To install the required packages use Conda and the following command will make an environment called course.
-```python
+```
 conda env create -f environment.yml
 ```
 
 # Create the docs locally
 
-To create the docs run the following commands from the course directory:
+To create the docs run the following commands from the 'course' directory:
 
 ```python
 make clean

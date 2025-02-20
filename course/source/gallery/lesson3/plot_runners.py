@@ -41,7 +41,6 @@ You will need to have a Python environment set up on your computer or access via
 Working with data
 =================
 
-
 Loading in the data set
 -----------------------
 """

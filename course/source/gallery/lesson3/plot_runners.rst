@@ -59,11 +59,10 @@ You will need to have a Python environment set up on your computer or access via
 Working with data
 =================
 
-
 Loading in the data set
 -----------------------
 
-.. GENERATED FROM PYTHON SOURCE LINES 48-62
+.. GENERATED FROM PYTHON SOURCE LINES 47-61
 
 .. code-block:: default
 
@@ -88,7 +87,7 @@ Loading in the data set
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 63-79
+.. GENERATED FROM PYTHON SOURCE LINES 62-78
 
 Calculating a confidence interval for a mean
 ============================================
@@ -107,7 +106,7 @@ Calculating a confidence interval for a mean
  --------------------------
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 79-90
+.. GENERATED FROM PYTHON SOURCE LINES 78-89
 
 .. code-block:: default
 
@@ -129,12 +128,12 @@ Calculating a confidence interval for a mean
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 91-93
+.. GENERATED FROM PYTHON SOURCE LINES 90-92
 
 A statistical test
 =================
 
-.. GENERATED FROM PYTHON SOURCE LINES 93-102
+.. GENERATED FROM PYTHON SOURCE LINES 92-101
 
 .. code-block:: default
 
@@ -157,7 +156,7 @@ A statistical test
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  0.003 seconds)
+   **Total running time of the script:** ( 0 minutes  0.000 seconds)
 
 
 .. _sphx_glr_download_gallery_lesson3_plot_runners.py:

@@ -108,20 +108,20 @@ you can first multiply out the brackets to get
 
 .. math::
 
- (4-2m)^2 = 16 - 16m + 4m^2 
+(4-2m)^2 = 16 - 16m + 4m^2 
 
-You can then take a derivative in order to calculate the slope of the function, 
-as follows.
+You can then take a derivative in order to calculate the slope of the function, to get
 
 .. math::
 
- rac{d}{dm} 16 - 16m + 4m^2= - 16 + 8m
+    -16 + 8m
+
 
 We then solve this equal to zero, because the function is a minimum when it has slope zero.
 
 .. math::
 
-  - 16 + 8m = 0 \Rightarrow 8m = 16 \Rightarrow m = 2
+    - 16 + 8m = 0 \Rightarrow 8m = 16 \Rightarrow m = 2
 
 Problem solved. 
 
@@ -147,7 +147,7 @@ A line through the data
 =======================
 
 We already discussed looked at how the `World Happiness Report <https://worldhappiness.report/ed/2018/>`_ 
-documents the happiness of people across the world. Now let's load in that data to Python. In this video, 
+documents the happiness of people across the world. Now, let's load in that data to Python. In this video, 
 David Sumpter steps through the code. Watch it first then try running the code yourself.
 
 [VIDEO HERE]
@@ -499,7 +499,7 @@ Moving the :math:`m` to the left hand side gives
 
  m = \frac{\sum_i^n x_i y_i}{\sum_i^n x_i^2}
 
-Lets now use our newly found equation to calculate the line that best fits the data.
+Let's use our newly found equation to calculate the line that best fits the data.
 
 .. GENERATED FROM PYTHON SOURCE LINES 373-380
 
@@ -858,7 +858,7 @@ Advanced add
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  0.892 seconds)
+   **Total running time of the script:** ( 0 minutes  0.609 seconds)
 
 
 .. _sphx_glr_download_gallery_lesson1_plot_howtobehappy.py:
