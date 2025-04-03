@@ -1,12 +1,12 @@
 
 :orphan:
 
-.. _sphx_glr_gallery_lesson4_sg_execution_times:
+.. _sphx_glr_gallery_sg_execution_times:
 
 
 Computation times
 =================
-**00:00.006** total execution time for 1 file **from gallery\lesson4**:
+**00:00.000** total execution time for 0 files **from gallery**:
 
 .. container::
 
@@ -32,6 +32,6 @@ Computation times
    * - Example
      - Time
      - Mem (MB)
-   * - :ref:`sphx_glr_gallery_lesson4_plot_influencer.py` (``plot_influencer.py``)
-     - 00:00.006
-     - 0.0
+   * - N/A
+     - N/A
+     - N/A

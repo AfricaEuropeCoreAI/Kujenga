@@ -14,6 +14,7 @@ From the book
 
     <div class="sphx-glr-thumbnails">
 
+.. thumbnail-parent-div-open
 
 .. raw:: html
 
@@ -22,7 +23,7 @@ From the book
 .. only:: html
 
   .. image:: /gallery/lesson2/images/thumb/sphx_glr_plot_cts2D_thumb.png
-    :alt: Rabbits and foxes
+    :alt:
 
   :ref:`sphx_glr_gallery_lesson2_plot_cts2D.py`
 
@@ -34,14 +35,14 @@ From the book
 
 .. raw:: html
 
-    <div class="sphx-glr-thumbcontainer" tooltip="  .. math::">
+    <div class="sphx-glr-thumbcontainer" tooltip="Now you should study a model yourself! Download the page as a  Python notebook and fill in the missing code according to the instructions.">
 
 .. only:: html
 
-  .. image:: /gallery/lesson2/images/thumb/sphx_glr_plot_SEIR_exercise_thumb.png
-    :alt: The SEIR model
+  .. image:: /gallery/lesson2/images/thumb/sphx_glr_plot_SEIR_thumb.png
+    :alt:
 
-  :ref:`sphx_glr_gallery_lesson2_plot_SEIR_exercise.py`
+  :ref:`sphx_glr_gallery_lesson2_plot_SEIR.py`
 
 .. raw:: html
 
@@ -51,14 +52,14 @@ From the book
 
 .. raw:: html
 
-    <div class="sphx-glr-thumbcontainer" tooltip="**Now you should study a model yourself!** Download the page as a  Python notebook and fill in ...">
+    <div class="sphx-glr-thumbcontainer" tooltip="  .. math::">
 
 .. only:: html
 
-  .. image:: /gallery/lesson2/images/thumb/sphx_glr_plot_SEIR_thumb.png
-    :alt: The SEIR model
+  .. image:: /gallery/lesson2/images/thumb/sphx_glr_plot_SEIR_exercise_thumb.png
+    :alt:
 
-  :ref:`sphx_glr_gallery_lesson2_plot_SEIR.py`
+  :ref:`sphx_glr_gallery_lesson2_plot_SEIR_exercise.py`
 
 .. raw:: html
 
@@ -73,7 +74,7 @@ From the book
 .. only:: html
 
   .. image:: /gallery/lesson2/images/thumb/sphx_glr_plot_epidemic_thumb.png
-    :alt: The SIR model
+    :alt:
 
   :ref:`sphx_glr_gallery_lesson2_plot_epidemic.py`
 
@@ -82,6 +83,8 @@ From the book
       <div class="sphx-glr-thumbnail-title">The SIR model</div>
     </div>
 
+
+.. thumbnail-parent-div-close
 
 .. raw:: html
 
@@ -92,7 +95,7 @@ From the book
    :hidden:
 
    /gallery/lesson2/plot_cts2D
-   /gallery/lesson2/plot_SEIR_exercise
    /gallery/lesson2/plot_SEIR
+   /gallery/lesson2/plot_SEIR_exercise
    /gallery/lesson2/plot_epidemic
 

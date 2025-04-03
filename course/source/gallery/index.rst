@@ -11,6 +11,9 @@ Welcome to the course.
 
     <div class="sphx-glr-thumbnails">
 
+.. thumbnail-parent-div-open
+
+.. thumbnail-parent-div-close
 
 .. raw:: html
 
@@ -28,6 +31,7 @@ From the book
 
     <div class="sphx-glr-thumbnails">
 
+.. thumbnail-parent-div-open
 
 .. raw:: html
 
@@ -36,7 +40,7 @@ From the book
 .. only:: html
 
   .. image:: /gallery/lesson1/images/thumb/sphx_glr_plot_howtobehappy_thumb.png
-    :alt: What you will learn
+    :alt:
 
   :ref:`sphx_glr_gallery_lesson1_plot_howtobehappy.py`
 
@@ -46,6 +50,8 @@ From the book
     </div>
 
 
+.. thumbnail-parent-div-close
+
 .. raw:: html
 
     </div>
@@ -62,6 +68,7 @@ From the book
 
     <div class="sphx-glr-thumbnails">
 
+.. thumbnail-parent-div-open
 
 .. raw:: html
 
@@ -70,7 +77,7 @@ From the book
 .. only:: html
 
   .. image:: /gallery/lesson2/images/thumb/sphx_glr_plot_cts2D_thumb.png
-    :alt: Rabbits and foxes
+    :alt:
 
   :ref:`sphx_glr_gallery_lesson2_plot_cts2D.py`
 
@@ -82,14 +89,14 @@ From the book
 
 .. raw:: html
 
-    <div class="sphx-glr-thumbcontainer" tooltip="  .. math::">
+    <div class="sphx-glr-thumbcontainer" tooltip="Now you should study a model yourself! Download the page as a  Python notebook and fill in the missing code according to the instructions.">
 
 .. only:: html
 
-  .. image:: /gallery/lesson2/images/thumb/sphx_glr_plot_SEIR_exercise_thumb.png
-    :alt: The SEIR model
+  .. image:: /gallery/lesson2/images/thumb/sphx_glr_plot_SEIR_thumb.png
+    :alt:
 
-  :ref:`sphx_glr_gallery_lesson2_plot_SEIR_exercise.py`
+  :ref:`sphx_glr_gallery_lesson2_plot_SEIR.py`
 
 .. raw:: html
 
@@ -99,14 +106,14 @@ From the book
 
 .. raw:: html
 
-    <div class="sphx-glr-thumbcontainer" tooltip="**Now you should study a model yourself!** Download the page as a  Python notebook and fill in ...">
+    <div class="sphx-glr-thumbcontainer" tooltip="  .. math::">
 
 .. only:: html
 
-  .. image:: /gallery/lesson2/images/thumb/sphx_glr_plot_SEIR_thumb.png
-    :alt: The SEIR model
+  .. image:: /gallery/lesson2/images/thumb/sphx_glr_plot_SEIR_exercise_thumb.png
+    :alt:
 
-  :ref:`sphx_glr_gallery_lesson2_plot_SEIR.py`
+  :ref:`sphx_glr_gallery_lesson2_plot_SEIR_exercise.py`
 
 .. raw:: html
 
@@ -121,7 +128,7 @@ From the book
 .. only:: html
 
   .. image:: /gallery/lesson2/images/thumb/sphx_glr_plot_epidemic_thumb.png
-    :alt: The SIR model
+    :alt:
 
   :ref:`sphx_glr_gallery_lesson2_plot_epidemic.py`
 
@@ -130,6 +137,8 @@ From the book
       <div class="sphx-glr-thumbnail-title">The SIR model</div>
     </div>
 
+
+.. thumbnail-parent-div-close
 
 .. raw:: html
 
@@ -147,6 +156,7 @@ From the book
 
     <div class="sphx-glr-thumbnails">
 
+.. thumbnail-parent-div-open
 
 .. raw:: html
 
@@ -155,7 +165,7 @@ From the book
 .. only:: html
 
   .. image:: /gallery/lesson3/images/thumb/sphx_glr_plot_runners_thumb.png
-    :alt: What you will learn
+    :alt:
 
   :ref:`sphx_glr_gallery_lesson3_plot_runners.py`
 
@@ -164,6 +174,8 @@ From the book
       <div class="sphx-glr-thumbnail-title">What you will learn</div>
     </div>
 
+
+.. thumbnail-parent-div-close
 
 .. raw:: html
 
@@ -181,15 +193,16 @@ From the book
 
     <div class="sphx-glr-thumbnails">
 
+.. thumbnail-parent-div-open
 
 .. raw:: html
 
-    <div class="sphx-glr-thumbcontainer" tooltip="The problem -----------">
+    <div class="sphx-glr-thumbcontainer" tooltip="|">
 
 .. only:: html
 
   .. image:: /gallery/lesson4/images/thumb/sphx_glr_plot_influencer_thumb.png
-    :alt: What you will learn
+    :alt:
 
   :ref:`sphx_glr_gallery_lesson4_plot_influencer.py`
 
@@ -199,6 +212,8 @@ From the book
     </div>
 
 
+.. thumbnail-parent-div-close
+
 .. raw:: html
 
     </div>
@@ -207,6 +222,7 @@ From the book
 .. toctree::
    :hidden:
    :includehidden:
+
 
    /gallery/lesson1/index.rst
    /gallery/lesson2/index.rst

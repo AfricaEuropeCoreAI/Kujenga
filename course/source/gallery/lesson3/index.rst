@@ -14,6 +14,7 @@ From the book
 
     <div class="sphx-glr-thumbnails">
 
+.. thumbnail-parent-div-open
 
 .. raw:: html
 
@@ -22,7 +23,7 @@ From the book
 .. only:: html
 
   .. image:: /gallery/lesson3/images/thumb/sphx_glr_plot_runners_thumb.png
-    :alt: What you will learn
+    :alt:
 
   :ref:`sphx_glr_gallery_lesson3_plot_runners.py`
 
@@ -31,6 +32,8 @@ From the book
       <div class="sphx-glr-thumbnail-title">What you will learn</div>
     </div>
 
+
+.. thumbnail-parent-div-close
 
 .. raw:: html
 
