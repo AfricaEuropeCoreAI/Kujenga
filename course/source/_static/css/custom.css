@@ -1,12 +1,19 @@
-
 body {
     background-color: #F5EFEF;
     color: black;
-  }
+}
 
-a:link { color: #C43733; } /* CSS link color (red) */
+a:link {
+    color: #C43733;
+}
 
-a:visited { color: #B19071; } /* CSS link color (grey) */
+/* CSS link color (red) */
+
+a:visited {
+    color: #B19071;
+}
+
+/* CSS link color (grey) */
 
 
 .wy-side-nav-search {
@@ -24,7 +31,7 @@ a:visited { color: #B19071; } /* CSS link color (grey) */
 
 .wy-nav-side {
     background: #F4F4EC
-} 
+}
 
 .wy-menu-vertical a {
     color: #C13130;
@@ -44,4 +51,16 @@ a:visited { color: #B19071; } /* CSS link color (grey) */
 
 a:hover {
     text-decoration: underline !important;
+}
+
+div.admonition.food-for-thought {
+    background-color: #e6f4ea;
+
+}
+
+div.admonition.food-for-thought p.admonition-title {
+    background-color: #34a853;
+    /* Solid green background */
+    font-weight: bold;
+    color: #e6f4ea;
 }
