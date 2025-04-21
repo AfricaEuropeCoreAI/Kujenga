@@ -89,14 +89,14 @@ From the book
 
 .. raw:: html
 
-    <div class="sphx-glr-thumbcontainer" tooltip="Now you should study a model yourself! Download the page as a  Python notebook and fill in the missing code according to the instructions.">
+    <div class="sphx-glr-thumbcontainer" tooltip="  .. math::">
 
 .. only:: html
 
-  .. image:: /gallery/lesson2/images/thumb/sphx_glr_plot_SEIR_thumb.png
+  .. image:: /gallery/lesson2/images/thumb/sphx_glr_plot_SEIR_exercise_thumb.png
     :alt:
 
-  :ref:`sphx_glr_gallery_lesson2_plot_SEIR.py`
+  :ref:`sphx_glr_gallery_lesson2_plot_SEIR_exercise.py`
 
 .. raw:: html
 
@@ -106,14 +106,14 @@ From the book
 
 .. raw:: html
 
-    <div class="sphx-glr-thumbcontainer" tooltip="  .. math::">
+    <div class="sphx-glr-thumbcontainer" tooltip="Now you should study a model yourself! Download the page as a  Python notebook and fill in the missing code according to the instructions.">
 
 .. only:: html
 
-  .. image:: /gallery/lesson2/images/thumb/sphx_glr_plot_SEIR_exercise_thumb.png
+  .. image:: /gallery/lesson2/images/thumb/sphx_glr_plot_SEIR_thumb.png
     :alt:
 
-  :ref:`sphx_glr_gallery_lesson2_plot_SEIR_exercise.py`
+  :ref:`sphx_glr_gallery_lesson2_plot_SEIR.py`
 
 .. raw:: html
 

@@ -10,8 +10,8 @@
     .. note::
         :class: sphx-glr-download-link-note
 
-        Click :ref:`here <sphx_glr_download_gallery_lesson2_plot_epidemic.py>`
-        to download the full example code
+        :ref:`Go to the end <sphx_glr_download_gallery_lesson2_plot_epidemic.py>`
+        to download the full example code.
 
 .. rst-class:: sphx-glr-example-title
 
@@ -52,7 +52,7 @@ Let's now solve these equations numerically. We start by importing the libraries
 
 .. GENERATED FROM PYTHON SOURCE LINES 35-45
 
-.. code-block:: default
+.. code-block:: Python
 
 
     import numpy as np
@@ -82,7 +82,7 @@ Investigate yourself what happens when :math:`b=1/3, 1/6, 1/10`.
 
 .. GENERATED FROM PYTHON SOURCE LINES 52-64
 
-.. code-block:: default
+.. code-block:: Python
 
 
     # Parameter values
@@ -109,7 +109,7 @@ We solve the equations numerically and plot solution over time.
 
 .. GENERATED FROM PYTHON SOURCE LINES 66-91
 
-.. code-block:: default
+.. code-block:: Python
 
 
     def plotEpidemicOverTime(ax,t,S,I,R):
@@ -145,34 +145,68 @@ We solve the equations numerically and plot solution over time.
    :class: sphx-glr-single-img
 
 
-.. rst-class:: sphx-glr-script-out
-
- .. code-block:: none
-
-    /Users/davidsumpter/Documents/GitHub/Kujenga/course/lessons/lesson2/plot_epidemic.py:89: UserWarning: FigureCanvasAgg is non-interactive, and thus cannot be shown
-      plt.show()
 
 
 
+.. GENERATED FROM PYTHON SOURCE LINES 92-141
 
-.. GENERATED FROM PYTHON SOURCE LINES 92-103
+Phase Planes
+============
+In this section, Emily introduces the concept of **phase planes** in the video below, 
+using the SIR model as an example.
 
-As with the  :ref:`precator prey model<rabbitsandfoxes>` we can find
-the equilibria where the rate at which people become infected equals the 
-rate at which they recover by solving
+.. youtube:: oYcNqe9KlDk
+    :width: 100%
+    :align: center
 
-.. math::
+The material that follows recaps what is covered in the video, with supporting code 
+and explanations to help you explore phase planes for yourself.
 
-  \\frac{dI}{dt} = b S I - c I =0  
+What are Phase Planes, and Why Do We Use Them?
+---------------------------------------------
+Phase planes provide a powerful visualization method for dynamic systems.
+Instead of observing each variable separately over time, phase planes plot one variable
+against another. In our case, a common representation for the SIR model is the interaction 
+between the Susceptible (S) and Infected (I) groups. This is used both the video, and
+further below in the code examples.
 
-This occurs either when :math:`I=0` (no-one has the disease) or 
-when :math:`S=\gamma/\beta`. We can now plot these equilibrium on the phase plane
+This visualization allows us to better understand complex system behaviors, such as:
+
+- The spread of disease over time
+- Stabilization points (equilibrium)
+- The eventual decline or extinction of an epidemic
+
+Phase planes highlight crucial relationships, equilibrium points, and system behavior
+that can inform predictions about the long-term outcomes of an epidemic.
+
+Key Components of Phase Planes
+------------------------------
+To fully understand phase planes, let’s examine their key components:
+
+**Axes**:
+    The axes of a phase plane represent the system variables, which is Susceptible (S) and Infected (I) in this case.
+    By plotting one variable against another, we can see how these groups interact directly, rather than just observing 
+    their individual changes over time.
+
+**Trajectories**:
+    Trajectories portray the state of the system as it evolves. 
+    For the SIR model in particular, the trajectory describes how the numbers of susceptible and infected individuals change in relation 
+    to one another as the epidemic progresses over time.
+
+**Directional Arrows**:
+    These arrows on the phase plane indicate the direction of movement over time, showing how the system transitions between states.
+    They guide us through the epidemic's progression, pointing from higher susceptibility toward states of greater infection or recovery.
+
+Below is the first example of a phase plane showing how the SIR system evolves over time, 
+with Susceptible (S) on the x-axis and Infected (I) on the y-axis. 
+
+.. GENERATED FROM PYTHON SOURCE LINES 141-173
+
+.. code-block:: Python
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 103-132
-
-.. code-block:: default
-
+    beta = 1/2
+    gamma = 1/7
 
     def plotPhasePlane(ax,S,I):
         ax.plot(S, I, '-',color='k')
@@ -197,9 +231,9 @@ when :math:`S=\gamma/\beta`. We can now plot these equilibrium on the phase plan
         ax.quiver(X, Y, dX, dY, pivot='mid')
 
     fig,ax=plt.subplots(num=1)
-    ax.plot([gamma/beta,gamma/beta],[-100,100],linestyle=':',color='k')
     plotPhasePlane(ax,S,I)
     drawArrows(ax,dXdt)
+    plt.tight_layout()
     plt.show()
 
 
@@ -211,20 +245,143 @@ when :math:`S=\gamma/\beta`. We can now plot these equilibrium on the phase plan
    :class: sphx-glr-single-img
 
 
-.. rst-class:: sphx-glr-script-out
-
- .. code-block:: none
-
-    /Users/davidsumpter/Documents/GitHub/Kujenga/course/lessons/lesson2/plot_epidemic.py:130: UserWarning: FigureCanvasAgg is non-interactive, and thus cannot be shown
-      plt.show()
 
 
 
+.. GENERATED FROM PYTHON SOURCE LINES 174-200
+
+Equilibrium Points and Nullclines
+---------------------------------
+One essential element of phase planes is the determination of equilibrium points. These 
+points occur where the rates of change for both Susceptible (S) and Infected (I) are zero. 
+The lines where the rate of change of a variable is equal to zero are called **nullclines**.
+The intersection of these nullclines determines the equilibrium points, which are 
+crucial to understanding how an epidemic evolves. 
+
+Similar to the :ref:`predator prey model<rabbitsandfoxes>`, we can find the equilibria for the infected population, where the rate at which 
+people become infected equals the rate at which they recover. This is done by solving:
+
+.. math::
+   \frac{dI}{dt} = \beta S I - \gamma I = 0
+
+This occurs either when :math:`I=0` (no one has the disease) or 
+when :math:`S=\gamma/\beta`.
+
+For the susceptible population:
+
+.. math::
+   \frac{dS}{dt} = -\beta S I = 0
+
+which simplifies to :math:`I = 0` or :math:`S = 0`. These resultant values are all nullclines
+of this system.
+
+We can now plot the nullcline :math:`S=\gamma/\beta` on the phase plane:
+
+.. GENERATED FROM PYTHON SOURCE LINES 200-223
+
+.. code-block:: Python
+
+
+    import numpy as np
+    import matplotlib.pyplot as plt
+    from scipy.integrate import odeint
+
+    # Parameters
+    beta = 1/2
+    gamma = 1/7
+
+    # Integrate the system
+    t = np.linspace(0, 100, 1000)
+    X0 = np.array([0.9999, 0.0001, 0.0000])
+    X = integrate.odeint(dXdt, X0, t)
+    S, I, R = X.T
+
+    fig,ax=plt.subplots(num=1)
+    # Include nullcline
+    ax.plot([gamma/beta,gamma/beta],[-100,100],linestyle=':',color='k')
+    plotPhasePlane(ax,S,I)
+    drawArrows(ax,dXdt)
+    plt.tight_layout()
+    plt.show()
+
+
+
+
+.. image-sg:: /gallery/lesson2/images/sphx_glr_plot_epidemic_003.png
+   :alt: plot epidemic
+   :srcset: /gallery/lesson2/images/sphx_glr_plot_epidemic_003.png
+   :class: sphx-glr-single-img
+
+
+
+
+
+.. GENERATED FROM PYTHON SOURCE LINES 224-242
+
+Now, we can see that this nullcline passes through the trajectory at its peak. 
+This is because the rate of change of infections (:math:`\frac{dI}{dt}`) becomes zero when :math:`S=\gamma/\beta`, 
+and the number of infected individuals reaches the maximum value possible for the system. 
+This visual insight helps us understand how the number of infections evolves over time, 
+and the nullclines highlight important thresholds in disease spread.
+The effects of interventions, such as vaccination or changes in contact rates can also be
+visualised in this way, by showing how they might shift the trajectory or alter the nullclines.
+
+Impact of Parameters
+---------------------
+Now, we can investigate what happens to the phase planes when we change the
+values of :math:`\beta` and :math:`\gamma`. In our previous code examples, the
+:math:`\beta` value was :math:`\frac{1}{2}`, which is the rate of contact between people,
+or transmission rate. What do you think will happen to the phase plane trajectory 
+if we increase this value? How will the nullcline be impacted?
+You can change the "beta" value in the code block to test your hypothesis.
+
+Answer:
+
+.. GENERATED FROM PYTHON SOURCE LINES 244-257
+
+.. toggle:: Click to expand explanation
+
+   As :math:`\beta` increases, the infection rate becomes faster, which means the disease 
+   spreads more quickly. This leads to a faster rise in the number of infected individuals, 
+   and the trajectory in the phase plane will become steeper. The peak of the trajectory will 
+   also become higher, as more individuals get infected more quickly before reaching the recovery phase.
+
+   The nullcline, which represents the point where the rate of change of infected individuals is zero 
+   (i.e., where the number of infections and recoveries are balanced), shifts to the left as 
+   :math:`\beta` increases. This indicates that, for a higher transmission rate, fewer susceptible 
+   individuals remain in the population when the epidemic reaches equilibrium. Essentially, a larger 
+   number of people are infected earlier, so there are fewer susceptible individuals left when the 
+   system reaches a stable state.
+
+.. GENERATED FROM PYTHON SOURCE LINES 259-264
+
+Similarly, the :math:`\gamma` value was set to :math:`\frac{1}{7}`, representing the recovery
+rate. What happens to the trajectory and nullcline for the phase plane when this value 
+is increased?
+
+Answer:
+
+.. GENERATED FROM PYTHON SOURCE LINES 266-273
+
+.. toggle:: Click to expand explanation
+
+   A flatter trajectory and a lower peak (due to quicker recovery) will be observed. In addition, the nullcline shifts to the right, 
+   indicating a higher number of susceptible individuals at equilibrium. 
+
+   This is because the quicker recovery of individuals causes the epidemic to peak and decline more quickly, 
+   leaving a larger proportion of the population susceptible at the point of equilibrium.
+
+.. GENERATED FROM PYTHON SOURCE LINES 275-278
+
+Additional questions:
+
+- When a high :math:`\gamma` or low :math:`\beta` value is used, the trajectory does not return to the x-axis after peaking. Why might this be happening?
+- We have been initialising the models with 99.99\% of the population as susceptible, and only 0.01\% infected. How are the phase planes affected when changing this proportion?
 
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  0.056 seconds)
+   **Total running time of the script:** (0 minutes 0.183 seconds)
 
 
 .. _sphx_glr_download_gallery_lesson2_plot_epidemic.py:
@@ -233,14 +390,17 @@ when :math:`S=\gamma/\beta`. We can now plot these equilibrium on the phase plan
 
   .. container:: sphx-glr-footer sphx-glr-footer-example
 
+    .. container:: sphx-glr-download sphx-glr-download-jupyter
+
+      :download:`Download Jupyter notebook: plot_epidemic.ipynb <plot_epidemic.ipynb>`
 
     .. container:: sphx-glr-download sphx-glr-download-python
 
       :download:`Download Python source code: plot_epidemic.py <plot_epidemic.py>`
 
-    .. container:: sphx-glr-download sphx-glr-download-jupyter
+    .. container:: sphx-glr-download sphx-glr-download-zip
 
-      :download:`Download Jupyter notebook: plot_epidemic.ipynb <plot_epidemic.ipynb>`
+      :download:`Download zipped: plot_epidemic.zip <plot_epidemic.zip>`
 
 
 .. only:: html
