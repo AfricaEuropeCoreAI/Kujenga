@@ -21,7 +21,8 @@ author = 'David Sumpter'
 extensions = ['sphinx.ext.mathjax',
               'sphinx_gallery.gen_gallery',
               'sphinxcontrib.youtube',
-              'myst_parser'
+              'myst_parser',
+              'sphinx_togglebutton'
               ]
 
 templates_path = ['_templates']
