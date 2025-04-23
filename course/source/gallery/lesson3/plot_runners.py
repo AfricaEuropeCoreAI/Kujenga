@@ -38,24 +38,105 @@ You will need to have a Python environment set up on your computer or access via
  *During class*: Your teacher will start by going through the theory for `the t-test`_. 
  Please ask them questions and actively engage! 
 
-Working with data
-=================
-
-Loading in the data set
------------------------
 """
-
-
+# %%
+# Mathematically proving if the Kenyan runners are faster than the Ethiopian runners
+# =================
+#
+# In order to establish if the Kenyan runners are faster than the Ethiopian runners. We will need to carry out a t-test.
+# A t-test is a statistical analysis tool that will tell you if two groups are statistically different. That the difference observed is not by chance.
+# In order to carry out a t-test, we need to have set an hypothesis that we will be testing. We need to set both the null and the alternate hypothesis.
+#
+# The null hypothesis
+# =================
+#
+# The null hypothesis is the default assumption that states, there is no difference. In this case the null hypothesis wil be
+# "There is no difference between the Kenyan 10000m women runners with the Ethiopian 10000m women runners ". The null hypothesis 
+# is usually denoted as h0.
+#
+# The alternate hypothesis
+# =================
+#
+# The alternate hypothesis is what you want to prove, which suggests a difference in the groups being tested. In this case our alternate hypothesis is
+# "Kenyan 10000m women runners are faster than the Ethiopian 10000m runners"
+#
+# To calculate carry out a t-test you need to first to
+#
+# 1. Calculate the t-statistic
+#
+# 2. Set the confidence level
+#
+# 3. Critical value
+#
+# 4. Degrees of freedom
+#
+# Calculating the t-statistic
+# =================
+#
+# The formule for calculating the t-statistic is as follows
+#
+# .. math::
+#   t = \frac{\bar{x}_1 - \bar{x}_2}{\sqrt{\left( \frac{s_1^2 }{n_1} + \frac{s_2^2 }{n_2} \right)}}
+#
+#
+#
+# Culculating the means
+# =====================
+#
+# The formulae for the mean is the summation of all the values divided by the total number of the values. This is expressed mathematically as follows;
+# 
+# .. math::
+#   \bar{x} = \frac{1}{n} \sum_{i=1}^{n} x_i
+#
+# The significance level
+# ======================
+#
+# The significance level is the measure of the stregth of the evidence that must be in your sample for you to reject the null hypothesis.
+# The significance level will help you make the conclusion that there is a statistical difference between the two groups.
+# The significance level indicates the probability of rejecting the null hypothesis when it is true. For example a significance level
+# of 0.05 indicates that there is a 5% risk of rejecting the null hypothesis when it is true. The lower the significance level the stronger 
+# the evidence required to reject the null hypothesis. Significance levels are set by the researchers prior to testing the hypothesis.
+#
+# The critical value
+# ====================
+#
+# The critical value is the threshold that is used to determine whether you will reject or accept the null hypothesis. 
+# It's the value that defines the boundary between the region where the null hypothesis is likely true and the region 
+# where it's likely false. 
+#
+# The critical value is based on the significance level that has been set and the type of test. It is usually culculated using 
+# a statistical table or a culculator. For a one tailed test, there is usually one critical value and for the two tailed tests, there
+# are two critical values indicating the two extremes where the null hypothesis is to be rejected. If the t-statistic falls in the 
+# critical value region, you reject the null hypothesis.
+#
+# Calculating t-test by hand.
+# ===========================
+# In this video Selina is going to demostrate to you how to calculate the t-statistic by hand
+#
+# .. youtube:: 5p8jcxIs4CA
+#     :width: 100%
+#     :align: center 
+#
+#
 import random
 import pickle
 import math
 import numpy as np
-
+#
 # Load in times of runners
-
+#
 #with open('course/lessons/data/runners.pkl', 'rb') as f:
-
-
+#
+#
+# %%
+# Carrying out a t-test using python
+# =================================
+#
+# In this video Beimet is demonstrating how to carry out a t-test using python libraries
+#
+# .. youtube:: kE8KCy1ErWE
+#     :width: 100%
+#     :align: center 
 # Plot a histogram of the data
 
 #############################################################
