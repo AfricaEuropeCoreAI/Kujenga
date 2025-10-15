@@ -10,8 +10,8 @@
     .. note::
         :class: sphx-glr-download-link-note
 
-        Click :ref:`here <sphx_glr_download_gallery_lesson1_plot_howtobehappy.py>`
-        to download the full example code
+        :ref:`Go to the end <sphx_glr_download_gallery_lesson1_plot_howtobehappy.py>`
+        to download the full example code.
 
 .. rst-class:: sphx-glr-example-title
 
@@ -23,7 +23,9 @@
 What you will learn
 ===================
 
-[VIDEO HERE]
+.. youtube:: pa-1O_T5uZI
+    :width: 100% 
+    :align: center 
 
 The problem
 -----------
@@ -69,18 +71,20 @@ between points and a line through those points.
 How to use this material
 ------------------------
 
-This material is taught as part of a 6 hour learning session. Your Kujenga instructor will have booked 
-a time for an in-person or online two hour session. This means you have two hours to work to do either side of the
+This material is taught as part of a 6 hour learning session. 
+If you are doing this as part of an organised study group, your Kujenga instructor 
+will have booked a time for an in-person or online two hour session. 
+This means you have two hours to work to do either side of the
 session. Here is what you should do:
 
 *Before coming to the class*: You should read through this page and get a feeling for the contents and watch the videos. 
 At the section on differentiation, solve the paper and 
-pencil exercise (If you get stuck look `here <https://www.bbc.co.uk/bitesize/guides/zyj77ty/revision/1>`_), but otherwise you should 
-simply read through and try to understand what we are doing. Along the way, you should 
-download the `data <https://github.com/AfricaEuropeCoreAI/Kujenga/blob/main/course/lessons/data/HappinessData.csv>`_ 
-for the exercise. You will need to have a Python environment set up on your computer or access via Google Colab (see here for
+pencil exercise, but mainly you should read and start thinking about the material. 
+
+To do the computer exercise, you will need to have a Python environment set up on your computer or access via Google Colab (see here for
 info on how to set that up). Then you can download this page as a Jupyter notebook or as Python code by clicking the links at
-the bottom of this page. Run the code and focus on understanding what it does up to and including section `Finding the best fit line`_. 
+the bottom of this page. You should also download the `data <https://github.com/AfricaEuropeCoreAI/Kujenga/blob/main/course/lessons/data/HappinessData.csv>`_ 
+for the exercise. Run the code and focus on understanding what it does up to and including section `Finding the best fit line`_. 
 
 *During class*: Your teacher will start by going through the theory for `Finding the best fit line`_. 
 Please ask them questions and actively engage! This is your chance to really understand what is going on.
@@ -108,7 +112,7 @@ you can first multiply out the brackets to get
 
 .. math::
 
-(4-2m)^2 = 16 - 16m + 4m^2 
+    (4-2m)^2 = 16 - 16m + 4m^2 
 
 You can then take a derivative in order to calculate the slope of the function, to get
 
@@ -132,6 +136,9 @@ Problem solved.
   .. math::
 
       (9-3m)^2  
+  
+  (If you get stuck look `here <https://www.bbc.co.uk/bitesize/guides/zyj77ty/revision/1>`_)
+
 
 Note that we use the letter :math:`m` for the variable, while
 most often in school we use the letter :math:`x` for the variable. In maths it really doesn't 
@@ -152,9 +159,9 @@ David Sumpter steps through the code. Watch it first then try running the code y
 
 [VIDEO HERE]
 
-.. GENERATED FROM PYTHON SOURCE LINES 138-158
+.. GENERATED FROM PYTHON SOURCE LINES 145-165
 
-.. code-block:: default
+.. code-block:: Python
 
 
     from IPython.display import display
@@ -202,7 +209,7 @@ David Sumpter steps through the code. Watch it first then try running the code y
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 159-164
+.. GENERATED FROM PYTHON SOURCE LINES 166-171
 
 Creating the plot 
 -----------------
@@ -210,9 +217,9 @@ The code below plots the average life expectancy of
 each of these countries against their happiness (life ladder) scores. 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 165-192
+.. GENERATED FROM PYTHON SOURCE LINES 172-199
 
-.. code-block:: default
+.. code-block:: Python
 
 
     from pylab import rcParams
@@ -250,17 +257,10 @@ each of these countries against their happiness (life ladder) scores.
    :class: sphx-glr-single-img
 
 
-.. rst-class:: sphx-glr-script-out
-
- .. code-block:: none
-
-    /Users/davidsumpter/Documents/GitHub/Kujenga/course/lessons/lesson1/plot_howtobehappy.py:190: UserWarning: FigureCanvasAgg is non-interactive, and thus cannot be shown
-      plt.show()
 
 
 
-
-.. GENERATED FROM PYTHON SOURCE LINES 193-218
+.. GENERATED FROM PYTHON SOURCE LINES 200-225
 
 Each circle in the plot is a country. 
 The x-axis shows the life expectancy in the country and 
@@ -288,9 +288,9 @@ If the life expectancy is 78 then average happiness is predicted to be 78/12=6.5
 We can draw this equation in the form of a straight line going 
 through the cloud of country points, as shown below.
 
-.. GENERATED FROM PYTHON SOURCE LINES 218-235
+.. GENERATED FROM PYTHON SOURCE LINES 225-242
 
-.. code-block:: default
+.. code-block:: Python
 
 
     # Setup parameters: m is the slope of the line
@@ -318,17 +318,10 @@ through the cloud of country points, as shown below.
    :class: sphx-glr-single-img
 
 
-.. rst-class:: sphx-glr-script-out
-
- .. code-block:: none
-
-    /Users/davidsumpter/Documents/GitHub/Kujenga/course/lessons/lesson1/plot_howtobehappy.py:233: UserWarning: FigureCanvasAgg is non-interactive, and thus cannot be shown
-      plt.show()
 
 
 
-
-.. GENERATED FROM PYTHON SOURCE LINES 236-265
+.. GENERATED FROM PYTHON SOURCE LINES 243-272
 
 .. admonition:: Try it yourself!
 
@@ -360,9 +353,9 @@ The table below shows the predicted value and the squared distance between
 prediction and reality for each country. We then sum these squared distances 
 to get an overall measure of how far our predictions our from reality. This is done below.
 
-.. GENERATED FROM PYTHON SOURCE LINES 265-274
+.. GENERATED FROM PYTHON SOURCE LINES 272-281
 
-.. code-block:: default
+.. code-block:: Python
 
 
     df=df.assign(SquaredDistance=np.power((df['Predicted'] - df['Happiness']),2))
@@ -400,7 +393,7 @@ to get an overall measure of how far our predictions our from reality. This is d
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 275-373
+.. GENERATED FROM PYTHON SOURCE LINES 282-380
 
 Finding the best fit line 
 =========================
@@ -418,7 +411,7 @@ Let’s start by formulating this problem mathematically.
 For each country :math:`i`, 
 we have two values: the life satisfaction, which I will call :math:`y_i` 
 and life expectancy, which I will call :math:`x_i` . For example, 
-when :math:`i=`USA then :math:`x_i=6.88` and :math:`y_i=68.3`. 
+when :math:`i=` USA then :math:`i=x_i=6.88` and :math:`y_i=68.3`. 
 
 Now, let’s denote the slope of the line as :math:`m` (in the plot above
 :math:`m=1/12`) and repeat the caluclation we made above but with letters instead 
@@ -436,7 +429,7 @@ The squared distance between the prediction and outcome is written as
 
  ( y_i - m \cdot x_i)^2 
 
-I want to emphasise here that all I am doing is rewriting the same calculation I
+All I am doing is rewriting the same calculation we
 did above with numbers, but now with the letters. The reason for doing this is that 
 our aim is to find an equation for the value of :math:`m` which minimises the sum of square 
 distances.
@@ -476,7 +469,7 @@ take the derivative
  = - 2 x_1 y_1 + 2 x_1^2 m  - 2 x_2 y_2 + 2 x_2^2 m  +  ... - 2 x_{136} y_{136} + 2 x_{136}^2 m  
 
 Although this particular step involves alot of algebra, notice that we are doing exactly the same as in the example above.
-Another thing that I find can confuse students (when I teach this in statistics) is that 
+Another thing that that can confuse students is that 
 we differentiate with respect to :math:`m`. 
 In school, we often use the letter :math:`x` for the variable name and :math:`m` for a constant. Here it is the other way round. 
 The data :math:`x_i` and :math:`y_i` are constants (measurements from countries) and  :math:`m` is the variable we differentiate for.
@@ -501,9 +494,9 @@ Moving the :math:`m` to the left hand side gives
 
 Let's use our newly found equation to calculate the line that best fits the data.
 
-.. GENERATED FROM PYTHON SOURCE LINES 373-380
+.. GENERATED FROM PYTHON SOURCE LINES 380-387
 
-.. code-block:: default
+.. code-block:: Python
 
 
     df=df.assign(SquaredLifEExp=np.power(df['LifeExp'],2))
@@ -525,16 +518,16 @@ Let's use our newly found equation to calculate the line that best fits the data
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 381-385
+.. GENERATED FROM PYTHON SOURCE LINES 388-392
 
 Our intial guess of :math:`m = 1/12 = 0.0833` wasn't so far away from the best fitting value. 
 But this new slope is slightly closer to the data. We can now plot this and recalculate 
 the model sum of squares
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 385-403
+.. GENERATED FROM PYTHON SOURCE LINES 392-410
 
-.. code-block:: default
+.. code-block:: Python
 
 
     Life_Expectancy=np.arange(0.5,100,step=0.01)
@@ -567,14 +560,12 @@ the model sum of squares
 
  .. code-block:: none
 
-    /Users/davidsumpter/Documents/GitHub/Kujenga/course/lessons/lesson1/plot_howtobehappy.py:396: UserWarning: FigureCanvasAgg is non-interactive, and thus cannot be shown
-      plt.show()
     The model sum of squares is 79.9469
 
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 404-424
+.. GENERATED FROM PYTHON SOURCE LINES 411-431
 
 Again, this sum of squares is slightly smaller than the value we got above 
 for :math:`m = 1/12` 
@@ -597,9 +588,9 @@ We start by shifting the data so that it has a mean (average) of zero.
 To do this we simply take away the mean value from both life expectancy and 
 from happiness. Then replot the data 
 
-.. GENERATED FROM PYTHON SOURCE LINES 424-437
+.. GENERATED FROM PYTHON SOURCE LINES 431-444
 
-.. code-block:: default
+.. code-block:: Python
 
 
     df=df.assign(ShiftedLifeExp=df['LifeExp'] - np.mean(df['LifeExp']))
@@ -623,17 +614,10 @@ from happiness. Then replot the data
    :class: sphx-glr-single-img
 
 
-.. rst-class:: sphx-glr-script-out
-
- .. code-block:: none
-
-    /Users/davidsumpter/Documents/GitHub/Kujenga/course/lessons/lesson1/plot_howtobehappy.py:435: UserWarning: FigureCanvasAgg is non-interactive, and thus cannot be shown
-      plt.show()
 
 
 
-
-.. GENERATED FROM PYTHON SOURCE LINES 438-448
+.. GENERATED FROM PYTHON SOURCE LINES 445-455
 
 This graph shows us that, for example, Yemen is almost -2.5 points below the world 
 average for happiness and has a life expectency 8 years shorter than the average over
@@ -646,9 +630,9 @@ of seeing between country differences.
 
 Let's now try to find the best fit line which goes through these data points.
 
-.. GENERATED FROM PYTHON SOURCE LINES 448-469
+.. GENERATED FROM PYTHON SOURCE LINES 455-476
 
-.. code-block:: default
+.. code-block:: Python
 
 
     df=df.assign(SquaredLifEExp=np.power(df['ShiftedLifeExp'],2))
@@ -685,22 +669,20 @@ Let's now try to find the best fit line which goes through these data points.
  .. code-block:: none
 
     The best fitting line has slope m = 0.1226
-    /Users/davidsumpter/Documents/GitHub/Kujenga/course/lessons/lesson1/plot_howtobehappy.py:467: UserWarning: FigureCanvasAgg is non-interactive, and thus cannot be shown
-      plt.show()
 
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 470-474
+.. GENERATED FROM PYTHON SOURCE LINES 477-481
 
 This line appears to fit better than the one we fitted earlier! It lies 
 closer to the points and better capture the relationship in the data.
 To test whether this is indeed the case we can calculate the sum of squares
 between this new line and the shifted data. This is as follows
 
-.. GENERATED FROM PYTHON SOURCE LINES 474-481
+.. GENERATED FROM PYTHON SOURCE LINES 481-488
 
-.. code-block:: default
+.. code-block:: Python
 
 
     df=df.assign(Predicted=np.array(m_best*df['ShiftedLifeExp']))       
@@ -722,7 +704,7 @@ between this new line and the shifted data. This is as follows
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 482-511
+.. GENERATED FROM PYTHON SOURCE LINES 489-518
 
 This new line through the data is better! It has a smaller sum of squares. 
 
@@ -754,9 +736,9 @@ Notice that this is an equation for a straight line, so we can write
 
 Let's apply this to data and plot the line again
 
-.. GENERATED FROM PYTHON SOURCE LINES 511-535
+.. GENERATED FROM PYTHON SOURCE LINES 518-542
 
-.. code-block:: default
+.. code-block:: Python
 
 
     k_best = np.mean(df['Happiness']) - m_best*np.mean(df['LifeExp'])
@@ -795,8 +777,6 @@ Let's apply this to data and plot the line again
 
  .. code-block:: none
 
-    /Users/davidsumpter/Documents/GitHub/Kujenga/course/lessons/lesson1/plot_howtobehappy.py:524: UserWarning: FigureCanvasAgg is non-interactive, and thus cannot be shown
-      plt.show()
     The slope of the line is m = 0.1226 and the intercept is k = -2.4252
     An increase in life expectancy of 8.1580 years is associated with one extra point of happiness
     The model sum of squares is still 71.7665
@@ -804,7 +784,7 @@ Let's apply this to data and plot the line again
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 536-564
+.. GENERATED FROM PYTHON SOURCE LINES 543-596
 
 Now we have it. By shifting back to the original co-ordinates we
 can find the best fitting line through the data. Notice that the sum of squares is unaffected by
@@ -821,44 +801,358 @@ Interpretting the data
 
 
 Although there is a relationship between these two variables, this does not mean
-that life expectancy causes happiness.
+that life expectancy causes happiness. One example of a causal relationship between
+life expectancy and happiness would be one where people are happier because they 
+know they are going to live longer. Less direct, but still causal relationship would
+be that people are happier because they have access to better healthcare, or 
+that they have less worries about the health of their children and loved ones.
+There are many seperate factors which can cause both life expectancy and happiness to increase.
+For example, a country with a high GDP per capita is likely to have both a high life 
+expectancy and a high happiness score (you can test this in the next section). It may even be the case
+that happy people co-operate more and build better healthcare systems, which in turn leads to longer life expectancy.
 
+John Helliwell and his colleagues, who collated the data for the World Happiness report, 
+emphasise the importance of, what they call, `social foundations <https://www.tgcom24.mediaset.it/binary/documento/83.$plit/C_2_documento_1063_upfDocumento.pdf#page=10>`_.
+in creating a happier world. 
+Happiness arises when we have choices, when the people around us are generous and 
+sociable, when we don’t live in poverty and when we are likely to live long lives.  
+But we have to be careful when interpreting these results. We cannot know, 
+from cross-country comparison data alone, which factors cause happiness or 
+merely happen to correlate with it. We don’t know if better healthcare or 
+better social support cause an increase in happiness, or the other way around. 
+What we do know is that people in more stable, more prosperous countries, with 
+greater social support tend to describe themselves as happier. 
 
-The dangers on confusing correlation for causation.....
+Think again about yourself. We cannot rely on national questionnaire results to 
+plan our own path to personal happiness. The majority of the factors which 
+Helliwell and his colleagues have studied are not under your control. They are 
+determined by the country you happen to be born in. In some parts of the world 
+people have access to high quality healthcare and do not experience corruption
+on an everyday basis. In others they don’t. Access to happiness isn’t entirely a personal 
+choice, it is just a matter of living in the right country at the right time. 
+
 
 Exercise: look for other predictors of happiness
 ===============================================
 
+Look at other variables that might predict happiness in the data. You can find the values for
+these in the dataframe under LogGDP, SocialSupport, Freedom, Generosity and Corruption.
+Full definitions can be found on the `World Happiness Report <https://data.worldhappiness.report/map>`_ website.
 
-Find best predictor using sum of squares
-Give one argument why it causes happiness.
+
+.. GENERATED FROM PYTHON SOURCE LINES 596-599
+
+.. code-block:: Python
+
+
+    df.head()
+
+
+
+
+
+
+.. raw:: html
+
+    <div class="output_subarea output_html rendered_html output_result">
+    <div>
+    <style scoped>
+        .dataframe tbody tr th:only-of-type {
+            vertical-align: middle;
+        }
+
+        .dataframe tbody tr th {
+            vertical-align: top;
+        }
+
+        .dataframe thead th {
+            text-align: right;
+        }
+    </style>
+    <table border="1" class="dataframe">
+      <thead>
+        <tr style="text-align: right;">
+          <th></th>
+          <th>Country name</th>
+          <th>Year</th>
+          <th>Happiness</th>
+          <th>LogGDP</th>
+          <th>SocialSupport</th>
+          <th>LifeExp</th>
+          <th>Freedom</th>
+          <th>Generosity</th>
+          <th>Corruption</th>
+          <th>Positive affect</th>
+          <th>Negative affect</th>
+          <th>Confidence in national government</th>
+          <th>Democratic Quality</th>
+          <th>Delivery Quality</th>
+          <th>Standard deviation of ladder by country-year</th>
+          <th>Standard deviation/Mean of ladder by country-year</th>
+          <th>GINI index (World Bank estimate)</th>
+          <th>GINI index (World Bank estimate), average 2000-16</th>
+          <th>gini of household income reported in Gallup, by wp5-year</th>
+          <th>Most people can be trusted, Gallup</th>
+          <th>Most people can be trusted, WVS round 1981-1984</th>
+          <th>Most people can be trusted, WVS round 1989-1993</th>
+          <th>Most people can be trusted, WVS round 1994-1998</th>
+          <th>Most people can be trusted, WVS round 1999-2004</th>
+          <th>Most people can be trusted, WVS round 2005-2009</th>
+          <th>Most people can be trusted, WVS round 2010-2014</th>
+          <th>Predicted</th>
+          <th>SquaredDistance</th>
+          <th>SquaredLifEExp</th>
+          <th>HappinessLifEExp</th>
+          <th>ShiftedLifeExp</th>
+          <th>ShiftedHappiness</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th>10</th>
+          <td>Afghanistan</td>
+          <td>2018</td>
+          <td>2.694303</td>
+          <td>7.494588</td>
+          <td>0.507516</td>
+          <td>52.599998</td>
+          <td>0.373536</td>
+          <td>-0.084888</td>
+          <td>0.927606</td>
+          <td>0.424125</td>
+          <td>0.404904</td>
+          <td>0.364666</td>
+          <td>NaN</td>
+          <td>NaN</td>
+          <td>1.408344</td>
+          <td>0.522712</td>
+          <td>NaN</td>
+          <td>NaN</td>
+          <td>0.290681</td>
+          <td>NaN</td>
+          <td>NaN</td>
+          <td>NaN</td>
+          <td>NaN</td>
+          <td>NaN</td>
+          <td>NaN</td>
+          <td>NaN</td>
+          <td>4.022502</td>
+          <td>1.764113</td>
+          <td>145.705026</td>
+          <td>33.892862</td>
+          <td>-12.070834</td>
+          <td>-2.807831</td>
+        </tr>
+        <tr>
+          <th>21</th>
+          <td>Albania</td>
+          <td>2018</td>
+          <td>5.004403</td>
+          <td>9.412399</td>
+          <td>0.683592</td>
+          <td>68.699997</td>
+          <td>0.824212</td>
+          <td>0.005385</td>
+          <td>0.899129</td>
+          <td>0.713300</td>
+          <td>0.318997</td>
+          <td>0.435338</td>
+          <td>NaN</td>
+          <td>NaN</td>
+          <td>2.640531</td>
+          <td>0.527642</td>
+          <td>NaN</td>
+          <td>0.303250</td>
+          <td>0.456174</td>
+          <td>NaN</td>
+          <td>NaN</td>
+          <td>NaN</td>
+          <td>0.243243</td>
+          <td>0.232000</td>
+          <td>NaN</td>
+          <td>NaN</td>
+          <td>5.996026</td>
+          <td>0.983316</td>
+          <td>16.234169</td>
+          <td>-2.005443</td>
+          <td>4.029165</td>
+          <td>-0.497732</td>
+        </tr>
+        <tr>
+          <th>28</th>
+          <td>Algeria</td>
+          <td>2018</td>
+          <td>5.043086</td>
+          <td>9.557952</td>
+          <td>0.798651</td>
+          <td>65.900002</td>
+          <td>0.583381</td>
+          <td>-0.172413</td>
+          <td>0.758704</td>
+          <td>0.591043</td>
+          <td>0.292946</td>
+          <td>NaN</td>
+          <td>NaN</td>
+          <td>NaN</td>
+          <td>1.973943</td>
+          <td>0.391416</td>
+          <td>NaN</td>
+          <td>0.276000</td>
+          <td>0.667872</td>
+          <td>NaN</td>
+          <td>NaN</td>
+          <td>NaN</td>
+          <td>NaN</td>
+          <td>0.107644</td>
+          <td>NaN</td>
+          <td>0.179286</td>
+          <td>5.652805</td>
+          <td>0.371757</td>
+          <td>1.510857</td>
+          <td>-0.564248</td>
+          <td>1.229169</td>
+          <td>-0.459048</td>
+        </tr>
+        <tr>
+          <th>45</th>
+          <td>Argentina</td>
+          <td>2018</td>
+          <td>5.792797</td>
+          <td>9.809972</td>
+          <td>0.899912</td>
+          <td>68.800003</td>
+          <td>0.845895</td>
+          <td>-0.206937</td>
+          <td>0.855255</td>
+          <td>0.820310</td>
+          <td>0.320502</td>
+          <td>0.261352</td>
+          <td>NaN</td>
+          <td>NaN</td>
+          <td>2.472559</td>
+          <td>0.426833</td>
+          <td>NaN</td>
+          <td>0.460938</td>
+          <td>0.405356</td>
+          <td>NaN</td>
+          <td>0.270073</td>
+          <td>0.223553</td>
+          <td>0.170844</td>
+          <td>0.150154</td>
+          <td>0.174058</td>
+          <td>0.193531</td>
+          <td>6.008284</td>
+          <td>0.046435</td>
+          <td>17.050052</td>
+          <td>1.200194</td>
+          <td>4.129171</td>
+          <td>0.290662</td>
+        </tr>
+        <tr>
+          <th>58</th>
+          <td>Armenia</td>
+          <td>2018</td>
+          <td>5.062449</td>
+          <td>9.119424</td>
+          <td>0.814449</td>
+          <td>66.900002</td>
+          <td>0.807644</td>
+          <td>-0.149109</td>
+          <td>0.676826</td>
+          <td>0.581488</td>
+          <td>0.454840</td>
+          <td>0.670828</td>
+          <td>NaN</td>
+          <td>NaN</td>
+          <td>2.102111</td>
+          <td>0.415236</td>
+          <td>NaN</td>
+          <td>0.319250</td>
+          <td>0.406403</td>
+          <td>NaN</td>
+          <td>NaN</td>
+          <td>NaN</td>
+          <td>0.235000</td>
+          <td>NaN</td>
+          <td>NaN</td>
+          <td>0.109136</td>
+          <td>5.775384</td>
+          <td>0.508277</td>
+          <td>4.969196</td>
+          <td>-0.980134</td>
+          <td>2.229169</td>
+          <td>-0.439686</td>
+        </tr>
+      </tbody>
+    </table>
+    </div>
+    </div>
+    <br />
+    <br />
+
+.. GENERATED FROM PYTHON SOURCE LINES 600-607
+
+Choose one of the variables and go through the steps we have done for life expectancy above, applying 
+them to your chosen variable. Find a different variable that predicts happiness. Make a plot with
+a fitted line through the data.
+
+Once you have shown the relationship in the data then write 
 Give one argument why it might be correlated with but does not cause happiness.
-Advanced add 
+In the code below we have plotted the relationship between happiness and perceived corruption in countries, as an example.
 
-.. GENERATED FROM PYTHON SOURCE LINES 564-573
+.. GENERATED FROM PYTHON SOURCE LINES 607-629
 
-.. code-block:: default
-
-
+.. code-block:: Python
 
 
+    def plotData(df,x,y): 
+        fig,ax=plt.subplots(num=1)
+        ax.plot(x,y, data=df, linestyle='none', markersize=5, marker='o', color=[0.85, 0.85, 0.85])
+        for country in ['United States','United Kingdom','Croatia','Benin','Finland','Yemen']:
+            ci=np.where(df['Country name']==country)[0][0]
+            ax.plot(  df.iloc[ci][x],df.iloc[ci][y], linestyle='none', markersize=7, marker='o', color='black')
+            ax.text(  df.iloc[ci][x],df.iloc[ci][y]+0.08,  country)
 
-    # Using regression in applications
-    # ================================
-    # 
-    #
-    #
-    # Need to write about independent and dependent variables. A bit about each applications
+        ax.set_yticks(np.arange(11,step=1))
+        ax.set_ylabel('Average Happiness (0-10)')
+        ax.set_xlabel(x)
+        ax.spines['top'].set_visible(False)
+        ax.spines['right'].set_visible(False)
+        ax.set_xlim(np.min(df['Corruption']),np.max(df['Corruption']))
+        ax.set_ylim(2.5,8.1) 
+        return fig,ax
+
+    fig,ax=plotData(df,'Corruption','Happiness')
+
+    plt.show()
+
+
+
+
+.. image-sg:: /gallery/lesson1/images/sphx_glr_plot_howtobehappy_007.png
+   :alt: plot howtobehappy
+   :srcset: /gallery/lesson1/images/sphx_glr_plot_howtobehappy_007.png
+   :class: sphx-glr-single-img
 
 
 
 
 
+.. GENERATED FROM PYTHON SOURCE LINES 630-638
+
+Using regression in applications
+================================
+We have now seen how to use linear regression to find a line through data points.
+In the video below we talk to several reasearchers who use linear regression in their work.
+
+.. youtube:: jQZ6db0FzQo
+   :width: 100% 
+   :align: center 
 
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  0.609 seconds)
+   **Total running time of the script:** (0 minutes 0.678 seconds)
 
 
 .. _sphx_glr_download_gallery_lesson1_plot_howtobehappy.py:
@@ -867,14 +1161,17 @@ Advanced add
 
   .. container:: sphx-glr-footer sphx-glr-footer-example
 
+    .. container:: sphx-glr-download sphx-glr-download-jupyter
+
+      :download:`Download Jupyter notebook: plot_howtobehappy.ipynb <plot_howtobehappy.ipynb>`
 
     .. container:: sphx-glr-download sphx-glr-download-python
 
       :download:`Download Python source code: plot_howtobehappy.py <plot_howtobehappy.py>`
 
-    .. container:: sphx-glr-download sphx-glr-download-jupyter
+    .. container:: sphx-glr-download sphx-glr-download-zip
 
-      :download:`Download Jupyter notebook: plot_howtobehappy.ipynb <plot_howtobehappy.ipynb>`
+      :download:`Download zipped: plot_howtobehappy.zip <plot_howtobehappy.zip>`
 
 
 .. only:: html

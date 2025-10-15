@@ -35,7 +35,7 @@ From the book
 
 .. raw:: html
 
-    <div class="sphx-glr-thumbcontainer" tooltip="[VIDEO HERE]">
+    <div class="sphx-glr-thumbcontainer" tooltip="The problem -----------">
 
 .. only:: html
 
@@ -197,7 +197,7 @@ From the book
 
 .. raw:: html
 
-    <div class="sphx-glr-thumbcontainer" tooltip="|">
+    <div class="sphx-glr-thumbcontainer" tooltip="How important is a webpage on the internet? This was the question that Google founders Larry Page and Sergey Brin asked themselves when they were developing their search engine. In this lesson we will learn the maths behind the solution, now known as PageRank, which is the basis of the algorithm that powers Google search.">
 
 .. only:: html
 

@@ -51,6 +51,9 @@ coverage.xml
 .pytest_cache/
 cover/
 
+#Compilation things
+course/lessons/gallery
+
 # Translations
 *.mo
 *.pot

@@ -5,7 +5,9 @@
 What you will learn
 ===================
 
-[VIDEO HERE]
+.. youtube:: pa-1O_T5uZI
+    :width: 100% 
+    :align: center 
 
 The problem
 -----------
@@ -51,18 +53,20 @@ between points and a line through those points.
 How to use this material
 ------------------------
 
-This material is taught as part of a 6 hour learning session. Your Kujenga instructor will have booked 
-a time for an in-person or online two hour session. This means you have two hours to work to do either side of the
+This material is taught as part of a 6 hour learning session. 
+If you are doing this as part of an organised study group, your Kujenga instructor 
+will have booked a time for an in-person or online two hour session. 
+This means you have two hours to work to do either side of the
 session. Here is what you should do:
 
 *Before coming to the class*: You should read through this page and get a feeling for the contents and watch the videos. 
 At the section on differentiation, solve the paper and 
-pencil exercise (If you get stuck look `here <https://www.bbc.co.uk/bitesize/guides/zyj77ty/revision/1>`_), but otherwise you should 
-simply read through and try to understand what we are doing. Along the way, you should 
-download the `data <https://github.com/AfricaEuropeCoreAI/Kujenga/blob/main/course/lessons/data/HappinessData.csv>`_ 
-for the exercise. You will need to have a Python environment set up on your computer or access via Google Colab (see here for
+pencil exercise, but mainly you should read and start thinking about the material. 
+
+To do the computer exercise, you will need to have a Python environment set up on your computer or access via Google Colab (see here for
 info on how to set that up). Then you can download this page as a Jupyter notebook or as Python code by clicking the links at
-the bottom of this page. Run the code and focus on understanding what it does up to and including section `Finding the best fit line`_. 
+the bottom of this page. You should also download the `data <https://github.com/AfricaEuropeCoreAI/Kujenga/blob/main/course/lessons/data/HappinessData.csv>`_ 
+for the exercise. Run the code and focus on understanding what it does up to and including section `Finding the best fit line`_. 
 
 *During class*: Your teacher will start by going through the theory for `Finding the best fit line`_. 
 Please ask them questions and actively engage! This is your chance to really understand what is going on.
@@ -90,7 +94,7 @@ you can first multiply out the brackets to get
 
 .. math::
 
-(4-2m)^2 = 16 - 16m + 4m^2 
+    (4-2m)^2 = 16 - 16m + 4m^2 
 
 You can then take a derivative in order to calculate the slope of the function, to get
 
@@ -114,6 +118,9 @@ Problem solved.
   .. math::
 
       (9-3m)^2  
+  
+  (If you get stuck look `here <https://www.bbc.co.uk/bitesize/guides/zyj77ty/revision/1>`_)
+
 
 Note that we use the letter :math:`m` for the variable, while
 most often in school we use the letter :math:`x` for the variable. In maths it really doesn't 
@@ -288,7 +295,7 @@ print('The model sum of squares is %.4f' % Model_Sum_Of_Squares)
 # For each country :math:`i`, 
 # we have two values: the life satisfaction, which I will call :math:`y_i` 
 # and life expectancy, which I will call :math:`x_i` . For example, 
-# when :math:`i=`USA then :math:`x_i=6.88` and :math:`y_i=68.3`. 
+# when :math:`i=` USA then :math:`i=x_i=6.88` and :math:`y_i=68.3`. 
 #
 # Now, let’s denote the slope of the line as :math:`m` (in the plot above
 # :math:`m=1/12`) and repeat the caluclation we made above but with letters instead 
@@ -306,7 +313,7 @@ print('The model sum of squares is %.4f' % Model_Sum_Of_Squares)
 # 
 #  ( y_i - m \cdot x_i)^2 
 # 
-# I want to emphasise here that all I am doing is rewriting the same calculation I
+# All I am doing is rewriting the same calculation we
 # did above with numbers, but now with the letters. The reason for doing this is that 
 # our aim is to find an equation for the value of :math:`m` which minimises the sum of square 
 # distances.
@@ -346,7 +353,7 @@ print('The model sum of squares is %.4f' % Model_Sum_Of_Squares)
 #  = - 2 x_1 y_1 + 2 x_1^2 m  - 2 x_2 y_2 + 2 x_2^2 m  +  ... - 2 x_{136} y_{136} + 2 x_{136}^2 m  
 #
 # Although this particular step involves alot of algebra, notice that we are doing exactly the same as in the example above.
-# Another thing that I find can confuse students (when I teach this in statistics) is that 
+# Another thing that that can confuse students is that 
 # we differentiate with respect to :math:`m`. 
 # In school, we often use the letter :math:`x` for the variable name and :math:`m` for a constant. Here it is the other way round. 
 # The data :math:`x_i` and :math:`y_i` are constants (measurements from countries) and  :math:`m` is the variable we differentiate for.
@@ -548,26 +555,83 @@ print('The model sum of squares is still %.4f' % Model_Sum_Of_Squares)
 #
 # 
 # Although there is a relationship between these two variables, this does not mean
-# that life expectancy causes happiness.
+# that life expectancy causes happiness. One example of a causal relationship between
+# life expectancy and happiness would be one where people are happier because they 
+# know they are going to live longer. Less direct, but still causal relationship would
+# be that people are happier because they have access to better healthcare, or 
+# that they have less worries about the health of their children and loved ones.
+# There are many seperate factors which can cause both life expectancy and happiness to increase.
+# For example, a country with a high GDP per capita is likely to have both a high life 
+# expectancy and a high happiness score (you can test this in the next section). It may even be the case
+# that happy people co-operate more and build better healthcare systems, which in turn leads to longer life expectancy.
+# 
+# John Helliwell and his colleagues, who collated the data for the World Happiness report, 
+# emphasise the importance of, what they call, `social foundations <https://www.tgcom24.mediaset.it/binary/documento/83.$plit/C_2_documento_1063_upfDocumento.pdf#page=10>`_.
+# in creating a happier world. 
+# Happiness arises when we have choices, when the people around us are generous and 
+# sociable, when we don’t live in poverty and when we are likely to live long lives.  
+# But we have to be careful when interpreting these results. We cannot know, 
+# from cross-country comparison data alone, which factors cause happiness or 
+# merely happen to correlate with it. We don’t know if better healthcare or 
+# better social support cause an increase in happiness, or the other way around. 
+# What we do know is that people in more stable, more prosperous countries, with 
+# greater social support tend to describe themselves as happier. 
 #
+# Think again about yourself. We cannot rely on national questionnaire results to 
+# plan our own path to personal happiness. The majority of the factors which 
+# Helliwell and his colleagues have studied are not under your control. They are 
+# determined by the country you happen to be born in. In some parts of the world 
+# people have access to high quality healthcare and do not experience corruption
+# on an everyday basis. In others they don’t. Access to happiness isn’t entirely a personal 
+# choice, it is just a matter of living in the right country at the right time. 
 #
-# The dangers on confusing correlation for causation.....
 #
 # Exercise: look for other predictors of happiness
 # ===============================================
 #
+# Look at other variables that might predict happiness in the data. You can find the values for
+# these in the dataframe under LogGDP, SocialSupport, Freedom, Generosity and Corruption.
+# Full definitions can be found on the `World Happiness Report <https://data.worldhappiness.report/map>`_ website.
+# 
+
+df[['Country name','LogGDP','SocialSupport','Freedom','Generosity','Corruption']].head()
+
+##############################################################################
+# Choose one of the variables and go through the steps we have done for life expectancy above, applying 
+# them to your chosen variable. Find a different variable that predicts happiness. Make a plot with
+# a fitted line through the data.
 #
-# Find best predictor using sum of squares
-# Give one argument why it causes happiness.
+# Once you have shown the relationship in the data then write 
 # Give one argument why it might be correlated with but does not cause happiness.
-# Advanced add 
+# In the code below we have plotted the relationship between happiness and perceived corruption in countries, as an example.
 
+def plotData(df,x,y): 
+    fig,ax=plt.subplots(num=1)
+    ax.plot(x,y, data=df, linestyle='none', markersize=5, marker='o', color=[0.85, 0.85, 0.85])
+    for country in ['United States','United Kingdom','Croatia','Benin','Finland','Yemen']:
+        ci=np.where(df['Country name']==country)[0][0]
+        ax.plot(  df.iloc[ci][x],df.iloc[ci][y], linestyle='none', markersize=7, marker='o', color='black')
+        ax.text(  df.iloc[ci][x],df.iloc[ci][y]+0.08,  country)
 
+    ax.set_yticks(np.arange(11,step=1))
+    ax.set_ylabel('Average Happiness (0-10)')
+    ax.set_xlabel(x)
+    ax.spines['top'].set_visible(False)
+    ax.spines['right'].set_visible(False)
+    ax.set_xlim(np.min(df['Corruption']),np.max(df['Corruption']))
+    ax.set_ylim(2.5,8.1) 
+    return fig,ax
 
+fig,ax=plotData(df,'Corruption','Happiness')
 
+plt.show()
+
+##############################################################################
 # Using regression in applications
 # ================================
+# We have now seen how to use linear regression to find a line through data points.
+# In the video below we talk to several reasearchers who use linear regression in their work.
 # 
-#
-#
-# Need to write about independent and dependent variables. A bit about each applications
+# .. youtube:: jQZ6db0FzQo
+#    :width: 100% 
+#    :align: center 
