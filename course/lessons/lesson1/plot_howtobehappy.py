@@ -525,17 +525,59 @@ plt.show()
 
 print('The slope of the line is m = %.4f and the intercept is k = %.4f' % (m_best,k_best))
 print('An increase in life expectancy of %.4f years is associated with one extra point of happiness' % (1/m_best))
-
-    
+   
 df=df.assign(SquaredDistance=np.power((df['Predicted'] - df['Happiness']),2))          
 Model_Sum_Of_Squares = np.sum(df['SquaredDistance'])             
-print('The model sum of squares is still %.4f' % Model_Sum_Of_Squares)
 
+print('The model sum of squares is still %.4f' % Model_Sum_Of_Squares)
 
 ##############################################################################
 # Now we have it. By shifting back to the original co-ordinates we
 # can find the best fitting line through the data. Notice that the sum of squares is unaffected by
 # shifting the line back again, since the distances from the points to the line are unaffected. 
+
+##############################################################################
+# Fitting with Statsmodels
+# --------------------------------------------------
+#
+# So, we’ve just done all the math by hand,pretty satisfying, right?
+# But now the big question is... could there be an easier way?
+# Maybe there’s a Python library that just does all the heavy lifting for us?
+#
+# Yep — that’s where `statsmodels` comes in. It basically runs the same linear regression
+# we just worked out by hand, but behind the scenes. This is exactly how a Machine
+# Learning Engineer would handle it in practice — less manual math, more letting Python
+# do the work.
+#
+# What we’re doing here is just checking: does `statsmodels` give us the same m and k
+# If they do, that means our manual derivation was spot on!
+#
+# Let’s test it out — and Victoria from Kenya will walk you through the code.
+#
+# *N.B.* Make sure you have `statsmodels` installed in your Python environment:
+#    pip install statsmodels  or if you are using **conda**:
+#    conda install statsmodels
+#
+# [VIDEO HERE]
+
+
+
+# Import the Ordinary Least Squares (OLS) regression tool from statsmodels
+# "ols" stands for Ordinary Least Squares – the most common method for fitting a line.
+from statsmodels.formula.api import ols
+
+# Fit a linear regression model using statsmodels.
+# The formula 'Happiness ~ LifeExp' means:
+# "predict Happiness using LifeExp as the independent variable".
+model = ols('Happiness ~ LifeExp', data=df).fit()
+
+# Display the model parameters:
+# Intercept corresponds to 'k', and the coefficient for LifeExp corresponds to 'm'.
+print("\nStatsmodels estimated parameters (Intercept and LifeExp):")
+print(model.params)
+
+
+##############################################################################
 #
 # We can say (roughly speaking) that for every 8 years of life expectancy
 # country citizens are about 1 point happier on a scale of 0 to 10. It isn't 

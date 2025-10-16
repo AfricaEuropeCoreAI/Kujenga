@@ -10,8 +10,8 @@
     .. note::
         :class: sphx-glr-download-link-note
 
-        Click :ref:`here <sphx_glr_download_gallery_lesson1_plot_howtobehappy.py>`
-        to download the full example code
+        :ref:`Go to the end <sphx_glr_download_gallery_lesson1_plot_howtobehappy.py>`
+        to download the full example code.
 
 .. rst-class:: sphx-glr-example-title
 
@@ -154,7 +154,7 @@ David Sumpter steps through the code. Watch it first then try running the code y
 
 .. GENERATED FROM PYTHON SOURCE LINES 138-158
 
-.. code-block:: default
+.. code-block:: Python
 
 
     from IPython.display import display
@@ -212,7 +212,7 @@ each of these countries against their happiness (life ladder) scores.
 
 .. GENERATED FROM PYTHON SOURCE LINES 165-192
 
-.. code-block:: default
+.. code-block:: Python
 
 
     from pylab import rcParams
@@ -250,13 +250,6 @@ each of these countries against their happiness (life ladder) scores.
    :class: sphx-glr-single-img
 
 
-.. rst-class:: sphx-glr-script-out
-
- .. code-block:: none
-
-    /Users/davidsumpter/Documents/GitHub/Kujenga/course/lessons/lesson1/plot_howtobehappy.py:190: UserWarning: FigureCanvasAgg is non-interactive, and thus cannot be shown
-      plt.show()
-
 
 
 
@@ -290,7 +283,7 @@ through the cloud of country points, as shown below.
 
 .. GENERATED FROM PYTHON SOURCE LINES 218-235
 
-.. code-block:: default
+.. code-block:: Python
 
 
     # Setup parameters: m is the slope of the line
@@ -317,13 +310,6 @@ through the cloud of country points, as shown below.
    :srcset: /gallery/lesson1/images/sphx_glr_plot_howtobehappy_002.png
    :class: sphx-glr-single-img
 
-
-.. rst-class:: sphx-glr-script-out
-
- .. code-block:: none
-
-    /Users/davidsumpter/Documents/GitHub/Kujenga/course/lessons/lesson1/plot_howtobehappy.py:233: UserWarning: FigureCanvasAgg is non-interactive, and thus cannot be shown
-      plt.show()
 
 
 
@@ -362,7 +348,7 @@ to get an overall measure of how far our predictions our from reality. This is d
 
 .. GENERATED FROM PYTHON SOURCE LINES 265-274
 
-.. code-block:: default
+.. code-block:: Python
 
 
     df=df.assign(SquaredDistance=np.power((df['Predicted'] - df['Happiness']),2))
@@ -503,7 +489,7 @@ Let's use our newly found equation to calculate the line that best fits the data
 
 .. GENERATED FROM PYTHON SOURCE LINES 373-380
 
-.. code-block:: default
+.. code-block:: Python
 
 
     df=df.assign(SquaredLifEExp=np.power(df['LifeExp'],2))
@@ -534,7 +520,7 @@ the model sum of squares
 
 .. GENERATED FROM PYTHON SOURCE LINES 385-403
 
-.. code-block:: default
+.. code-block:: Python
 
 
     Life_Expectancy=np.arange(0.5,100,step=0.01)
@@ -567,8 +553,6 @@ the model sum of squares
 
  .. code-block:: none
 
-    /Users/davidsumpter/Documents/GitHub/Kujenga/course/lessons/lesson1/plot_howtobehappy.py:396: UserWarning: FigureCanvasAgg is non-interactive, and thus cannot be shown
-      plt.show()
     The model sum of squares is 79.9469
 
 
@@ -599,7 +583,7 @@ from happiness. Then replot the data
 
 .. GENERATED FROM PYTHON SOURCE LINES 424-437
 
-.. code-block:: default
+.. code-block:: Python
 
 
     df=df.assign(ShiftedLifeExp=df['LifeExp'] - np.mean(df['LifeExp']))
@@ -623,13 +607,6 @@ from happiness. Then replot the data
    :class: sphx-glr-single-img
 
 
-.. rst-class:: sphx-glr-script-out
-
- .. code-block:: none
-
-    /Users/davidsumpter/Documents/GitHub/Kujenga/course/lessons/lesson1/plot_howtobehappy.py:435: UserWarning: FigureCanvasAgg is non-interactive, and thus cannot be shown
-      plt.show()
-
 
 
 
@@ -648,7 +625,7 @@ Let's now try to find the best fit line which goes through these data points.
 
 .. GENERATED FROM PYTHON SOURCE LINES 448-469
 
-.. code-block:: default
+.. code-block:: Python
 
 
     df=df.assign(SquaredLifEExp=np.power(df['ShiftedLifeExp'],2))
@@ -685,8 +662,6 @@ Let's now try to find the best fit line which goes through these data points.
  .. code-block:: none
 
     The best fitting line has slope m = 0.1226
-    /Users/davidsumpter/Documents/GitHub/Kujenga/course/lessons/lesson1/plot_howtobehappy.py:467: UserWarning: FigureCanvasAgg is non-interactive, and thus cannot be shown
-      plt.show()
 
 
 
@@ -700,7 +675,7 @@ between this new line and the shifted data. This is as follows
 
 .. GENERATED FROM PYTHON SOURCE LINES 474-481
 
-.. code-block:: default
+.. code-block:: Python
 
 
     df=df.assign(Predicted=np.array(m_best*df['ShiftedLifeExp']))       
@@ -754,9 +729,9 @@ Notice that this is an equation for a straight line, so we can write
 
 Let's apply this to data and plot the line again
 
-.. GENERATED FROM PYTHON SOURCE LINES 511-535
+.. GENERATED FROM PYTHON SOURCE LINES 511-534
 
-.. code-block:: default
+.. code-block:: Python
 
 
     k_best = np.mean(df['Happiness']) - m_best*np.mean(df['LifeExp'])
@@ -775,12 +750,11 @@ Let's apply this to data and plot the line again
 
     print('The slope of the line is m = %.4f and the intercept is k = %.4f' % (m_best,k_best))
     print('An increase in life expectancy of %.4f years is associated with one extra point of happiness' % (1/m_best))
-
-    
+   
     df=df.assign(SquaredDistance=np.power((df['Predicted'] - df['Happiness']),2))          
     Model_Sum_Of_Squares = np.sum(df['SquaredDistance'])             
-    print('The model sum of squares is still %.4f' % Model_Sum_Of_Squares)
 
+    print('The model sum of squares is still %.4f' % Model_Sum_Of_Squares)
 
 
 
@@ -795,8 +769,6 @@ Let's apply this to data and plot the line again
 
  .. code-block:: none
 
-    /Users/davidsumpter/Documents/GitHub/Kujenga/course/lessons/lesson1/plot_howtobehappy.py:524: UserWarning: FigureCanvasAgg is non-interactive, and thus cannot be shown
-      plt.show()
     The slope of the line is m = 0.1226 and the intercept is k = -2.4252
     An increase in life expectancy of 8.1580 years is associated with one extra point of happiness
     The model sum of squares is still 71.7665
@@ -804,11 +776,77 @@ Let's apply this to data and plot the line again
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 536-564
+.. GENERATED FROM PYTHON SOURCE LINES 535-538
 
 Now we have it. By shifting back to the original co-ordinates we
 can find the best fitting line through the data. Notice that the sum of squares is unaffected by
 shifting the line back again, since the distances from the points to the line are unaffected. 
+
+.. GENERATED FROM PYTHON SOURCE LINES 540-562
+
+Verifying our analytical solution with Statsmodels
+--------------------------------------------------
+
+So, we’ve just done all the math by hand,pretty satisfying, right?
+But now the big question is... could there be an easier way?
+Maybe there’s a Python library that just does all the heavy lifting for us?
+
+Yep — that’s where `statsmodels` comes in. It basically runs the same linear regression
+we just worked out by hand, but behind the scenes. This is exactly how a Machine
+Learning Engineer would handle it in practice — less manual math, more letting Python
+do the work.
+
+What we’re doing here is just checking: does `statsmodels` give us the same m and k
+If they do, that means our manual derivation was spot on!
+
+Let’s test it out — and Victoria from Kenya will walk you through the code.
+
+*N.B.* Make sure you have `statsmodels` installed in your Python environment:
+   pip install statsmodels  or if you are using **conda**:
+   conda install statsmodels
+
+[VIDEO HERE]
+
+.. GENERATED FROM PYTHON SOURCE LINES 562-580
+
+.. code-block:: Python
+
+
+
+
+    # Import the Ordinary Least Squares (OLS) regression tool from statsmodels
+    # "ols" stands for Ordinary Least Squares – the most common method for fitting a line.
+    from statsmodels.formula.api import ols
+
+    # Fit a linear regression model using statsmodels.
+    # The formula 'Happiness ~ LifeExp' means:
+    # "predict Happiness using LifeExp as the independent variable".
+    model = ols('Happiness ~ LifeExp', data=df).fit()
+
+    # Display the model parameters:
+    # Intercept corresponds to 'k', and the coefficient for LifeExp corresponds to 'm'.
+    print("\nStatsmodels estimated parameters (Intercept and LifeExp):")
+    print(model.params)
+
+
+
+
+
+
+.. rst-class:: sphx-glr-script-out
+
+ .. code-block:: none
+
+
+    Statsmodels estimated parameters (Intercept and LifeExp):
+    Intercept   -2.416310
+    LifeExp      0.122579
+    dtype: float64
+
+
+
+
+.. GENERATED FROM PYTHON SOURCE LINES 581-605
 
 We can say (roughly speaking) that for every 8 years of life expectancy
 country citizens are about 1 point happier on a scale of 0 to 10. It isn't 
@@ -835,9 +873,9 @@ Give one argument why it causes happiness.
 Give one argument why it might be correlated with but does not cause happiness.
 Advanced add 
 
-.. GENERATED FROM PYTHON SOURCE LINES 564-573
+.. GENERATED FROM PYTHON SOURCE LINES 606-615
 
-.. code-block:: default
+.. code-block:: Python
 
 
 
@@ -858,7 +896,7 @@ Advanced add
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  0.609 seconds)
+   **Total running time of the script:** (0 minutes 5.481 seconds)
 
 
 .. _sphx_glr_download_gallery_lesson1_plot_howtobehappy.py:
@@ -867,14 +905,17 @@ Advanced add
 
   .. container:: sphx-glr-footer sphx-glr-footer-example
 
+    .. container:: sphx-glr-download sphx-glr-download-jupyter
+
+      :download:`Download Jupyter notebook: plot_howtobehappy.ipynb <plot_howtobehappy.ipynb>`
 
     .. container:: sphx-glr-download sphx-glr-download-python
 
       :download:`Download Python source code: plot_howtobehappy.py <plot_howtobehappy.py>`
 
-    .. container:: sphx-glr-download sphx-glr-download-jupyter
+    .. container:: sphx-glr-download sphx-glr-download-zip
 
-      :download:`Download Jupyter notebook: plot_howtobehappy.ipynb <plot_howtobehappy.ipynb>`
+      :download:`Download zipped: plot_howtobehappy.zip <plot_howtobehappy.zip>`
 
 
 .. only:: html
