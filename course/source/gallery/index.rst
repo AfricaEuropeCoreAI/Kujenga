@@ -35,7 +35,7 @@ From the book
 
 .. raw:: html
 
-    <div class="sphx-glr-thumbcontainer" tooltip="[VIDEO HERE]">
+    <div class="sphx-glr-thumbcontainer" tooltip="The problem -----------">
 
 .. only:: html
 
