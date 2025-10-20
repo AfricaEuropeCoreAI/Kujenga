@@ -698,6 +698,8 @@
    "name": "DirNamesMixin.assign"
   }
  ],
+<<<<<<< HEAD
+=======
  "df.head": [
   {
    "is_class": false,
@@ -826,6 +828,7 @@
    "name": "DirNamesMixin.head"
   }
  ],
+>>>>>>> upstream/main
  "df.iloc": [
   {
    "is_class": false,
@@ -1315,6 +1318,55 @@
    "name": "FontProperties"
   }
  ],
+<<<<<<< HEAD
+ "model": [
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "statsmodels.regression.linear_model",
+   "module_short": "statsmodels.regression.linear_model",
+   "name": "RegressionResultsWrapper"
+  },
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "statsmodels.regression",
+   "module_short": "statsmodels.regression",
+   "name": "RegressionResultsWrapper"
+  },
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "statsmodels",
+   "module_short": "statsmodels",
+   "name": "RegressionResultsWrapper"
+  }
+ ],
+ "model.params": [
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "pandas.core.series",
+   "module_short": "pandas.core.series",
+   "name": "Series"
+  },
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "pandas.core",
+   "module_short": "pandas.core",
+   "name": "Series"
+  },
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "pandas",
+   "module_short": "pandas",
+   "name": "Series"
+  }
+ ],
+=======
+>>>>>>> upstream/main
  "np.arange": [
   {
    "is_class": false,
@@ -1347,6 +1399,8 @@
    "name": "array"
   }
  ],
+<<<<<<< HEAD
+=======
  "np.max": [
   {
    "is_class": false,
@@ -1363,6 +1417,7 @@
    "name": "max"
   }
  ],
+>>>>>>> upstream/main
  "np.mean": [
   {
    "is_class": false,
@@ -1379,6 +1434,8 @@
    "name": "mean"
   }
  ],
+<<<<<<< HEAD
+=======
  "np.min": [
   {
    "is_class": false,
@@ -1395,6 +1452,7 @@
    "name": "min"
   }
  ],
+>>>>>>> upstream/main
  "np.power": [
   {
    "is_class": false,
@@ -1443,6 +1501,25 @@
    "name": "where"
   }
  ],
+<<<<<<< HEAD
+ "ols": [
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "builtins",
+   "module_short": "builtins",
+   "name": "method"
+  },
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "statsmodels.formula.api",
+   "module_short": "statsmodels.formula.api",
+   "name": "ols"
+  }
+ ],
+=======
+>>>>>>> upstream/main
  "pd.read_csv": [
   {
    "is_class": false,

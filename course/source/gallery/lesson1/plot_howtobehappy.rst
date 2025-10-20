@@ -736,7 +736,7 @@ Notice that this is an equation for a straight line, so we can write
 
 Let's apply this to data and plot the line again
 
-.. GENERATED FROM PYTHON SOURCE LINES 518-542
+.. GENERATED FROM PYTHON SOURCE LINES 518-541
 
 .. code-block:: Python
 
@@ -757,12 +757,11 @@ Let's apply this to data and plot the line again
 
     print('The slope of the line is m = %.4f and the intercept is k = %.4f' % (m_best,k_best))
     print('An increase in life expectancy of %.4f years is associated with one extra point of happiness' % (1/m_best))
-
-    
+   
     df=df.assign(SquaredDistance=np.power((df['Predicted'] - df['Happiness']),2))          
     Model_Sum_Of_Squares = np.sum(df['SquaredDistance'])             
-    print('The model sum of squares is still %.4f' % Model_Sum_Of_Squares)
 
+    print('The model sum of squares is still %.4f' % Model_Sum_Of_Squares)
 
 
 
@@ -784,11 +783,77 @@ Let's apply this to data and plot the line again
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 543-596
+.. GENERATED FROM PYTHON SOURCE LINES 542-545
 
 Now we have it. By shifting back to the original co-ordinates we
 can find the best fitting line through the data. Notice that the sum of squares is unaffected by
 shifting the line back again, since the distances from the points to the line are unaffected. 
+
+.. GENERATED FROM PYTHON SOURCE LINES 547-569
+
+Too Much Math? There’s a Shortcut for That
+--------------------------------------------------
+
+So, we’ve just done all the math by hand,pretty satisfying, right?
+But now the big question is... could there be an easier way?
+Maybe there’s a Python library that just does all the heavy lifting for us?
+
+Yep, that’s where `statsmodels` comes in. It basically runs the same linear regression
+we just worked out by hand, but behind the scenes. This is exactly how a Machine
+Learning Engineer would handle it in practice. Less manual math, more letting Python
+do the work.
+
+What we’re doing here is just checking: does `statsmodels` give us the same m and k
+If they do, that means our manual derivation was spot on!
+
+Let’s test it out — and Victoria from Kenya will walk you through the code.
+
+*N.B.* Make sure you have `statsmodels` installed in your Python environment  by using:
+pip install statsmodels or if you are using conda:
+conda install statsmodels
+
+[VIDEO HERE]
+
+.. GENERATED FROM PYTHON SOURCE LINES 569-587
+
+.. code-block:: Python
+
+
+
+
+    # Import the Ordinary Least Squares (OLS) regression tool from statsmodels
+    # "ols" stands for Ordinary Least Squares – the most common method for fitting a line.
+    from statsmodels.formula.api import ols
+
+    # Fit a linear regression model using statsmodels.
+    # The formula 'Happiness ~ LifeExp' means:
+    # "predict Happiness using LifeExp as the independent variable".
+    model = ols('Happiness ~ LifeExp', data=df).fit()
+
+    # Display the model parameters:
+    # Intercept corresponds to 'k', and the coefficient for LifeExp corresponds to 'm'.
+    print("\nStatsmodels estimated parameters (Intercept and LifeExp):")
+    print(model.params)
+
+
+
+
+
+
+.. rst-class:: sphx-glr-script-out
+
+ .. code-block:: none
+
+
+    Statsmodels estimated parameters (Intercept and LifeExp):
+    Intercept   -2.416310
+    LifeExp      0.122579
+    dtype: float64
+
+
+
+
+.. GENERATED FROM PYTHON SOURCE LINES 588-637
 
 We can say (roughly speaking) that for every 8 years of life expectancy
 country citizens are about 1 point happier on a scale of 0 to 10. It isn't 
@@ -840,12 +905,12 @@ these in the dataframe under LogGDP, SocialSupport, Freedom, Generosity and Corr
 Full definitions can be found on the `World Happiness Report <https://data.worldhappiness.report/map>`_ website.
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 596-599
+.. GENERATED FROM PYTHON SOURCE LINES 638-641
 
 .. code-block:: Python
 
 
-    df.head()
+    df[['Country name','LogGDP','SocialSupport','Freedom','Generosity','Corruption']].head()
 
 
 
@@ -874,214 +939,58 @@ Full definitions can be found on the `World Happiness Report <https://data.world
         <tr style="text-align: right;">
           <th></th>
           <th>Country name</th>
-          <th>Year</th>
-          <th>Happiness</th>
           <th>LogGDP</th>
           <th>SocialSupport</th>
-          <th>LifeExp</th>
           <th>Freedom</th>
           <th>Generosity</th>
           <th>Corruption</th>
-          <th>Positive affect</th>
-          <th>Negative affect</th>
-          <th>Confidence in national government</th>
-          <th>Democratic Quality</th>
-          <th>Delivery Quality</th>
-          <th>Standard deviation of ladder by country-year</th>
-          <th>Standard deviation/Mean of ladder by country-year</th>
-          <th>GINI index (World Bank estimate)</th>
-          <th>GINI index (World Bank estimate), average 2000-16</th>
-          <th>gini of household income reported in Gallup, by wp5-year</th>
-          <th>Most people can be trusted, Gallup</th>
-          <th>Most people can be trusted, WVS round 1981-1984</th>
-          <th>Most people can be trusted, WVS round 1989-1993</th>
-          <th>Most people can be trusted, WVS round 1994-1998</th>
-          <th>Most people can be trusted, WVS round 1999-2004</th>
-          <th>Most people can be trusted, WVS round 2005-2009</th>
-          <th>Most people can be trusted, WVS round 2010-2014</th>
-          <th>Predicted</th>
-          <th>SquaredDistance</th>
-          <th>SquaredLifEExp</th>
-          <th>HappinessLifEExp</th>
-          <th>ShiftedLifeExp</th>
-          <th>ShiftedHappiness</th>
         </tr>
       </thead>
       <tbody>
         <tr>
           <th>10</th>
           <td>Afghanistan</td>
-          <td>2018</td>
-          <td>2.694303</td>
           <td>7.494588</td>
           <td>0.507516</td>
-          <td>52.599998</td>
           <td>0.373536</td>
           <td>-0.084888</td>
           <td>0.927606</td>
-          <td>0.424125</td>
-          <td>0.404904</td>
-          <td>0.364666</td>
-          <td>NaN</td>
-          <td>NaN</td>
-          <td>1.408344</td>
-          <td>0.522712</td>
-          <td>NaN</td>
-          <td>NaN</td>
-          <td>0.290681</td>
-          <td>NaN</td>
-          <td>NaN</td>
-          <td>NaN</td>
-          <td>NaN</td>
-          <td>NaN</td>
-          <td>NaN</td>
-          <td>NaN</td>
-          <td>4.022502</td>
-          <td>1.764113</td>
-          <td>145.705026</td>
-          <td>33.892862</td>
-          <td>-12.070834</td>
-          <td>-2.807831</td>
         </tr>
         <tr>
           <th>21</th>
           <td>Albania</td>
-          <td>2018</td>
-          <td>5.004403</td>
           <td>9.412399</td>
           <td>0.683592</td>
-          <td>68.699997</td>
           <td>0.824212</td>
           <td>0.005385</td>
           <td>0.899129</td>
-          <td>0.713300</td>
-          <td>0.318997</td>
-          <td>0.435338</td>
-          <td>NaN</td>
-          <td>NaN</td>
-          <td>2.640531</td>
-          <td>0.527642</td>
-          <td>NaN</td>
-          <td>0.303250</td>
-          <td>0.456174</td>
-          <td>NaN</td>
-          <td>NaN</td>
-          <td>NaN</td>
-          <td>0.243243</td>
-          <td>0.232000</td>
-          <td>NaN</td>
-          <td>NaN</td>
-          <td>5.996026</td>
-          <td>0.983316</td>
-          <td>16.234169</td>
-          <td>-2.005443</td>
-          <td>4.029165</td>
-          <td>-0.497732</td>
         </tr>
         <tr>
           <th>28</th>
           <td>Algeria</td>
-          <td>2018</td>
-          <td>5.043086</td>
           <td>9.557952</td>
           <td>0.798651</td>
-          <td>65.900002</td>
           <td>0.583381</td>
           <td>-0.172413</td>
           <td>0.758704</td>
-          <td>0.591043</td>
-          <td>0.292946</td>
-          <td>NaN</td>
-          <td>NaN</td>
-          <td>NaN</td>
-          <td>1.973943</td>
-          <td>0.391416</td>
-          <td>NaN</td>
-          <td>0.276000</td>
-          <td>0.667872</td>
-          <td>NaN</td>
-          <td>NaN</td>
-          <td>NaN</td>
-          <td>NaN</td>
-          <td>0.107644</td>
-          <td>NaN</td>
-          <td>0.179286</td>
-          <td>5.652805</td>
-          <td>0.371757</td>
-          <td>1.510857</td>
-          <td>-0.564248</td>
-          <td>1.229169</td>
-          <td>-0.459048</td>
         </tr>
         <tr>
           <th>45</th>
           <td>Argentina</td>
-          <td>2018</td>
-          <td>5.792797</td>
           <td>9.809972</td>
           <td>0.899912</td>
-          <td>68.800003</td>
           <td>0.845895</td>
           <td>-0.206937</td>
           <td>0.855255</td>
-          <td>0.820310</td>
-          <td>0.320502</td>
-          <td>0.261352</td>
-          <td>NaN</td>
-          <td>NaN</td>
-          <td>2.472559</td>
-          <td>0.426833</td>
-          <td>NaN</td>
-          <td>0.460938</td>
-          <td>0.405356</td>
-          <td>NaN</td>
-          <td>0.270073</td>
-          <td>0.223553</td>
-          <td>0.170844</td>
-          <td>0.150154</td>
-          <td>0.174058</td>
-          <td>0.193531</td>
-          <td>6.008284</td>
-          <td>0.046435</td>
-          <td>17.050052</td>
-          <td>1.200194</td>
-          <td>4.129171</td>
-          <td>0.290662</td>
         </tr>
         <tr>
           <th>58</th>
           <td>Armenia</td>
-          <td>2018</td>
-          <td>5.062449</td>
           <td>9.119424</td>
           <td>0.814449</td>
-          <td>66.900002</td>
           <td>0.807644</td>
           <td>-0.149109</td>
           <td>0.676826</td>
-          <td>0.581488</td>
-          <td>0.454840</td>
-          <td>0.670828</td>
-          <td>NaN</td>
-          <td>NaN</td>
-          <td>2.102111</td>
-          <td>0.415236</td>
-          <td>NaN</td>
-          <td>0.319250</td>
-          <td>0.406403</td>
-          <td>NaN</td>
-          <td>NaN</td>
-          <td>NaN</td>
-          <td>0.235000</td>
-          <td>NaN</td>
-          <td>NaN</td>
-          <td>0.109136</td>
-          <td>5.775384</td>
-          <td>0.508277</td>
-          <td>4.969196</td>
-          <td>-0.980134</td>
-          <td>2.229169</td>
-          <td>-0.439686</td>
         </tr>
       </tbody>
     </table>
@@ -1090,7 +999,7 @@ Full definitions can be found on the `World Happiness Report <https://data.world
     <br />
     <br />
 
-.. GENERATED FROM PYTHON SOURCE LINES 600-607
+.. GENERATED FROM PYTHON SOURCE LINES 642-649
 
 Choose one of the variables and go through the steps we have done for life expectancy above, applying 
 them to your chosen variable. Find a different variable that predicts happiness. Make a plot with
@@ -1100,7 +1009,7 @@ Once you have shown the relationship in the data then write
 Give one argument why it might be correlated with but does not cause happiness.
 In the code below we have plotted the relationship between happiness and perceived corruption in countries, as an example.
 
-.. GENERATED FROM PYTHON SOURCE LINES 607-629
+.. GENERATED FROM PYTHON SOURCE LINES 649-671
 
 .. code-block:: Python
 
@@ -1138,7 +1047,7 @@ In the code below we have plotted the relationship between happiness and perceiv
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 630-638
+.. GENERATED FROM PYTHON SOURCE LINES 672-680
 
 Using regression in applications
 ================================
@@ -1152,7 +1061,7 @@ In the video below we talk to several reasearchers who use linear regression in 
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** (0 minutes 0.678 seconds)
+   **Total running time of the script:** (0 minutes 5.830 seconds)
 
 
 .. _sphx_glr_download_gallery_lesson1_plot_howtobehappy.py:

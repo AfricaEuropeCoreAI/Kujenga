@@ -6,7 +6,11 @@
 
 Computation times
 =================
+<<<<<<< HEAD
+**00:05.481** total execution time for 7 files **from all galleries**:
+=======
 **00:00.678** total execution time for 7 files **from all galleries**:
+>>>>>>> upstream/main
 
 .. container::
 
@@ -33,7 +37,11 @@ Computation times
      - Time
      - Mem (MB)
    * - :ref:`sphx_glr_gallery_lesson1_plot_howtobehappy.py` (``../lessons/lesson1/plot_howtobehappy.py``)
+<<<<<<< HEAD
+     - 00:05.481
+=======
      - 00:00.678
+>>>>>>> upstream/main
      - 0.0
    * - :ref:`sphx_glr_gallery_lesson2_plot_SEIR.py` (``../lessons/lesson2/plot_SEIR.py``)
      - 00:00.000

@@ -6,7 +6,11 @@
 
 Computation times
 =================
+<<<<<<< HEAD
+**00:00.130** total execution time for 1 file **from gallery/lesson4**:
+=======
 **00:00.011** total execution time for 1 file **from gallery/lesson4**:
+>>>>>>> upstream/main
 
 .. container::
 
@@ -33,5 +37,9 @@ Computation times
      - Time
      - Mem (MB)
    * - :ref:`sphx_glr_gallery_lesson4_plot_influencer.py` (``plot_influencer.py``)
+<<<<<<< HEAD
+     - 00:00.130
+=======
      - 00:00.011
+>>>>>>> upstream/main
      - 0.0
