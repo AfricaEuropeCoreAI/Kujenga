@@ -544,16 +544,16 @@ print('The model sum of squares is still %.4f' % Model_Sum_Of_Squares)
 # shifting the line back again, since the distances from the points to the line are unaffected. 
 
 ##############################################################################
-# Verifying our analytical solution with Statsmodels
+# Too Much Math? There’s a Shortcut for That
 # --------------------------------------------------
 #
 # So, we’ve just done all the math by hand,pretty satisfying, right?
 # But now the big question is... could there be an easier way?
 # Maybe there’s a Python library that just does all the heavy lifting for us?
 #
-# Yep — that’s where `statsmodels` comes in. It basically runs the same linear regression
+# Yep, that’s where `statsmodels` comes in. It basically runs the same linear regression
 # we just worked out by hand, but behind the scenes. This is exactly how a Machine
-# Learning Engineer would handle it in practice — less manual math, more letting Python
+# Learning Engineer would handle it in practice. Less manual math, more letting Python
 # do the work.
 #
 # What we’re doing here is just checking: does `statsmodels` give us the same m and k
@@ -561,9 +561,9 @@ print('The model sum of squares is still %.4f' % Model_Sum_Of_Squares)
 #
 # Let’s test it out — and Victoria from Kenya will walk you through the code.
 #
-# *N.B.* Make sure you have `statsmodels` installed in your Python environment:
-#    pip install statsmodels  or if you are using **conda**:
-#    conda install statsmodels
+# *N.B.* Make sure you have `statsmodels` installed in your Python environment  by using:
+# pip install statsmodels or if you are using conda:
+# conda install statsmodels
 #
 # [VIDEO HERE]
 
@@ -636,7 +636,7 @@ print(model.params)
 # Full definitions can be found on the `World Happiness Report <https://data.worldhappiness.report/map>`_ website.
 # 
 
-df.head()
+df[['Country name','LogGDP','SocialSupport','Freedom','Generosity','Corruption']].head()
 
 ##############################################################################
 # Choose one of the variables and go through the steps we have done for life expectancy above, applying 
