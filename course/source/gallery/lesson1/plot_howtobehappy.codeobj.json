@@ -49,6 +49,64 @@
    "name": "Axes"
   }
  ],
+ "ax.legend": [
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "matplotlib.axes._axes",
+   "module_short": "matplotlib.axes",
+   "name": "Axes.legend"
+  },
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "matplotlib.axes",
+   "module_short": "matplotlib.axes",
+   "name": "Axes.legend"
+  },
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "matplotlib",
+   "module_short": "matplotlib",
+   "name": "Axes.legend"
+  },
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "matplotlib.axes._base",
+   "module_short": "matplotlib.axes._base",
+   "name": "_AxesBase.legend"
+  },
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "matplotlib.axes",
+   "module_short": "matplotlib.axes",
+   "name": "_AxesBase.legend"
+  },
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "matplotlib",
+   "module_short": "matplotlib",
+   "name": "_AxesBase.legend"
+  },
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "matplotlib.artist",
+   "module_short": "matplotlib.artist",
+   "name": "Artist.legend"
+  },
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "matplotlib",
+   "module_short": "matplotlib",
+   "name": "Artist.legend"
+  }
+ ],
  "ax.plot": [
   {
    "is_class": false,
@@ -698,137 +756,6 @@
    "name": "DirNamesMixin.assign"
   }
  ],
-<<<<<<< HEAD
-=======
- "df.head": [
-  {
-   "is_class": false,
-   "is_explicit": false,
-   "module": "pandas.core.frame",
-   "module_short": "pandas.core.frame",
-   "name": "DataFrame.head"
-  },
-  {
-   "is_class": false,
-   "is_explicit": false,
-   "module": "pandas.core",
-   "module_short": "pandas.core",
-   "name": "DataFrame.head"
-  },
-  {
-   "is_class": false,
-   "is_explicit": false,
-   "module": "pandas",
-   "module_short": "pandas",
-   "name": "DataFrame.head"
-  },
-  {
-   "is_class": false,
-   "is_explicit": false,
-   "module": "pandas.core.generic",
-   "module_short": "pandas.core.generic",
-   "name": "NDFrame.head"
-  },
-  {
-   "is_class": false,
-   "is_explicit": false,
-   "module": "pandas.core",
-   "module_short": "pandas.core",
-   "name": "NDFrame.head"
-  },
-  {
-   "is_class": false,
-   "is_explicit": false,
-   "module": "pandas",
-   "module_short": "pandas",
-   "name": "NDFrame.head"
-  },
-  {
-   "is_class": false,
-   "is_explicit": false,
-   "module": "pandas.core.arraylike",
-   "module_short": "pandas.core.arraylike",
-   "name": "OpsMixin.head"
-  },
-  {
-   "is_class": false,
-   "is_explicit": false,
-   "module": "pandas.core",
-   "module_short": "pandas.core",
-   "name": "OpsMixin.head"
-  },
-  {
-   "is_class": false,
-   "is_explicit": false,
-   "module": "pandas",
-   "module_short": "pandas",
-   "name": "OpsMixin.head"
-  },
-  {
-   "is_class": false,
-   "is_explicit": false,
-   "module": "pandas.core.base",
-   "module_short": "pandas.core.base",
-   "name": "PandasObject.head"
-  },
-  {
-   "is_class": false,
-   "is_explicit": false,
-   "module": "pandas.core",
-   "module_short": "pandas.core",
-   "name": "PandasObject.head"
-  },
-  {
-   "is_class": false,
-   "is_explicit": false,
-   "module": "pandas",
-   "module_short": "pandas",
-   "name": "PandasObject.head"
-  },
-  {
-   "is_class": false,
-   "is_explicit": false,
-   "module": "pandas.core.indexing",
-   "module_short": "pandas.core.indexing",
-   "name": "IndexingMixin.head"
-  },
-  {
-   "is_class": false,
-   "is_explicit": false,
-   "module": "pandas.core",
-   "module_short": "pandas.core",
-   "name": "IndexingMixin.head"
-  },
-  {
-   "is_class": false,
-   "is_explicit": false,
-   "module": "pandas",
-   "module_short": "pandas",
-   "name": "IndexingMixin.head"
-  },
-  {
-   "is_class": false,
-   "is_explicit": false,
-   "module": "pandas.core.accessor",
-   "module_short": "pandas.core.accessor",
-   "name": "DirNamesMixin.head"
-  },
-  {
-   "is_class": false,
-   "is_explicit": false,
-   "module": "pandas.core",
-   "module_short": "pandas.core",
-   "name": "DirNamesMixin.head"
-  },
-  {
-   "is_class": false,
-   "is_explicit": false,
-   "module": "pandas",
-   "module_short": "pandas",
-   "name": "DirNamesMixin.head"
-  }
- ],
->>>>>>> upstream/main
  "df.iloc": [
   {
    "is_class": false,
@@ -1268,6 +1195,36 @@
    "name": "DirNamesMixin.rename"
   }
  ],
+ "interact": [
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "ipywidgets.widgets.interaction",
+   "module_short": "ipywidgets.widgets.interaction",
+   "name": "_InteractFactory"
+  },
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "ipywidgets.widgets",
+   "module_short": "ipywidgets.widgets",
+   "name": "_InteractFactory"
+  },
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "ipywidgets",
+   "module_short": "ipywidgets",
+   "name": "_InteractFactory"
+  },
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "ipywidgets",
+   "module_short": "ipywidgets",
+   "name": "interact"
+  }
+ ],
  "k_best": [
   {
    "is_class": false,
@@ -1295,6 +1252,29 @@
    "name": "float64"
   }
  ],
+ "m_slider": [
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "ipywidgets.widgets.widget_float",
+   "module_short": "ipywidgets",
+   "name": "FloatSlider"
+  },
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "ipywidgets.widgets",
+   "module_short": "ipywidgets",
+   "name": "FloatSlider"
+  },
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "ipywidgets",
+   "module_short": "ipywidgets",
+   "name": "FloatSlider"
+  }
+ ],
  "matplotlib.font_manager.FontProperties": [
   {
    "is_class": true,
@@ -1318,7 +1298,6 @@
    "name": "FontProperties"
   }
  ],
-<<<<<<< HEAD
  "model": [
   {
    "is_class": false,
@@ -1365,8 +1344,6 @@
    "name": "Series"
   }
  ],
-=======
->>>>>>> upstream/main
  "np.arange": [
   {
    "is_class": false,
@@ -1399,8 +1376,6 @@
    "name": "array"
   }
  ],
-<<<<<<< HEAD
-=======
  "np.max": [
   {
    "is_class": false,
@@ -1417,7 +1392,6 @@
    "name": "max"
   }
  ],
->>>>>>> upstream/main
  "np.mean": [
   {
    "is_class": false,
@@ -1434,8 +1408,6 @@
    "name": "mean"
   }
  ],
-<<<<<<< HEAD
-=======
  "np.min": [
   {
    "is_class": false,
@@ -1452,7 +1424,6 @@
    "name": "min"
   }
  ],
->>>>>>> upstream/main
  "np.power": [
   {
    "is_class": false,
@@ -1501,7 +1472,6 @@
    "name": "where"
   }
  ],
-<<<<<<< HEAD
  "ols": [
   {
    "is_class": false,
@@ -1518,8 +1488,6 @@
    "name": "ols"
   }
  ],
-=======
->>>>>>> upstream/main
  "pd.read_csv": [
   {
    "is_class": false,
@@ -1537,6 +1505,15 @@
   }
  ],
  "plotData": [
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "builtins",
+   "module_short": "builtins",
+   "name": "function"
+  }
+ ],
+ "plot_with_m": [
   {
    "is_class": false,
    "is_explicit": false,
@@ -1591,6 +1568,232 @@
    "module": "pylab",
    "module_short": "pylab",
    "name": "rcParams"
+  }
+ ],
+ "widgets.FloatSlider": [
+  {
+   "is_class": true,
+   "is_explicit": false,
+   "module": "ipywidgets.widgets.widget_float",
+   "module_short": "ipywidgets",
+   "name": "FloatSlider"
+  },
+  {
+   "is_class": true,
+   "is_explicit": false,
+   "module": "ipywidgets.widgets",
+   "module_short": "ipywidgets",
+   "name": "FloatSlider"
+  },
+  {
+   "is_class": true,
+   "is_explicit": false,
+   "module": "ipywidgets",
+   "module_short": "ipywidgets",
+   "name": "FloatSlider"
+  },
+  {
+   "is_class": true,
+   "is_explicit": false,
+   "module": "ipywidgets.widgets.widget_float",
+   "module_short": "ipywidgets.widgets.widget_float",
+   "name": "_BoundedFloat"
+  },
+  {
+   "is_class": true,
+   "is_explicit": false,
+   "module": "ipywidgets.widgets",
+   "module_short": "ipywidgets.widgets",
+   "name": "_BoundedFloat"
+  },
+  {
+   "is_class": true,
+   "is_explicit": false,
+   "module": "ipywidgets",
+   "module_short": "ipywidgets",
+   "name": "_BoundedFloat"
+  },
+  {
+   "is_class": true,
+   "is_explicit": false,
+   "module": "ipywidgets.widgets.widget_float",
+   "module_short": "ipywidgets.widgets.widget_float",
+   "name": "_Float"
+  },
+  {
+   "is_class": true,
+   "is_explicit": false,
+   "module": "ipywidgets.widgets",
+   "module_short": "ipywidgets.widgets",
+   "name": "_Float"
+  },
+  {
+   "is_class": true,
+   "is_explicit": false,
+   "module": "ipywidgets",
+   "module_short": "ipywidgets",
+   "name": "_Float"
+  },
+  {
+   "is_class": true,
+   "is_explicit": false,
+   "module": "ipywidgets.widgets.widget_description",
+   "module_short": "ipywidgets.widgets.widget_description",
+   "name": "DescriptionWidget"
+  },
+  {
+   "is_class": true,
+   "is_explicit": false,
+   "module": "ipywidgets.widgets",
+   "module_short": "ipywidgets.widgets",
+   "name": "DescriptionWidget"
+  },
+  {
+   "is_class": true,
+   "is_explicit": false,
+   "module": "ipywidgets",
+   "module_short": "ipywidgets",
+   "name": "DescriptionWidget"
+  },
+  {
+   "is_class": true,
+   "is_explicit": false,
+   "module": "ipywidgets.widgets.valuewidget",
+   "module_short": "ipywidgets",
+   "name": "ValueWidget"
+  },
+  {
+   "is_class": true,
+   "is_explicit": false,
+   "module": "ipywidgets.widgets",
+   "module_short": "ipywidgets",
+   "name": "ValueWidget"
+  },
+  {
+   "is_class": true,
+   "is_explicit": false,
+   "module": "ipywidgets",
+   "module_short": "ipywidgets",
+   "name": "ValueWidget"
+  },
+  {
+   "is_class": true,
+   "is_explicit": false,
+   "module": "ipywidgets.widgets.widget_core",
+   "module_short": "ipywidgets",
+   "name": "CoreWidget"
+  },
+  {
+   "is_class": true,
+   "is_explicit": false,
+   "module": "ipywidgets.widgets",
+   "module_short": "ipywidgets",
+   "name": "CoreWidget"
+  },
+  {
+   "is_class": true,
+   "is_explicit": false,
+   "module": "ipywidgets",
+   "module_short": "ipywidgets",
+   "name": "CoreWidget"
+  },
+  {
+   "is_class": true,
+   "is_explicit": false,
+   "module": "ipywidgets.widgets.domwidget",
+   "module_short": "ipywidgets",
+   "name": "DOMWidget"
+  },
+  {
+   "is_class": true,
+   "is_explicit": false,
+   "module": "ipywidgets.widgets",
+   "module_short": "ipywidgets",
+   "name": "DOMWidget"
+  },
+  {
+   "is_class": true,
+   "is_explicit": false,
+   "module": "ipywidgets",
+   "module_short": "ipywidgets",
+   "name": "DOMWidget"
+  },
+  {
+   "is_class": true,
+   "is_explicit": false,
+   "module": "ipywidgets.widgets.widget",
+   "module_short": "ipywidgets",
+   "name": "Widget"
+  },
+  {
+   "is_class": true,
+   "is_explicit": false,
+   "module": "ipywidgets.widgets",
+   "module_short": "ipywidgets",
+   "name": "Widget"
+  },
+  {
+   "is_class": true,
+   "is_explicit": false,
+   "module": "ipywidgets",
+   "module_short": "ipywidgets",
+   "name": "Widget"
+  },
+  {
+   "is_class": true,
+   "is_explicit": false,
+   "module": "ipywidgets.widgets.widget",
+   "module_short": "ipywidgets.widgets.widget",
+   "name": "LoggingHasTraits"
+  },
+  {
+   "is_class": true,
+   "is_explicit": false,
+   "module": "ipywidgets.widgets",
+   "module_short": "ipywidgets.widgets",
+   "name": "LoggingHasTraits"
+  },
+  {
+   "is_class": true,
+   "is_explicit": false,
+   "module": "ipywidgets",
+   "module_short": "ipywidgets",
+   "name": "LoggingHasTraits"
+  },
+  {
+   "is_class": true,
+   "is_explicit": false,
+   "module": "traitlets.traitlets",
+   "module_short": "traitlets",
+   "name": "HasTraits"
+  },
+  {
+   "is_class": true,
+   "is_explicit": false,
+   "module": "traitlets",
+   "module_short": "traitlets",
+   "name": "HasTraits"
+  },
+  {
+   "is_class": true,
+   "is_explicit": false,
+   "module": "traitlets.traitlets",
+   "module_short": "traitlets",
+   "name": "HasDescriptors"
+  },
+  {
+   "is_class": true,
+   "is_explicit": false,
+   "module": "traitlets",
+   "module_short": "traitlets",
+   "name": "HasDescriptors"
+  },
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "ipywidgets.widgets",
+   "module_short": "ipywidgets",
+   "name": "FloatSlider"
   }
  ]
 }

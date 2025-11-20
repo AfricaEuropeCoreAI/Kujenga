@@ -247,6 +247,55 @@ plt.show()
 #   changing the values 1/12 and replotting the line.
 #   See if you can find a line that lies closer to the data points.
 #
+
+
+from ipywidgets import interact, widgets
+
+# Function that updates the plot based on m
+def plot_with_m(m):
+    Life_Expectancy = np.arange(0.5, 100, step=0.01)
+    Happiness = m * Life_Expectancy
+    #Happiness = (m * Life_Expectancy)+k
+
+    # Plot data
+    fig, ax = plotData(df, 'LifeExp', 'Happiness')
+    ax.plot(Life_Expectancy, Happiness, linestyle='-', color='black', label=f'm = {m:.4f}')
+    #ax.plot(Life_Expectancy, Happiness, linestyle='-', color='black', label=f'm = {m:.4f},k={k:.3f}')
+
+    # Update df with predicted values
+    df_plot= df.assign(Predicted=np.array(m * df['LifeExp']))
+
+    # Highlight selected countries
+    for country in ['United States', 'United Kingdom', 'Croatia', 'Benin', 'Finland', 'Yemen']:
+        ci = np.where(df['Country name'] == country)[0][0]
+        ax.plot([df_plot.iloc[ci]['LifeExp'], df_plot.iloc[ci]['LifeExp']],
+                [df_plot.iloc[ci]['Happiness'], df_plot.iloc[ci]['Predicted']],
+                linestyle=':', color='black')
+
+
+    df_plot=df_plot.assign(SquaredDistance=np.power((df_plot['Predicted'] - df_plot['Happiness']),2))
+
+    #display(df[['Country name','Happiness','Predicted','SquaredDistance']])
+    Model_Sum_Of_Squares = np.sum(df_plot['SquaredDistance'])
+
+    print('The model sum of squares is %.4f' % Model_Sum_Of_Squares)
+
+    ax.legend()
+    plt.show()
+
+# Define a range for m and display numeric values
+m_slider = widgets.FloatSlider(
+    value=1/12,
+    min=1/20,
+    max=1/8,
+    step=0.00001,
+    description='m',
+    readout=True,       # Show numeric value
+    readout_format='.6f'  # Format the display (3 decimal places)
+)
+# Create dropdown widget
+interact(plot_with_m, m=m_slider)
+
 #
 # The sum of squares
 # ------------------
@@ -551,9 +600,9 @@ print('The model sum of squares is still %.4f' % Model_Sum_Of_Squares)
 # But now the big question is... could there be an easier way?
 # Maybe there’s a Python library that just does all the heavy lifting for us?
 #
-# Yep, that’s where `statsmodels` comes in. It basically runs the same linear regression
+# Yep — that’s where `statsmodels` comes in. It basically runs the same linear regression
 # we just worked out by hand, but behind the scenes. This is exactly how a Machine
-# Learning Engineer would handle it in practice. Less manual math, more letting Python
+# Learning Engineer would handle it in practice — less manual math, more letting Python
 # do the work.
 #
 # What we’re doing here is just checking: does `statsmodels` give us the same m and k
@@ -561,9 +610,9 @@ print('The model sum of squares is still %.4f' % Model_Sum_Of_Squares)
 #
 # Let’s test it out — and Victoria from Kenya will walk you through the code.
 #
-# *N.B.* Make sure you have `statsmodels` installed in your Python environment  by using:
-# pip install statsmodels or if you are using conda:
-# conda install statsmodels
+# *N.B.* Make sure you have `statsmodels` installed in your Python environment:
+#    pip install statsmodels  or if you are using **conda**:
+#    conda install statsmodels
 #
 # [VIDEO HERE]
 
