@@ -331,7 +331,7 @@ through the cloud of country points, as shown below.
   See if you can find a line that lies closer to the data points.
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 250-330
+.. GENERATED FROM PYTHON SOURCE LINES 250-298
 
 .. code-block:: Python
 
@@ -384,38 +384,6 @@ through the cloud of country points, as shown below.
     # Create dropdown widget
     interact(plot_with_m, m=m_slider)
 
-    #
-    # The sum of squares
-    # ------------------
-    #
-    # Each of the dotted lines above show how far the line – which predicts that happiness is one 
-    # twelfth of life expectancy – is from the data for each of the six highlighted countries.
-    # For example, the USA has a happiness score of 6.88 and an 
-    # average life expectancy of 68.3. The first equation (figure 2b) predicts 
-    #
-    # .. math::
-    #    
-    #    \mbox{Predicted USA Happiness} = \frac{\mbox{USA Life Expectancy}}{12} = \frac{\mbox{68.3}}{12} =  5.69
-    #
-    # Which means that the squared distance between the prediction and reality is 
-    #
-    # .. math::
-    #    
-    #  (6.88 - 5.69)^2 = 1.412
-    #
-    # The table below shows the predicted value and the squared distance between 
-    # prediction and reality for each country. We then sum these squared distances 
-    # to get an overall measure of how far our predictions our from reality. This is done below.
-
-    df=df.assign(SquaredDistance=np.power((df['Predicted'] - df['Happiness']),2))
-    display(df[['Country name','Happiness','Predicted','SquaredDistance']])
-             
-    Model_Sum_Of_Squares = np.sum(df['SquaredDistance'])
-
-    print('The model sum of squares is %.4f' % Model_Sum_Of_Squares)
-
-
-
 
 
 .. image-sg:: /gallery/lesson1/images/sphx_glr_plot_howtobehappy_003.png
@@ -430,6 +398,56 @@ through the cloud of country points, as shown below.
 
             The model sum of squares is 82.8467
     interactive(children=(FloatSlider(value=0.08333333333333333, description='m', max=0.125, min=0.05, readout_format='.6f', step=1e-05), Output()), _dom_classes=('widget-interact',))
+
+    <function plot_with_m at 0x000002A5535F4E00>
+
+
+
+.. GENERATED FROM PYTHON SOURCE LINES 299-320
+
+The sum of squares
+------------------
+
+Each of the dotted lines above show how far the line – which predicts that happiness is one 
+twelfth of life expectancy – is from the data for each of the six highlighted countries.
+For example, the USA has a happiness score of 6.88 and an 
+average life expectancy of 68.3. The first equation (figure 2b) predicts 
+
+.. math::
+
+   \mbox{Predicted USA Happiness} = \frac{\mbox{USA Life Expectancy}}{12} = \frac{\mbox{68.3}}{12} =  5.69
+
+Which means that the squared distance between the prediction and reality is 
+
+.. math::
+
+ (6.88 - 5.69)^2 = 1.412
+
+The table below shows the predicted value and the squared distance between 
+prediction and reality for each country. We then sum these squared distances 
+to get an overall measure of how far our predictions our from reality. This is done below.
+
+.. GENERATED FROM PYTHON SOURCE LINES 321-330
+
+.. code-block:: Python
+
+
+    df=df.assign(SquaredDistance=np.power((df['Predicted'] - df['Happiness']),2))
+    display(df[['Country name','Happiness','Predicted','SquaredDistance']])
+             
+    Model_Sum_Of_Squares = np.sum(df['SquaredDistance'])
+
+    print('The model sum of squares is %.4f' % Model_Sum_Of_Squares)
+
+
+
+
+
+
+.. rst-class:: sphx-glr-script-out
+
+ .. code-block:: none
+
          Country name  Happiness  Predicted  SquaredDistance
     10    Afghanistan   2.694303   4.383333         2.852822
     21        Albania   5.004403   5.725000         0.519260
@@ -1117,7 +1135,7 @@ In the video below we talk to several reasearchers who use linear regression in 
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** (0 minutes 3.592 seconds)
+   **Total running time of the script:** (0 minutes 3.193 seconds)
 
 
 .. _sphx_glr_download_gallery_lesson1_plot_howtobehappy.py:
