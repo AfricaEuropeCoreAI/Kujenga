@@ -295,7 +295,7 @@ m_slider = widgets.FloatSlider(
 )
 # Create dropdown widget
 interact(plot_with_m, m=m_slider)
-
+##############################################################################
 #
 # The sum of squares
 # ------------------
