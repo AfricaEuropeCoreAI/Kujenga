@@ -247,7 +247,7 @@ plt.show()
 #   changing the values 1/12 and replotting the line.
 #   See if you can find a line that lies closer to the data points.
 #
-##############################################################################
+
 
 from ipywidgets import interact, widgets
 
