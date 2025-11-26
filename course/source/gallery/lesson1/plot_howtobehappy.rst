@@ -159,7 +159,7 @@ David Sumpter steps through the code. Watch it first then try running the code y
 
 [VIDEO HERE]
 
-.. GENERATED FROM PYTHON SOURCE LINES 145-165
+.. GENERATED FROM PYTHON SOURCE LINES 147-167
 
 .. code-block:: Python
 
@@ -209,7 +209,7 @@ David Sumpter steps through the code. Watch it first then try running the code y
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 166-171
+.. GENERATED FROM PYTHON SOURCE LINES 168-173
 
 Creating the plot 
 -----------------
@@ -217,7 +217,7 @@ The code below plots the average life expectancy of
 each of these countries against their happiness (life ladder) scores. 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 172-199
+.. GENERATED FROM PYTHON SOURCE LINES 174-201
 
 .. code-block:: Python
 
@@ -260,7 +260,7 @@ each of these countries against their happiness (life ladder) scores.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 200-225
+.. GENERATED FROM PYTHON SOURCE LINES 202-227
 
 Each circle in the plot is a country. 
 The x-axis shows the life expectancy in the country and 
@@ -288,7 +288,7 @@ If the life expectancy is 78 then average happiness is predicted to be 78/12=6.5
 We can draw this equation in the form of a straight line going 
 through the cloud of country points, as shown below.
 
-.. GENERATED FROM PYTHON SOURCE LINES 225-242
+.. GENERATED FROM PYTHON SOURCE LINES 227-244
 
 .. code-block:: Python
 
@@ -321,89 +321,20 @@ through the cloud of country points, as shown below.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 243-250
+.. GENERATED FROM PYTHON SOURCE LINES 245-246
+
+[Video here]
+
+.. GENERATED FROM PYTHON SOURCE LINES 248-254
 
 .. admonition:: Try it yourself!
 
   Download the code by clicking on the link below and 
   try changing the slope and the intercept of the line above by 
   changing the values 1/12 and replotting the line.
-  See if you can find a line that lies closer to the data points.
+  See if you can find a line that lies closer to the data points. OR `Try this link for interactivity  <https://mybinder.org/v2/gh/AfricaEuropeCoreAI/Kujenga/Interactive?urlpath=%2Fdoc%2Ftree%2Fcourse%2Flessons%2Flesson1%2Fplot_howtobehappy.ipynb>`_
 
-
-.. GENERATED FROM PYTHON SOURCE LINES 250-298
-
-.. code-block:: Python
-
-
-
-    from ipywidgets import interact, widgets
-
-    # Function that updates the plot based on m
-    def plot_with_m(m):
-        Life_Expectancy = np.arange(0.5, 100, step=0.01)
-        Happiness = m * Life_Expectancy
-        #Happiness = (m * Life_Expectancy)+k
-
-        # Plot data
-        fig, ax = plotData(df, 'LifeExp', 'Happiness')
-        ax.plot(Life_Expectancy, Happiness, linestyle='-', color='black', label=f'm = {m:.4f}')
-        #ax.plot(Life_Expectancy, Happiness, linestyle='-', color='black', label=f'm = {m:.4f},k={k:.3f}')
-
-        # Update df with predicted values
-        df_plot= df.assign(Predicted=np.array(m * df['LifeExp']))
-
-        # Highlight selected countries
-        for country in ['United States', 'United Kingdom', 'Croatia', 'Benin', 'Finland', 'Yemen']:
-            ci = np.where(df['Country name'] == country)[0][0]
-            ax.plot([df_plot.iloc[ci]['LifeExp'], df_plot.iloc[ci]['LifeExp']],
-                    [df_plot.iloc[ci]['Happiness'], df_plot.iloc[ci]['Predicted']],
-                    linestyle=':', color='black')
-
-
-        df_plot=df_plot.assign(SquaredDistance=np.power((df_plot['Predicted'] - df_plot['Happiness']),2))
-
-        #display(df[['Country name','Happiness','Predicted','SquaredDistance']])
-        Model_Sum_Of_Squares = np.sum(df_plot['SquaredDistance'])
-
-        print('The model sum of squares is %.4f' % Model_Sum_Of_Squares)
-
-        ax.legend()
-        plt.show()
-
-    # Define a range for m and display numeric values
-    m_slider = widgets.FloatSlider(
-        value=1/12,
-        min=1/20,
-        max=1/8,
-        step=0.00001,
-        description='m',
-        readout=True,       # Show numeric value
-        readout_format='.6f'  # Format the display (3 decimal places)
-    )
-    # Create dropdown widget
-    interact(plot_with_m, m=m_slider)
-
-
-
-.. image-sg:: /gallery/lesson1/images/sphx_glr_plot_howtobehappy_003.png
-   :alt: plot howtobehappy
-   :srcset: /gallery/lesson1/images/sphx_glr_plot_howtobehappy_003.png
-   :class: sphx-glr-single-img
-
-
-.. rst-class:: sphx-glr-script-out
-
- .. code-block:: none
-
-            The model sum of squares is 82.8467
-    interactive(children=(FloatSlider(value=0.08333333333333333, description='m', max=0.125, min=0.05, readout_format='.6f', step=1e-05), Output()), _dom_classes=('widget-interact',))
-
-    <function plot_with_m at 0x000002A5535F4E00>
-
-
-
-.. GENERATED FROM PYTHON SOURCE LINES 299-320
+.. GENERATED FROM PYTHON SOURCE LINES 256-277
 
 The sum of squares
 ------------------
@@ -427,7 +358,7 @@ The table below shows the predicted value and the squared distance between
 prediction and reality for each country. We then sum these squared distances 
 to get an overall measure of how far our predictions our from reality. This is done below.
 
-.. GENERATED FROM PYTHON SOURCE LINES 321-330
+.. GENERATED FROM PYTHON SOURCE LINES 280-289
 
 .. code-block:: Python
 
@@ -467,7 +398,7 @@ to get an overall measure of how far our predictions our from reality. This is d
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 331-429
+.. GENERATED FROM PYTHON SOURCE LINES 290-388
 
 Finding the best fit line 
 =========================
@@ -568,7 +499,7 @@ Moving the :math:`m` to the left hand side gives
 
 Let's use our newly found equation to calculate the line that best fits the data.
 
-.. GENERATED FROM PYTHON SOURCE LINES 429-436
+.. GENERATED FROM PYTHON SOURCE LINES 388-395
 
 .. code-block:: Python
 
@@ -592,14 +523,14 @@ Let's use our newly found equation to calculate the line that best fits the data
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 437-441
+.. GENERATED FROM PYTHON SOURCE LINES 396-400
 
 Our intial guess of :math:`m = 1/12 = 0.0833` wasn't so far away from the best fitting value. 
 But this new slope is slightly closer to the data. We can now plot this and recalculate 
 the model sum of squares
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 441-459
+.. GENERATED FROM PYTHON SOURCE LINES 400-418
 
 .. code-block:: Python
 
@@ -624,9 +555,9 @@ the model sum of squares
 
 
 
-.. image-sg:: /gallery/lesson1/images/sphx_glr_plot_howtobehappy_004.png
+.. image-sg:: /gallery/lesson1/images/sphx_glr_plot_howtobehappy_003.png
    :alt: plot howtobehappy
-   :srcset: /gallery/lesson1/images/sphx_glr_plot_howtobehappy_004.png
+   :srcset: /gallery/lesson1/images/sphx_glr_plot_howtobehappy_003.png
    :class: sphx-glr-single-img
 
 
@@ -639,7 +570,7 @@ the model sum of squares
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 460-480
+.. GENERATED FROM PYTHON SOURCE LINES 419-439
 
 Again, this sum of squares is slightly smaller than the value we got above 
 for :math:`m = 1/12` 
@@ -662,7 +593,7 @@ We start by shifting the data so that it has a mean (average) of zero.
 To do this we simply take away the mean value from both life expectancy and 
 from happiness. Then replot the data 
 
-.. GENERATED FROM PYTHON SOURCE LINES 480-493
+.. GENERATED FROM PYTHON SOURCE LINES 439-452
 
 .. code-block:: Python
 
@@ -682,16 +613,16 @@ from happiness. Then replot the data
 
 
 
-.. image-sg:: /gallery/lesson1/images/sphx_glr_plot_howtobehappy_005.png
+.. image-sg:: /gallery/lesson1/images/sphx_glr_plot_howtobehappy_004.png
    :alt: plot howtobehappy
-   :srcset: /gallery/lesson1/images/sphx_glr_plot_howtobehappy_005.png
+   :srcset: /gallery/lesson1/images/sphx_glr_plot_howtobehappy_004.png
    :class: sphx-glr-single-img
 
 
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 494-504
+.. GENERATED FROM PYTHON SOURCE LINES 453-463
 
 This graph shows us that, for example, Yemen is almost -2.5 points below the world 
 average for happiness and has a life expectency 8 years shorter than the average over
@@ -704,7 +635,7 @@ of seeing between country differences.
 
 Let's now try to find the best fit line which goes through these data points.
 
-.. GENERATED FROM PYTHON SOURCE LINES 504-525
+.. GENERATED FROM PYTHON SOURCE LINES 463-484
 
 .. code-block:: Python
 
@@ -732,9 +663,9 @@ Let's now try to find the best fit line which goes through these data points.
 
 
 
-.. image-sg:: /gallery/lesson1/images/sphx_glr_plot_howtobehappy_006.png
+.. image-sg:: /gallery/lesson1/images/sphx_glr_plot_howtobehappy_005.png
    :alt: plot howtobehappy
-   :srcset: /gallery/lesson1/images/sphx_glr_plot_howtobehappy_006.png
+   :srcset: /gallery/lesson1/images/sphx_glr_plot_howtobehappy_005.png
    :class: sphx-glr-single-img
 
 
@@ -747,14 +678,14 @@ Let's now try to find the best fit line which goes through these data points.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 526-530
+.. GENERATED FROM PYTHON SOURCE LINES 485-489
 
 This line appears to fit better than the one we fitted earlier! It lies 
 closer to the points and better capture the relationship in the data.
 To test whether this is indeed the case we can calculate the sum of squares
 between this new line and the shifted data. This is as follows
 
-.. GENERATED FROM PYTHON SOURCE LINES 530-537
+.. GENERATED FROM PYTHON SOURCE LINES 489-496
 
 .. code-block:: Python
 
@@ -778,7 +709,7 @@ between this new line and the shifted data. This is as follows
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 538-567
+.. GENERATED FROM PYTHON SOURCE LINES 497-526
 
 This new line through the data is better! It has a smaller sum of squares. 
 
@@ -810,7 +741,7 @@ Notice that this is an equation for a straight line, so we can write
 
 Let's apply this to data and plot the line again
 
-.. GENERATED FROM PYTHON SOURCE LINES 567-590
+.. GENERATED FROM PYTHON SOURCE LINES 526-549
 
 .. code-block:: Python
 
@@ -840,9 +771,9 @@ Let's apply this to data and plot the line again
 
 
 
-.. image-sg:: /gallery/lesson1/images/sphx_glr_plot_howtobehappy_007.png
+.. image-sg:: /gallery/lesson1/images/sphx_glr_plot_howtobehappy_006.png
    :alt: plot howtobehappy
-   :srcset: /gallery/lesson1/images/sphx_glr_plot_howtobehappy_007.png
+   :srcset: /gallery/lesson1/images/sphx_glr_plot_howtobehappy_006.png
    :class: sphx-glr-single-img
 
 
@@ -857,13 +788,13 @@ Let's apply this to data and plot the line again
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 591-594
+.. GENERATED FROM PYTHON SOURCE LINES 550-553
 
 Now we have it. By shifting back to the original co-ordinates we
 can find the best fitting line through the data. Notice that the sum of squares is unaffected by
 shifting the line back again, since the distances from the points to the line are unaffected. 
 
-.. GENERATED FROM PYTHON SOURCE LINES 596-618
+.. GENERATED FROM PYTHON SOURCE LINES 555-577
 
 Too Much Math? There’s a Shortcut for That
 --------------------------------------------------
@@ -888,7 +819,7 @@ Let’s test it out — and Victoria from Kenya will walk you through the code.
 
 [VIDEO HERE]
 
-.. GENERATED FROM PYTHON SOURCE LINES 618-636
+.. GENERATED FROM PYTHON SOURCE LINES 577-595
 
 .. code-block:: Python
 
@@ -927,7 +858,7 @@ Let’s test it out — and Victoria from Kenya will walk you through the code.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 637-686
+.. GENERATED FROM PYTHON SOURCE LINES 596-645
 
 We can say (roughly speaking) that for every 8 years of life expectancy
 country citizens are about 1 point happier on a scale of 0 to 10. It isn't 
@@ -979,7 +910,7 @@ these in the dataframe under LogGDP, SocialSupport, Freedom, Generosity and Corr
 Full definitions can be found on the `World Happiness Report <https://data.worldhappiness.report/map>`_ website.
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 687-690
+.. GENERATED FROM PYTHON SOURCE LINES 646-649
 
 .. code-block:: Python
 
@@ -1073,7 +1004,7 @@ Full definitions can be found on the `World Happiness Report <https://data.world
     <br />
     <br />
 
-.. GENERATED FROM PYTHON SOURCE LINES 691-698
+.. GENERATED FROM PYTHON SOURCE LINES 650-657
 
 Choose one of the variables and go through the steps we have done for life expectancy above, applying 
 them to your chosen variable. Find a different variable that predicts happiness. Make a plot with
@@ -1083,7 +1014,7 @@ Once you have shown the relationship in the data then write
 Give one argument why it might be correlated with but does not cause happiness.
 In the code below we have plotted the relationship between happiness and perceived corruption in countries, as an example.
 
-.. GENERATED FROM PYTHON SOURCE LINES 698-720
+.. GENERATED FROM PYTHON SOURCE LINES 657-679
 
 .. code-block:: Python
 
@@ -1112,16 +1043,16 @@ In the code below we have plotted the relationship between happiness and perceiv
 
 
 
-.. image-sg:: /gallery/lesson1/images/sphx_glr_plot_howtobehappy_008.png
+.. image-sg:: /gallery/lesson1/images/sphx_glr_plot_howtobehappy_007.png
    :alt: plot howtobehappy
-   :srcset: /gallery/lesson1/images/sphx_glr_plot_howtobehappy_008.png
+   :srcset: /gallery/lesson1/images/sphx_glr_plot_howtobehappy_007.png
    :class: sphx-glr-single-img
 
 
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 721-729
+.. GENERATED FROM PYTHON SOURCE LINES 680-688
 
 Using regression in applications
 ================================
@@ -1135,7 +1066,7 @@ In the video below we talk to several reasearchers who use linear regression in 
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** (0 minutes 3.193 seconds)
+   **Total running time of the script:** (0 minutes 2.176 seconds)
 
 
 .. _sphx_glr_download_gallery_lesson1_plot_howtobehappy.py:

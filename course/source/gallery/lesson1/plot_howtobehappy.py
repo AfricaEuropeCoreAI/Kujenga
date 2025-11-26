@@ -141,6 +141,8 @@ David Sumpter steps through the code. Watch it first then try running the code y
 
 [VIDEO HERE]
 
+
+
 """
 
 from IPython.display import display
@@ -240,62 +242,19 @@ for country in ['United States','United Kingdom','Croatia','Benin','Finland','Ye
 plt.show()
 
 ##############################################################################
+#[Video here]
+
+##############################################################################
 # .. admonition:: Try it yourself!
 #   
 #   Download the code by clicking on the link below and 
 #   try changing the slope and the intercept of the line above by 
 #   changing the values 1/12 and replotting the line.
-#   See if you can find a line that lies closer to the data points.
-#
+#   See if you can find a line that lies closer to the data points. OR `Try this link for interactivity  <https://mybinder.org/v2/gh/AfricaEuropeCoreAI/Kujenga/Interactive?urlpath=%2Fdoc%2Ftree%2Fcourse%2Flessons%2Flesson1%2Fplot_howtobehappy.ipynb>`_
 
-
-from ipywidgets import interact, widgets
-
-# Function that updates the plot based on m
-def plot_with_m(m):
-    Life_Expectancy = np.arange(0.5, 100, step=0.01)
-    Happiness = m * Life_Expectancy
-    #Happiness = (m * Life_Expectancy)+k
-
-    # Plot data
-    fig, ax = plotData(df, 'LifeExp', 'Happiness')
-    ax.plot(Life_Expectancy, Happiness, linestyle='-', color='black', label=f'm = {m:.4f}')
-    #ax.plot(Life_Expectancy, Happiness, linestyle='-', color='black', label=f'm = {m:.4f},k={k:.3f}')
-
-    # Update df with predicted values
-    df_plot= df.assign(Predicted=np.array(m * df['LifeExp']))
-
-    # Highlight selected countries
-    for country in ['United States', 'United Kingdom', 'Croatia', 'Benin', 'Finland', 'Yemen']:
-        ci = np.where(df['Country name'] == country)[0][0]
-        ax.plot([df_plot.iloc[ci]['LifeExp'], df_plot.iloc[ci]['LifeExp']],
-                [df_plot.iloc[ci]['Happiness'], df_plot.iloc[ci]['Predicted']],
-                linestyle=':', color='black')
-
-
-    df_plot=df_plot.assign(SquaredDistance=np.power((df_plot['Predicted'] - df_plot['Happiness']),2))
-
-    #display(df[['Country name','Happiness','Predicted','SquaredDistance']])
-    Model_Sum_Of_Squares = np.sum(df_plot['SquaredDistance'])
-
-    print('The model sum of squares is %.4f' % Model_Sum_Of_Squares)
-
-    ax.legend()
-    plt.show()
-
-# Define a range for m and display numeric values
-m_slider = widgets.FloatSlider(
-    value=1/12,
-    min=1/20,
-    max=1/8,
-    step=0.00001,
-    description='m',
-    readout=True,       # Show numeric value
-    readout_format='.6f'  # Format the display (3 decimal places)
-)
-# Create dropdown widget
-interact(plot_with_m, m=m_slider)
 ##############################################################################
+#
+#
 #
 # The sum of squares
 # ------------------
