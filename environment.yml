@@ -12,6 +12,7 @@ dependencies:
   - seaborn
   - sphinx
   - sphinx-gallery
+  - sphinx_gallery
   - sphinx_rtd_theme
   - sphinx-togglebutton  
   - matplotlib
