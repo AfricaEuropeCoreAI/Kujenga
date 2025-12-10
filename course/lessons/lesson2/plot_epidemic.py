@@ -81,7 +81,6 @@ from scipy import integrate
 # You can change these to see how
 # changes to the paramaters leads to changes in the outcome of the model. 
 #
-# Investigate yourself what happens when :math:`β=1/3, 1/6, 1/10`.
 
 # Parameter values
 beta = 1/2
@@ -97,7 +96,7 @@ def dXdt(X, t=0):
 ##############################################################################
 # Let's now solve these equations numerically and plot the solution over time. 
 # You can change β to see how changes to the parameters leads to changes in the epidemic curve. 
-# Let’s try it here by changing β values to ½,1/6,1/10 and observe the changes over time.
+# Let’s try it 'here <https://mybinder.org/v2/gh/AfricaEuropeCoreAI/Kujenga/SIRModel?urlpath=%2Fdoc%2Ftree%2Fcourse%2Flessons%2Flesson2%2Fplot_epidemic.ipynb>'_ by changing β values and observe the changes over time.
 
 def plotEpidemicOverTime(ax,t,S,I,R):
 
