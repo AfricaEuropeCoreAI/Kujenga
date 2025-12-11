@@ -389,29 +389,84 @@ By plotting the distribution of race times for both Ethiopian and Kenyan runners
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 264-280
+.. GENERATED FROM PYTHON SOURCE LINES 264-334
 
 If our hypothesis is correct, we might expect to see the Kenyan distribution slightly shifted to the left, toward smaller times.
-This would visually confirm what our t-test already suggested: that Kenyan runners tend to record faster race times on average.
+ This would visually confirm what our t-test already suggested: that Kenyan runners tend to record faster race times on average.
 
-In statistics, visualization and computation go hand in hand.
-A plot helps you build intuition for what the numbers are saying. 
-The t-test gives you the exact measure of confidence, but the plot gives you a story, it helps you see patterns, 
-overlap, and how much the two groups differ in real terms.
-By comparing both, we can move beyond just accepting or rejecting a hypothesis and 
-start understanding what the data are actually telling us. 
+ In statistics, visualization and computation go hand in hand.
+ A plot helps you build intuition for what the numbers are saying. 
+ The t-test gives you the exact measure of confidence, but the plot gives you a story, it helps you see patterns, 
+ overlap, and how much the two groups differ in real terms.
+ By comparing both, we can move beyond just accepting or rejecting a hypothesis and 
+ start understanding what the data are actually telling us. 
 
-[segue  to last discussion video on the couch]
 
-.. youtube:: spuHjliHpw0
-   :width: 100% 
-   :align: center 
 
+ .. youtube:: spuHjliHpw0
+    :width: 100% 
+    :align: center 
+
+
+ Exercise: Evaluating a Coach's Claim about Training Methods
+ =============================================================== 
+ Below is an example that we can attempt. In this exercise you will apply your knowledge of hypothesis testing to evaluate a coaches claim about training methods
+
+ * Scenario 
+ A running coach believes that training at high altitutde improves athletes' 10,000-meter race performance. According to the coach, athletes who train at higher evaltion have better oxygen-utilisation effeciency, resulting in faster race times
+ To asses this claim, the coach records the race times (in seconds) for 50 athletes 
+ * 35 athletes trained at High Altitude (HA)
+ * 25 athletes trained at Low Altitude (SL)
+ Your task is to statistically determine whether high-altitude athletes are indeed significantly faster
+ Your task 
+ *Define your null hypothesis H_0 and teh alternative hypothesis H_1
+ * What does the coach's claim imply?
+ * Should this be a one sided test or a two sided test?
+########################################################
+ Use the dataset below 
+ This dataset contains the race times recorded by the coach
+
+ High Altitude (HA) Group - 25 athletes
+ HA = [
+     1931.2, 1928.4, 1942.1, 1919.7, 1935.3,
+     1922.8, 1917.4, 1940.9, 1938.2, 1926.5,
+     1933.1, 1924.6, 1930.4, 1918.9, 1936.7,
+     1921.3, 1941.5, 1934.2, 1916.8, 1929.9,
+     1937.4, 1923.1, 1932.8, 1927.6, 1919.3
+ ]
+
+ Sea Altitude (SL) Group - 25 athletes
+ SL = [
+     1958.6, 1961.9, 1949.5, 1965.2, 1953.8,
+     1962.3, 1947.9, 1956.7, 1970.1, 1959.4,
+     1963.8, 1950.7, 1966.4, 1948.8, 1961.2,
+     1957.9, 1972.6, 1960.5, 1954.1, 1968.3,
+     1952.7, 1971.4, 1955.9, 1964.8, 1958.1
+ ]
+
+ Perform a t-test
+ Use scipy.stats.ttest_ind():
+ * Choose whether the test should be alternative="less" or "two-sided".
+ * Decide whether equal variances can be assumed.
+ Interpret your results
+ Answer the following:
+
+ * What does the p-value indicate about the coach’s claim?
+ * Should you reject or fail to reject the null hypothesis?
+ * Do the results support the idea that high-altitude training improves performance?
+ * Visualize the comparison
+
+ Create:
+ * A boxplot
+ * A histogram
+ * Or any plot that helps you compare the distributions
+
+ Discuss what you observe visually.
 
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** (0 minutes 0.465 seconds)
+   **Total running time of the script:** (0 minutes 2.817 seconds)
 
 
 .. _sphx_glr_download_gallery_lesson3_plot_runners.py:
