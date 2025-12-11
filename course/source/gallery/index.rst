@@ -127,7 +127,7 @@ From the book
 
 .. raw:: html
 
-    <div class="sphx-glr-thumbcontainer" tooltip="and the rate of change of infectives is ">
+    <div class="sphx-glr-thumbcontainer" tooltip="What you will learn ===================">
 
 .. only:: html
 

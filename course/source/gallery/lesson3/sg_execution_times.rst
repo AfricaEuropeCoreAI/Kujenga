@@ -6,7 +6,7 @@
 
 Computation times
 =================
-**00:00.156** total execution time for 1 file **from gallery\lesson3**:
+**00:00.465** total execution time for 1 file **from gallery/lesson3**:
 
 .. container::
 
@@ -33,5 +33,5 @@ Computation times
      - Time
      - Mem (MB)
    * - :ref:`sphx_glr_gallery_lesson3_plot_runners.py` (``plot_runners.py``)
-     - 00:00.156
+     - 00:00.465
      - 0.0
