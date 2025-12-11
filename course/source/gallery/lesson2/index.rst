@@ -35,23 +35,6 @@ From the book
 
 .. raw:: html
 
-    <div class="sphx-glr-thumbcontainer" tooltip="Now you should study a model yourself! Download the page as a  Python notebook and fill in the missing code according to the instructions.">
-
-.. only:: html
-
-  .. image:: /gallery/lesson2/images/thumb/sphx_glr_plot_SEIR_thumb.png
-    :alt:
-
-  :ref:`sphx_glr_gallery_lesson2_plot_SEIR.py`
-
-.. raw:: html
-
-      <div class="sphx-glr-thumbnail-title">The SEIR model</div>
-    </div>
-
-
-.. raw:: html
-
     <div class="sphx-glr-thumbcontainer" tooltip="  .. math::">
 
 .. only:: html
@@ -69,7 +52,24 @@ From the book
 
 .. raw:: html
 
-    <div class="sphx-glr-thumbcontainer" tooltip="What you will learn ===================">
+    <div class="sphx-glr-thumbcontainer" tooltip="Now you should study a model yourself! Download the page as a  Python notebook and fill in the missing code according to the instructions.">
+
+.. only:: html
+
+  .. image:: /gallery/lesson2/images/thumb/sphx_glr_plot_SEIR_thumb.png
+    :alt:
+
+  :ref:`sphx_glr_gallery_lesson2_plot_SEIR.py`
+
+.. raw:: html
+
+      <div class="sphx-glr-thumbnail-title">The SEIR model</div>
+    </div>
+
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="You are asked a critical question: Can we predict when this outbreak will be at it’s peak, how many people will get infected, and what interventions could stop it? Did you know that ordinary differential equations (ODEs) are not abstract math but a tool for saving lives in a case like this?">
 
 .. only:: html
 
@@ -95,7 +95,7 @@ From the book
    :hidden:
 
    /gallery/lesson2/plot_cts2D
-   /gallery/lesson2/plot_SEIR
    /gallery/lesson2/plot_SEIR_exercise
+   /gallery/lesson2/plot_SEIR
    /gallery/lesson2/plot_epidemic
 
