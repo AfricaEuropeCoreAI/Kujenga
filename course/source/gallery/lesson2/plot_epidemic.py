@@ -3,7 +3,47 @@
 
 The SIR model
 =============
-  
+
+What you will learn
+===================
+
+**Preamble**: 
+Imagine a new virus emerges in your community. At first, only a few people are infected but soon hospitals in your city begin to fill up.
+
+You are asked a critical question: Can we predict when this outbreak will be at it’s peak, how many people will get infected, and what interventions could stop it?
+Did you know that ordinary differential equations (ODEs) are not abstract math but a tool for saving lives in a case like this?
+
+These questions can be answered using the SIR model. The Susceptible Infected Recovered (SIR) model can be described using three differential equations. 
+
+`But, can these ordinary differential equations really describe the story of an outbreak from start to end?`
+
+In the first video, Patience answers this question as she takes us through the mathematical foundations of the SIR model often referred to as `The Math of Epidemics`.
+
+She explains the total population(N) which consists of 3 populations of individuals often referred to as compartments of the SIR model. The susceptible(S) individuals who are at an increased risk of infection and may require interventions such as vaccination or chemoprophylaxis, social distancing etc. to prevent diseases. They do not have the virus but could catch it. The Infected/Infectious(I) people who have the virus and can spread it to those who are susceptible and the Recovered(R) people who have had the virus, have recovered, and can no longer spread the virus.
+
+She also explains two key variables; β which is the disease transmission rate and γ which is the recovery rate
+
+Assumptions of the SIR Model
+----------------------------
+
+**The SIR model operates on 4 assumptions**: 
+
+1.	The total population N is constant in time i.e No births, deaths or migration
+
+2.	There is a homogeneous mixing of the infected and susceptible populations
+
+3.	Individuals who recover from the disease gain permanent immunity
+
+4.	Both the rate of Infection and the rate of recovery are constant
+
+Deriving the differential equations by hand
+===========================================
+
+PATIENCE'S VIDEO HERE
+
+The 3 differential Equations
+----------------------------
+
 In the SIR model, the rate of change of susceptible individuals is
 
 .. math::
@@ -18,7 +58,7 @@ and the rate of change of infectives is
  
    \\frac{dI}{dt} = \\beta S I - \gamma I
 
-The constant :math:`b` is the rate of contact between people and :math:`c` is the rate of recovery.
+The constant :math:`\\beta` is the rate of contact between people and :math:`\gamma` is the rate of recovery.
 We can also write down an equation for recovery as follows,
 
 .. math::
@@ -29,91 +69,128 @@ We can also write down an equation for recovery as follows,
 In this model :math:`S`, :math:`I` and :math:`R` are proportions of the population. Summing them up gives :math:`S+I+R=1`, since 
 everyone in the popultaion is either susceptible, infective or recovered.
 
-Let's now solve these equations numerically. We start by importing the libraries we need from Python.
+While it is very important to understand this math, python makes it easier for us to solve these equations by importing key python libraries without having to manually do these calculations.
 
+Let’s now solve these equations numerically in python. We start by importing the libraries we need from Python.
+
+Doing it numerically in python
+=================================
 """
 
 import numpy as np
+import panel as pn
+pn.extension()   
+
 import matplotlib.pyplot as plt
 import matplotlib
 from pylab import rcParams
-matplotlib.font_manager.FontProperties(family='Helvetica',size=11)
+from scipy.integrate import odeint
+
+matplotlib.font_manager.FontProperties(family='Helvetica', size=11)
 rcParams['figure.figsize'] = 9/2.54, 9/2.54
-from scipy import integrate
 
 
 ##############################################################################
 # Now we define the model. This code creates a function 
 # which we can use to simulate differential equations :eq:`susc` and :eq:`infect`. 
-# We also define the parameter values. You can change these to see how
+# We also define the parameter values β (the infection rate) and γ (the recovery rate. 
+# You can change these to see how
 # changes to the paramaters leads to changes in the outcome of the model. 
 #
-# Investigate yourself what happens when :math:`b=1/3, 1/6, 1/10`.
+# Investigate yourself what happens when you change the values of β:math:`β=1/3, 1/6, 1/10`.
 
-# Parameter values
-beta = 1/2
-gamma = 1/7
-
-# Differential equation
-def dXdt(X, t=0):
-    return np.array([  - beta*X[0]*X[1] ,              #Susceptible X[0] is S
-                      beta*X[0]*X[1]   - gamma*X[1],       #Infectives X[1] is I
-                      gamma*X[1]])                      #Recovered X[2] is R
+def sir_model(y, t, beta, gamma):
+    S, I, R = y
+    dSdt = -beta * S * I
+    dIdt = beta * S * I - gamma * I
+    dRdt = gamma * I
+    return [dSdt, dIdt, dRdt]           
 
 
 ##############################################################################
-# We solve the equations numerically and plot solution over time. 
+# Let's now solve these equations numerically and plot the solution over time. 
+# You can change β to see how changes to the parameters leads to changes in the epidemic curve. 
+# Let’s try it here by changing β values and observe the changes over time.
 
-def plotEpidemicOverTime(ax,t,S,I,R):
+#Plotting the solution over time
+#-------------------------------
 
-    ax.plot(t, S, '--',color='k', label='Suceptible (S)')
-    ax.plot(t, I  , '-',color='k', label='Infectives (I)')
-    ax.plot(t, R  , ':',color='k', label='Recovered (R)')
-    ax.legend(loc='best')
-    ax.set_xlabel('Time: t')
-    ax.set_ylabel('Population')
-    ax.spines['top'].set_visible(False)
-    ax.spines['right'].set_visible(False)
-    ax.set_xticks(np.arange(0,100,step=10))
-    ax.set_yticks(np.arange(0,1.01,step=0.5))
-    ax.set_xlim(0,100)
-    ax.set_ylim(0,1) 
+def plot_sir(beta):
+    gamma = 1/7  
+    t = np.linspace(0, 100, 1000)
+    y0 = [0.9999, 0.0001, 0.0]
+    sol = odeint(sir_model, y0, t, args=(beta, gamma))
+    S, I, R = sol.T
     
+    plt.close()
+    fig = plt.figure()
+    plt.plot(t, S, '--', label='Susceptible')
+    plt.plot(t, I, '-', label='Infectives')
+    plt.plot(t, R, ':', label='Recovered')
 
-t = np.linspace(0, 100,  1000)               # time
-X0 = np.array([0.9999, 0.0001,0.0000])      # initially 99.99% are uninfected
-X = integrate.odeint(dXdt, X0, t)           # uses a Python package to simulate the interactions
-S, I, R = X.T
-fig,ax=plt.subplots(num=1)
-plotEpidemicOverTime(ax,t,S,I,R)
-plt.show()
+    plt.xlabel("Time")
+    plt.ylabel("Proportion")
+    plt.title(f"SIR Model (β={beta:.2f}, γ=1/7)")
+    plt.legend()
+    plt.grid(True)
+    return fig
 
+slider = pn.widgets.FloatSlider(
+    name='β (transmission rate)',
+    start=0.05, end=1.0, step=0.05, value=0.5
+)
+
+interactive_plot = pn.bind(plot_sir, beta=slider)
+
+pn.Column(
+    "# SIR Model Epidemic Curve",
+    slider,
+    interactive_plot
+).servable()
 ##############################################################################
-# Phase Planes
-# ============
-# In this section, Emily introduces the concept of **phase planes** in the video below, 
-# using the SIR model as an example.
-#
-# .. youtube:: oYcNqe9KlDk
-#     :width: 100%
-#     :align: center
-#
-# The material that follows recaps what is covered in the video, with supporting code 
-# and explanations to help you explore phase planes for yourself.
-#
+"""
+
+Phase Planes and nullclines
+===========================
+
+In this section, Emily introduces the concept of **phase planes and nullclines** in the video below, 
+using the SIR model as an example.
+
+.. youtube:: oYcNqe9KlDk
+    :width: 100%
+     :align: center
+
+The material that follows recaps what is covered in the video, with supporting code 
+and explanations to help you explore phase planes for yourself.
+
+"""
+
 # What are Phase Planes, and Why Do We Use Them?
 # ---------------------------------------------
+# A phase plane is a graphical representation of a dynamical system i.e a system described by 
+# differential equations where we plot one variable against another instead of plotting them over time.
 # Phase planes provide a powerful visualization method for dynamic systems.
+#
+#Why a dynamic system?
+# --------------------
+# In mathematics and epidemiology, a system means a set of linked equations that describe how 
+# variables change over time. So the SIR model is a dynamic system because the numbers of S,I and 
+# R are continuously changing as the epidemic evolves i.e When there are many susceptibles and 
+# few infected, the rate of infection is high, as susceptibles decrease, the rate of infection slows down 
+# and when almost everyone is recovered, the infection fades away. The trajectory of the epidemic 
+# (rise, peak, decline) is a dynamic response to how the parts of the system interact over time
 # Instead of observing each variable separately over time, phase planes plot one variable
 # against another. In our case, a common representation for the SIR model is the interaction 
-# between the Susceptible (S) and Infected (I) groups. This is used both the video, and
+# between the Susceptible (S) and Infected (I) groups. This is used both in in Emily's video, and
 # further below in the code examples.
-#
+# 
 # This visualization allows us to better understand complex system behaviors, such as:
-#
-# - The spread of disease over time
-# - Stabilization points (equilibrium)
-# - The eventual decline or extinction of an epidemic
+# 
+# 1. The spread of disease over time
+# 
+# 2. Stabilization points (equilibrium)
+# 
+# 3. The eventual decline or extinction of an epidemic
 #
 # Phase planes highlight crucial relationships, equilibrium points, and system behavior
 # that can inform predictions about the long-term outcomes of an epidemic.
@@ -139,36 +216,60 @@ plt.show()
 # Below is the first example of a phase plane showing how the SIR system evolves over time, 
 # with Susceptible (S) on the x-axis and Infected (I) on the y-axis. 
 
+
 beta = 1/2
 gamma = 1/7
 
-def plotPhasePlane(ax,S,I):
-    ax.plot(S, I, '-',color='k')
+def _dXdt_for_phase(X, t=0, beta_val=beta, gamma_val=gamma):
+    S, I, R = X
+    dSdt = -beta_val * S * I
+    dIdt = beta_val * S * I - gamma_val * I
+    dRdt = gamma_val * I
+    return [dSdt, dIdt, dRdt]
+
+def plotPhasePlane(ax, Svals, Ivals):
+    ax.plot(Svals, Ivals, '-', color='k')
     ax.set_xlabel('Susceptibles: S')
     ax.set_ylabel('Infectives: I')
     ax.spines['top'].set_visible(False)
     ax.spines['right'].set_visible(False)
-    ax.set_xticks(np.arange(0,1.01,step=0.5))
-    ax.set_yticks(np.arange(0,1.01,step=0.5))
-    ax.set_ylim(0,1)   
-    ax.set_xlim(0,1) 
+    ax.set_xticks(np.arange(0, 1.01, step=0.5))
+    ax.set_yticks(np.arange(0, 1.01, step=0.5))
+    ax.set_ylim(0, 1)
+    ax.set_xlim(0, 1)
 
-def drawArrows(ax,dXdt):
-    x = np.linspace(0.05, 1 ,6)
+def drawArrows(ax, beta_val=beta, gamma_val=gamma):
+    x = np.linspace(0.05, 1, 6)
     y = np.linspace(0.05, 1, 6)
-    X , Y  = np.meshgrid(x, y)
-    dX, dY, dZ = dXdt([X, Y,1-X-Y]) 
-    #Make in to unit vectors. 
-    M = np.hypot(dX,dY)
-    dX = dX/M
-    dY = dY/M
-    ax.quiver(X, Y, dX, dY, pivot='mid')
+    Xgrid, Ygrid = np.meshgrid(x, y)
+    # Vector field components on the grid:
+    dS = -beta_val * Xgrid * Ygrid
+    dI = beta_val * Xgrid * Ygrid - gamma_val * Ygrid
+    M = np.hypot(dS, dI)
+    M[M == 0] = 1.0          
+    dSu = dS / M
+    dIu = dI / M
+    ax.quiver(Xgrid, Ygrid, dSu, dIu, pivot='mid', scale=20)
 
-fig,ax=plt.subplots(num=1)
-plotPhasePlane(ax,S,I)
-drawArrows(ax,dXdt)
+
+t_phase = np.linspace(0, 160, 800)
+X0_phase = np.array([0.9999, 0.0001, 0.0])
+
+X_phase = odeint(_dXdt_for_phase, X0_phase, t_phase)
+S_phase, I_phase, R_phase = X_phase.T
+
+# Plot
+fig, ax = plt.subplots(figsize=(6, 6))
+plotPhasePlane(ax, S_phase, I_phase)
+drawArrows(ax, beta_val=beta, gamma_val=gamma)
+
+# Nullcline (vertical line at S = gamma/beta)
+ax.plot([gamma / beta, gamma / beta], [-1, 2], linestyle=':', color='k')
+
 plt.tight_layout()
 plt.show()
+
+
 
 ##############################################
 # Equilibrium Points and Nullclines
@@ -178,6 +279,14 @@ plt.show()
 # The lines where the rate of change of a variable is equal to zero are called **nullclines**.
 # The intersection of these nullclines determines the equilibrium points, which are 
 # crucial to understanding how an epidemic evolves. 
+# As the system evolves, either the susceptibles (S) becomes zero or the Infected(I) become zero and 
+# the point at which they intersect where S=0 (vertical axis) and I=0(horizontal axis) is the 
+# equilibrium. This is the **S-nullcline**. 
+# The **I-nullcline** is where I=0 or βS- γ = 0 and if we make S the subject, then S=γ/β
+# So the I-nullclines are I=0(horizontal axis) and S=γ/β (vertical axis)
+# 
+# S=γ/β  is very important because it represents the threshold for the outbreak.
+# **This is also referred to as the R_o** (basic reproductive number/ratio). 
 # 
 # Similar to the :ref:`predator prey model<rabbitsandfoxes>`, we can find the equilibria for the infected population, where the rate at which 
 # people become infected equals the rate at which they recover. This is done by solving:
@@ -197,6 +306,9 @@ plt.show()
 # of this system.
 #
 # We can now plot the nullcline :math:`S=\gamma/\beta` on the phase plane:
+#
+#Plot the nullcline
+# -----------------
 
 import numpy as np
 import matplotlib.pyplot as plt
@@ -206,17 +318,22 @@ from scipy.integrate import odeint
 beta = 1/2
 gamma = 1/7
 
+def dXdt(X, t=0):
+    S, I, R = X
+    dSdt = -beta * S * I
+    dIdt = beta * S * I - gamma * I
+    dRdt = gamma * I
+    return [dSdt, dIdt, dRdt]
+
 # Integrate the system
-t = np.linspace(0, 100, 1000)
-X0 = np.array([0.9999, 0.0001, 0.0000])
-X = integrate.odeint(dXdt, X0, t)
+X0 = np.array([0.99, 0.01, 0.0])
+t = np.linspace(0, 160, 800)
+X = odeint(dXdt, X0, t)
 S, I, R = X.T
 
-fig,ax=plt.subplots(num=1)
-# Include nullcline
-ax.plot([gamma/beta,gamma/beta],[-100,100],linestyle=':',color='k')
+fig,ax=plt.subplots(figsize=(6,6))
 plotPhasePlane(ax,S,I)
-drawArrows(ax,dXdt)
+drawArrows(ax, beta_val=beta, gamma_val=gamma)
 plt.tight_layout()
 plt.show()
 
@@ -272,7 +389,15 @@ plt.show()
 #    leaving a larger proportion of the population susceptible at the point of equilibrium.
 
 #####################################################################
-# Additional questions:
 # 
-# - When a high :math:`\gamma` or low :math:`\beta` value is used, the trajectory does not return to the x-axis after peaking. Why might this be happening?
-# - We have been initialising the models with 99.99\% of the population as susceptible, and only 0.01\% infected. How are the phase planes affected when changing this proportion?
+# Additional questions:
+# =====================
+#
+# 1. When a high :math:`\gamma` or low :math:`\beta` value is used, the trajectory does not return to the x-axis after peaking. Why might this be happening?
+# 2. We have been initialising the models with 99.99\% of the population as susceptible, and only 0.01\% infected. How are the phase planes affected when changing this proportion?
+# 3. If we could reduce the Infection/transmission rate β (e.g., through social distancing or vaccination), what do you think will happen to the nullcline? Then how would the epidemic curve change? What if this value increases?
+# 4. If we could increase recovery rate γ, how would the curve change?
+# 5. If we reduced β while at the same time increasing γ how would that alter the shape of the epidemic curve?
+# 6. How can we estimate how long it will take for the epidemic to be at its peak and how long it will stay at its peak? This question is answered using phase planes and nullclines in Emily’s video
+# 7. How can the SIR model help governments decide when to lift restrictions?
+# 8. Can you now be able to answer the question you were asked at the start i.e Can we predict when this outbreak will be at it’s peak, how many people will get infected, and what interventions could stop it?
