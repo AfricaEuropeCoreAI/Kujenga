@@ -569,11 +569,17 @@ print('The model sum of squares is still %.4f' % Model_Sum_Of_Squares)
 #
 # Let’s test it out — and Victoria from Kenya will walk you through the code.
 #
-# *N.B.* Make sure you have `statsmodels` installed in your Python environment  by using:
+# N.B. Make sure you have `statsmodels` installed in your Python environment  by using:
 # pip install statsmodels or if you are using conda:
 # conda install statsmodels
+# 
 #
-# [VIDEO HERE]
+# .. youtube:: S0VTQ5rkdm8
+#   :width: 100% 
+#   :align: center 
+#
+#
+#
 
 
 

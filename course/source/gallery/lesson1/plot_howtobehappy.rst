@@ -794,7 +794,7 @@ Now we have it. By shifting back to the original co-ordinates we
 can find the best fitting line through the data. Notice that the sum of squares is unaffected by
 shifting the line back again, since the distances from the points to the line are unaffected. 
 
-.. GENERATED FROM PYTHON SOURCE LINES 555-577
+.. GENERATED FROM PYTHON SOURCE LINES 555-583
 
 Too Much Math? There’s a Shortcut for That
 --------------------------------------------------
@@ -813,13 +813,19 @@ If they do, that means our manual derivation was spot on!
 
 Let’s test it out — and Victoria from Kenya will walk you through the code.
 
-*N.B.* Make sure you have `statsmodels` installed in your Python environment  by using:
+N.B. Make sure you have `statsmodels` installed in your Python environment  by using:
 pip install statsmodels or if you are using conda:
 conda install statsmodels
 
-[VIDEO HERE]
 
-.. GENERATED FROM PYTHON SOURCE LINES 577-595
+.. youtube:: S0VTQ5rkdm8
+  :width: 100% 
+  :align: center 
+
+
+
+
+.. GENERATED FROM PYTHON SOURCE LINES 583-601
 
 .. code-block:: Python
 
@@ -858,7 +864,7 @@ conda install statsmodels
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 596-645
+.. GENERATED FROM PYTHON SOURCE LINES 602-651
 
 We can say (roughly speaking) that for every 8 years of life expectancy
 country citizens are about 1 point happier on a scale of 0 to 10. It isn't 
@@ -910,7 +916,7 @@ these in the dataframe under LogGDP, SocialSupport, Freedom, Generosity and Corr
 Full definitions can be found on the `World Happiness Report <https://data.worldhappiness.report/map>`_ website.
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 646-649
+.. GENERATED FROM PYTHON SOURCE LINES 652-655
 
 .. code-block:: Python
 
@@ -1004,7 +1010,7 @@ Full definitions can be found on the `World Happiness Report <https://data.world
     <br />
     <br />
 
-.. GENERATED FROM PYTHON SOURCE LINES 650-657
+.. GENERATED FROM PYTHON SOURCE LINES 656-663
 
 Choose one of the variables and go through the steps we have done for life expectancy above, applying 
 them to your chosen variable. Find a different variable that predicts happiness. Make a plot with
@@ -1014,7 +1020,7 @@ Once you have shown the relationship in the data then write
 Give one argument why it might be correlated with but does not cause happiness.
 In the code below we have plotted the relationship between happiness and perceived corruption in countries, as an example.
 
-.. GENERATED FROM PYTHON SOURCE LINES 657-679
+.. GENERATED FROM PYTHON SOURCE LINES 663-685
 
 .. code-block:: Python
 
@@ -1052,7 +1058,7 @@ In the code below we have plotted the relationship between happiness and perceiv
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 680-688
+.. GENERATED FROM PYTHON SOURCE LINES 686-694
 
 Using regression in applications
 ================================
@@ -1066,7 +1072,7 @@ In the video below we talk to several reasearchers who use linear regression in 
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** (0 minutes 7.686 seconds)
+   **Total running time of the script:** (0 minutes 7.183 seconds)
 
 
 .. _sphx_glr_download_gallery_lesson1_plot_howtobehappy.py:
