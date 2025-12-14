@@ -4,9 +4,31 @@ The building blocks for learning Data Science, AI and Computational Thinking. Th
 
 # Installation
 
+## Anaconda
+
 To install the required packages use Conda and the following command will make an environment called course.
 ```
 conda env create -f environment.yml
+```
+## PIP
+
+in the project home directory , create a virtual environment with the following command:
+```
+python -m venv venv
+```
+Activate the environment with:
+- On Windows:
+
+```
+ venv/Scripts/activate
+```
+- On MacOS/Linux:
+    source venv/bin/activate
+
+Then install the required packages with:
+
+```
+pip install -r course/requirements-pip.txt
 ```
 
 # Create the docs locally

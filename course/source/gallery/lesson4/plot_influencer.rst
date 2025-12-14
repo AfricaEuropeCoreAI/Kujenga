@@ -1163,10 +1163,14 @@ The largest eigenvalue is the first element of the sorted eigenValues array. The
  .. code-block:: none
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     Largest Eigenvalue: (0.2925587369323658+0j)
 =======
     Largest Eigenvalue: (0.29255873693236584+0j)
 >>>>>>> upstream/main
+=======
+    Largest Eigenvalue: (0.2925587369323658+0j)
+>>>>>>> integral
     Corresponding Eigenvector: [0.51030388+0.j 0.30519189+0.j 0.53571932+0.j 0.35611479+0.j
      0.15671107+0.j 0.15562185+0.j 0.42878715+0.j]
 
@@ -1275,10 +1279,14 @@ Assuming that the eigenvalues are labeled so that :math:`|\lambda_1| > |\lambda_
 .. rst-class:: sphx-glr-timing
 
 <<<<<<< HEAD
+<<<<<<< HEAD
    **Total running time of the script:** (0 minutes 0.130 seconds)
 =======
    **Total running time of the script:** (0 minutes 0.011 seconds)
 >>>>>>> upstream/main
+=======
+   **Total running time of the script:** (0 minutes 0.036 seconds)
+>>>>>>> integral
 
 
 .. _sphx_glr_download_gallery_lesson4_plot_influencer.py:
