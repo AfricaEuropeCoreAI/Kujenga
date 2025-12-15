@@ -96,7 +96,8 @@ def dXdt(X, t=0):
 ##############################################################################
 # Let's now solve these equations numerically and plot the solution over time. 
 # You can change β to see how changes to the parameters leads to changes in the epidemic curve. 
-# Let’s try it 'here <https://mybinder.org/v2/gh/AfricaEuropeCoreAI/Kujenga/SIRModel?urlpath=%2Fdoc%2Ftree%2Fcourse%2Flessons%2Flesson2%2Fplot_epidemic.ipynb>'_ by changing β values and observe the changes over time.
+# Let’s try it `here <https://mybinder.org/v2/gh/AfricaEuropeCoreAI/Kujenga/SIRModel?urlpath=%2Fdoc%2Ftree%2Fcourse%2Flessons%2Flesson2%2Fplot_epidemic.ipynb>`_ by changing β values and observe the changes over time.
+
 
 def plotEpidemicOverTime(ax,t,S,I,R):
 
@@ -124,7 +125,7 @@ plt.show()
 
 ##############################################################################
 # Phase Planes and nullclines
-# ============
+# ===========================
 # In this section, Emily introduces the concept of **phase planes and nullclines** in the video below, 
 # using the SIR model as an example.
 #
@@ -136,7 +137,7 @@ plt.show()
 # and explanations to help you explore phase planes for yourself.
 #
 # What are Phase Planes, and Why Do We Use Them?
-# ---------------------------------------------
+# ----------------------------------------------
 # A phase plane is a graphical representation of a dynamical system i.e a system described by 
 # differential equations where we plot one variable against another instead of plotting them over time.
 # Phase planes provide a powerful visualization method for dynamic systems.
@@ -284,7 +285,7 @@ plt.show()
 # visualised in this way, by showing how they might shift the trajectory or alter the nullclines.
 #
 # Impact of Parameters
-# ---------------------
+# --------------------
 # Now, we can investigate what happens to the phase planes when we change the
 # values of :math:`\beta` and :math:`\gamma`. In our previous code examples, the
 # :math:`\beta` value was :math:`\frac{1}{2}`, which is the rate of contact between people,
