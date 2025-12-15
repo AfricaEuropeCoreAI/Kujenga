@@ -1,0 +1,850 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>What you will learn &mdash; Kujenga  documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/custom.css?v=55fe5824" />
+      <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery.css?v=d2d258e8" />
+      <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-binder.css?v=f4aeca0c" />
+      <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-dataframe.css?v=2082cf3c" />
+      <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-rendered-html.css?v=1277b6f3" />
+
+  
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=5929fcd5"></script>
+      <script src="../../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script>let toggleHintShow = 'Click to show';</script>
+      <script>let toggleHintHide = 'Click to hide';</script>
+      <script>let toggleOpenOnPrint = 'true';</script>
+      <script src="../../_static/togglebutton.js?v=4a39c7ea"></script>
+      <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+      <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+      <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      <script src="https://cdn.bokeh.org/bokeh/release/bokeh-3.2.0.min.js"></script>
+      <script src="https://cdn.bokeh.org/bokeh/release/bokeh-widgets-3.2.0.min.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="The SIR model" href="../lesson2/plot_epidemic.html" />
+    <link rel="prev" title="Contents" href="../../index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html">
+            
+              <img src="../../_static/CoreAI.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Are healthier people happier people?</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">What you will learn</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#the-problem">The problem</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#the-methods">The methods</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#how-to-use-this-material">How to use this material</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="#differentiation">Differentiation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#a-line-through-the-data">A line through the data</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#creating-the-plot">Creating the plot</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#drawing-a-line">Drawing a line</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#the-sum-of-squares">The sum of squares</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="#finding-the-best-fit-line">Finding the best fit line</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#sum-of-squares">Sum of squares</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#back-to-differentiation">Back to differentiation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#including-the-intercept">Including the Intercept</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#too-much-math-theres-a-shortcut-for-that">Too Much Math? There’s a Shortcut for That</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="#interpretting-the-data">Interpretting the data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#exercise-look-for-other-predictors-of-happiness">Exercise: look for other predictors of happiness</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#using-regression-in-applications">Using regression in applications</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Can we predict a disease outbreak?</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../lesson2/plot_epidemic.html">The SIR model</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lesson2/plot_SEIR.html">The SEIR model</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Are Ethiopian or Kenyan runners the fastest?</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../lesson3/plot_runners.html">What you will learn</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lesson3/plot_runners.html#why-do-we-need-a-test-at-all">Why Do We Need a Test at All?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lesson3/plot_runners.html#calculating-the-t-statistic-by-hand">Calculating the t-Statistic by Hand</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lesson3/plot_runners.html#doing-it-in-python">Doing it in Python</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">How did Google make billions of dollars?</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../lesson4/plot_influencer.html">What you will learn</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lesson4/plot_influencer.html#the-mathematics-of-the-pagerank-algorithm">The Mathematics of the PageRank algorithm</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lesson4/plot_influencer.html#working-with-matrices-in-python">Working with matrices in Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lesson4/plot_influencer.html#simulating-pagerank">Simulating PageRank</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lesson4/plot_influencer.html#eigenvalues-and-eigenvectors-of-a-matrix">Eigenvalues and eigenvectors of a matrix</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lesson4/plot_influencer.html#directly-computing-the-pagerank-scores">Directly computing the PageRank scores</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Kujenga</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">What you will learn</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/gallery/lesson1/plot_howtobehappy.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <div class="sphx-glr-download-link-note admonition note">
+<p class="admonition-title">Note</p>
+<p><a class="reference internal" href="#sphx-glr-download-gallery-lesson1-plot-howtobehappy-py"><span class="std std-ref">Go to the end</span></a>
+to download the full example code.</p>
+</div>
+<section class="sphx-glr-example-title" id="what-you-will-learn">
+<span id="happyworld"></span><span id="sphx-glr-gallery-lesson1-plot-howtobehappy-py"></span><h1>What you will learn<a class="headerlink" href="#what-you-will-learn" title="Link to this heading"></a></h1>
+<div class="video_wrapper align-center" style="padding-bottom: 56.250000%; padding-top: 30px; position: relative; text-align: center; width: 100%">
+<iframe allowfullscreen="true" src="https://www.youtube.com/embed/pa-1O_T5uZI" style="border: 0; height: 100%; left: 0; position: absolute; top: 0; width: 100%">
+</iframe></div><section id="the-problem">
+<h2>The problem<a class="headerlink" href="#the-problem" title="Link to this heading"></a></h2>
+<p>Every year since 2005, the <a class="reference external" href="https://worldhappiness.report/ed/2018/">World Happiness Report</a>
+has analysed the results of the Gallup World Poll,
+which is carried out in 160 countries (covering 99% of the world’s population).
+The pollsters contact a random sample of people in each country and ask them over
+100 questions about their income, their health and their family. These questions include the
+following question about happiness:</p>
+<img alt="../../_images/HappyQuestion.png" src="../../_images/HappyQuestion.png" />
+<p>People living in different countries give different answers. In the UK it is 6.94, making the UK 17th in the world for happiness.
+The top ranked country — rather surprisingly given a national stereotype of people who are reserved and don’t express their
+feelings very much — is Finland, with a score of 7.82. In general, Scandinavian and Northern European countries are
+ranked highest. The USA is 16th (0.03 points ahead of the UK). China, with a score of 5.59 and at 72nd place, is
+roughly in the middle of the table of the countries surveyed. Other mid-ranked countries include Montenegro, Ecuador,
+Vietnam and Russia. Further down the table, we find many African — Uganda and Ethiopia placed 117th and 131st,
+respectively, Middle Eastern countries — Iran is at 110 and Yemen at 132.
+The unhappiest country in the world in 2022 is Afghanistan, with an average happiness score of only 2.40.</p>
+<p>The question is what makes people happy? One possible answer is that people are happier when they live longer.
+It is this relationship in data that we will explore in this lesson.</p>
+</section>
+<section id="the-methods">
+<h2>The methods<a class="headerlink" href="#the-methods" title="Link to this heading"></a></h2>
+<p>Here we will learn about plotting and looking for relationships in data;
+fitting straight lines through data points; understanding the slope and intercept of the line
+as parameters in a mathematical model; and showing that the parameters are the best possible fit to the data.
+These are all key data science skills and also the first steps towards machine learning. Specifically,
+we will find out more about a method known as linear regression.</p>
+<p>Before we get to linear regression, we are going to go take detour into another part of mathematics:
+calculus. When you studied calculus at school or university, you probably didn’t associate it with finding statsitical
+relationships in data. But in machine learning, we are often interested in finding the minimum value of a function, and for that
+we need to go back to differentiation. Once we have done that,
+we will use differentiation to find the slope of a line which minimises the distances
+between points and a line through those points.</p>
+</section>
+<section id="how-to-use-this-material">
+<h2>How to use this material<a class="headerlink" href="#how-to-use-this-material" title="Link to this heading"></a></h2>
+<p>This material is taught as part of a 6 hour learning session.
+If you are doing this as part of an organised study group, your Kujenga instructor
+will have booked a time for an in-person or online two hour session.
+This means you have two hours to work to do either side of the
+session. Here is what you should do:</p>
+<p><em>Before coming to the class</em>: You should read through this page and get a feeling for the contents and watch the videos.
+At the section on differentiation, solve the paper and
+pencil exercise, but mainly you should read and start thinking about the material.</p>
+<p>To do the computer exercise, you will need to have a Python environment set up on your computer or access via Google Colab (see here for
+info on how to set that up). Then you can download this page as a Jupyter notebook or as Python code by clicking the links at
+the bottom of this page. You should also download the <a class="reference external" href="https://github.com/AfricaEuropeCoreAI/Kujenga/blob/main/course/lessons/data/HappinessData.csv">data</a>
+for the exercise. Run the code and focus on understanding what it does up to and including section <a class="reference internal" href="#finding-the-best-fit-line">Finding the best fit line</a>.</p>
+<p><em>During class</em>: Your teacher will start by going through the theory for <a class="reference internal" href="#finding-the-best-fit-line">Finding the best fit line</a>.
+Please ask them questions and actively engage! This is your chance to really understand what is going on.</p>
+<p><em>After class</em>: The section <a class="reference internal" href="#exercise-look-for-other-predictors-of-happiness">Exercise: look for other predictors of happiness</a> gives the exercises you will need to hand in to
+your teacher in order to pass the section. Ask your teacher how you should submit your work.</p>
+</section>
+</section>
+<section id="differentiation">
+<h1>Differentiation<a class="headerlink" href="#differentiation" title="Link to this heading"></a></h1>
+<p>Taking the derivative of a function is about finding an equation for the slope of the curve the function describes.
+When the derivative is zero, the slope is zero. For a recap on differentiation,
+<a class="reference external" href="https://www.bbc.co.uk/bitesize/guides/zyj77ty/revision/1">this page</a> provides a quick review. And here
+is Blessing from Univeristy of Lagos, Nigeria to lead you through an example!</p>
+<div class="video_wrapper align-center" style="padding-bottom: 56.250000%; padding-top: 30px; position: relative; text-align: center; width: 100%">
+<iframe allowfullscreen="true" src="https://www.youtube.com/embed/dBCV_cYxZAg" style="border: 0; height: 100%; left: 0; position: absolute; top: 0; width: 100%">
+</iframe></div><p>In the example Blessing goes through she tries to find the value of <span class="math notranslate nohighlight">\(m\)</span>
+which minimises the function <span class="math notranslate nohighlight">\((4-2m)^2\)</span>. To solve this problem,
+you can first multiply out the brackets to get</p>
+<div class="math notranslate nohighlight">
+\[(4-2m)^2 = 16 - 16m + 4m^2\]</div>
+<p>You can then take a derivative in order to calculate the slope of the function, to get</p>
+<div class="math notranslate nohighlight">
+\[-16 + 8m\]</div>
+<p>We then solve this equal to zero, because the function is a minimum when it has slope zero.</p>
+<div class="math notranslate nohighlight">
+\[- 16 + 8m = 0 \Rightarrow 8m = 16 \Rightarrow m = 2\]</div>
+<p>Problem solved.</p>
+<div class="admonition-think-yourself admonition">
+<p class="admonition-title">Think yourself!</p>
+<p>Use the derivative to find the minimum of</p>
+<div class="math notranslate nohighlight">
+\[(9-3m)^2\]</div>
+<p>(If you get stuck look <a class="reference external" href="https://www.bbc.co.uk/bitesize/guides/zyj77ty/revision/1">here</a>)</p>
+</div>
+<p>Note that we use the letter <span class="math notranslate nohighlight">\(m\)</span> for the variable, while
+most often in school we use the letter <span class="math notranslate nohighlight">\(x\)</span> for the variable. In maths it really doesn’t
+matter what letter you use, as long as you are consistent, but we will later use <span class="math notranslate nohighlight">\(m\)</span> for the slope of a line,
+so we wanted to start using it already now.</p>
+<p>If you can solve the problem above, you have the mathematics needed to work through the rest of this lesson.
+But, irrespective of whether you can solve the problem above or not, we recommend you have a look at
+<a class="reference external" href="https://www.khanacademy.org/math/calculus-1">Khan Academy’s Calculus 1 course</a>. These calculus
+skills are part of the building blocks needed for the Kujenga course.</p>
+</section>
+<section id="a-line-through-the-data">
+<h1>A line through the data<a class="headerlink" href="#a-line-through-the-data" title="Link to this heading"></a></h1>
+<p>We already discussed looked at how the <a class="reference external" href="https://worldhappiness.report/ed/2018/">World Happiness Report</a>
+documents the happiness of people across the world. Now, let’s load in that data to Python. In this video,
+David Sumpter steps through the code. Watch it first then try running the code yourself.</p>
+<p>[VIDEO HERE]</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">IPython.display</span><span class="w"> </span><span class="kn">import</span> <span class="n">display</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+
+<span class="c1"># Read in the data, we shorten the variable names</span>
+<span class="n">happy</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;../data/HappinessData.csv&quot;</span><span class="p">,</span><span class="n">delimiter</span><span class="o">=</span><span class="s1">&#39;;&#39;</span><span class="p">)</span>
+<span class="n">happy</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;Social support&#39;</span><span class="p">:</span><span class="s1">&#39;SocialSupport&#39;</span><span class="p">},</span> <span class="n">inplace</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
+<span class="n">happy</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;Life Ladder&#39;</span><span class="p">:</span> <span class="s1">&#39;Happiness&#39;</span><span class="p">},</span> <span class="n">inplace</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
+<span class="n">happy</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;Perceptions of corruption&#39;</span><span class="p">:</span><span class="s1">&#39;Corruption&#39;</span><span class="p">},</span> <span class="n">inplace</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
+<span class="n">happy</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;Log GDP per capita&#39;</span><span class="p">:</span> <span class="s1">&#39;LogGDP&#39;</span><span class="p">},</span> <span class="n">inplace</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
+<span class="n">happy</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;Healthy life expectancy at birth&#39;</span><span class="p">:</span> <span class="s1">&#39;LifeExp&#39;</span><span class="p">},</span> <span class="n">inplace</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
+<span class="n">happy</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;Freedom to make life choices&#39;</span><span class="p">:</span> <span class="s1">&#39;Freedom&#39;</span><span class="p">},</span> <span class="n">inplace</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
+
+<span class="c1"># We just look at data for 2018 and dsiplay in table.</span>
+<span class="n">df</span><span class="o">=</span><span class="n">happy</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">happy</span><span class="p">[</span><span class="s1">&#39;Year&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">2018</span><span class="p">]</span>
+<span class="n">display</span><span class="p">(</span><span class="n">df</span><span class="p">[[</span><span class="s1">&#39;Country name&#39;</span><span class="p">,</span><span class="s1">&#39;LifeExp&#39;</span><span class="p">,</span><span class="s1">&#39;Happiness&#39;</span><span class="p">]])</span>
+</pre></div>
+</div>
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>     Country name    LifeExp  Happiness
+10    Afghanistan  52.599998   2.694303
+21        Albania  68.699997   5.004403
+28        Algeria  65.900002   5.043086
+45      Argentina  68.800003   5.792797
+58        Armenia  66.900002   5.062449
+...           ...        ...        ...
+1654    Venezuela  66.500000   5.005663
+1667      Vietnam  67.900002   5.295547
+1678        Yemen  56.700001   3.057514
+1690       Zambia  55.299999   4.041488
+1703     Zimbabwe  55.599998   3.616480
+
+[136 rows x 3 columns]
+</pre></div>
+</div>
+<section id="creating-the-plot">
+<h2>Creating the plot<a class="headerlink" href="#creating-the-plot" title="Link to this heading"></a></h2>
+<p>The code below plots the average life expectancy of
+each of these countries against their happiness (life ladder) scores.</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">pylab</span><span class="w"> </span><span class="kn">import</span> <span class="n">rcParams</span>
+<span class="n">rcParams</span><span class="p">[</span><span class="s1">&#39;figure.figsize&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">14</span><span class="o">/</span><span class="mf">2.54</span><span class="p">,</span> <span class="mi">14</span><span class="o">/</span><span class="mf">2.54</span>
+<span class="n">matplotlib</span><span class="o">.</span><span class="n">font_manager</span><span class="o">.</span><span class="n">FontProperties</span><span class="p">(</span><span class="n">family</span><span class="o">=</span><span class="s1">&#39;Helvetica&#39;</span><span class="p">,</span><span class="n">size</span><span class="o">=</span><span class="mi">11</span><span class="p">)</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">plotData</span><span class="p">(</span><span class="n">df</span><span class="p">,</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">):</span>
+    <span class="n">fig</span><span class="p">,</span><span class="n">ax</span><span class="o">=</span><span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">num</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">df</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;none&#39;</span><span class="p">,</span> <span class="n">markersize</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">marker</span><span class="o">=</span><span class="s1">&#39;o&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="p">[</span><span class="mf">0.85</span><span class="p">,</span> <span class="mf">0.85</span><span class="p">,</span> <span class="mf">0.85</span><span class="p">])</span>
+    <span class="k">for</span> <span class="n">country</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;United States&#39;</span><span class="p">,</span><span class="s1">&#39;United Kingdom&#39;</span><span class="p">,</span><span class="s1">&#39;Croatia&#39;</span><span class="p">,</span><span class="s1">&#39;Benin&#39;</span><span class="p">,</span><span class="s1">&#39;Finland&#39;</span><span class="p">,</span><span class="s1">&#39;Yemen&#39;</span><span class="p">]:</span>
+        <span class="n">ci</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Country name&#39;</span><span class="p">]</span><span class="o">==</span><span class="n">country</span><span class="p">)[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>
+        <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span>  <span class="n">df</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="n">ci</span><span class="p">][</span><span class="n">x</span><span class="p">],</span><span class="n">df</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="n">ci</span><span class="p">][</span><span class="n">y</span><span class="p">],</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;none&#39;</span><span class="p">,</span> <span class="n">markersize</span><span class="o">=</span><span class="mi">7</span><span class="p">,</span> <span class="n">marker</span><span class="o">=</span><span class="s1">&#39;o&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">)</span>
+        <span class="n">ax</span><span class="o">.</span><span class="n">text</span><span class="p">(</span>  <span class="n">df</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="n">ci</span><span class="p">][</span><span class="n">x</span><span class="p">]</span><span class="o">+</span><span class="mf">0.5</span><span class="p">,</span><span class="n">df</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="n">ci</span><span class="p">][</span><span class="n">y</span><span class="p">]</span><span class="o">+</span><span class="mf">0.08</span><span class="p">,</span>  <span class="n">country</span><span class="p">)</span>
+
+    <span class="n">ax</span><span class="o">.</span><span class="n">set_xticks</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">30</span><span class="p">,</span><span class="mi">90</span><span class="p">,</span><span class="n">step</span><span class="o">=</span><span class="mi">5</span><span class="p">))</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">set_yticks</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">11</span><span class="p">,</span><span class="n">step</span><span class="o">=</span><span class="mi">1</span><span class="p">))</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;Average Happiness (0-10)&#39;</span><span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;Life Expectancy at Birth&#39;</span><span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">spines</span><span class="p">[</span><span class="s1">&#39;top&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">set_visible</span><span class="p">(</span><span class="kc">False</span><span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">spines</span><span class="p">[</span><span class="s1">&#39;right&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">set_visible</span><span class="p">(</span><span class="kc">False</span><span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">set_xlim</span><span class="p">(</span><span class="mi">47</span><span class="p">,</span><span class="mi">78</span><span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">set_ylim</span><span class="p">(</span><span class="mf">2.5</span><span class="p">,</span><span class="mf">8.1</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">fig</span><span class="p">,</span><span class="n">ax</span>
+
+<span class="n">fig</span><span class="p">,</span><span class="n">ax</span><span class="o">=</span><span class="n">plotData</span><span class="p">(</span><span class="n">df</span><span class="p">,</span><span class="s1">&#39;LifeExp&#39;</span><span class="p">,</span><span class="s1">&#39;Happiness&#39;</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+<img src="../../_images/sphx_glr_plot_howtobehappy_001.png" srcset="../../_images/sphx_glr_plot_howtobehappy_001.png" alt="plot howtobehappy" class = "sphx-glr-single-img"/><p>Each circle in the plot is a country.
+The x-axis shows the life expectancy in the country and
+the y-axis shows the average ranking of life satisfaction,
+on the 0 to 10 scale. In general, the higher the life expectancy of a country,
+the higher the happiness (life satisfaction) there.</p>
+</section>
+<section id="drawing-a-line">
+<h2>Drawing a line<a class="headerlink" href="#drawing-a-line" title="Link to this heading"></a></h2>
+<p>One way to quantify this relationship is to draw a straight line
+through the points, showing how happiness increases with life expectancy.
+For example, imagine that for every 12 extra years which people live in a
+country they are one point happier. The equation for happiness in this case
+would then look like this,</p>
+<div class="math notranslate nohighlight">
+\[\mbox{Happiness} = \frac{\mbox{Life Expectancy}}{12}\]</div>
+<p>in this case, if the average life expectancy in the country
+is 60 then the equation above predicts the happiness to be 60/12=5.
+If the life expectancy is 78 then average happiness is predicted to be 78/12=6.5. And so on…</p>
+<p>We can draw this equation in the form of a straight line going
+through the cloud of country points, as shown below.</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Setup parameters: m is the slope of the line</span>
+<span class="c1"># And calculate a line with that slope.</span>
+
+<span class="n">m</span><span class="o">=</span><span class="mi">1</span><span class="o">/</span><span class="mi">12</span>
+<span class="n">Life_Expectancy</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mf">0.5</span><span class="p">,</span><span class="mi">100</span><span class="p">,</span><span class="n">step</span><span class="o">=</span><span class="mf">0.01</span><span class="p">)</span>
+<span class="n">Happiness</span><span class="o">=</span> <span class="n">m</span><span class="o">*</span><span class="n">Life_Expectancy</span>
+
+<span class="c1"># Plot the data and the line</span>
+<span class="n">fig</span><span class="p">,</span><span class="n">ax</span><span class="o">=</span><span class="n">plotData</span><span class="p">(</span><span class="n">df</span><span class="p">,</span><span class="s1">&#39;LifeExp&#39;</span><span class="p">,</span><span class="s1">&#39;Happiness&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">Life_Expectancy</span><span class="p">,</span> <span class="n">Happiness</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;-&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">)</span>
+<span class="n">df</span><span class="o">=</span><span class="n">df</span><span class="o">.</span><span class="n">assign</span><span class="p">(</span><span class="n">Predicted</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">m</span><span class="o">*</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;LifeExp&#39;</span><span class="p">]))</span>
+<span class="k">for</span> <span class="n">country</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;United States&#39;</span><span class="p">,</span><span class="s1">&#39;United Kingdom&#39;</span><span class="p">,</span><span class="s1">&#39;Croatia&#39;</span><span class="p">,</span><span class="s1">&#39;Benin&#39;</span><span class="p">,</span><span class="s1">&#39;Finland&#39;</span><span class="p">,</span><span class="s1">&#39;Yemen&#39;</span><span class="p">]:</span>
+    <span class="n">ci</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Country name&#39;</span><span class="p">]</span><span class="o">==</span><span class="n">country</span><span class="p">)[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span>  <span class="p">[</span><span class="n">df</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="n">ci</span><span class="p">][</span><span class="s1">&#39;LifeExp&#39;</span><span class="p">],</span><span class="n">df</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="n">ci</span><span class="p">][</span><span class="s1">&#39;LifeExp&#39;</span><span class="p">]]</span> <span class="p">,[</span> <span class="n">df</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="n">ci</span><span class="p">][</span><span class="s1">&#39;Happiness&#39;</span><span class="p">],</span><span class="n">df</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="n">ci</span><span class="p">][</span><span class="s1">&#39;Predicted&#39;</span><span class="p">]]</span> <span class="p">,</span><span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;:&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+<img src="../../_images/sphx_glr_plot_howtobehappy_002.png" srcset="../../_images/sphx_glr_plot_howtobehappy_002.png" alt="plot howtobehappy" class = "sphx-glr-single-img"/><p>[Video here]</p>
+<div class="admonition-try-it-yourself admonition">
+<p class="admonition-title">Try it yourself!</p>
+<p>Download the code by clicking on the link below and
+try changing the slope and the intercept of the line above by
+changing the values 1/12 and replotting the line.
+See if you can find a line that lies closer to the data points. OR <a class="reference external" href="https://mybinder.org/v2/gh/AfricaEuropeCoreAI/Kujenga/Interactive?urlpath=%2Fdoc%2Ftree%2Fcourse%2Flessons%2Flesson1%2Fplot_howtobehappy.ipynb">Try this link for interactivity</a></p>
+</div>
+</section>
+<section id="the-sum-of-squares">
+<h2>The sum of squares<a class="headerlink" href="#the-sum-of-squares" title="Link to this heading"></a></h2>
+<p>Each of the dotted lines above show how far the line – which predicts that happiness is one
+twelfth of life expectancy – is from the data for each of the six highlighted countries.
+For example, the USA has a happiness score of 6.88 and an
+average life expectancy of 68.3. The first equation (figure 2b) predicts</p>
+<div class="math notranslate nohighlight">
+\[\mbox{Predicted USA Happiness} = \frac{\mbox{USA Life Expectancy}}{12} = \frac{\mbox{68.3}}{12} =  5.69\]</div>
+<p>Which means that the squared distance between the prediction and reality is</p>
+<div class="math notranslate nohighlight">
+\[(6.88 - 5.69)^2 = 1.412\]</div>
+<p>The table below shows the predicted value and the squared distance between
+prediction and reality for each country. We then sum these squared distances
+to get an overall measure of how far our predictions our from reality. This is done below.</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">=</span><span class="n">df</span><span class="o">.</span><span class="n">assign</span><span class="p">(</span><span class="n">SquaredDistance</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">power</span><span class="p">((</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Predicted&#39;</span><span class="p">]</span> <span class="o">-</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;Happiness&#39;</span><span class="p">]),</span><span class="mi">2</span><span class="p">))</span>
+<span class="n">display</span><span class="p">(</span><span class="n">df</span><span class="p">[[</span><span class="s1">&#39;Country name&#39;</span><span class="p">,</span><span class="s1">&#39;Happiness&#39;</span><span class="p">,</span><span class="s1">&#39;Predicted&#39;</span><span class="p">,</span><span class="s1">&#39;SquaredDistance&#39;</span><span class="p">]])</span>
+
+<span class="n">Model_Sum_Of_Squares</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;SquaredDistance&#39;</span><span class="p">])</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The model sum of squares is </span><span class="si">%.4f</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="n">Model_Sum_Of_Squares</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>     Country name  Happiness  Predicted  SquaredDistance
+10    Afghanistan   2.694303   4.383333         2.852822
+21        Albania   5.004403   5.725000         0.519260
+28        Algeria   5.043086   5.491667         0.201225
+45      Argentina   5.792797   5.733334         0.003536
+58        Armenia   5.062449   5.575000         0.262709
+...           ...        ...        ...              ...
+1654    Venezuela   5.005663   5.541667         0.287300
+1667      Vietnam   5.295547   5.658333         0.131614
+1678        Yemen   3.057514   4.725000         2.780510
+1690       Zambia   4.041488   4.608333         0.321313
+1703     Zimbabwe   3.616480   4.633333         1.033991
+
+[136 rows x 4 columns]
+The model sum of squares is 82.8467
+</pre></div>
+</div>
+</section>
+</section>
+<section id="finding-the-best-fit-line">
+<h1>Finding the best fit line<a class="headerlink" href="#finding-the-best-fit-line" title="Link to this heading"></a></h1>
+<p>We have drawn a line. But the question is what the ‘best’ line is? Blessing goes through the theory
+below and then we will calculate the best fitting line for the data above.</p>
+<div class="video_wrapper align-center" style="padding-bottom: 56.250000%; padding-top: 30px; position: relative; text-align: center; width: 100%">
+<iframe allowfullscreen="true" src="https://www.youtube.com/embed/1dsTGNywCjc" style="border: 0; height: 100%; left: 0; position: absolute; top: 0; width: 100%">
+</iframe></div><section id="sum-of-squares">
+<h2>Sum of squares<a class="headerlink" href="#sum-of-squares" title="Link to this heading"></a></h2>
+<p>Let’s start by formulating this problem mathematically.
+For each country <span class="math notranslate nohighlight">\(i\)</span>,
+we have two values: the life satisfaction, which I will call <span class="math notranslate nohighlight">\(y_i\)</span>
+and life expectancy, which I will call <span class="math notranslate nohighlight">\(x_i\)</span> . For example,
+when <span class="math notranslate nohighlight">\(i=\)</span> USA then <span class="math notranslate nohighlight">\(i=x_i=6.88\)</span> and <span class="math notranslate nohighlight">\(y_i=68.3\)</span>.</p>
+<p>Now, let’s denote the slope of the line as <span class="math notranslate nohighlight">\(m\)</span> (in the plot above
+<span class="math notranslate nohighlight">\(m=1/12\)</span>) and repeat the caluclation we made above but with letters instead
+of numbers. First we note that</p>
+<div class="math notranslate nohighlight">
+\[\hat{y_i} = m \cdot x_i = 1/12 \cdot 6.88\]</div>
+<p>The little “hat” in <span class="math notranslate nohighlight">\(\hat{y_i}\)</span> denotes that it is a prediction
+(rather than the measured value itself, which is <span class="math notranslate nohighlight">\(y_i\)</span>).
+The squared distance between the prediction and outcome is written as</p>
+<div class="math notranslate nohighlight">
+\[( y_i - m \cdot x_i)^2\]</div>
+<p>All I am doing is rewriting the same calculation we
+did above with numbers, but now with the letters. The reason for doing this is that
+our aim is to find an equation for the value of <span class="math notranslate nohighlight">\(m\)</span> which minimises the sum of square
+distances.</p>
+<p>The next step is to write out the sum</p>
+<div class="math notranslate nohighlight">
+\[( y_1 - m \cdot x_1)^2 +  ( y_2 - m \cdot x_2)^2  + ... + ( y_{136} - m \cdot x_{136})^2\]</div>
+<p>The above equation is can be written in shorthand form (using the sum notation we met
+in <span class="xref std std-ref">the section on our average friend</span> as</p>
+<div class="math notranslate nohighlight">
+\[\sum_i^n ( y_i - m \cdot x_i)^2\]</div>
+<p>where <span class="math notranslate nohighlight">\(n=136\)</span> is the number of countries.</p>
+</section>
+<section id="back-to-differentiation">
+<h2>Back to differentiation<a class="headerlink" href="#back-to-differentiation" title="Link to this heading"></a></h2>
+<p>We want to find the value of <span class="math notranslate nohighlight">\(m\)</span> which minimises this sum of squares. But how do we do this?</p>
+<p>The answer is differentiation. We now want to find the value of <span class="math notranslate nohighlight">\(m\)</span> which minimises the sum of squares.
+The equation above is more complicated than the one we used in the section on <a class="reference internal" href="#differentiation">Differentiation</a>.</p>
+<p>Although  the algebra is more complicated, we can use exactly the same logic to solve the problem
+above, of finding the value of <span class="math notranslate nohighlight">\(m\)</span> which minimises this sum of squares. We first
+take the derivative</p>
+<div class="math notranslate nohighlight">
+\[ \begin{align}\begin{aligned}\frac{d}{dm} \left( ( y_1 - m \cdot x_1)^2 +  ( y_2 - m \cdot x_2)^2  + ... + ( y_{136} - m \cdot x_{136})^2  \right)\\= - 2 x_1 y_1 + 2 x_1^2 m  - 2 x_2 y_2 + 2 x_2^2 m  +  ... - 2 x_{136} y_{136} + 2 x_{136}^2 m\end{aligned}\end{align} \]</div>
+<p>Although this particular step involves alot of algebra, notice that we are doing exactly the same as in the example above.
+Another thing that that can confuse students is that
+we differentiate with respect to <span class="math notranslate nohighlight">\(m\)</span>.
+In school, we often use the letter <span class="math notranslate nohighlight">\(x\)</span> for the variable name and <span class="math notranslate nohighlight">\(m\)</span> for a constant. Here it is the other way round.
+The data <span class="math notranslate nohighlight">\(x_i\)</span> and <span class="math notranslate nohighlight">\(y_i\)</span> are constants (measurements from countries) and  <span class="math notranslate nohighlight">\(m\)</span> is the variable we differentiate for.</p>
+<p>We now write the sum above in shorthand as</p>
+<div class="math notranslate nohighlight">
+\[\sum_i^n 2 x_i y_i - \sum_i^n 2 \cdot x_i^2 m\]</div>
+<p>and we solve equal to zero (to find the point at which it is minimized, and the slope is zero) to get</p>
+<div class="math notranslate nohighlight">
+\[\sum_i^n 2 x_i y_i - \sum_i^n 2 \cdot x_i)^2 m = 0 \Rightarrow \sum_i^n 2 x_i y_i = \sum_i^n 2 \cdot x_i^2 m \Rightarrow \sum_i^n x_i y_i = \sum_i^n x_i^2\]</div>
+<p>Moving the <span class="math notranslate nohighlight">\(m\)</span> to the left hand side gives</p>
+<div class="math notranslate nohighlight">
+\[m = \frac{\sum_i^n x_i y_i}{\sum_i^n x_i^2}\]</div>
+<p>Let’s use our newly found equation to calculate the line that best fits the data.</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">=</span><span class="n">df</span><span class="o">.</span><span class="n">assign</span><span class="p">(</span><span class="n">SquaredLifEExp</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">power</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;LifeExp&#39;</span><span class="p">],</span><span class="mi">2</span><span class="p">))</span>
+<span class="n">df</span><span class="o">=</span><span class="n">df</span><span class="o">.</span><span class="n">assign</span><span class="p">(</span><span class="n">HappinessLifEExp</span><span class="o">=</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;LifeExp&#39;</span><span class="p">]</span> <span class="o">*</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;Happiness&#39;</span><span class="p">])</span>
+
+<span class="n">m_best</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;HappinessLifEExp&#39;</span><span class="p">])</span><span class="o">/</span><span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;SquaredLifEExp&#39;</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The best fitting line has slope m = </span><span class="si">%.4f</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="n">m_best</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>The best fitting line has slope m = 0.0856
+</pre></div>
+</div>
+<p>Our intial guess of <span class="math notranslate nohighlight">\(m = 1/12 = 0.0833\)</span> wasn’t so far away from the best fitting value.
+But this new slope is slightly closer to the data. We can now plot this and recalculate
+the model sum of squares</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">Life_Expectancy</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mf">0.5</span><span class="p">,</span><span class="mi">100</span><span class="p">,</span><span class="n">step</span><span class="o">=</span><span class="mf">0.01</span><span class="p">)</span>
+<span class="n">Happiness</span><span class="o">=</span> <span class="n">m_best</span><span class="o">*</span><span class="n">Life_Expectancy</span>
+
+<span class="n">fig</span><span class="p">,</span><span class="n">ax</span><span class="o">=</span><span class="n">plotData</span><span class="p">(</span><span class="n">df</span><span class="p">,</span><span class="s1">&#39;LifeExp&#39;</span><span class="p">,</span><span class="s1">&#39;Happiness&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">Life_Expectancy</span><span class="p">,</span> <span class="n">Happiness</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;-&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">)</span>
+<span class="n">df</span><span class="o">=</span><span class="n">df</span><span class="o">.</span><span class="n">assign</span><span class="p">(</span><span class="n">Predicted</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">m_best</span><span class="o">*</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;LifeExp&#39;</span><span class="p">]))</span>
+<span class="k">for</span> <span class="n">country</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;United States&#39;</span><span class="p">,</span><span class="s1">&#39;United Kingdom&#39;</span><span class="p">,</span><span class="s1">&#39;Croatia&#39;</span><span class="p">,</span><span class="s1">&#39;Benin&#39;</span><span class="p">,</span><span class="s1">&#39;Finland&#39;</span><span class="p">,</span><span class="s1">&#39;Yemen&#39;</span><span class="p">]:</span>
+    <span class="n">ci</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Country name&#39;</span><span class="p">]</span><span class="o">==</span><span class="n">country</span><span class="p">)[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span>  <span class="p">[</span><span class="n">df</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="n">ci</span><span class="p">][</span><span class="s1">&#39;LifeExp&#39;</span><span class="p">],</span><span class="n">df</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="n">ci</span><span class="p">][</span><span class="s1">&#39;LifeExp&#39;</span><span class="p">]]</span> <span class="p">,[</span> <span class="n">df</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="n">ci</span><span class="p">][</span><span class="s1">&#39;Happiness&#39;</span><span class="p">],</span><span class="n">df</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="n">ci</span><span class="p">][</span><span class="s1">&#39;Predicted&#39;</span><span class="p">]]</span> <span class="p">,</span><span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;:&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+
+<span class="n">df</span><span class="o">=</span><span class="n">df</span><span class="o">.</span><span class="n">assign</span><span class="p">(</span><span class="n">SquaredDistance</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">power</span><span class="p">((</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Predicted&#39;</span><span class="p">]</span> <span class="o">-</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;Happiness&#39;</span><span class="p">]),</span><span class="mi">2</span><span class="p">))</span>
+
+<span class="n">Model_Sum_Of_Squares</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;SquaredDistance&#39;</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The model sum of squares is </span><span class="si">%.4f</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="n">Model_Sum_Of_Squares</span><span class="p">)</span>
+</pre></div>
+</div>
+<img src="../../_images/sphx_glr_plot_howtobehappy_003.png" srcset="../../_images/sphx_glr_plot_howtobehappy_003.png" alt="plot howtobehappy" class = "sphx-glr-single-img"/><div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>The model sum of squares is 79.9469
+</pre></div>
+</div>
+<p>Again, this sum of squares is slightly smaller than the value we got above
+for <span class="math notranslate nohighlight">\(m = 1/12\)</span></p>
+</section>
+<section id="including-the-intercept">
+<h2>Including the Intercept<a class="headerlink" href="#including-the-intercept" title="Link to this heading"></a></h2>
+<p>An equation for a straight line usually has two components a slope <span class="math notranslate nohighlight">\(m\)</span>
+which we have already seen and an intercept <span class="math notranslate nohighlight">\(k\)</span>, which so far we have assumed is zero.
+We can write the equation for a straight line as</p>
+<div class="math notranslate nohighlight">
+\[y = k + m \times x\]</div>
+<p>We now look at how we can improve the fit of the model by
+including this intercept.</p>
+<p>We start by shifting the data so that it has a mean (average) of zero.
+To do this we simply take away the mean value from both life expectancy and
+from happiness. Then replot the data</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">=</span><span class="n">df</span><span class="o">.</span><span class="n">assign</span><span class="p">(</span><span class="n">ShiftedLifeExp</span><span class="o">=</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;LifeExp&#39;</span><span class="p">]</span> <span class="o">-</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;LifeExp&#39;</span><span class="p">]))</span>
+<span class="n">df</span><span class="o">=</span><span class="n">df</span><span class="o">.</span><span class="n">assign</span><span class="p">(</span><span class="n">ShiftedHappiness</span><span class="o">=</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Happiness&#39;</span><span class="p">]</span> <span class="o">-</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Happiness&#39;</span><span class="p">]))</span>
+
+<span class="n">fig</span><span class="p">,</span><span class="n">ax</span><span class="o">=</span><span class="n">plotData</span><span class="p">(</span><span class="n">df</span><span class="p">,</span><span class="s1">&#39;ShiftedLifeExp&#39;</span><span class="p">,</span><span class="s1">&#39;ShiftedHappiness&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;Happiness (corrected for Mean Happiness)&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;Life Expectancy (corrected for Mean Life Expectancy) &#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xticks</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="o">-</span><span class="mi">30</span><span class="p">,</span><span class="mi">30</span><span class="p">,</span><span class="n">step</span><span class="o">=</span><span class="mi">5</span><span class="p">))</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_yticks</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="o">-</span><span class="mi">5</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="n">step</span><span class="o">=</span><span class="mi">1</span><span class="p">))</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlim</span><span class="p">(</span><span class="o">-</span><span class="mi">20</span><span class="p">,</span><span class="mi">15</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylim</span><span class="p">(</span><span class="o">-</span><span class="mi">3</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+<img src="../../_images/sphx_glr_plot_howtobehappy_004.png" srcset="../../_images/sphx_glr_plot_howtobehappy_004.png" alt="plot howtobehappy" class = "sphx-glr-single-img"/><p>This graph shows us that, for example, Yemen is almost -2.5 points below the world
+average for happiness and has a life expectency 8 years shorter than the average over
+all countries in the world. The United States life expectancy is around 3.5 years longer than
+the average and the citizens of the USA are about 1.3 points happier than average.
+It is worth noting that the correction is for country averages and does not account for the size of the
+populations of these various countries. It does however give us a new way
+of seeing between country differences.</p>
+<p>Let’s now try to find the best fit line which goes through these data points.</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">=</span><span class="n">df</span><span class="o">.</span><span class="n">assign</span><span class="p">(</span><span class="n">SquaredLifEExp</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">power</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;ShiftedLifeExp&#39;</span><span class="p">],</span><span class="mi">2</span><span class="p">))</span>
+<span class="n">df</span><span class="o">=</span><span class="n">df</span><span class="o">.</span><span class="n">assign</span><span class="p">(</span><span class="n">HappinessLifEExp</span><span class="o">=</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;ShiftedLifeExp&#39;</span><span class="p">]</span> <span class="o">*</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;ShiftedHappiness&#39;</span><span class="p">])</span>
+
+<span class="n">m_best</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;HappinessLifEExp&#39;</span><span class="p">])</span><span class="o">/</span><span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;SquaredLifEExp&#39;</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The best fitting line has slope m = </span><span class="si">%.4f</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="n">m_best</span><span class="p">)</span>
+
+<span class="n">Life_Expectancy</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="o">-</span><span class="mi">50</span><span class="p">,</span><span class="mi">50</span><span class="p">,</span><span class="n">step</span><span class="o">=</span><span class="mf">0.01</span><span class="p">)</span>
+<span class="n">Happiness</span><span class="o">=</span> <span class="n">m_best</span><span class="o">*</span><span class="n">Life_Expectancy</span>
+
+<span class="n">fig</span><span class="p">,</span><span class="n">ax</span><span class="o">=</span><span class="n">plotData</span><span class="p">(</span><span class="n">df</span><span class="p">,</span><span class="s1">&#39;ShiftedLifeExp&#39;</span><span class="p">,</span><span class="s1">&#39;ShiftedHappiness&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">Life_Expectancy</span><span class="p">,</span> <span class="n">Happiness</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;-&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;Happiness (corrected for Mean Happiness)&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;Life Expectancy (corrected for Mean Life Expectancy) &#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xticks</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="o">-</span><span class="mi">30</span><span class="p">,</span><span class="mi">30</span><span class="p">,</span><span class="n">step</span><span class="o">=</span><span class="mi">5</span><span class="p">))</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_yticks</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="o">-</span><span class="mi">5</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="n">step</span><span class="o">=</span><span class="mi">1</span><span class="p">))</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlim</span><span class="p">(</span><span class="o">-</span><span class="mi">20</span><span class="p">,</span><span class="mi">15</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylim</span><span class="p">(</span><span class="o">-</span><span class="mi">3</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+<img src="../../_images/sphx_glr_plot_howtobehappy_005.png" srcset="../../_images/sphx_glr_plot_howtobehappy_005.png" alt="plot howtobehappy" class = "sphx-glr-single-img"/><div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>The best fitting line has slope m = 0.1226
+</pre></div>
+</div>
+<p>This line appears to fit better than the one we fitted earlier! It lies
+closer to the points and better capture the relationship in the data.
+To test whether this is indeed the case we can calculate the sum of squares
+between this new line and the shifted data. This is as follows</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">=</span><span class="n">df</span><span class="o">.</span><span class="n">assign</span><span class="p">(</span><span class="n">Predicted</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">m_best</span><span class="o">*</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;ShiftedLifeExp&#39;</span><span class="p">]))</span>
+<span class="n">df</span><span class="o">=</span><span class="n">df</span><span class="o">.</span><span class="n">assign</span><span class="p">(</span><span class="n">SquaredDistance</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">power</span><span class="p">((</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Predicted&#39;</span><span class="p">]</span> <span class="o">-</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;ShiftedHappiness&#39;</span><span class="p">]),</span><span class="mi">2</span><span class="p">))</span>
+
+<span class="n">Model_Sum_Of_Squares</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;SquaredDistance&#39;</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The model sum of squares is </span><span class="si">%.4f</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="n">Model_Sum_Of_Squares</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>The model sum of squares is 71.7665
+</pre></div>
+</div>
+<p>This new line through the data is better! It has a smaller sum of squares.</p>
+<p>The mean values are calculated as follows</p>
+<div class="math notranslate nohighlight">
+\[\bar{x} = \frac{1}{n} \sum_i^n x_i \mbox{ and }  \bar{y} = \frac{1}{n} \sum_i^n y_i\]</div>
+<p>Using this notation, the equation for the line through the data is</p>
+<div class="math notranslate nohighlight">
+\[\hat{y_i} - \bar{y} = m  (\hat{x_i} - \bar{x})\]</div>
+<p>Just to remind you about the notation. The predicted value has a hat over it, while the mean values
+have a bar over them. We can rearrange this equation to get</p>
+<div class="math notranslate nohighlight">
+\[\hat{y_i}  = m \hat{x_i} + (\bar{y} - m\bar{x})\]</div>
+<p>Notice that this is an equation for a straight line, so we can write</p>
+<div class="math notranslate nohighlight">
+\[\hat{y_i}  = m \hat{x_i} + k  \mbox{ where } k = \bar{y} - m\bar{x}\]</div>
+<p>Let’s apply this to data and plot the line again</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">k_best</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Happiness&#39;</span><span class="p">])</span> <span class="o">-</span> <span class="n">m_best</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;LifeExp&#39;</span><span class="p">])</span>
+
+<span class="n">Life_Expectancy</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mf">0.5</span><span class="p">,</span><span class="mi">100</span><span class="p">,</span><span class="n">step</span><span class="o">=</span><span class="mf">0.01</span><span class="p">)</span>
+<span class="n">Happiness</span><span class="o">=</span> <span class="n">m_best</span><span class="o">*</span><span class="n">Life_Expectancy</span> <span class="o">+</span> <span class="n">k_best</span>
+
+<span class="n">fig</span><span class="p">,</span><span class="n">ax</span><span class="o">=</span><span class="n">plotData</span><span class="p">(</span><span class="n">df</span><span class="p">,</span><span class="s1">&#39;LifeExp&#39;</span><span class="p">,</span><span class="s1">&#39;Happiness&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">Life_Expectancy</span><span class="p">,</span> <span class="n">Happiness</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;-&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">)</span>
+<span class="n">df</span><span class="o">=</span><span class="n">df</span><span class="o">.</span><span class="n">assign</span><span class="p">(</span><span class="n">Predicted</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">m_best</span><span class="o">*</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;LifeExp&#39;</span><span class="p">]</span><span class="o">+</span><span class="n">k_best</span><span class="p">))</span>
+<span class="k">for</span> <span class="n">country</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;United States&#39;</span><span class="p">,</span><span class="s1">&#39;United Kingdom&#39;</span><span class="p">,</span><span class="s1">&#39;Croatia&#39;</span><span class="p">,</span><span class="s1">&#39;Benin&#39;</span><span class="p">,</span><span class="s1">&#39;Finland&#39;</span><span class="p">,</span><span class="s1">&#39;Yemen&#39;</span><span class="p">]:</span>
+    <span class="n">ci</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Country name&#39;</span><span class="p">]</span><span class="o">==</span><span class="n">country</span><span class="p">)[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span>  <span class="p">[</span><span class="n">df</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="n">ci</span><span class="p">][</span><span class="s1">&#39;LifeExp&#39;</span><span class="p">],</span><span class="n">df</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="n">ci</span><span class="p">][</span><span class="s1">&#39;LifeExp&#39;</span><span class="p">]]</span> <span class="p">,[</span> <span class="n">df</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="n">ci</span><span class="p">][</span><span class="s1">&#39;Happiness&#39;</span><span class="p">],</span><span class="n">df</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="n">ci</span><span class="p">][</span><span class="s1">&#39;Predicted&#39;</span><span class="p">]]</span> <span class="p">,</span><span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;:&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The slope of the line is m = </span><span class="si">%.4f</span><span class="s1"> and the intercept is k = </span><span class="si">%.4f</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="n">m_best</span><span class="p">,</span><span class="n">k_best</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;An increase in life expectancy of </span><span class="si">%.4f</span><span class="s1"> years is associated with one extra point of happiness&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="mi">1</span><span class="o">/</span><span class="n">m_best</span><span class="p">))</span>
+
+<span class="n">df</span><span class="o">=</span><span class="n">df</span><span class="o">.</span><span class="n">assign</span><span class="p">(</span><span class="n">SquaredDistance</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">power</span><span class="p">((</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Predicted&#39;</span><span class="p">]</span> <span class="o">-</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;Happiness&#39;</span><span class="p">]),</span><span class="mi">2</span><span class="p">))</span>
+<span class="n">Model_Sum_Of_Squares</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;SquaredDistance&#39;</span><span class="p">])</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The model sum of squares is still </span><span class="si">%.4f</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="n">Model_Sum_Of_Squares</span><span class="p">)</span>
+</pre></div>
+</div>
+<img src="../../_images/sphx_glr_plot_howtobehappy_006.png" srcset="../../_images/sphx_glr_plot_howtobehappy_006.png" alt="plot howtobehappy" class = "sphx-glr-single-img"/><div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>The slope of the line is m = 0.1226 and the intercept is k = -2.4252
+An increase in life expectancy of 8.1580 years is associated with one extra point of happiness
+The model sum of squares is still 71.7665
+</pre></div>
+</div>
+<p>Now we have it. By shifting back to the original co-ordinates we
+can find the best fitting line through the data. Notice that the sum of squares is unaffected by
+shifting the line back again, since the distances from the points to the line are unaffected.</p>
+</section>
+<section id="too-much-math-theres-a-shortcut-for-that">
+<h2>Too Much Math? There’s a Shortcut for That<a class="headerlink" href="#too-much-math-theres-a-shortcut-for-that" title="Link to this heading"></a></h2>
+<p>So, we’ve just done all the math by hand,pretty satisfying, right?
+But now the big question is… could there be an easier way?
+Maybe there’s a Python library that just does all the heavy lifting for us?</p>
+<p>Yep — that’s where <cite>statsmodels</cite> comes in. It basically runs the same linear regression
+we just worked out by hand, but behind the scenes. This is exactly how a Machine
+Learning Engineer would handle it in practice — less manual math, more letting Python
+do the work.</p>
+<p>What we’re doing here is just checking: does <cite>statsmodels</cite> give us the same m and k
+If they do, that means our manual derivation was spot on!</p>
+<p>Let’s test it out — and Victoria from Kenya will walk you through the code.</p>
+<dl class="simple">
+<dt><em>N.B.</em> Make sure you have <cite>statsmodels</cite> installed in your Python environment:</dt><dd><p>pip install statsmodels  or if you are using <strong>conda</strong>:
+conda install statsmodels</p>
+</dd>
+</dl>
+<p>[VIDEO HERE]</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Import the Ordinary Least Squares (OLS) regression tool from statsmodels</span>
+<span class="c1"># &quot;ols&quot; stands for Ordinary Least Squares – the most common method for fitting a line.</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">statsmodels.formula.api</span><span class="w"> </span><span class="kn">import</span> <span class="n">ols</span>
+
+<span class="c1"># Fit a linear regression model using statsmodels.</span>
+<span class="c1"># The formula &#39;Happiness ~ LifeExp&#39; means:</span>
+<span class="c1"># &quot;predict Happiness using LifeExp as the independent variable&quot;.</span>
+<span class="n">model</span> <span class="o">=</span> <span class="n">ols</span><span class="p">(</span><span class="s1">&#39;Happiness ~ LifeExp&#39;</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">df</span><span class="p">)</span><span class="o">.</span><span class="n">fit</span><span class="p">()</span>
+
+<span class="c1"># Display the model parameters:</span>
+<span class="c1"># Intercept corresponds to &#39;k&#39;, and the coefficient for LifeExp corresponds to &#39;m&#39;.</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Statsmodels estimated parameters (Intercept and LifeExp):&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">model</span><span class="o">.</span><span class="n">params</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>Statsmodels estimated parameters (Intercept and LifeExp):
+Intercept   -2.416310
+LifeExp      0.122579
+dtype: float64
+</pre></div>
+</div>
+<p>We can say (roughly speaking) that for every 8 years of life expectancy
+country citizens are about 1 point happier on a scale of 0 to 10. It isn’t
+the whole truth (see the word of warning below), but it isn’t entirely misleading either.</p>
+</section>
+</section>
+<section id="interpretting-the-data">
+<h1>Interpretting the data<a class="headerlink" href="#interpretting-the-data" title="Link to this heading"></a></h1>
+<p>Although there is a relationship between these two variables, this does not mean
+that life expectancy causes happiness. One example of a causal relationship between
+life expectancy and happiness would be one where people are happier because they
+know they are going to live longer. Less direct, but still causal relationship would
+be that people are happier because they have access to better healthcare, or
+that they have less worries about the health of their children and loved ones.
+There are many seperate factors which can cause both life expectancy and happiness to increase.
+For example, a country with a high GDP per capita is likely to have both a high life
+expectancy and a high happiness score (you can test this in the next section). It may even be the case
+that happy people co-operate more and build better healthcare systems, which in turn leads to longer life expectancy.</p>
+<p>John Helliwell and his colleagues, who collated the data for the World Happiness report,
+emphasise the importance of, what they call, <a class="reference external" href="https://www.tgcom24.mediaset.it/binary/documento/83.$plit/C_2_documento_1063_upfDocumento.pdf#page=10">social foundations</a>.
+in creating a happier world.
+Happiness arises when we have choices, when the people around us are generous and
+sociable, when we don’t live in poverty and when we are likely to live long lives.
+But we have to be careful when interpreting these results. We cannot know,
+from cross-country comparison data alone, which factors cause happiness or
+merely happen to correlate with it. We don’t know if better healthcare or
+better social support cause an increase in happiness, or the other way around.
+What we do know is that people in more stable, more prosperous countries, with
+greater social support tend to describe themselves as happier.</p>
+<p>Think again about yourself. We cannot rely on national questionnaire results to
+plan our own path to personal happiness. The majority of the factors which
+Helliwell and his colleagues have studied are not under your control. They are
+determined by the country you happen to be born in. In some parts of the world
+people have access to high quality healthcare and do not experience corruption
+on an everyday basis. In others they don’t. Access to happiness isn’t entirely a personal
+choice, it is just a matter of living in the right country at the right time.</p>
+</section>
+<section id="exercise-look-for-other-predictors-of-happiness">
+<h1>Exercise: look for other predictors of happiness<a class="headerlink" href="#exercise-look-for-other-predictors-of-happiness" title="Link to this heading"></a></h1>
+<p>Look at other variables that might predict happiness in the data. You can find the values for
+these in the dataframe under LogGDP, SocialSupport, Freedom, Generosity and Corruption.
+Full definitions can be found on the <a class="reference external" href="https://data.worldhappiness.report/map">World Happiness Report</a> website.</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="p">[[</span><span class="s1">&#39;Country name&#39;</span><span class="p">,</span><span class="s1">&#39;LogGDP&#39;</span><span class="p">,</span><span class="s1">&#39;SocialSupport&#39;</span><span class="p">,</span><span class="s1">&#39;Freedom&#39;</span><span class="p">,</span><span class="s1">&#39;Generosity&#39;</span><span class="p">,</span><span class="s1">&#39;Corruption&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+<div class="output_subarea output_html rendered_html output_result">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Country name</th>
+      <th>LogGDP</th>
+      <th>SocialSupport</th>
+      <th>Freedom</th>
+      <th>Generosity</th>
+      <th>Corruption</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>10</th>
+      <td>Afghanistan</td>
+      <td>7.494588</td>
+      <td>0.507516</td>
+      <td>0.373536</td>
+      <td>-0.084888</td>
+      <td>0.927606</td>
+    </tr>
+    <tr>
+      <th>21</th>
+      <td>Albania</td>
+      <td>9.412399</td>
+      <td>0.683592</td>
+      <td>0.824212</td>
+      <td>0.005385</td>
+      <td>0.899129</td>
+    </tr>
+    <tr>
+      <th>28</th>
+      <td>Algeria</td>
+      <td>9.557952</td>
+      <td>0.798651</td>
+      <td>0.583381</td>
+      <td>-0.172413</td>
+      <td>0.758704</td>
+    </tr>
+    <tr>
+      <th>45</th>
+      <td>Argentina</td>
+      <td>9.809972</td>
+      <td>0.899912</td>
+      <td>0.845895</td>
+      <td>-0.206937</td>
+      <td>0.855255</td>
+    </tr>
+    <tr>
+      <th>58</th>
+      <td>Armenia</td>
+      <td>9.119424</td>
+      <td>0.814449</td>
+      <td>0.807644</td>
+      <td>-0.149109</td>
+      <td>0.676826</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+<br />
+<br /><p>Choose one of the variables and go through the steps we have done for life expectancy above, applying
+them to your chosen variable. Find a different variable that predicts happiness. Make a plot with
+a fitted line through the data.</p>
+<p>Once you have shown the relationship in the data then write
+Give one argument why it might be correlated with but does not cause happiness.
+In the code below we have plotted the relationship between happiness and perceived corruption in countries, as an example.</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">plotData</span><span class="p">(</span><span class="n">df</span><span class="p">,</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">):</span>
+    <span class="n">fig</span><span class="p">,</span><span class="n">ax</span><span class="o">=</span><span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">num</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">df</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;none&#39;</span><span class="p">,</span> <span class="n">markersize</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">marker</span><span class="o">=</span><span class="s1">&#39;o&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="p">[</span><span class="mf">0.85</span><span class="p">,</span> <span class="mf">0.85</span><span class="p">,</span> <span class="mf">0.85</span><span class="p">])</span>
+    <span class="k">for</span> <span class="n">country</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;United States&#39;</span><span class="p">,</span><span class="s1">&#39;United Kingdom&#39;</span><span class="p">,</span><span class="s1">&#39;Croatia&#39;</span><span class="p">,</span><span class="s1">&#39;Benin&#39;</span><span class="p">,</span><span class="s1">&#39;Finland&#39;</span><span class="p">,</span><span class="s1">&#39;Yemen&#39;</span><span class="p">]:</span>
+        <span class="n">ci</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Country name&#39;</span><span class="p">]</span><span class="o">==</span><span class="n">country</span><span class="p">)[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>
+        <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span>  <span class="n">df</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="n">ci</span><span class="p">][</span><span class="n">x</span><span class="p">],</span><span class="n">df</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="n">ci</span><span class="p">][</span><span class="n">y</span><span class="p">],</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;none&#39;</span><span class="p">,</span> <span class="n">markersize</span><span class="o">=</span><span class="mi">7</span><span class="p">,</span> <span class="n">marker</span><span class="o">=</span><span class="s1">&#39;o&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">)</span>
+        <span class="n">ax</span><span class="o">.</span><span class="n">text</span><span class="p">(</span>  <span class="n">df</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="n">ci</span><span class="p">][</span><span class="n">x</span><span class="p">],</span><span class="n">df</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="n">ci</span><span class="p">][</span><span class="n">y</span><span class="p">]</span><span class="o">+</span><span class="mf">0.08</span><span class="p">,</span>  <span class="n">country</span><span class="p">)</span>
+
+    <span class="n">ax</span><span class="o">.</span><span class="n">set_yticks</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">11</span><span class="p">,</span><span class="n">step</span><span class="o">=</span><span class="mi">1</span><span class="p">))</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;Average Happiness (0-10)&#39;</span><span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">spines</span><span class="p">[</span><span class="s1">&#39;top&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">set_visible</span><span class="p">(</span><span class="kc">False</span><span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">spines</span><span class="p">[</span><span class="s1">&#39;right&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">set_visible</span><span class="p">(</span><span class="kc">False</span><span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">set_xlim</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">min</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Corruption&#39;</span><span class="p">]),</span><span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Corruption&#39;</span><span class="p">]))</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">set_ylim</span><span class="p">(</span><span class="mf">2.5</span><span class="p">,</span><span class="mf">8.1</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">fig</span><span class="p">,</span><span class="n">ax</span>
+
+<span class="n">fig</span><span class="p">,</span><span class="n">ax</span><span class="o">=</span><span class="n">plotData</span><span class="p">(</span><span class="n">df</span><span class="p">,</span><span class="s1">&#39;Corruption&#39;</span><span class="p">,</span><span class="s1">&#39;Happiness&#39;</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+<img src="../../_images/sphx_glr_plot_howtobehappy_007.png" srcset="../../_images/sphx_glr_plot_howtobehappy_007.png" alt="plot howtobehappy" class = "sphx-glr-single-img"/></section>
+<section id="using-regression-in-applications">
+<h1>Using regression in applications<a class="headerlink" href="#using-regression-in-applications" title="Link to this heading"></a></h1>
+<p>We have now seen how to use linear regression to find a line through data points.
+In the video below we talk to several reasearchers who use linear regression in their work.</p>
+<div class="video_wrapper align-center" style="padding-bottom: 56.250000%; padding-top: 30px; position: relative; text-align: center; width: 100%">
+<iframe allowfullscreen="true" src="https://www.youtube.com/embed/jQZ6db0FzQo" style="border: 0; height: 100%; left: 0; position: absolute; top: 0; width: 100%">
+</iframe></div><p class="sphx-glr-timing"><strong>Total running time of the script:</strong> (0 minutes 2.176 seconds)</p>
+<div class="sphx-glr-footer sphx-glr-footer-example docutils container" id="sphx-glr-download-gallery-lesson1-plot-howtobehappy-py">
+<div class="sphx-glr-download sphx-glr-download-jupyter docutils container">
+<p><a class="reference download internal" download="" href="../../_downloads/2cad81c01cde4499fa94cf63e40b6e63/plot_howtobehappy.ipynb"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Jupyter</span> <span class="pre">notebook:</span> <span class="pre">plot_howtobehappy.ipynb</span></code></a></p>
+</div>
+<div class="sphx-glr-download sphx-glr-download-python docutils container">
+<p><a class="reference download internal" download="" href="../../_downloads/83d7cb04dd124b7a0d8acd0dd575a47c/plot_howtobehappy.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">plot_howtobehappy.py</span></code></a></p>
+</div>
+<div class="sphx-glr-download sphx-glr-download-zip docutils container">
+<p><a class="reference download internal" download="" href="../../_downloads/8efbb96a19b43e443490ce8858e0f317/plot_howtobehappy.zip"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">zipped:</span> <span class="pre">plot_howtobehappy.zip</span></code></a></p>
+</div>
+</div>
+<p class="sphx-glr-signature"><a class="reference external" href="https://sphinx-gallery.github.io">Gallery generated by Sphinx-Gallery</a></p>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../../index.html" class="btn btn-neutral float-left" title="Contents" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../lesson2/plot_epidemic.html" class="btn btn-neutral float-right" title="The SIR model" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, David Sumpter.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

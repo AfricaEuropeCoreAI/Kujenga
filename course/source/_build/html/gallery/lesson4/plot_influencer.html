@@ -1,0 +1,885 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>What you will learn &mdash; Kujenga  documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/custom.css?v=55fe5824" />
+      <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery.css?v=d2d258e8" />
+      <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-binder.css?v=f4aeca0c" />
+      <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-dataframe.css?v=2082cf3c" />
+      <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-rendered-html.css?v=1277b6f3" />
+
+  
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=5929fcd5"></script>
+      <script src="../../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script>let toggleHintShow = 'Click to show';</script>
+      <script>let toggleHintHide = 'Click to hide';</script>
+      <script>let toggleOpenOnPrint = 'true';</script>
+      <script src="../../_static/togglebutton.js?v=4a39c7ea"></script>
+      <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+      <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+      <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      <script src="https://cdn.bokeh.org/bokeh/release/bokeh-3.2.0.min.js"></script>
+      <script src="https://cdn.bokeh.org/bokeh/release/bokeh-widgets-3.2.0.min.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="prev" title="What you will learn" href="../lesson3/plot_runners.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html">
+            
+              <img src="../../_static/CoreAI.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Are healthier people happier people?</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../lesson1/plot_howtobehappy.html">What you will learn</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lesson1/plot_howtobehappy.html#differentiation">Differentiation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lesson1/plot_howtobehappy.html#a-line-through-the-data">A line through the data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lesson1/plot_howtobehappy.html#finding-the-best-fit-line">Finding the best fit line</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lesson1/plot_howtobehappy.html#interpretting-the-data">Interpretting the data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lesson1/plot_howtobehappy.html#exercise-look-for-other-predictors-of-happiness">Exercise: look for other predictors of happiness</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lesson1/plot_howtobehappy.html#using-regression-in-applications">Using regression in applications</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Can we predict a disease outbreak?</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../lesson2/plot_epidemic.html">The SIR model</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lesson2/plot_SEIR.html">The SEIR model</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Are Ethiopian or Kenyan runners the fastest?</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../lesson3/plot_runners.html">What you will learn</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lesson3/plot_runners.html#why-do-we-need-a-test-at-all">Why Do We Need a Test at All?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lesson3/plot_runners.html#calculating-the-t-statistic-by-hand">Calculating the t-Statistic by Hand</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lesson3/plot_runners.html#doing-it-in-python">Doing it in Python</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">How did Google make billions of dollars?</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">What you will learn</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#the-problem">The problem</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#the-methods">The methods</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#how-to-use-this-material">How to use this material</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="#the-mathematics-of-the-pagerank-algorithm">The Mathematics of the PageRank algorithm</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#preliminaries">Preliminaries</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#the-iterative-update-rule">The Iterative Update Rule</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#convergence">Convergence</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#simplified-update-rule-for-connected-graphs">Simplified update rule for connected graphs</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="#working-with-matrices-in-python">Working with matrices in Python</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#importing-numpy">Importing NumPy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#defining-a-vector-1d-arrays">Defining a vector (1D Arrays)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#creating-matrices-2d-arrays">Creating Matrices (2D Arrays)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#basic-operations">Basic Operations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#accessing-elements">Accessing Elements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#constructing-the-transition-matrix-m">Constructing the transition matrix <strong>M</strong></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="#simulating-pagerank">Simulating PageRank</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#eigenvalues-and-eigenvectors-of-a-matrix">Eigenvalues and eigenvectors of a matrix</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#directly-computing-the-pagerank-scores">Directly computing the PageRank scores</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Kujenga</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">What you will learn</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/gallery/lesson4/plot_influencer.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <div class="sphx-glr-download-link-note admonition note">
+<p class="admonition-title">Note</p>
+<p><a class="reference internal" href="#sphx-glr-download-gallery-lesson4-plot-influencer-py"><span class="std std-ref">Go to the end</span></a>
+to download the full example code.</p>
+</div>
+<section class="sphx-glr-example-title" id="what-you-will-learn">
+<span id="google"></span><span id="sphx-glr-gallery-lesson4-plot-influencer-py"></span><h1>What you will learn<a class="headerlink" href="#what-you-will-learn" title="Link to this heading"></a></h1>
+<p>How important is a webpage on the internet? This was the question that Google founders Larry Page and Sergey Brin asked themselves when they were developing their search engine. In this lesson we will learn the maths behind the solution, now known as PageRank, which is the basis of the algorithm that powers Google search.</p>
+<p>As Otema explains in the video below the PageRank algorithm is the additional ingredient that allows search engines to rank the most relevant pages first. The PageRank algorithm is based on the idea that a page is important if it is linked to other important pages. Although it was originally intended to rank web pages, the PageRank algorithm can be used to analyze any kind of network, for example, social connections, biological systems and transportation infrastructure to name a few.</p>
+<div class="video_wrapper align-center" style="padding-bottom: 56.250000%; padding-top: 30px; position: relative; text-align: center; width: 100%">
+<iframe allowfullscreen="true" src="https://www.youtube.com/embed/D8OxGNeXNIY" style="border: 0; height: 100%; left: 0; position: absolute; top: 0; width: 100%">
+</iframe></div><div class="line-block">
+<div class="line"><br /></div>
+</div>
+<section id="the-problem">
+<h2>The problem<a class="headerlink" href="#the-problem" title="Link to this heading"></a></h2>
+<p>In this lesson we will work with a small network built from Wikipedia pages of <a class="reference external" href="https://en.wikipedia.org/wiki/Ethiopia">Ethiopia</a>, <a class="reference external" href="https://en.wikipedia.org/wiki/Ghana">Ghana</a>, <a class="reference external" href="https://en.wikipedia.org/wiki/Kenya">Kenya</a>, <a class="reference external" href="https://en.wikipedia.org/wiki/Nigeria">Nigeria</a>, <a class="reference external" href="https://en.wikipedia.org/wiki/Rwanda">Rwanda</a>, <a class="reference external" href="https://en.wikipedia.org/wiki/SouthAfrica">South Africa</a> and <a class="reference external" href="https://en.wikipedia.org/wiki/Uganda">Uganda</a> – chosen for being the home countries of the African members of the Kujenga team. These pages represent a tiny part of the internet but the principles we will learn can be applied to networks of any size. See the video below where Amy introduces our tiny internet.</p>
+<div class="video_wrapper align-center" style="padding-bottom: 56.250000%; padding-top: 30px; position: relative; text-align: center; width: 100%">
+<iframe allowfullscreen="true" src="https://www.youtube.com/embed/HO-I-6vHEY4" style="border: 0; height: 100%; left: 0; position: absolute; top: 0; width: 100%">
+</iframe></div><div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>We represent our network of Wikipedia pages as a directed graph where each node represents a country, shown as labeled country flags in the video. In order to construct the connections between nodes in the graph we check on each country’s page for links to the other 6 countries. For example, in the first paragraph of the page for <a class="reference external" href="https://en.wikipedia.org/wiki/Ethiopia">Ethiopia</a> we read:</p>
+<p><em>Ethiopia, officially the Federal Democratic Republic of Ethiopia, is a landlocked country located in the Horn of Africa region of East Africa. It shares borders with Eritrea to the north, Djibouti to the northeast, Somalia to the east,</em> <a class="reference external" href="https://en.wikipedia.org/wiki/Kenya">Kenya</a> <em>to the south, South Sudan to the west, and Sudan to the northwest.</em></p>
+<p>Here we see a link to Kenya, meaning we should count this as a connection from Ethiopia to Kenya. We represent this connection as a directed edge in the graph, shown by an arrow pointing from Ethiopia to Kenya. The weight of each edge, shown as a number next to the edge, counts the total number of links from page <em>A</em> to page <em>B</em>, in this case, there are a total of 4 links from from Ethiopia’s page to Kenya’s.</p>
+<img alt="../../_images/network.png" src="../../_images/network.png" />
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Wikipedia is a dynamic website and the links between pages can change over time, the network we are using is a snapshot of the Wikipedia pages taken in November 2024. You may want to update this network or even add your home country if is not already included.</p>
+</div>
+<div class="food-for-thought admonition">
+<p class="admonition-title">Food for Thought</p>
+<p>As Amy mentions in the video, use your intuitive understanding of the problem to predict which countries’ pages you think will have a high (or low) ranking.</p>
+</div>
+</section>
+<section id="the-methods">
+<h2>The methods<a class="headerlink" href="#the-methods" title="Link to this heading"></a></h2>
+<p>We have seen a graphical representation of a network in <a class="reference internal" href="#the-problem">The problem</a> but in order to use the PageRank algorithm we will need to represent the network mathematically as a matrix. In the following section, we will learn how to work with matrices as well as some basic concepts of linear algebra. The most useful concepts for understanding PageRank will be the notions of an eigenvector and eigenvalue of a matrix which we cover in <a href="#id10"><span class="problematic" id="id11">`Defining a matrix`_</span></a>.</p>
+</section>
+<section id="how-to-use-this-material">
+<h2>How to use this material<a class="headerlink" href="#how-to-use-this-material" title="Link to this heading"></a></h2>
+<p>This material is taught as part of a 6-hour learning session. Your Kujenga instructor will have booked
+a time for an in-person or online 2-hour session. This means you have two hours of work to do on either side of the in-person or online
+session. Here is what you should do:</p>
+<p><em>Before coming to the class</em>: You should read through this entire page. In the section on <a class="reference external" href="LINKNEEDED">LINKNEEDED</a>,
+try to solve the example both by hand and using Python. If you get stuck look <a class="reference external" href="LINKNEEDED">here</a>, but otherwise you should
+simply read through and try to understand what we are doing. Once you have read through, you should
+download this page as a Jupyter notebook or as Python code by clicking the links at the bottom of this page.
+You will need to have a Python environment set up on your computer or access via Google Colab (see here for info on how to set that up).</p>
+<p><em>During class</em>: Your teacher will start by going through the theory for <a class="reference external" href="LINKNEEDED">LINKNEEDED</a>.
+Please ask them questions and actively engage!</p>
+</section>
+</section>
+<section id="the-mathematics-of-the-pagerank-algorithm">
+<h1>The Mathematics of the PageRank algorithm<a class="headerlink" href="#the-mathematics-of-the-pagerank-algorithm" title="Link to this heading"></a></h1>
+<p>The PageRank algorithm can be understood as modeling the behavior of a “random surfer” navigating the internet. This surfer either clicks on a link on the current page or occasionally gets bored and jumps to a completely random page. The PageRank score of a page represents the long-term probability that this random surfer will end up on that particular page.</p>
+<section id="preliminaries">
+<h2>Preliminaries<a class="headerlink" href="#preliminaries" title="Link to this heading"></a></h2>
+<p>Let’s break down the process using some mathematical formulas.</p>
+<p>The PageRank Vector (<strong>R</strong>)</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\mathbf{R} = \begin{pmatrix} r_1 \\ r_2 \\ \vdots \\ r_N \end{pmatrix}\end{split}\]</div>
+<p>This vector <strong>R</strong> represents the PageRank scores for all N=7 pages in the graph.
+Each element r<sub>i</sub> is the PageRank score of page i.
+Initially, these scores can be set equally, for example, r<sub>i</sub> = 1/N for all i.</p>
+<p>The Transition Matrix (<strong>M</strong>)</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}M_{ij} = \begin{cases} 1/L_j^{\text{out}}, &amp; \text{if } j \text{ links to } i \\ 0, &amp; \text{otherwise} \end{cases}\end{split}\]</div>
+<p>This matrix <strong>M</strong> (often called the hyperlink matrix or transition matrix) encodes the link structure of the network.</p>
+<ul class="simple">
+<li><p>L<sub>j</sub><sup>out</sup> is the total number of outgoing links from page j.</p></li>
+<li><p><strong>M</strong><sub>ij</sub> represents the probability of transitioning from page j to page i by following some specific link.</p>
+<ul>
+<li><p>If page j links to page i, the probability of following a specific link from j to i is 1/L<sub>j</sub><sup>out</sup> , assuming the surfer chooses randomly among all outgoing links.</p></li>
+<li><p>If there is no link from j to i, then <strong>M</strong><sub>ij</sub> = 0.</p></li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="the-iterative-update-rule">
+<h2>The Iterative Update Rule<a class="headerlink" href="#the-iterative-update-rule" title="Link to this heading"></a></h2>
+<div class="math notranslate nohighlight">
+\[\mathbf{R}(t + 1) = d\mathbf{M}\mathbf{R}(t) + \frac{1-d}{N} \mathbf{1}\]</div>
+<p>This is the core formula for calculating PageRank iteratively.</p>
+<ul class="simple">
+<li><p><strong>R</strong>(t) is the PageRank vector at iteration t, and <strong>R</strong>(t+1) is the vector at the next iteration.</p></li>
+<li><p>d is the “damping factor” (typically around 0.85). It represents the probability that the random surfer will continue following links (as opposed to jumping to a random page). In practice, this is important to handle “dangling nodes”, nodes with no outgoing links L<sub>j</sub><sup>out</sup> = 0.</p></li>
+</ul>
+<p><strong>M</strong><strong>R</strong>(t) calculates how the existing PageRank scores <strong>R</strong>(t) are distributed across the network by following links. Element i of this resulting vector is the sum of PageRank contributions from all pages j that link to page i.
+d<strong>M</strong><strong>R</strong>(t) is the portion of the PageRank score derived from surfers following links.</p>
+<p>1-d is the probability that the surfer gets bored and jumps to a random page.
+(1-d)/N is the probability of landing on any specific page during a random jump (assuming N pages total).
+<strong>1</strong> is a column vector of size N containing all ones.
+(1-d)/N <strong>1</strong> represents the PageRank score distributed equally among all pages due to the random jump behavior. This term ensures that all pages receive some minimal rank and helps the algorithm converge. This is especially important for dealing with nodes with no outgoing links L<sub>j</sub><sup>out</sup> = 0, as mentioned earlier, or disconnected parts of the graph.</p>
+</section>
+<section id="convergence">
+<h2>Convergence<a class="headerlink" href="#convergence" title="Link to this heading"></a></h2>
+<div class="math notranslate nohighlight">
+\[\mathbf{R}(t + 1) \approx \mathbf{R}(t)\]</div>
+<p>The iterative update process is repeated until the PageRank vector <strong>R</strong> stabilizes.
+Convergence is reached when the difference between the PageRank vector in the current iteration <strong>R</strong>(t+1) and the previous iteration <strong>R</strong>(t) is very small (below some predefined threshold).
+The final vector <strong>R</strong> represents the stable probability distribution of the random surfer, indicating the relative importance of each page.</p>
+</section>
+<section id="simplified-update-rule-for-connected-graphs">
+<h2>Simplified update rule for connected graphs<a class="headerlink" href="#simplified-update-rule-for-connected-graphs" title="Link to this heading"></a></h2>
+<p>Looking at the graph representing our network of Wikipedia pages we can see that the graph is connected, a technical term meaning there is a path between every pair of distinct nodes ignoring the direction of the edges. It is clear that we do not need to take into account any “dangling nodes”, nodes with no outgoing links L<sub>j</sub><sup>out</sup> = 0,  or disconnected parts of the graph.</p>
+<p>Using this observation we can simplify the update rule by setting d = 1. This means that the random surfer will always follow a link and never jump to a random page. The update rule becomes:</p>
+<div class="math notranslate nohighlight">
+\[\mathbf{R}(t + 1) = \frac{1}{\lambda} \mathbf{M}\mathbf{R}(t)\]</div>
+<p>Here we introduce a normalization factor <span class="math notranslate nohighlight">\(\lambda\)</span>. This normalization ensures that all PageRank scores (element of the vector <strong>R</strong>) sum to a constant value.</p>
+<p>Assuming the algorithm has converged, <strong>R</strong>(t + 1) = <strong>R</strong>(t), you might already recognize the resemblance to the eigenvalue equation:</p>
+<div class="math notranslate nohighlight">
+\[\mathbf{M}\mathbf{R} = \lambda \mathbf{R}\]</div>
+<p>If not don’t worry, we will cover the details in the section <a class="reference internal" href="#eigenvalues-and-eigenvectors-of-a-matrix">Eigenvalues and eigenvectors of a matrix</a>.</p>
+<p>In the video below Amy discusses the theory above and shows the results of applying the simplified update rule iteratively. You will see how to implement this yourself in the section <a href="#id4"><span class="problematic" id="id5">``</span></a>_.</p>
+<div class="video_wrapper align-center" style="padding-bottom: 56.250000%; padding-top: 30px; position: relative; text-align: center; width: 100%">
+<iframe allowfullscreen="true" src="https://www.youtube.com/embed/guf36O9rBXs" style="border: 0; height: 100%; left: 0; position: absolute; top: 0; width: 100%">
+</iframe></div><div class="line-block">
+<div class="line"><br /></div>
+</div>
+<div class="food-for-thought admonition">
+<p class="admonition-title">Food for Thought</p>
+<p>It turned out that Nigeria had the highest PageRank and Kenya and Uganda the lowest. Did this match your expectations based on the network shown in section <a class="reference internal" href="#the-problem">The problem</a>.</p>
+</div>
+</section>
+</section>
+<section id="working-with-matrices-in-python">
+<h1>Working with matrices in Python<a class="headerlink" href="#working-with-matrices-in-python" title="Link to this heading"></a></h1>
+<p>NumPy (Numerical Python) is the fundamental package for scientific computing in Python. It provides a powerful N-dimensional array object and tools for working with these arrays. We’ll use NumPy arrays to represent vectors (1D arrays) and matrices (2D arrays).</p>
+<section id="importing-numpy">
+<h2>Importing NumPy<a class="headerlink" href="#importing-numpy" title="Link to this heading"></a></h2>
+<p>NumPy is a third-party library, so you need to install it separately. If you are using Google Colab, it is already included.
+To load NumPy with the alias np, you can use the following command:</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+</pre></div>
+</div>
+</section>
+<section id="defining-a-vector-1d-arrays">
+<h2>Defining a vector (1D Arrays)<a class="headerlink" href="#defining-a-vector-1d-arrays" title="Link to this heading"></a></h2>
+<p>A vector can be thought of as a list of numbers. In NumPy, you create it using np.array() with a Python list:</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">my_list</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
+<span class="n">my_vector</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">my_list</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;My Vector:&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">my_vector</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>My Vector:
+[1 2 3]
+</pre></div>
+</div>
+<p>Check its shape (dimensions)
+Output: (3,) indicates a 1D array with 3 elements</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Vector shape:&quot;</span><span class="p">,</span> <span class="n">my_vector</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>Vector shape: (3,)
+</pre></div>
+</div>
+</section>
+<section id="creating-matrices-2d-arrays">
+<h2>Creating Matrices (2D Arrays)<a class="headerlink" href="#creating-matrices-2d-arrays" title="Link to this heading"></a></h2>
+<p>A matrix is like a grid of numbers (rows and columns). You create it using np.array() with a list of lists, where each inner list is a row:</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">my_lists</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">]]</span>
+<span class="n">my_matrix</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">my_lists</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">My Matrix:&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">my_matrix</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>My Matrix:
+[[1 2 3]
+ [4 5 6]]
+</pre></div>
+</div>
+<p>Check its shape (rows, columns)
+Output: (2, 3) indicates 2 rows and 3 columns</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Matrix shape:&quot;</span><span class="p">,</span> <span class="n">my_matrix</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>Matrix shape: (2, 3)
+</pre></div>
+</div>
+<p>Create a square matrix (same number of rows and columns)</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">square_matrix</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">9</span><span class="p">,</span> <span class="mi">8</span><span class="p">],</span> <span class="p">[</span><span class="mi">7</span><span class="p">,</span> <span class="mi">6</span><span class="p">]])</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Square Matrix:&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">square_matrix</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Square Matrix shape:&quot;</span><span class="p">,</span> <span class="n">square_matrix</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>Square Matrix:
+[[9 8]
+ [7 6]]
+Square Matrix shape: (2, 2)
+</pre></div>
+</div>
+</section>
+<section id="basic-operations">
+<h2>Basic Operations<a class="headerlink" href="#basic-operations" title="Link to this heading"></a></h2>
+<p>NumPy makes operating on vectors and matrices straightforward.
+Element-wise Operations: Standard arithmetic operators (+, -, <a href="#id6"><span class="problematic" id="id7">*</span></a>, /) often work element-by-element if the shapes are compatible.</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">vec1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">])</span>
+<span class="n">vec2</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">])</span>
+<span class="n">mat1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">]])</span>
+<span class="n">mat2</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">4</span><span class="p">]])</span>
+</pre></div>
+</div>
+<p>Vector addition (element-wise)</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Vector Addition:&quot;</span><span class="p">,</span> <span class="n">vec1</span> <span class="o">+</span> <span class="n">vec2</span><span class="p">)</span>  <span class="c1"># Output: [5 7 9]</span>
+</pre></div>
+</div>
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>Vector Addition: [5 7 9]
+</pre></div>
+</div>
+<p>Matrix addition (element-wise)</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Matrix Addition:</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">mat1</span> <span class="o">+</span> <span class="n">mat2</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>Matrix Addition:
+ [[4 4]
+ [6 6]]
+</pre></div>
+</div>
+<p>Scalar multiplication (multiply every element by a number)</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Scalar Multiplication (Vector):&quot;</span><span class="p">,</span> <span class="mi">3</span> <span class="o">*</span> <span class="n">vec1</span><span class="p">)</span>  <span class="c1"># Output: [3 6 9]</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Scalar Multiplication (Matrix):</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">mat1</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>Scalar Multiplication (Vector): [3 6 9]
+Scalar Multiplication (Matrix):
+ [[2 2]
+ [4 4]]
+</pre></div>
+</div>
+<p>Dot Product / Matrix Multiplication: This is different from element-wise multiplication (*). It’s the standard mathematical operation. Use np.dot() or the &#64; operator.</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">vec1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">])</span>
+<span class="n">vec2</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">])</span>
+</pre></div>
+</div>
+<p>Vector dot product (sum of element-wise products)</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">dot_product</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">vec1</span><span class="p">,</span> <span class="n">vec2</span><span class="p">)</span>  <span class="c1"># 1*4 + 2*5 + 3*6 = 4 + 10 + 18 = 32</span>
+</pre></div>
+</div>
+<p>Or using the &#64; operator</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">dot_product_alt</span> <span class="o">=</span> <span class="n">vec1</span> <span class="o">@</span> <span class="n">vec2</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Vector Dot Product:&quot;</span><span class="p">,</span> <span class="n">dot_product</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Vector Dot Product (@):&quot;</span><span class="p">,</span> <span class="n">dot_product_alt</span><span class="p">)</span>
+
+<span class="n">mat1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]])</span>  <span class="c1"># 2x2 matrix</span>
+<span class="n">mat2</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">],</span> <span class="p">[</span><span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">]])</span>  <span class="c1"># 2x2 matrix</span>
+<span class="n">vec3</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">])</span>  <span class="c1"># 1x2 vector</span>
+</pre></div>
+</div>
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>Vector Dot Product: 32
+Vector Dot Product (@): 32
+</pre></div>
+</div>
+<p>Matrix multiplication</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">matrix_product</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">mat1</span><span class="p">,</span> <span class="n">mat2</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Or using the &#64; operator</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">matrix_product_alt</span> <span class="o">=</span> <span class="n">mat1</span> <span class="o">@</span> <span class="n">mat2</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Matrix Multiplication:</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">matrix_product</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Matrix Multiplication (@):</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">matrix_product_alt</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>Matrix Multiplication:
+ [[19 22]
+ [43 50]]
+Matrix Multiplication (@):
+ [[19 22]
+ [43 50]]
+</pre></div>
+</div>
+<p>Matrix-vector multiplication</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">mat_vec_product</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">mat1</span><span class="p">,</span> <span class="n">vec3</span><span class="p">)</span>  <span class="c1"># Note: Treats vec3 as a column vector here</span>
+</pre></div>
+</div>
+<p>Or using the &#64; operator</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">mat_vec_product_alt</span> <span class="o">=</span> <span class="n">mat1</span> <span class="o">@</span> <span class="n">vec3</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Matrix-Vector Multiplication:&quot;</span><span class="p">,</span> <span class="n">mat_vec_product</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Matrix-Vector Multiplication (@):&quot;</span><span class="p">,</span> <span class="n">mat_vec_product_alt</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>Matrix-Vector Multiplication: [ 50 110]
+Matrix-Vector Multiplication (@): [ 50 110]
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Simple multiplication <span class="math notranslate nohighlight">\(*\)</span> is element-wise, not matrix multiplication!</p>
+</div>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Element-wise Matrix Multiplication (NOT dot product):</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">mat1</span> <span class="o">*</span> <span class="n">mat2</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>Element-wise Matrix Multiplication (NOT dot product):
+ [[ 5 12]
+ [21 32]]
+</pre></div>
+</div>
+<p>Rule for A &#64; B: The number of columns in A must equal the number of rows in B.
+Transpose: Swaps rows and columns. Use the .T attribute.</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">matrix</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">]])</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Original Matrix:</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">matrix</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Transposed Matrix:</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">matrix</span><span class="o">.</span><span class="n">T</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Original shape:&quot;</span><span class="p">,</span> <span class="n">matrix</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>  <span class="c1"># Output: (2, 3)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Transposed shape:&quot;</span><span class="p">,</span> <span class="n">matrix</span><span class="o">.</span><span class="n">T</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>  <span class="c1"># Output: (3, 2)</span>
+</pre></div>
+</div>
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>Original Matrix:
+ [[1 2 3]
+ [4 5 6]]
+Transposed Matrix:
+ [[1 4]
+ [2 5]
+ [3 6]]
+Original shape: (2, 3)
+Transposed shape: (3, 2)
+</pre></div>
+</div>
+</section>
+<section id="accessing-elements">
+<h2>Accessing Elements<a class="headerlink" href="#accessing-elements" title="Link to this heading"></a></h2>
+<p>You can access elements using zero-based indexing, similar to Python lists. For matrices, use [row, column].</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">vector</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">40</span><span class="p">])</span>
+<span class="n">matrix</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]])</span>
+</pre></div>
+</div>
+<p>Get the first element of the vector (index 0)</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Vector element [0]:&quot;</span><span class="p">,</span> <span class="n">vector</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>  <span class="c1"># Output: 10</span>
+</pre></div>
+</div>
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>Vector element [0]: 10
+</pre></div>
+</div>
+<p>Get the element at row 1, column 0 of the matrix</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Matrix element [1, 0]:&quot;</span><span class="p">,</span> <span class="n">matrix</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">])</span>  <span class="c1"># Output: 3</span>
+</pre></div>
+</div>
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>Matrix element [1, 0]: 3
+</pre></div>
+</div>
+<p>Get an entire row (e.g., row 0)</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Matrix row [0]:&quot;</span><span class="p">,</span> <span class="n">matrix</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>  <span class="c1"># Output: [1 2]</span>
+</pre></div>
+</div>
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>Matrix row [0]: [1 2]
+</pre></div>
+</div>
+<p>Get an entire column (e.g., column 1) using slicing ‘:’</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Matrix column [:, 1]:&quot;</span><span class="p">,</span> <span class="n">matrix</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">])</span>  <span class="c1"># Output: [2 4]</span>
+</pre></div>
+</div>
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>Matrix column [:, 1]: [2 4]
+</pre></div>
+</div>
+</section>
+<section id="constructing-the-transition-matrix-m">
+<h2>Constructing the transition matrix <strong>M</strong><a class="headerlink" href="#constructing-the-transition-matrix-m" title="Link to this heading"></a></h2>
+<p>The transition matrix <strong>M</strong>, given in section <a class="reference internal" href="#preliminaries">Preliminaries</a>, has elements</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}M_{ij} = \begin{cases} 1/L_j^{\text{out}}, &amp; \text{if } j \text{ links to } i \\ 0, &amp; \text{otherwise} \end{cases}\end{split}\]</div>
+<p>where L<sub>j</sub><sup>out</sup> is the total number of outgoing links from page j.</p>
+<p>From the network shown in section <a class="reference internal" href="#the-problem">The problem</a> we can count up the number of outgoing links for each country and summarize them in a table.</p>
+<table class="docutils align-default" id="id8">
+<caption><span class="caption-text">Number of outgoing links for each country (L<sub>j</sub><sup>out</sup>)</span><a class="headerlink" href="#id8" title="Link to this table"></a></caption>
+<colgroup>
+<col style="width: 50.0%" />
+<col style="width: 50.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Country</p></th>
+<th class="head"><p>Number of outgoing links</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>ZA</p></td>
+<td><p>7</p></td>
+</tr>
+<tr class="row-odd"><td><p>GH</p></td>
+<td><p>10</p></td>
+</tr>
+<tr class="row-even"><td><p>NG</p></td>
+<td><p>6</p></td>
+</tr>
+<tr class="row-odd"><td><p>RW</p></td>
+<td><p>25</p></td>
+</tr>
+<tr class="row-even"><td><p>UG</p></td>
+<td><p>21</p></td>
+</tr>
+<tr class="row-odd"><td><p>KE</p></td>
+<td><p>20</p></td>
+</tr>
+<tr class="row-even"><td><p>ET</p></td>
+<td><p>18</p></td>
+</tr>
+</tbody>
+</table>
+<p>We can again use the network shown in section <a class="reference internal" href="#the-problem">The problem</a> to check if if there is a link from country j to country i. For example, we can see that there is a link from Ethiopia to Kenya but not from Ethiopia to South Africa. Combining these two pieces of information we can construct the transition matrix <strong>M</strong> as shown in the table below.</p>
+<table class="docutils align-default" id="id9">
+<caption><span class="caption-text">PageRank matrix elements</span><a class="headerlink" href="#id9" title="Link to this table"></a></caption>
+<colgroup>
+<col style="width: 12.5%" />
+<col style="width: 12.5%" />
+<col style="width: 12.5%" />
+<col style="width: 12.5%" />
+<col style="width: 12.5%" />
+<col style="width: 12.5%" />
+<col style="width: 12.5%" />
+<col style="width: 12.5%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"></th>
+<th class="head"><p>ZA</p></th>
+<th class="head"><p>GH</p></th>
+<th class="head"><p>NG</p></th>
+<th class="head"><p>RW</p></th>
+<th class="head"><p>UG</p></th>
+<th class="head"><p>KE</p></th>
+<th class="head"><p>ET</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>ZA</p></td>
+<td><p>0</p></td>
+<td><p>1/10</p></td>
+<td><p>1/6</p></td>
+<td><p>1/25</p></td>
+<td><p>1/21</p></td>
+<td><p>1/20</p></td>
+<td><p>0</p></td>
+</tr>
+<tr class="row-odd"><td><p>GH</p></td>
+<td><p>0</p></td>
+<td><p>0</p></td>
+<td><p>1/6</p></td>
+<td><p>0</p></td>
+<td><p>0</p></td>
+<td><p>0</p></td>
+<td><p>0</p></td>
+</tr>
+<tr class="row-even"><td><p>NG</p></td>
+<td><p>1/7</p></td>
+<td><p>1/10</p></td>
+<td><p>0</p></td>
+<td><p>1/25</p></td>
+<td><p>1/21</p></td>
+<td><p>1/20</p></td>
+<td><p>1/18</p></td>
+</tr>
+<tr class="row-odd"><td><p>RW</p></td>
+<td><p>1/7</p></td>
+<td><p>0</p></td>
+<td><p>0</p></td>
+<td><p>0</p></td>
+<td><p>1/21</p></td>
+<td><p>0</p></td>
+<td><p>1/18</p></td>
+</tr>
+<tr class="row-even"><td><p>UG</p></td>
+<td><p>0</p></td>
+<td><p>0</p></td>
+<td><p>0</p></td>
+<td><p>1/25</p></td>
+<td><p>0</p></td>
+<td><p>1/20</p></td>
+<td><p>1/18</p></td>
+</tr>
+<tr class="row-odd"><td><p>KE</p></td>
+<td><p>0</p></td>
+<td><p>0</p></td>
+<td><p>0</p></td>
+<td><p>1/25</p></td>
+<td><p>1/21</p></td>
+<td><p>0</p></td>
+<td><p>1/18</p></td>
+</tr>
+<tr class="row-even"><td><p>ET</p></td>
+<td><p>1/7</p></td>
+<td><p>1/10</p></td>
+<td><p>0</p></td>
+<td><p>1/25</p></td>
+<td><p>0</p></td>
+<td><p>1/20</p></td>
+<td><p>0</p></td>
+</tr>
+</tbody>
+</table>
+<p>This table can be translated into Python code as a NumPy array:</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">M</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span>
+    <span class="p">[</span>
+        <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span> <span class="o">/</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">1</span> <span class="o">/</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">1</span> <span class="o">/</span> <span class="mi">25</span><span class="p">,</span> <span class="mi">1</span> <span class="o">/</span> <span class="mi">21</span><span class="p">,</span> <span class="mi">1</span> <span class="o">/</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span>
+        <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span> <span class="o">/</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span>
+        <span class="p">[</span><span class="mi">1</span> <span class="o">/</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">1</span> <span class="o">/</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span> <span class="o">/</span> <span class="mi">25</span><span class="p">,</span> <span class="mi">1</span> <span class="o">/</span> <span class="mi">21</span><span class="p">,</span> <span class="mi">1</span> <span class="o">/</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">1</span> <span class="o">/</span> <span class="mi">18</span><span class="p">],</span>
+        <span class="p">[</span><span class="mi">1</span> <span class="o">/</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span> <span class="o">/</span> <span class="mi">21</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span> <span class="o">/</span> <span class="mi">18</span><span class="p">],</span>
+        <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span> <span class="o">/</span> <span class="mi">25</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span> <span class="o">/</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">1</span> <span class="o">/</span> <span class="mi">18</span><span class="p">],</span>
+        <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span> <span class="o">/</span> <span class="mi">25</span><span class="p">,</span> <span class="mi">1</span> <span class="o">/</span> <span class="mi">21</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span> <span class="o">/</span> <span class="mi">18</span><span class="p">],</span>
+        <span class="p">[</span><span class="mi">1</span> <span class="o">/</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">1</span> <span class="o">/</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span> <span class="o">/</span> <span class="mi">25</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span> <span class="o">/</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span>
+    <span class="p">]</span>
+<span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">M</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>[[0.         0.1        0.16666667 0.04       0.04761905 0.05
+  0.        ]
+ [0.         0.         0.16666667 0.         0.         0.
+  0.        ]
+ [0.14285714 0.1        0.         0.04       0.04761905 0.05
+  0.05555556]
+ [0.14285714 0.         0.         0.         0.04761905 0.
+  0.05555556]
+ [0.         0.         0.         0.04       0.         0.05
+  0.05555556]
+ [0.         0.         0.         0.04       0.04761905 0.
+  0.05555556]
+ [0.14285714 0.1        0.         0.04       0.         0.05
+  0.        ]]
+</pre></div>
+</div>
+<div class="food-for-thought admonition">
+<p class="admonition-title">Food for Thought</p>
+<p>If a new link between two pages were added or even a whole new page, how would with change the matrix <strong>M</strong>? Does such a change to <strong>M</strong> represent a large or small computational cost? Consider this in a real-world context where the number of pages (nodes in the network) could be extremely large.</p>
+</div>
+</section>
+</section>
+<section id="simulating-pagerank">
+<h1>Simulating PageRank<a class="headerlink" href="#simulating-pagerank" title="Link to this heading"></a></h1>
+<p>Let’s choose an initial PageRank vector <strong>R</strong>(0) and apply the update rule iteratively until convergence.</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">R</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">])</span> <span class="o">*</span> <span class="mi">100</span> <span class="o">/</span> <span class="mi">7</span>  <span class="c1"># Initial PageRank vector</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Initial PageRank vector R(0):&quot;</span><span class="p">,</span> <span class="n">R</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>Initial PageRank vector R(0): [14.28571429 14.28571429 14.28571429 14.28571429 14.28571429 14.28571429
+ 14.28571429]
+</pre></div>
+</div>
+<p>Create a variable t to keep track of the number of iterations performed</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">t</span> <span class="o">=</span> <span class="mi">0</span>  <span class="c1"># Iteration counter</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Iteration:&quot;</span><span class="p">,</span> <span class="n">t</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>Iteration: 0
+</pre></div>
+</div>
+<p>Create a vector with the county codes which will be used to label the PageRank vector</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">countries</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;ZA&quot;</span><span class="p">,</span> <span class="s2">&quot;GH&quot;</span><span class="p">,</span> <span class="s2">&quot;NG&quot;</span><span class="p">,</span> <span class="s2">&quot;RW&quot;</span><span class="p">,</span> <span class="s2">&quot;UG&quot;</span><span class="p">,</span> <span class="s2">&quot;KE&quot;</span><span class="p">,</span> <span class="s2">&quot;ET&quot;</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Countries:&quot;</span><span class="p">,</span> <span class="n">countries</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>Countries: [&#39;ZA&#39;, &#39;GH&#39;, &#39;NG&#39;, &#39;RW&#39;, &#39;UG&#39;, &#39;KE&#39;, &#39;ET&#39;]
+</pre></div>
+</div>
+<p>Apply the update rule</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">R</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">M</span><span class="p">,</span> <span class="n">R</span><span class="p">)</span>  <span class="c1"># Update PageRank vector using matrix multiplication</span>
+<span class="n">R</span> <span class="o">=</span> <span class="n">R</span> <span class="o">/</span> <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">R</span><span class="p">)</span> <span class="o">*</span> <span class="mi">100</span>  <span class="c1"># Normalize the PageRank vector to sum to 100</span>
+<span class="nb">print</span><span class="p">(</span>
+    <span class="sa">f</span><span class="s2">&quot;Updated PageRank vector R(</span><span class="si">{</span><span class="n">t</span><span class="o">+</span><span class="mi">1</span><span class="si">}</span><span class="s2">):</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;</span><span class="se">\n</span><span class="s2"> &quot;</span><span class="o">.</span><span class="n">join</span><span class="p">([</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">c</span><span class="si">}</span><span class="s2">: </span><span class="si">{</span><span class="n">r</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">&quot;</span> <span class="k">for</span> <span class="n">c</span><span class="p">,</span> <span class="n">r</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">countries</span><span class="p">,</span> <span class="n">R</span><span class="p">)]),</span>
+<span class="p">)</span>
+<span class="n">t</span> <span class="o">+=</span> <span class="mi">1</span>  <span class="c1"># Increment iteration counter</span>
+</pre></div>
+</div>
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>Updated PageRank vector R(1):
+ ZA: 21.57
+ GH: 8.89
+ NG: 23.26
+ RW: 13.12
+ UG: 7.76
+ KE: 7.64
+ ET: 17.76
+</pre></div>
+</div>
+<p>Run the cell above multiple times to see how the PageRank vector converges. If you want to start again be sure to rerun all the cells in the <a class="reference internal" href="#simulating-pagerank">Simulating PageRank</a> section to avoid unexpected behavior.</p>
+<div class="food-for-thought admonition">
+<p class="admonition-title">Food for Thought</p>
+<p>If you run the cell above multiple times you will see that the PageRank vector converges to a stable value. How many iterations does it take to converge? Do you think this is a reasonable number of iterations for a real-world application?
+What happens if you choose a different initial PageRank vector? Does it converge to the same value?</p>
+</div>
+</section>
+<section id="eigenvalues-and-eigenvectors-of-a-matrix">
+<h1>Eigenvalues and eigenvectors of a matrix<a class="headerlink" href="#eigenvalues-and-eigenvectors-of-a-matrix" title="Link to this heading"></a></h1>
+<p>In the video below Amandine and Amy give a brief introduction to eigenvalues and eigenvectors and how they are applied in the context of the PageRank algorithm.</p>
+<div class="video_wrapper align-center" style="padding-bottom: 56.250000%; padding-top: 30px; position: relative; text-align: center; width: 100%">
+<iframe allowfullscreen="true" src="https://www.youtube.com/embed/RuCxLyykc2g" style="border: 0; height: 100%; left: 0; position: absolute; top: 0; width: 100%">
+</iframe></div><div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>Let’s summarize the mathematics shown in the video. The N-by-N matrix <strong>M</strong> has N eigenvectors math:<cite>mathbf{v}_i`</cite> which obey the equation:</p>
+<p><span class="math notranslate nohighlight">\(\mathbf{M}\mathbf{v}_i = \lambda_i \mathbf{v}_i\)</span>
+where math:<cite>lambda_i</cite> is the eigenvalue associated with the eigenvector math:<cite>mathbf{v}_i</cite>.</p>
+<p>The eigenvalue equation states that when the matrix <strong>M</strong> acts on the eigenvector math:<cite>mathbf{v}_i</cite>, it scales the vector by a factor of math:<cite>lambda_i</cite> without changing its direction.</p>
+<p>Let’s use Python to compute the eigenvalues and the corresponding eigenvectors of the transition matrix <strong>M</strong>. We will use the <cite>numpy.linalg.eig()</cite> function to compute the eigenvalues and eigenvectors of a matrix.</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">eigenValues</span><span class="p">,</span> <span class="n">eigenVectors</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">eig</span><span class="p">(</span><span class="n">M</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Eigenvalues:&quot;</span><span class="p">,</span> <span class="n">eigenValues</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>Eigenvalues: [ 0.29255874+0.j         -0.1132207 +0.0347069j  -0.1132207 -0.0347069j
+  0.03257219+0.j         -0.02452311+0.03602166j -0.02452311-0.03602166j
+ -0.0496433 +0.j        ]
+</pre></div>
+</div>
+<p>Note that some of the eigenvalues are complex, e.g. 0.02227925-0.04471056j.</p>
+<p>Let’s get the index of the largest eigenvalue by first getting a list of the indices of the sorted eigenValues:</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">idx</span> <span class="o">=</span> <span class="n">eigenValues</span><span class="o">.</span><span class="n">argsort</span><span class="p">()[::</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>  <span class="c1"># Sort eigenValues in descending order</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">idx</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>[0 3 4 5 6 1 2]
+</pre></div>
+</div>
+<p>Now let’s replace the eigenValues and eigenVectors with the sorted versions</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">eigenValues</span> <span class="o">=</span> <span class="n">eigenValues</span><span class="p">[</span><span class="n">idx</span><span class="p">]</span>
+<span class="n">eigenVectors</span> <span class="o">=</span> <span class="n">eigenVectors</span><span class="p">[:,</span> <span class="n">idx</span><span class="p">]</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Sorted Eigenvalues:&quot;</span><span class="p">,</span> <span class="n">eigenValues</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>Sorted Eigenvalues: [ 0.29255874+0.j          0.03257219+0.j         -0.02452311+0.03602166j
+ -0.02452311-0.03602166j -0.0496433 +0.j         -0.1132207 +0.0347069j
+ -0.1132207 -0.0347069j ]
+</pre></div>
+</div>
+<p>The largest eigenvalue is the first element of the sorted eigenValues array. The corresponding eigenvector is the first column of the sorted eigenVectors array.</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">largest_eigenvalue</span> <span class="o">=</span> <span class="n">eigenValues</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">largest_eigenvector</span> <span class="o">=</span> <span class="n">eigenVectors</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Largest Eigenvalue:&quot;</span><span class="p">,</span> <span class="n">largest_eigenvalue</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Corresponding Eigenvector:&quot;</span><span class="p">,</span> <span class="n">largest_eigenvector</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<dl class="simple">
+<dt>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</dt><dd><p>Largest Eigenvalue: (0.2925587369323658+0j)</p>
+</dd>
+</dl>
+<blockquote>
+<div><dl class="simple">
+<dt>Corresponding Eigenvector: [0.51030388+0.j 0.30519189+0.j 0.53571932+0.j 0.35611479+0.j</dt><dd><p>0.15671107+0.j 0.15562185+0.j 0.42878715+0.j]</p>
+</dd>
+</dl>
+</div></blockquote>
+<p>Check that the eigenvalue equation holds</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;M @ largest_eigenvector:&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">M</span><span class="p">,</span> <span class="n">largest_eigenvector</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;largest_eigenvalue * largest_eigenvector:&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">largest_eigenvalue</span> <span class="o">*</span> <span class="n">largest_eigenvector</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>M @ largest_eigenvector:
+[0.14929386+0.j 0.08928655+0.j 0.15672937+0.j 0.10418449+0.j
+ 0.04584719+0.j 0.04552853+0.j 0.12544543+0.j]
+largest_eigenvalue * largest_eigenvector:
+[0.14929386+0.j 0.08928655+0.j 0.15672937+0.j 0.10418449+0.j
+ 0.04584719+0.j 0.04552853+0.j 0.12544543+0.j]
+</pre></div>
+</div>
+<p>In the final video Amandine will briefly take you through the computation of the eigenvalues and eigenvalues of the transition matrix <strong>M</strong> including how to sort them to extract the largest eigenvalue and its corresponding eigenvector.</p>
+<div class="video_wrapper align-center" style="padding-bottom: 56.250000%; padding-top: 30px; position: relative; text-align: center; width: 100%">
+<iframe allowfullscreen="true" src="https://www.youtube.com/embed/GtiyJYddliI" style="border: 0; height: 100%; left: 0; position: absolute; top: 0; width: 100%">
+</iframe></div><div class="line-block">
+<div class="line"><br /></div>
+</div>
+</section>
+<section id="directly-computing-the-pagerank-scores">
+<h1>Directly computing the PageRank scores<a class="headerlink" href="#directly-computing-the-pagerank-scores" title="Link to this heading"></a></h1>
+<p>Does this help us predict the PageRank scores? Let’s normalize largest_eigenvector and check that the values correspond to the PageRank scores obtained using the iterative method applied in the section <a class="reference internal" href="#simulating-pagerank">Simulating PageRank</a>.</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">largest_eigenvector_normalized</span> <span class="o">=</span> <span class="n">largest_eigenvector</span> <span class="o">/</span> <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">largest_eigenvector</span><span class="p">)</span> <span class="o">*</span> <span class="mi">100</span>
+<span class="nb">print</span><span class="p">(</span>
+    <span class="sa">f</span><span class="s2">&quot;Normalized largest eigenvector:</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;</span><span class="se">\n</span><span class="s2"> &quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span>
+        <span class="p">[</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">c</span><span class="si">}</span><span class="s2">: </span><span class="si">{</span><span class="n">r</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">&quot;</span> <span class="k">for</span> <span class="n">c</span><span class="p">,</span> <span class="n">r</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">countries</span><span class="p">,</span> <span class="n">largest_eigenvector_normalized</span><span class="p">)]</span>
+    <span class="p">),</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>Normalized largest eigenvector:
+ ZA: 20.84+0.00j
+ GH: 12.46+0.00j
+ NG: 21.88+0.00j
+ RW: 14.54+0.00j
+ UG: 6.40+0.00j
+ KE: 6.36+0.00j
+ ET: 17.51+0.00j
+</pre></div>
+</div>
+<p>What about the other eigenvalues and eigenvectors? Why do we only need to consider the eigenvalue with the largest magnitude and its corresponding eigenvector?
+It turns out that the eigenvalue with the largest magnitude is the only one that matters for the PageRank algorithm.</p>
+<p>Eigenvectors corresponding to distinct eigenvalues are always linearly independent. You can verify that this is the case for our transition matrix <strong>M</strong>. Consequently, it is possible to rewrite any initial state <strong>R</strong>(0) as a linear combination of the eigenvectors <strong>v</strong><sub>i</sub> of <strong>M</strong>,</p>
+<div class="math notranslate nohighlight">
+\[\mathbf{R}(0) = \sum_{i=1}^N \lambda_i^t a_i \mathbf{v}_i\]</div>
+<p>The PageRank vector <strong>R</strong>(t) at iteration t can be expressed as a linear combination of the eigenvectors of <strong>M</strong>:</p>
+<div class="math notranslate nohighlight">
+\[\mathbf{R}(1) = \sum_{i=1}^N  a_i \mathbf{M}\mathbf{v}_i = \sum_{i=1}^N  a_i \lambda_i\mathbf{v}_i\]</div>
+<p>Applying <strong>M</strong> t times you can convince yourself that</p>
+<div class="math notranslate nohighlight">
+\[\mathbf{R}(t) = \sum_{i=1}^N  a_i \mathbf{M}^t\mathbf{v}_i = \sum_{i=1}^N  a_i \lambda_i^t\mathbf{v}_i\]</div>
+<p>Assuming that the eigenvalues are labeled so that <span class="math notranslate nohighlight">\(|\lambda_1| &gt; |\lambda_2| &gt; |\lambda_3| &gt; ... &gt; |\lambda_N|\)</span>, the term <span class="math notranslate nohighlight">\(\lambda_1^t a_1 \mathbf{v}_1\)</span> will dominate the sum as t increases. The other terms will decay to zero as t increases, and the PageRank vector will converge to a multiple of the eigenvector corresponding to the largest eigenvalue.</p>
+<dl class="simple sphx-glr-timing">
+<dt>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</dt><dd><p><strong>Total running time of the script:</strong> (0 minutes 0.130 seconds)</p>
+</dd>
+</dl>
+<div class="sphx-glr-footer sphx-glr-footer-example docutils container" id="sphx-glr-download-gallery-lesson4-plot-influencer-py">
+<div class="sphx-glr-download sphx-glr-download-jupyter docutils container">
+<p><a class="reference download internal" download="" href="../../_downloads/42e4934e95bbe5f2a82e1b882d99ad30/plot_influencer.ipynb"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Jupyter</span> <span class="pre">notebook:</span> <span class="pre">plot_influencer.ipynb</span></code></a></p>
+</div>
+<div class="sphx-glr-download sphx-glr-download-python docutils container">
+<p><a class="reference download internal" download="" href="../../_downloads/96e89960c68055766c7e2178bd34a96f/plot_influencer.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">plot_influencer.py</span></code></a></p>
+</div>
+<div class="sphx-glr-download sphx-glr-download-zip docutils container">
+<p><a class="reference download internal" download="" href="../../_downloads/cf79ea2b06ab169f209f12f8b98a2a0a/plot_influencer.zip"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">zipped:</span> <span class="pre">plot_influencer.zip</span></code></a></p>
+</div>
+</div>
+<p class="sphx-glr-signature"><a class="reference external" href="https://sphinx-gallery.github.io">Gallery generated by Sphinx-Gallery</a></p>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../lesson3/plot_runners.html" class="btn btn-neutral float-left" title="What you will learn" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, David Sumpter.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

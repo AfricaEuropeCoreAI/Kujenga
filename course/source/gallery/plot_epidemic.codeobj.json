@@ -1,0 +1,1806 @@
+{
+ "I": [
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "numpy",
+   "module_short": "numpy",
+   "name": "ndarray"
+  }
+ ],
+ "I_phase": [
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "numpy",
+   "module_short": "numpy",
+   "name": "ndarray"
+  }
+ ],
+ "R": [
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "numpy",
+   "module_short": "numpy",
+   "name": "ndarray"
+  }
+ ],
+ "R_phase": [
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "numpy",
+   "module_short": "numpy",
+   "name": "ndarray"
+  }
+ ],
+ "S": [
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "numpy",
+   "module_short": "numpy",
+   "name": "ndarray"
+  }
+ ],
+ "S_phase": [
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "numpy",
+   "module_short": "numpy",
+   "name": "ndarray"
+  }
+ ],
+ "X": [
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "numpy",
+   "module_short": "numpy",
+   "name": "ndarray"
+  }
+ ],
+ "X.T": [
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "numpy",
+   "module_short": "numpy",
+   "name": "ndarray"
+  }
+ ],
+ "X0": [
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "numpy",
+   "module_short": "numpy",
+   "name": "ndarray"
+  }
+ ],
+ "X0_phase": [
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "numpy",
+   "module_short": "numpy",
+   "name": "ndarray"
+  }
+ ],
+ "X_phase": [
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "numpy",
+   "module_short": "numpy",
+   "name": "ndarray"
+  }
+ ],
+ "X_phase.T": [
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "numpy",
+   "module_short": "numpy",
+   "name": "ndarray"
+  }
+ ],
+ "_dXdt_for_phase": [
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "builtins",
+   "module_short": "builtins",
+   "name": "function"
+  }
+ ],
+ "ax": [
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "matplotlib.axes._axes",
+   "module_short": "matplotlib.axes",
+   "name": "Axes"
+  },
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "matplotlib.axes",
+   "module_short": "matplotlib.axes",
+   "name": "Axes"
+  },
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "matplotlib",
+   "module_short": "matplotlib",
+   "name": "Axes"
+  }
+ ],
+ "ax.axhline": [
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "matplotlib.axes._axes",
+   "module_short": "matplotlib.axes",
+   "name": "Axes.axhline"
+  },
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "matplotlib.axes",
+   "module_short": "matplotlib.axes",
+   "name": "Axes.axhline"
+  },
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "matplotlib",
+   "module_short": "matplotlib",
+   "name": "Axes.axhline"
+  },
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "matplotlib.axes._base",
+   "module_short": "matplotlib.axes._base",
+   "name": "_AxesBase.axhline"
+  },
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "matplotlib.axes",
+   "module_short": "matplotlib.axes",
+   "name": "_AxesBase.axhline"
+  },
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "matplotlib",
+   "module_short": "matplotlib",
+   "name": "_AxesBase.axhline"
+  },
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "matplotlib.artist",
+   "module_short": "matplotlib.artist",
+   "name": "Artist.axhline"
+  },
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "matplotlib",
+   "module_short": "matplotlib",
+   "name": "Artist.axhline"
+  }
+ ],
+ "ax.axvline": [
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "matplotlib.axes._axes",
+   "module_short": "matplotlib.axes",
+   "name": "Axes.axvline"
+  },
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "matplotlib.axes",
+   "module_short": "matplotlib.axes",
+   "name": "Axes.axvline"
+  },
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "matplotlib",
+   "module_short": "matplotlib",
+   "name": "Axes.axvline"
+  },
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "matplotlib.axes._base",
+   "module_short": "matplotlib.axes._base",
+   "name": "_AxesBase.axvline"
+  },
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "matplotlib.axes",
+   "module_short": "matplotlib.axes",
+   "name": "_AxesBase.axvline"
+  },
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "matplotlib",
+   "module_short": "matplotlib",
+   "name": "_AxesBase.axvline"
+  },
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "matplotlib.artist",
+   "module_short": "matplotlib.artist",
+   "name": "Artist.axvline"
+  },
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "matplotlib",
+   "module_short": "matplotlib",
+   "name": "Artist.axvline"
+  }
+ ],
+ "ax.legend": [
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "matplotlib.axes._axes",
+   "module_short": "matplotlib.axes",
+   "name": "Axes.legend"
+  },
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "matplotlib.axes",
+   "module_short": "matplotlib.axes",
+   "name": "Axes.legend"
+  },
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "matplotlib",
+   "module_short": "matplotlib",
+   "name": "Axes.legend"
+  },
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "matplotlib.axes._base",
+   "module_short": "matplotlib.axes._base",
+   "name": "_AxesBase.legend"
+  },
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "matplotlib.axes",
+   "module_short": "matplotlib.axes",
+   "name": "_AxesBase.legend"
+  },
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "matplotlib",
+   "module_short": "matplotlib",
+   "name": "_AxesBase.legend"
+  },
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "matplotlib.artist",
+   "module_short": "matplotlib.artist",
+   "name": "Artist.legend"
+  },
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "matplotlib",
+   "module_short": "matplotlib",
+   "name": "Artist.legend"
+  }
+ ],
+ "ax.plot": [
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "matplotlib.axes._axes",
+   "module_short": "matplotlib.axes",
+   "name": "Axes.plot"
+  },
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "matplotlib.axes",
+   "module_short": "matplotlib.axes",
+   "name": "Axes.plot"
+  },
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "matplotlib",
+   "module_short": "matplotlib",
+   "name": "Axes.plot"
+  },
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "matplotlib.axes._base",
+   "module_short": "matplotlib.axes._base",
+   "name": "_AxesBase.plot"
+  },
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "matplotlib.axes",
+   "module_short": "matplotlib.axes",
+   "name": "_AxesBase.plot"
+  },
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "matplotlib",
+   "module_short": "matplotlib",
+   "name": "_AxesBase.plot"
+  },
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "matplotlib.artist",
+   "module_short": "matplotlib.artist",
+   "name": "Artist.plot"
+  },
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "matplotlib",
+   "module_short": "matplotlib",
+   "name": "Artist.plot"
+  }
+ ],
+ "ax.quiver": [
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "matplotlib.axes._axes",
+   "module_short": "matplotlib.axes",
+   "name": "Axes.quiver"
+  },
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "matplotlib.axes",
+   "module_short": "matplotlib.axes",
+   "name": "Axes.quiver"
+  },
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "matplotlib",
+   "module_short": "matplotlib",
+   "name": "Axes.quiver"
+  },
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "matplotlib.axes._base",
+   "module_short": "matplotlib.axes._base",
+   "name": "_AxesBase.quiver"
+  },
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "matplotlib.axes",
+   "module_short": "matplotlib.axes",
+   "name": "_AxesBase.quiver"
+  },
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "matplotlib",
+   "module_short": "matplotlib",
+   "name": "_AxesBase.quiver"
+  },
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "matplotlib.artist",
+   "module_short": "matplotlib.artist",
+   "name": "Artist.quiver"
+  },
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "matplotlib",
+   "module_short": "matplotlib",
+   "name": "Artist.quiver"
+  }
+ ],
+ "ax.set_xlabel": [
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "matplotlib.axes._axes",
+   "module_short": "matplotlib.axes",
+   "name": "Axes.set_xlabel"
+  },
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "matplotlib.axes",
+   "module_short": "matplotlib.axes",
+   "name": "Axes.set_xlabel"
+  },
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "matplotlib",
+   "module_short": "matplotlib",
+   "name": "Axes.set_xlabel"
+  },
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "matplotlib.axes._base",
+   "module_short": "matplotlib.axes._base",
+   "name": "_AxesBase.set_xlabel"
+  },
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "matplotlib.axes",
+   "module_short": "matplotlib.axes",
+   "name": "_AxesBase.set_xlabel"
+  },
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "matplotlib",
+   "module_short": "matplotlib",
+   "name": "_AxesBase.set_xlabel"
+  },
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "matplotlib.artist",
+   "module_short": "matplotlib.artist",
+   "name": "Artist.set_xlabel"
+  },
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "matplotlib",
+   "module_short": "matplotlib",
+   "name": "Artist.set_xlabel"
+  }
+ ],
+ "ax.set_xlim": [
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "matplotlib.axes._axes",
+   "module_short": "matplotlib.axes",
+   "name": "Axes.set_xlim"
+  },
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "matplotlib.axes",
+   "module_short": "matplotlib.axes",
+   "name": "Axes.set_xlim"
+  },
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "matplotlib",
+   "module_short": "matplotlib",
+   "name": "Axes.set_xlim"
+  },
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "matplotlib.axes._base",
+   "module_short": "matplotlib.axes._base",
+   "name": "_AxesBase.set_xlim"
+  },
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "matplotlib.axes",
+   "module_short": "matplotlib.axes",
+   "name": "_AxesBase.set_xlim"
+  },
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "matplotlib",
+   "module_short": "matplotlib",
+   "name": "_AxesBase.set_xlim"
+  },
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "matplotlib.artist",
+   "module_short": "matplotlib.artist",
+   "name": "Artist.set_xlim"
+  },
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "matplotlib",
+   "module_short": "matplotlib",
+   "name": "Artist.set_xlim"
+  }
+ ],
+ "ax.set_xticks": [
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "matplotlib.axes._axes",
+   "module_short": "matplotlib.axes",
+   "name": "Axes.set_xticks"
+  },
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "matplotlib.axes",
+   "module_short": "matplotlib.axes",
+   "name": "Axes.set_xticks"
+  },
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "matplotlib",
+   "module_short": "matplotlib",
+   "name": "Axes.set_xticks"
+  },
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "matplotlib.axes._base",
+   "module_short": "matplotlib.axes._base",
+   "name": "_AxesBase.set_xticks"
+  },
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "matplotlib.axes",
+   "module_short": "matplotlib.axes",
+   "name": "_AxesBase.set_xticks"
+  },
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "matplotlib",
+   "module_short": "matplotlib",
+   "name": "_AxesBase.set_xticks"
+  },
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "matplotlib.artist",
+   "module_short": "matplotlib.artist",
+   "name": "Artist.set_xticks"
+  },
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "matplotlib",
+   "module_short": "matplotlib",
+   "name": "Artist.set_xticks"
+  }
+ ],
+ "ax.set_ylabel": [
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "matplotlib.axes._axes",
+   "module_short": "matplotlib.axes",
+   "name": "Axes.set_ylabel"
+  },
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "matplotlib.axes",
+   "module_short": "matplotlib.axes",
+   "name": "Axes.set_ylabel"
+  },
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "matplotlib",
+   "module_short": "matplotlib",
+   "name": "Axes.set_ylabel"
+  },
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "matplotlib.axes._base",
+   "module_short": "matplotlib.axes._base",
+   "name": "_AxesBase.set_ylabel"
+  },
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "matplotlib.axes",
+   "module_short": "matplotlib.axes",
+   "name": "_AxesBase.set_ylabel"
+  },
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "matplotlib",
+   "module_short": "matplotlib",
+   "name": "_AxesBase.set_ylabel"
+  },
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "matplotlib.artist",
+   "module_short": "matplotlib.artist",
+   "name": "Artist.set_ylabel"
+  },
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "matplotlib",
+   "module_short": "matplotlib",
+   "name": "Artist.set_ylabel"
+  }
+ ],
+ "ax.set_ylim": [
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "matplotlib.axes._axes",
+   "module_short": "matplotlib.axes",
+   "name": "Axes.set_ylim"
+  },
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "matplotlib.axes",
+   "module_short": "matplotlib.axes",
+   "name": "Axes.set_ylim"
+  },
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "matplotlib",
+   "module_short": "matplotlib",
+   "name": "Axes.set_ylim"
+  },
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "matplotlib.axes._base",
+   "module_short": "matplotlib.axes._base",
+   "name": "_AxesBase.set_ylim"
+  },
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "matplotlib.axes",
+   "module_short": "matplotlib.axes",
+   "name": "_AxesBase.set_ylim"
+  },
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "matplotlib",
+   "module_short": "matplotlib",
+   "name": "_AxesBase.set_ylim"
+  },
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "matplotlib.artist",
+   "module_short": "matplotlib.artist",
+   "name": "Artist.set_ylim"
+  },
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "matplotlib",
+   "module_short": "matplotlib",
+   "name": "Artist.set_ylim"
+  }
+ ],
+ "ax.set_yticks": [
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "matplotlib.axes._axes",
+   "module_short": "matplotlib.axes",
+   "name": "Axes.set_yticks"
+  },
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "matplotlib.axes",
+   "module_short": "matplotlib.axes",
+   "name": "Axes.set_yticks"
+  },
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "matplotlib",
+   "module_short": "matplotlib",
+   "name": "Axes.set_yticks"
+  },
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "matplotlib.axes._base",
+   "module_short": "matplotlib.axes._base",
+   "name": "_AxesBase.set_yticks"
+  },
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "matplotlib.axes",
+   "module_short": "matplotlib.axes",
+   "name": "_AxesBase.set_yticks"
+  },
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "matplotlib",
+   "module_short": "matplotlib",
+   "name": "_AxesBase.set_yticks"
+  },
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "matplotlib.artist",
+   "module_short": "matplotlib.artist",
+   "name": "Artist.set_yticks"
+  },
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "matplotlib",
+   "module_short": "matplotlib",
+   "name": "Artist.set_yticks"
+  }
+ ],
+ "ax.spines": [
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "matplotlib.spines",
+   "module_short": "matplotlib.spines",
+   "name": "Spines"
+  },
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "matplotlib",
+   "module_short": "matplotlib",
+   "name": "Spines"
+  }
+ ],
+ "beta": [
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "builtins",
+   "module_short": "builtins",
+   "name": "float"
+  }
+ ],
+ "dXdt": [
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "builtins",
+   "module_short": "builtins",
+   "name": "function"
+  }
+ ],
+ "drawArrows": [
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "builtins",
+   "module_short": "builtins",
+   "name": "function"
+  }
+ ],
+ "fig": [
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "matplotlib.figure",
+   "module_short": "matplotlib.figure",
+   "name": "Figure"
+  },
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "matplotlib",
+   "module_short": "matplotlib",
+   "name": "Figure"
+  }
+ ],
+ "gamma": [
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "builtins",
+   "module_short": "builtins",
+   "name": "float"
+  }
+ ],
+ "interactive_plot": [
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "builtins",
+   "module_short": "builtins",
+   "name": "function"
+  }
+ ],
+ "matplotlib.font_manager.FontProperties": [
+  {
+   "is_class": true,
+   "is_explicit": false,
+   "module": "matplotlib.font_manager",
+   "module_short": "matplotlib.font_manager",
+   "name": "FontProperties"
+  },
+  {
+   "is_class": true,
+   "is_explicit": false,
+   "module": "matplotlib",
+   "module_short": "matplotlib",
+   "name": "FontProperties"
+  },
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "matplotlib.font_manager",
+   "module_short": "matplotlib.font_manager",
+   "name": "FontProperties"
+  }
+ ],
+ "np.arange": [
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "builtins",
+   "module_short": "builtins",
+   "name": "builtin_function_or_method"
+  },
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "numpy",
+   "module_short": "numpy",
+   "name": "arange"
+  }
+ ],
+ "np.array": [
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "builtins",
+   "module_short": "builtins",
+   "name": "builtin_function_or_method"
+  },
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "numpy",
+   "module_short": "numpy",
+   "name": "array"
+  }
+ ],
+ "np.hypot": [
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "numpy",
+   "module_short": "numpy",
+   "name": "ufunc"
+  },
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "numpy",
+   "module_short": "numpy",
+   "name": "hypot"
+  }
+ ],
+ "np.linspace": [
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "numpy",
+   "module_short": "numpy",
+   "name": "_ArrayFunctionDispatcher"
+  },
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "numpy",
+   "module_short": "numpy",
+   "name": "linspace"
+  }
+ ],
+ "np.meshgrid": [
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "numpy",
+   "module_short": "numpy",
+   "name": "_ArrayFunctionDispatcher"
+  },
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "numpy",
+   "module_short": "numpy",
+   "name": "meshgrid"
+  }
+ ],
+ "odeint": [
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "builtins",
+   "module_short": "builtins",
+   "name": "function"
+  },
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "scipy.integrate",
+   "module_short": "scipy.integrate",
+   "name": "odeint"
+  }
+ ],
+ "plotPhasePlane": [
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "builtins",
+   "module_short": "builtins",
+   "name": "function"
+  }
+ ],
+ "plot_sir": [
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "builtins",
+   "module_short": "builtins",
+   "name": "function"
+  }
+ ],
+ "plt.close": [
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "builtins",
+   "module_short": "builtins",
+   "name": "function"
+  },
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "matplotlib.pyplot",
+   "module_short": "matplotlib.pyplot",
+   "name": "close"
+  }
+ ],
+ "plt.figure": [
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "builtins",
+   "module_short": "builtins",
+   "name": "function"
+  },
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "matplotlib.pyplot",
+   "module_short": "matplotlib.pyplot",
+   "name": "figure"
+  }
+ ],
+ "plt.grid": [
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "builtins",
+   "module_short": "builtins",
+   "name": "function"
+  },
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "matplotlib.pyplot",
+   "module_short": "matplotlib.pyplot",
+   "name": "grid"
+  }
+ ],
+ "plt.legend": [
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "builtins",
+   "module_short": "builtins",
+   "name": "function"
+  },
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "matplotlib.pyplot",
+   "module_short": "matplotlib.pyplot",
+   "name": "legend"
+  }
+ ],
+ "plt.plot": [
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "builtins",
+   "module_short": "builtins",
+   "name": "function"
+  },
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "matplotlib.pyplot",
+   "module_short": "matplotlib.pyplot",
+   "name": "plot"
+  }
+ ],
+ "plt.show": [
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "builtins",
+   "module_short": "builtins",
+   "name": "function"
+  },
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "matplotlib.pyplot",
+   "module_short": "matplotlib.pyplot",
+   "name": "show"
+  }
+ ],
+ "plt.subplots": [
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "builtins",
+   "module_short": "builtins",
+   "name": "function"
+  },
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "matplotlib.pyplot",
+   "module_short": "matplotlib.pyplot",
+   "name": "subplots"
+  }
+ ],
+ "plt.tight_layout": [
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "builtins",
+   "module_short": "builtins",
+   "name": "function"
+  },
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "matplotlib.pyplot",
+   "module_short": "matplotlib.pyplot",
+   "name": "tight_layout"
+  }
+ ],
+ "plt.title": [
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "builtins",
+   "module_short": "builtins",
+   "name": "function"
+  },
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "matplotlib.pyplot",
+   "module_short": "matplotlib.pyplot",
+   "name": "title"
+  }
+ ],
+ "plt.xlabel": [
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "builtins",
+   "module_short": "builtins",
+   "name": "function"
+  },
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "matplotlib.pyplot",
+   "module_short": "matplotlib.pyplot",
+   "name": "xlabel"
+  }
+ ],
+ "plt.ylabel": [
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "builtins",
+   "module_short": "builtins",
+   "name": "function"
+  },
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "matplotlib.pyplot",
+   "module_short": "matplotlib.pyplot",
+   "name": "ylabel"
+  }
+ ],
+ "pn.Column": [
+  {
+   "is_class": true,
+   "is_explicit": false,
+   "module": "panel.layout.base",
+   "module_short": "panel",
+   "name": "Column"
+  },
+  {
+   "is_class": true,
+   "is_explicit": false,
+   "module": "panel.layout",
+   "module_short": "panel",
+   "name": "Column"
+  },
+  {
+   "is_class": true,
+   "is_explicit": false,
+   "module": "panel",
+   "module_short": "panel",
+   "name": "Column"
+  },
+  {
+   "is_class": true,
+   "is_explicit": false,
+   "module": "panel.layout.base",
+   "module_short": "panel.layout",
+   "name": "ListPanel"
+  },
+  {
+   "is_class": true,
+   "is_explicit": false,
+   "module": "panel.layout",
+   "module_short": "panel.layout",
+   "name": "ListPanel"
+  },
+  {
+   "is_class": true,
+   "is_explicit": false,
+   "module": "panel",
+   "module_short": "panel",
+   "name": "ListPanel"
+  },
+  {
+   "is_class": true,
+   "is_explicit": false,
+   "module": "panel.layout.base",
+   "module_short": "panel.layout",
+   "name": "ListLike"
+  },
+  {
+   "is_class": true,
+   "is_explicit": false,
+   "module": "panel.layout",
+   "module_short": "panel.layout",
+   "name": "ListLike"
+  },
+  {
+   "is_class": true,
+   "is_explicit": false,
+   "module": "panel",
+   "module_short": "panel",
+   "name": "ListLike"
+  },
+  {
+   "is_class": true,
+   "is_explicit": false,
+   "module": "panel.layout.base",
+   "module_short": "panel.layout",
+   "name": "Panel"
+  },
+  {
+   "is_class": true,
+   "is_explicit": false,
+   "module": "panel.layout",
+   "module_short": "panel.layout",
+   "name": "Panel"
+  },
+  {
+   "is_class": true,
+   "is_explicit": false,
+   "module": "panel",
+   "module_short": "panel",
+   "name": "Panel"
+  },
+  {
+   "is_class": true,
+   "is_explicit": false,
+   "module": "param.parameterized",
+   "module_short": "param",
+   "name": "Parameterized"
+  },
+  {
+   "is_class": true,
+   "is_explicit": false,
+   "module": "param",
+   "module_short": "param",
+   "name": "Parameterized"
+  },
+  {
+   "is_class": true,
+   "is_explicit": false,
+   "module": "panel.reactive",
+   "module_short": "panel.reactive",
+   "name": "Reactive"
+  },
+  {
+   "is_class": true,
+   "is_explicit": false,
+   "module": "panel",
+   "module_short": "panel",
+   "name": "Reactive"
+  },
+  {
+   "is_class": true,
+   "is_explicit": false,
+   "module": "panel.layout.base",
+   "module_short": "panel.layout.base",
+   "name": "SizingModeMixin"
+  },
+  {
+   "is_class": true,
+   "is_explicit": false,
+   "module": "panel.layout",
+   "module_short": "panel.layout",
+   "name": "SizingModeMixin"
+  },
+  {
+   "is_class": true,
+   "is_explicit": false,
+   "module": "panel",
+   "module_short": "panel",
+   "name": "SizingModeMixin"
+  },
+  {
+   "is_class": true,
+   "is_explicit": false,
+   "module": "panel.reactive",
+   "module_short": "panel.reactive",
+   "name": "Syncable"
+  },
+  {
+   "is_class": true,
+   "is_explicit": false,
+   "module": "panel",
+   "module_short": "panel",
+   "name": "Syncable"
+  },
+  {
+   "is_class": true,
+   "is_explicit": false,
+   "module": "panel.viewable",
+   "module_short": "panel.viewable",
+   "name": "Viewable"
+  },
+  {
+   "is_class": true,
+   "is_explicit": false,
+   "module": "panel",
+   "module_short": "panel",
+   "name": "Viewable"
+  },
+  {
+   "is_class": true,
+   "is_explicit": false,
+   "module": "panel.viewable",
+   "module_short": "panel.viewable",
+   "name": "Renderable"
+  },
+  {
+   "is_class": true,
+   "is_explicit": false,
+   "module": "panel",
+   "module_short": "panel",
+   "name": "Renderable"
+  },
+  {
+   "is_class": true,
+   "is_explicit": false,
+   "module": "panel.viewable",
+   "module_short": "panel.viewable",
+   "name": "Layoutable"
+  },
+  {
+   "is_class": true,
+   "is_explicit": false,
+   "module": "panel",
+   "module_short": "panel",
+   "name": "Layoutable"
+  },
+  {
+   "is_class": true,
+   "is_explicit": false,
+   "module": "panel.viewable",
+   "module_short": "panel.viewable",
+   "name": "ServableMixin"
+  },
+  {
+   "is_class": true,
+   "is_explicit": false,
+   "module": "panel",
+   "module_short": "panel",
+   "name": "ServableMixin"
+  },
+  {
+   "is_class": true,
+   "is_explicit": false,
+   "module": "panel.viewable",
+   "module_short": "panel.viewable",
+   "name": "MimeRenderMixin"
+  },
+  {
+   "is_class": true,
+   "is_explicit": false,
+   "module": "panel",
+   "module_short": "panel",
+   "name": "MimeRenderMixin"
+  },
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "panel",
+   "module_short": "panel",
+   "name": "Column"
+  }
+ ],
+ "pn.bind": [
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "builtins",
+   "module_short": "builtins",
+   "name": "function"
+  },
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "panel",
+   "module_short": "panel",
+   "name": "bind"
+  }
+ ],
+ "pn.extension": [
+  {
+   "is_class": true,
+   "is_explicit": false,
+   "module": "panel.config",
+   "module_short": "panel.config",
+   "name": "panel_extension"
+  },
+  {
+   "is_class": true,
+   "is_explicit": false,
+   "module": "panel",
+   "module_short": "panel",
+   "name": "panel_extension"
+  },
+  {
+   "is_class": true,
+   "is_explicit": false,
+   "module": "pyviz_comms",
+   "module_short": "pyviz_comms",
+   "name": "extension"
+  },
+  {
+   "is_class": true,
+   "is_explicit": false,
+   "module": "param.parameterized",
+   "module_short": "param",
+   "name": "ParameterizedFunction"
+  },
+  {
+   "is_class": true,
+   "is_explicit": false,
+   "module": "param",
+   "module_short": "param",
+   "name": "ParameterizedFunction"
+  },
+  {
+   "is_class": true,
+   "is_explicit": false,
+   "module": "param.parameterized",
+   "module_short": "param",
+   "name": "Parameterized"
+  },
+  {
+   "is_class": true,
+   "is_explicit": false,
+   "module": "param",
+   "module_short": "param",
+   "name": "Parameterized"
+  },
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "panel",
+   "module_short": "panel",
+   "name": "extension"
+  }
+ ],
+ "pn.state.curdoc": [
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "panel.io.state",
+   "module_short": "panel.io.state",
+   "name": "_state.curdoc"
+  },
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "panel.io",
+   "module_short": "panel.io",
+   "name": "_state.curdoc"
+  },
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "panel",
+   "module_short": "panel",
+   "name": "_state.curdoc"
+  },
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "param.parameterized",
+   "module_short": "param.parameterized",
+   "name": "Parameterized.curdoc"
+  },
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "param",
+   "module_short": "param",
+   "name": "Parameterized.curdoc"
+  },
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "panel.state",
+   "module_short": "panel.state",
+   "name": "curdoc"
+  }
+ ],
+ "pn.widgets.FloatSlider": [
+  {
+   "is_class": true,
+   "is_explicit": false,
+   "module": "panel.widgets.slider",
+   "module_short": "panel.widgets",
+   "name": "FloatSlider"
+  },
+  {
+   "is_class": true,
+   "is_explicit": false,
+   "module": "panel.widgets",
+   "module_short": "panel.widgets",
+   "name": "FloatSlider"
+  },
+  {
+   "is_class": true,
+   "is_explicit": false,
+   "module": "panel",
+   "module_short": "panel",
+   "name": "FloatSlider"
+  },
+  {
+   "is_class": true,
+   "is_explicit": false,
+   "module": "panel.widgets.slider",
+   "module_short": "panel.widgets.slider",
+   "name": "ContinuousSlider"
+  },
+  {
+   "is_class": true,
+   "is_explicit": false,
+   "module": "panel.widgets",
+   "module_short": "panel.widgets",
+   "name": "ContinuousSlider"
+  },
+  {
+   "is_class": true,
+   "is_explicit": false,
+   "module": "panel",
+   "module_short": "panel",
+   "name": "ContinuousSlider"
+  },
+  {
+   "is_class": true,
+   "is_explicit": false,
+   "module": "panel.widgets.slider",
+   "module_short": "panel.widgets.slider",
+   "name": "_SliderBase"
+  },
+  {
+   "is_class": true,
+   "is_explicit": false,
+   "module": "panel.widgets",
+   "module_short": "panel.widgets",
+   "name": "_SliderBase"
+  },
+  {
+   "is_class": true,
+   "is_explicit": false,
+   "module": "panel",
+   "module_short": "panel",
+   "name": "_SliderBase"
+  },
+  {
+   "is_class": true,
+   "is_explicit": false,
+   "module": "panel.widgets.base",
+   "module_short": "panel.widgets",
+   "name": "Widget"
+  },
+  {
+   "is_class": true,
+   "is_explicit": false,
+   "module": "panel.widgets",
+   "module_short": "panel.widgets",
+   "name": "Widget"
+  },
+  {
+   "is_class": true,
+   "is_explicit": false,
+   "module": "panel",
+   "module_short": "panel",
+   "name": "Widget"
+  },
+  {
+   "is_class": true,
+   "is_explicit": false,
+   "module": "panel.reactive",
+   "module_short": "panel.reactive",
+   "name": "Reactive"
+  },
+  {
+   "is_class": true,
+   "is_explicit": false,
+   "module": "panel",
+   "module_short": "panel",
+   "name": "Reactive"
+  },
+  {
+   "is_class": true,
+   "is_explicit": false,
+   "module": "panel.widgets.base",
+   "module_short": "panel.widgets",
+   "name": "WidgetBase"
+  },
+  {
+   "is_class": true,
+   "is_explicit": false,
+   "module": "panel.widgets",
+   "module_short": "panel.widgets",
+   "name": "WidgetBase"
+  },
+  {
+   "is_class": true,
+   "is_explicit": false,
+   "module": "panel",
+   "module_short": "panel",
+   "name": "WidgetBase"
+  },
+  {
+   "is_class": true,
+   "is_explicit": false,
+   "module": "panel.reactive",
+   "module_short": "panel.reactive",
+   "name": "Syncable"
+  },
+  {
+   "is_class": true,
+   "is_explicit": false,
+   "module": "panel",
+   "module_short": "panel",
+   "name": "Syncable"
+  },
+  {
+   "is_class": true,
+   "is_explicit": false,
+   "module": "panel.viewable",
+   "module_short": "panel.viewable",
+   "name": "Viewable"
+  },
+  {
+   "is_class": true,
+   "is_explicit": false,
+   "module": "panel",
+   "module_short": "panel",
+   "name": "Viewable"
+  },
+  {
+   "is_class": true,
+   "is_explicit": false,
+   "module": "param.parameterized",
+   "module_short": "param",
+   "name": "Parameterized"
+  },
+  {
+   "is_class": true,
+   "is_explicit": false,
+   "module": "param",
+   "module_short": "param",
+   "name": "Parameterized"
+  },
+  {
+   "is_class": true,
+   "is_explicit": false,
+   "module": "panel.viewable",
+   "module_short": "panel.viewable",
+   "name": "Renderable"
+  },
+  {
+   "is_class": true,
+   "is_explicit": false,
+   "module": "panel",
+   "module_short": "panel",
+   "name": "Renderable"
+  },
+  {
+   "is_class": true,
+   "is_explicit": false,
+   "module": "panel.viewable",
+   "module_short": "panel.viewable",
+   "name": "Layoutable"
+  },
+  {
+   "is_class": true,
+   "is_explicit": false,
+   "module": "panel",
+   "module_short": "panel",
+   "name": "Layoutable"
+  },
+  {
+   "is_class": true,
+   "is_explicit": false,
+   "module": "panel.viewable",
+   "module_short": "panel.viewable",
+   "name": "ServableMixin"
+  },
+  {
+   "is_class": true,
+   "is_explicit": false,
+   "module": "panel",
+   "module_short": "panel",
+   "name": "ServableMixin"
+  },
+  {
+   "is_class": true,
+   "is_explicit": false,
+   "module": "panel.viewable",
+   "module_short": "panel.viewable",
+   "name": "MimeRenderMixin"
+  },
+  {
+   "is_class": true,
+   "is_explicit": false,
+   "module": "panel",
+   "module_short": "panel",
+   "name": "MimeRenderMixin"
+  },
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "panel.widgets",
+   "module_short": "panel.widgets",
+   "name": "FloatSlider"
+  }
+ ],
+ "rcParams": [
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "matplotlib",
+   "module_short": "matplotlib",
+   "name": "RcParams"
+  },
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "pylab",
+   "module_short": "pylab",
+   "name": "rcParams"
+  }
+ ],
+ "sir_model": [
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "builtins",
+   "module_short": "builtins",
+   "name": "function"
+  }
+ ],
+ "slider": [
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "panel.widgets.slider",
+   "module_short": "panel.widgets",
+   "name": "FloatSlider"
+  },
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "panel.widgets",
+   "module_short": "panel.widgets",
+   "name": "FloatSlider"
+  },
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "panel",
+   "module_short": "panel",
+   "name": "FloatSlider"
+  }
+ ],
+ "t": [
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "numpy",
+   "module_short": "numpy",
+   "name": "ndarray"
+  }
+ ],
+ "t_phase": [
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "numpy",
+   "module_short": "numpy",
+   "name": "ndarray"
+  }
+ ]
+}

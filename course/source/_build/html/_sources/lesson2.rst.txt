@@ -1,0 +1,20 @@
+Lesson 2: The SIR Model
+=======================
+
+.. _epidemic:
+
+The SIR model
+-------------
+
+Imagine a new virus emerges in your community. ...
+
+.. note::
+
+   Let's try it here by changing β values to ½, 1/6, 1/10 and observe the changes over time.
+
+Interactive Epidemic Curve
+==========================
+
+.. panel:: ../lessons/lesson2/plot_epidemic.py
+   :height: 400
+   :width: 700

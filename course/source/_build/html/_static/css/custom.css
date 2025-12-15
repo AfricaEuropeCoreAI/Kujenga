@@ -1,0 +1,116 @@
+body {
+    background-color: #F5EFEF;
+    color: black;
+}
+
+a:link {
+    color: #C43733;
+}
+
+/* CSS link color (red) */
+
+a:visited {
+    color: #B19071;
+}
+
+/* CSS link color (grey) */
+
+
+.wy-side-nav-search {
+    background-color: #F4F4EC;
+}
+
+.wy-side-nav-search input[type=text] {
+    background: #F4F4EC;
+    border-color: #E5862C
+}
+
+.wy-nav-top {
+    background: #C13130
+}
+
+.wy-nav-side {
+    background: #F4F4EC
+}
+
+.wy-menu-vertical a {
+    color: #C13130;
+}
+
+.wy-menu-vertical a:hover {
+    background-color: #c8c8c8;
+}
+
+.rst-versions {
+    border-top: solid 10px #C43733;
+}
+
+.rst-versions .rst-current-version {
+    background-color: #C43733;
+}
+
+a:hover {
+    text-decoration: underline !important;
+}
+
+div.admonition.food-for-thought {
+    background-color: #e6f4ea;
+
+}
+
+div.admonition.food-for-thought p.admonition-title {
+    background-color: #34a853;
+    /* Solid green background */
+    font-weight: bold;
+    color: #e6f4ea;
+}
+
+
+
+/* Allow caption paragraphs (section titles) in the sidebar to wrap */
+.wy-menu-vertical p.caption {
+    white-space: normal !important;
+    /* Allow wrapping */
+    line-height: 1.4em !important;
+    /* Adjust line height for wrapped text */
+    padding-right: 5px;
+    /* Add a little padding if needed */
+    word-wrap: break-word !important;
+    /* Older browsers */
+    overflow-wrap: break-word !important;
+    /* Modern browsers */
+    margin-bottom: 0.5em !important;
+    /* Adjust value as needed (e.g., 5px, 8px, 0.75em) */
+}
+
+/* Ensure the text span inside the caption behaves */
+.wy-menu-vertical p.caption span.caption-text {
+    white-space: normal !important;
+    display: inline !important;
+    /* Should already be inline, but good to be sure */
+    word-wrap: break-word !important;
+    overflow-wrap: break-word !important;
+    /* max-width: 100%; */
+    /* Usually not needed as the <p> controls width */
+}
+
+
+/* --- Keep your existing rules for links (<a> tags) as they might be useful for long page titles --- */
+.wy-menu-vertical a {
+    white-space: normal !important;
+    word-break: break-word !important;
+    /* Or break-all if you want harsher breaks */
+    overflow-wrap: break-word !important;
+    /* Prefer break-word */
+    display: block !important;
+    max-width: 100% !important;
+    padding-right: 10px;
+    line-height: 1.4em;
+    /* Adjust line height for wrapped links too */
+}
+
+/* Ensure the menu container doesn't impose a stricter width limit than the sidebar */
+.wy-menu-vertical {
+    max-width: 100% !important;
+    /* Keep this */
+}

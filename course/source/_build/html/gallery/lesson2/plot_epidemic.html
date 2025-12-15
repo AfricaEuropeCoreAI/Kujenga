@@ -1,0 +1,467 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The SIR model &mdash; Kujenga  documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/custom.css?v=55fe5824" />
+      <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery.css?v=d2d258e8" />
+      <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-binder.css?v=f4aeca0c" />
+      <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-dataframe.css?v=2082cf3c" />
+      <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-rendered-html.css?v=1277b6f3" />
+
+  
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=5929fcd5"></script>
+      <script src="../../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script>let toggleHintShow = 'Click to show';</script>
+      <script>let toggleHintHide = 'Click to hide';</script>
+      <script>let toggleOpenOnPrint = 'true';</script>
+      <script src="../../_static/togglebutton.js?v=4a39c7ea"></script>
+      <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+      <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+      <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      <script src="https://cdn.bokeh.org/bokeh/release/bokeh-3.2.0.min.js"></script>
+      <script src="https://cdn.bokeh.org/bokeh/release/bokeh-widgets-3.2.0.min.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="The SEIR model" href="plot_SEIR.html" />
+    <link rel="prev" title="What you will learn" href="../lesson1/plot_howtobehappy.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html">
+            
+              <img src="../../_static/CoreAI.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Are healthier people happier people?</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../lesson1/plot_howtobehappy.html">What you will learn</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lesson1/plot_howtobehappy.html#differentiation">Differentiation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lesson1/plot_howtobehappy.html#a-line-through-the-data">A line through the data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lesson1/plot_howtobehappy.html#finding-the-best-fit-line">Finding the best fit line</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lesson1/plot_howtobehappy.html#interpretting-the-data">Interpretting the data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lesson1/plot_howtobehappy.html#exercise-look-for-other-predictors-of-happiness">Exercise: look for other predictors of happiness</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lesson1/plot_howtobehappy.html#using-regression-in-applications">Using regression in applications</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Can we predict a disease outbreak?</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">The SIR model</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#equilibrium-points-and-nullclines">Equilibrium Points and Nullclines</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#impact-of-parameters">Impact of Parameters</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="plot_SEIR.html">The SEIR model</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Are Ethiopian or Kenyan runners the fastest?</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../lesson3/plot_runners.html">What you will learn</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lesson3/plot_runners.html#why-do-we-need-a-test-at-all">Why Do We Need a Test at All?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lesson3/plot_runners.html#calculating-the-t-statistic-by-hand">Calculating the t-Statistic by Hand</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lesson3/plot_runners.html#doing-it-in-python">Doing it in Python</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">How did Google make billions of dollars?</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../lesson4/plot_influencer.html">What you will learn</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lesson4/plot_influencer.html#the-mathematics-of-the-pagerank-algorithm">The Mathematics of the PageRank algorithm</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lesson4/plot_influencer.html#working-with-matrices-in-python">Working with matrices in Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lesson4/plot_influencer.html#simulating-pagerank">Simulating PageRank</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lesson4/plot_influencer.html#eigenvalues-and-eigenvectors-of-a-matrix">Eigenvalues and eigenvectors of a matrix</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lesson4/plot_influencer.html#directly-computing-the-pagerank-scores">Directly computing the PageRank scores</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Kujenga</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">The SIR model</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/gallery/lesson2/plot_epidemic.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <div class="sphx-glr-download-link-note admonition note">
+<p class="admonition-title">Note</p>
+<p><a class="reference internal" href="#sphx-glr-download-gallery-lesson2-plot-epidemic-py"><span class="std std-ref">Go to the end</span></a>
+to download the full example code.</p>
+</div>
+<section class="sphx-glr-example-title" id="the-sir-model">
+<span id="epidemic"></span><span id="sphx-glr-gallery-lesson2-plot-epidemic-py"></span><h1>The SIR model<a class="headerlink" href="#the-sir-model" title="Link to this heading"></a></h1>
+<p><strong>Preamble</strong>:
+Imagine a new virus emerges in your community. At first, only a few people are infected but soon hospitals in your city begin to fill up.</p>
+<p>You are asked a critical question: Can we predict when this outbreak will be at it’s peak, how many people will get infected, and what interventions could stop it?
+Did you know that ordinary differential equations (ODEs) are not abstract math but a tool for saving lives in a case like this?</p>
+<p>These questions can be answered using the SIR model. The Susceptible Infected Recovered (SIR) model can be described using three differential equations.</p>
+<p><cite>But, can these ordinary differential equations really describe the story of an outbreak from start to end?</cite></p>
+<p>In the first video, Patience answers this question as she takes us through the mathematical foundations of the SIR model often referred to as <cite>The Math of Epidemics</cite>.</p>
+<p>She explains the total population(N) which consists of 3 populations of individuals often referred to as compartments of the SIR model. The susceptible(S) individuals who are at an increased risk of infection and may require interventions such as vaccination or chemoprophylaxis, social distancing etc. to prevent diseases. They do not have the virus but could catch it. The Infected/Infectious(I) people who have the virus and can spread it to those who are susceptible and the Recovered(R) people who have had the virus, have recovered, and can no longer spread the virus.</p>
+<p>She also explains two key variables; β which is the disease transmission rate and γ which is the recovery rate</p>
+<p>The SIR model operates on 4 assumptions:</p>
+<ol class="arabic simple">
+<li><p>The total population N is constant in time. No births, deaths or migration</p></li>
+<li><p>There is a homogeneous mixing of the infected and susceptible populations</p></li>
+<li><p>Individuals who recover from the disease gain permanent immunity</p></li>
+<li><p>Both the rate of Infection and the rate of recovery are constant</p></li>
+</ol>
+<p>PATIENCE’S VIDEO HERE</p>
+<p>EQUATIONS BY SEUN HERE</p>
+<p>In the SIR model, the rate of change of susceptible individuals is</p>
+<div class="math notranslate nohighlight" id="equation-susc">
+<span class="eqno">(1)<a class="headerlink" href="#equation-susc" title="Link to this equation"></a></span>\[\frac{dS}{dt} = -\beta S I\]</div>
+<p>and the rate of change of infectives is</p>
+<div class="math notranslate nohighlight" id="equation-infect">
+<span class="eqno">(2)<a class="headerlink" href="#equation-infect" title="Link to this equation"></a></span>\[\frac{dI}{dt} = \beta S I - \gamma I\]</div>
+<p>The constant <span class="math notranslate nohighlight">\(\beta\)</span> is the rate of contact between people and <span class="math notranslate nohighlight">\(\gamma\)</span> is the rate of recovery.
+We can also write down an equation for recovery as follows,</p>
+<div class="math notranslate nohighlight" id="equation-recover">
+<span class="eqno">(3)<a class="headerlink" href="#equation-recover" title="Link to this equation"></a></span>\[\frac{dR}{dt} = \gamma I\]</div>
+<p>In this model <span class="math notranslate nohighlight">\(S\)</span>, <span class="math notranslate nohighlight">\(I\)</span> and <span class="math notranslate nohighlight">\(R\)</span> are proportions of the population. Summing them up gives <span class="math notranslate nohighlight">\(S+I+R=1\)</span>, since
+everyone in the popultaion is either susceptible, infective or recovered.</p>
+<p>While it is very important to understand this math, python makes it easier for us to solve these equations by importing key python libraries without having to manually do these calculations.</p>
+<p>Let’s now solve these equations numerically in python. We start by importing the libraries we need from Python.</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">panel</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pn</span>
+<span class="n">pn</span><span class="o">.</span><span class="n">extension</span><span class="p">(</span><span class="s1">&#39;widgets&#39;</span><span class="p">)</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">pylab</span><span class="w"> </span><span class="kn">import</span> <span class="n">rcParams</span>
+<span class="n">matplotlib</span><span class="o">.</span><span class="n">font_manager</span><span class="o">.</span><span class="n">FontProperties</span><span class="p">(</span><span class="n">family</span><span class="o">=</span><span class="s1">&#39;Helvetica&#39;</span><span class="p">,</span><span class="n">size</span><span class="o">=</span><span class="mi">11</span><span class="p">)</span>
+<span class="n">rcParams</span><span class="p">[</span><span class="s1">&#39;figure.figsize&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">9</span><span class="o">/</span><span class="mf">2.54</span><span class="p">,</span> <span class="mi">9</span><span class="o">/</span><span class="mf">2.54</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">scipy</span><span class="w"> </span><span class="kn">import</span> <span class="n">integrate</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">ipywidgets</span><span class="w"> </span><span class="kn">import</span> <span class="n">interact</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">scipy.integrate</span><span class="w"> </span><span class="kn">import</span> <span class="n">odeint</span>
+</pre></div>
+</div>
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>WARNING:param.panel_extension: widgets extension not recognized and will be skipped.
+</pre></div>
+</div>
+<p>Now we define the model. This code creates a function
+which we can use to simulate differential equations <a class="reference internal" href="../plot_epidemic.html#equation-susc">(1)</a> and <a class="reference internal" href="../plot_epidemic.html#equation-infect">(2)</a>.
+We also define the parameter values β (the infection rate) and γ (the recovery rate.
+You can change these to see how
+changes to the paramaters leads to changes in the outcome of the model.</p>
+<p>Investigate yourself what happens when <span class="math notranslate nohighlight">\(β=1/3, 1/6, 1/10\)</span>.</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">sir_model</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span> <span class="n">beta</span><span class="p">,</span> <span class="n">gamma</span><span class="p">):</span>
+    <span class="n">S</span><span class="p">,</span> <span class="n">I</span><span class="p">,</span> <span class="n">R</span> <span class="o">=</span> <span class="n">y</span>
+    <span class="n">dSdt</span> <span class="o">=</span> <span class="o">-</span><span class="n">beta</span> <span class="o">*</span> <span class="n">S</span> <span class="o">*</span> <span class="n">I</span>
+    <span class="n">dIdt</span> <span class="o">=</span> <span class="n">beta</span> <span class="o">*</span> <span class="n">S</span> <span class="o">*</span> <span class="n">I</span> <span class="o">-</span> <span class="n">gamma</span> <span class="o">*</span> <span class="n">I</span>
+    <span class="n">dRdt</span> <span class="o">=</span> <span class="n">gamma</span> <span class="o">*</span> <span class="n">I</span>
+    <span class="k">return</span> <span class="p">[</span><span class="n">dSdt</span><span class="p">,</span> <span class="n">dIdt</span><span class="p">,</span> <span class="n">dRdt</span><span class="p">]</span>            <span class="c1">#Recovered X[2] is R</span>
+</pre></div>
+</div>
+<p>Let’s now solve these equations numerically and plot the solution over time.
+You can change β to see how changes to the parameters leads to changes in the epidemic curve.
+Let’s try it here by changing β values to ½,1/6,1/10 and observe the changes over time.</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Interactive slider for exploring β values with fixed γ = 1/7</span>
+<span class="n">beta_values</span> <span class="o">=</span> <span class="p">[</span><span class="mf">0.5</span><span class="p">,</span> <span class="mi">1</span><span class="o">/</span><span class="mi">6</span><span class="p">,</span> <span class="mi">1</span><span class="o">/</span><span class="mi">10</span><span class="p">]</span>
+
+<span class="nd">@interact</span><span class="p">(</span><span class="n">beta</span><span class="o">=</span><span class="n">beta_values</span><span class="p">)</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">plot_sir</span><span class="p">(</span><span class="n">beta</span><span class="p">):</span>
+    <span class="n">gamma</span> <span class="o">=</span> <span class="mi">1</span><span class="o">/</span><span class="mi">7</span>  <span class="c1"># fixed</span>
+    <span class="n">t</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">1000</span><span class="p">)</span>
+    <span class="n">y0</span> <span class="o">=</span> <span class="p">[</span><span class="mf">0.9999</span><span class="p">,</span> <span class="mf">0.0001</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">]</span>
+    <span class="n">sol</span> <span class="o">=</span> <span class="n">odeint</span><span class="p">(</span><span class="n">sir_model</span><span class="p">,</span> <span class="n">y0</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span> <span class="n">args</span><span class="o">=</span><span class="p">(</span><span class="n">beta</span><span class="p">,</span> <span class="n">gamma</span><span class="p">))</span>
+    <span class="n">S</span><span class="p">,</span> <span class="n">I</span><span class="p">,</span> <span class="n">R</span> <span class="o">=</span> <span class="n">sol</span><span class="o">.</span><span class="n">T</span>
+
+    <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span><span class="mi">5</span><span class="p">))</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">S</span><span class="p">,</span> <span class="s1">&#39;--&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Susceptible&#39;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">I</span><span class="p">,</span> <span class="s1">&#39;-&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Infectives&#39;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">R</span><span class="p">,</span> <span class="s1">&#39;:&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Recovered&#39;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;Time&quot;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;Proportion&quot;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;SIR Model (β=</span><span class="si">{</span><span class="n">beta</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">, γ=1/7)&quot;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+
+<span class="c1"># Panel interactive slider</span>
+<span class="n">slider</span> <span class="o">=</span> <span class="n">pn</span><span class="o">.</span><span class="n">widgets</span><span class="o">.</span><span class="n">FloatSlider</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;β&#39;</span><span class="p">,</span> <span class="n">start</span><span class="o">=</span><span class="mf">0.05</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="mf">1.0</span><span class="p">,</span> <span class="n">step</span><span class="o">=</span><span class="mf">0.05</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span>
+<span class="n">interactive_plot</span> <span class="o">=</span> <span class="n">pn</span><span class="o">.</span><span class="n">bind</span><span class="p">(</span><span class="n">plot_sir</span><span class="p">,</span> <span class="n">beta</span><span class="o">=</span><span class="n">slider</span><span class="p">)</span>
+
+<span class="c1"># Serve the Panel app</span>
+<span class="n">pn</span><span class="o">.</span><span class="n">Column</span><span class="p">(</span><span class="s2">&quot;# SIR Model Epidemic Curve&quot;</span><span class="p">,</span> <span class="n">slider</span><span class="p">,</span> <span class="n">interactive_plot</span><span class="p">)</span><span class="o">.</span><span class="n">servable</span><span class="p">()</span>
+</pre></div>
+</div>
+<ul class="sphx-glr-horizontal">
+<li><img src="../../_images/sphx_glr_plot_epidemic_001.png" srcset="../../_images/sphx_glr_plot_epidemic_001.png" alt="SIR Model (β=0.50, γ=1/7)" class = "sphx-glr-multi-img"/></li>
+<li><img src="../../_images/sphx_glr_plot_epidemic_002.png" srcset="../../_images/sphx_glr_plot_epidemic_002.png" alt="SIR Model (β=0.50, γ=1/7)" class = "sphx-glr-multi-img"/></li>
+</ul>
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>interactive(children=(Dropdown(description=&#39;beta&#39;, options=(0.5, 0.16666666666666666, 0.1), value=0.5), Output()), _dom_classes=(&#39;widget-interact&#39;,))
+
+Column
+    [0] Markdown(str)
+    [1] FloatSlider(name=&#39;β&#39;, start=0.05, step=0.05, value=0.5)
+    [2] ParamFunction(function, _pane=Str, defer_load=False)
+</pre></div>
+</div>
+<dl>
+<dt>Phase Planes and nullclines</dt><dd><p>In this section, Emily introduces the concept of <strong>phase planes and nullclines</strong> in the video below,
+using the SIR model as an example.</p>
+<div class="video_wrapper align-center" style="padding-bottom: 56.250000%; padding-top: 30px; position: relative; text-align: center; width: 100%">
+<iframe allowfullscreen="true" src="https://www.youtube.com/embed/oYcNqe9KlDk" style="border: 0; height: 100%; left: 0; position: absolute; top: 0; width: 100%">
+</iframe></div><p>The material that follows recaps what is covered in the video, with supporting code
+and explanations to help you explore phase planes for yourself.</p>
+<p>A phase plane is a graphical representation of a dynamical system i.e a system described by
+differential equations where we plot one variable against another instead of plotting them over time.
+Phase planes provide a powerful visualization method for dynamic systems.</p>
+</dd>
+<dt>Why a dynamic system?</dt><dd><p>In mathematics and epidemiology, a system means a set of linked equations that describe how
+variables change over time. So the SIR model is a dynamic system because the numbers of S,I and
+R are continuously changing as the epidemic evolves i.e When there are many susceptibles and
+few infected, the rate of infection is high, as susceptibles decrease, the rate of infection slows down
+and when almost everyone is recovered, the infection fades away. The trajectory of the epidemic
+(rise, peak, decline) is a dynamic response to how the parts of the system interact over time
+Instead of observing each variable separately over time, phase planes plot one variable
+against another. In our case, a common representation for the SIR model is the interaction
+between the Susceptible (S) and Infected (I) groups. This is used both in in Emily’s video, and
+further below in the code examples.</p>
+<p>This visualization allows us to better understand complex system behaviors, such as:</p>
+<ol class="arabic simple">
+<li><p>The spread of disease over time</p></li>
+<li><p>Stabilization points (equilibrium)</p></li>
+<li><p>The eventual decline or extinction of an epidemic</p></li>
+</ol>
+<p>Phase planes highlight crucial relationships, equilibrium points, and system behavior
+that can inform predictions about the long-term outcomes of an epidemic.</p>
+<p>To fully understand phase planes, let’s examine their key components:</p>
+<dl class="simple">
+<dt><strong>Axes</strong>:</dt><dd><p>The axes of a phase plane represent the system variables, which is Susceptible (S) and Infected (I) in this case.
+By plotting one variable against another, we can see how these groups interact directly, rather than just observing
+their individual changes over time.</p>
+</dd>
+<dt><strong>Trajectories</strong>:</dt><dd><p>Trajectories portray the state of the system as it evolves.
+For the SIR model in particular, the trajectory describes how the numbers of susceptible and infected individuals change in relation
+to one another as the epidemic progresses over time.</p>
+</dd>
+<dt><strong>Directional Arrows</strong>:</dt><dd><p>These arrows on the phase plane indicate the direction of movement over time, showing how the system transitions between states.
+They guide us through the epidemic’s progression, pointing from higher susceptibility toward states of greater infection or recovery.</p>
+</dd>
+</dl>
+<p>Below is the first example of a phase plane showing how the SIR system evolves over time,
+with Susceptible (S) on the x-axis and Infected (I) on the y-axis.</p>
+</dd>
+</dl>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">beta</span> <span class="o">=</span> <span class="mi">1</span><span class="o">/</span><span class="mi">2</span>
+<span class="n">gamma</span> <span class="o">=</span> <span class="mi">1</span><span class="o">/</span><span class="mi">7</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">plotPhasePlane</span><span class="p">(</span><span class="n">ax</span><span class="p">,</span><span class="n">S</span><span class="p">,</span><span class="n">I</span><span class="p">):</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">S</span><span class="p">,</span> <span class="n">I</span><span class="p">,</span> <span class="s1">&#39;-&#39;</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;k&#39;</span><span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;Susceptibles: S&#39;</span><span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;Infectives: I&#39;</span><span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">spines</span><span class="p">[</span><span class="s1">&#39;top&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">set_visible</span><span class="p">(</span><span class="kc">False</span><span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">spines</span><span class="p">[</span><span class="s1">&#39;right&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">set_visible</span><span class="p">(</span><span class="kc">False</span><span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">set_xticks</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mf">1.01</span><span class="p">,</span><span class="n">step</span><span class="o">=</span><span class="mf">0.5</span><span class="p">))</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">set_yticks</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mf">1.01</span><span class="p">,</span><span class="n">step</span><span class="o">=</span><span class="mf">0.5</span><span class="p">))</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">set_ylim</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">set_xlim</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">drawArrows</span><span class="p">(</span><span class="n">ax</span><span class="p">,</span><span class="n">dXdt</span><span class="p">):</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mf">0.05</span><span class="p">,</span> <span class="mi">1</span> <span class="p">,</span><span class="mi">6</span><span class="p">)</span>
+    <span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mf">0.05</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">6</span><span class="p">)</span>
+    <span class="n">X</span> <span class="p">,</span> <span class="n">Y</span>  <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">meshgrid</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+    <span class="n">dX</span><span class="p">,</span> <span class="n">dY</span><span class="p">,</span> <span class="n">dZ</span> <span class="o">=</span> <span class="n">dXdt</span><span class="p">([</span><span class="n">X</span><span class="p">,</span> <span class="n">Y</span><span class="p">,</span><span class="mi">1</span><span class="o">-</span><span class="n">X</span><span class="o">-</span><span class="n">Y</span><span class="p">])</span>
+    <span class="c1">#Make in to unit vectors.</span>
+    <span class="n">M</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">hypot</span><span class="p">(</span><span class="n">dX</span><span class="p">,</span><span class="n">dY</span><span class="p">)</span>
+    <span class="n">dX</span> <span class="o">=</span> <span class="n">dX</span><span class="o">/</span><span class="n">M</span>
+    <span class="n">dY</span> <span class="o">=</span> <span class="n">dY</span><span class="o">/</span><span class="n">M</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">quiver</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">Y</span><span class="p">,</span> <span class="n">dX</span><span class="p">,</span> <span class="n">dY</span><span class="p">,</span> <span class="n">pivot</span><span class="o">=</span><span class="s1">&#39;mid&#39;</span><span class="p">)</span>
+
+<span class="n">fig</span><span class="p">,</span><span class="n">ax</span><span class="o">=</span><span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">num</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">plotPhasePlane</span><span class="p">(</span><span class="n">ax</span><span class="p">,</span><span class="n">S</span><span class="p">,</span><span class="n">I</span><span class="p">)</span>
+<span class="n">drawArrows</span><span class="p">(</span><span class="n">ax</span><span class="p">,</span><span class="n">dXdt</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+<div class="sphx-glr-script-out highlight-pytb notranslate"><div class="highlight"><pre><span></span><span class="gt">Traceback (most recent call last):</span>
+  File <span class="nb">&quot;C:\Users\pc\SIR Model\Kujenga\course\lessons\lesson2\plot_epidemic.py&quot;</span>, line <span class="m">221</span>, in <span class="n">&lt;module&gt;</span>
+<span class="w">    </span><span class="n">plotPhasePlane</span><span class="p">(</span><span class="n">ax</span><span class="p">,</span><span class="n">S</span><span class="p">,</span><span class="n">I</span><span class="p">)</span>
+<span class="w">                      </span><span class="pm">^</span>
+<span class="gr">NameError</span>: <span class="n">name &#39;S&#39; is not defined</span>
+</pre></div>
+</div>
+<section id="equilibrium-points-and-nullclines">
+<h2>Equilibrium Points and Nullclines<a class="headerlink" href="#equilibrium-points-and-nullclines" title="Link to this heading"></a></h2>
+<p>One essential element of phase planes is the determination of equilibrium points. These
+points occur where the rates of change for both Susceptible (S) and Infected (I) are zero.
+The lines where the rate of change of a variable is equal to zero are called <strong>nullclines</strong>.
+The intersection of these nullclines determines the equilibrium points, which are
+crucial to understanding how an epidemic evolves.
+As the system evolves, either the susceptibles (S) becomes zero or the Infected(I) become zero and
+the point at which they intersect where S=0 (vertical axis) and I=0(horizontal axis) is the
+equilibrium. This is the <strong>S-nullcline</strong>.
+The <strong>I-nullcline</strong> is where I=0 or βS- γ = 0 and if we make S the subject, then S=γ/β
+So the I-nullclines are I=0(horizontal axis) and S=γ/β (vertical axis)</p>
+<p>S=γ/β  is very important because it represents the threshold for the outbreak.
+<strong>This is also referred to as the R_o</strong> (basic reproductive number/ratio).</p>
+<p>Similar to the <a class="reference internal" href="plot_rabbitsandfoxes.html#rabbitsandfoxes"><span class="std std-ref">predator prey model</span></a>, we can find the equilibria for the infected population, where the rate at which
+people become infected equals the rate at which they recover. This is done by solving:</p>
+<div class="math notranslate nohighlight">
+\[\frac{dI}{dt} = \beta S I - \gamma I = 0\]</div>
+<p>This occurs either when <span class="math notranslate nohighlight">\(I=0\)</span> (no one has the disease) or
+when <span class="math notranslate nohighlight">\(S=\gamma/\beta\)</span>.</p>
+<p>For the susceptible population:</p>
+<div class="math notranslate nohighlight">
+\[\frac{dS}{dt} = -\beta S I = 0\]</div>
+<p>which simplifies to <span class="math notranslate nohighlight">\(I = 0\)</span> or <span class="math notranslate nohighlight">\(S = 0\)</span>. These resultant values are all nullclines
+of this system.</p>
+<p>We can now plot the nullcline <span class="math notranslate nohighlight">\(S=\gamma/\beta\)</span> on the phase plane:</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">scipy.integrate</span><span class="w"> </span><span class="kn">import</span> <span class="n">odeint</span>
+
+<span class="c1"># Parameters</span>
+<span class="n">beta</span> <span class="o">=</span> <span class="mi">1</span><span class="o">/</span><span class="mi">2</span>
+<span class="n">gamma</span> <span class="o">=</span> <span class="mi">1</span><span class="o">/</span><span class="mi">7</span>
+
+<span class="c1"># Integrate the system</span>
+<span class="n">t</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">1000</span><span class="p">)</span>
+<span class="n">X0</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">0.9999</span><span class="p">,</span> <span class="mf">0.0001</span><span class="p">,</span> <span class="mf">0.0000</span><span class="p">])</span>
+<span class="n">X</span> <span class="o">=</span> <span class="n">integrate</span><span class="o">.</span><span class="n">odeint</span><span class="p">(</span><span class="n">dXdt</span><span class="p">,</span> <span class="n">X0</span><span class="p">,</span> <span class="n">t</span><span class="p">)</span>
+<span class="n">S</span><span class="p">,</span> <span class="n">I</span><span class="p">,</span> <span class="n">R</span> <span class="o">=</span> <span class="n">X</span><span class="o">.</span><span class="n">T</span>
+
+<span class="n">fig</span><span class="p">,</span><span class="n">ax</span><span class="o">=</span><span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">num</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="c1"># Include nullcline</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">([</span><span class="n">gamma</span><span class="o">/</span><span class="n">beta</span><span class="p">,</span><span class="n">gamma</span><span class="o">/</span><span class="n">beta</span><span class="p">],[</span><span class="o">-</span><span class="mi">100</span><span class="p">,</span><span class="mi">100</span><span class="p">],</span><span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;:&#39;</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;k&#39;</span><span class="p">)</span>
+<span class="n">plotPhasePlane</span><span class="p">(</span><span class="n">ax</span><span class="p">,</span><span class="n">S</span><span class="p">,</span><span class="n">I</span><span class="p">)</span>
+<span class="n">drawArrows</span><span class="p">(</span><span class="n">ax</span><span class="p">,</span><span class="n">dXdt</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>Now, we can see that this nullcline passes through the trajectory at its peak.
+This is because the rate of change of infections (<span class="math notranslate nohighlight">\(\frac{dI}{dt}\)</span>) becomes zero when <span class="math notranslate nohighlight">\(S=\gamma/\beta\)</span>,
+and the number of infected individuals reaches the maximum value possible for the system.
+This visual insight helps us understand how the number of infections evolves over time,
+and the nullclines highlight important thresholds in disease spread.
+The effects of interventions, such as vaccination or changes in contact rates can also be
+visualised in this way, by showing how they might shift the trajectory or alter the nullclines.</p>
+</section>
+<section id="impact-of-parameters">
+<h2>Impact of Parameters<a class="headerlink" href="#impact-of-parameters" title="Link to this heading"></a></h2>
+<p>Now, we can investigate what happens to the phase planes when we change the
+values of <span class="math notranslate nohighlight">\(\beta\)</span> and <span class="math notranslate nohighlight">\(\gamma\)</span>. In our previous code examples, the
+<span class="math notranslate nohighlight">\(\beta\)</span> value was <span class="math notranslate nohighlight">\(\frac{1}{2}\)</span>, which is the rate of contact between people,
+or transmission rate. What do you think will happen to the phase plane trajectory
+if we increase this value? How will the nullcline be impacted?
+You can change the “beta” value in the code block to test your hypothesis.</p>
+<p>Answer:</p>
+<div class="toggle docutils container">
+<p>As <span class="math notranslate nohighlight">\(\beta\)</span> increases, the infection rate becomes faster, which means the disease
+spreads more quickly. This leads to a faster rise in the number of infected individuals,
+and the trajectory in the phase plane will become steeper. The peak of the trajectory will
+also become higher, as more individuals get infected more quickly before reaching the recovery phase.</p>
+<p>The nullcline, which represents the point where the rate of change of infected individuals is zero
+(i.e., where the number of infections and recoveries are balanced), shifts to the left as
+<span class="math notranslate nohighlight">\(\beta\)</span> increases. This indicates that, for a higher transmission rate, fewer susceptible
+individuals remain in the population when the epidemic reaches equilibrium. Essentially, a larger
+number of people are infected earlier, so there are fewer susceptible individuals left when the
+system reaches a stable state.</p>
+</div>
+<p>Similarly, the <span class="math notranslate nohighlight">\(\gamma\)</span> value was set to <span class="math notranslate nohighlight">\(\frac{1}{7}\)</span>, representing the recovery
+rate. What happens to the trajectory and nullcline for the phase plane when this value
+is increased?</p>
+<p>Answer:</p>
+<div class="toggle docutils container">
+<p>A flatter trajectory and a lower peak (due to quicker recovery) will be observed. In addition, the nullcline shifts to the right,
+indicating a higher number of susceptible individuals at equilibrium.</p>
+<p>This is because the quicker recovery of individuals causes the epidemic to peak and decline more quickly,
+leaving a larger proportion of the population susceptible at the point of equilibrium.</p>
+</div>
+<p>Additional questions:</p>
+<ol class="arabic simple">
+<li><p>When a high <span class="math notranslate nohighlight">\(\gamma\)</span> or low <span class="math notranslate nohighlight">\(\beta\)</span> value is used, the trajectory does not return to the x-axis after peaking. Why might this be happening?</p></li>
+<li><p>We have been initialising the models with 99.99% of the population as susceptible, and only 0.01% infected. How are the phase planes affected when changing this proportion?</p></li>
+<li><p>If we could reduce the Infection/transmission rate β (e.g., through social distancing or vaccination), what do you think will happen to the nullcline? Then how would the epidemic curve change? What if this value increases?</p></li>
+<li><p>If we could increase recovery rate γ, how would the curve change?</p></li>
+<li><p>If we reduced β while at the same time increasing γ how would that alter the shape of the epidemic curve?</p></li>
+<li><p>How can we estimate how long it will take for the epidemic to be at its peak and how long it will stay at its peak? This question is answered using phase planes and nullclines in Emily’s video</p></li>
+<li><p>How can the SIR model help governments decide when to lift restrictions?</p></li>
+<li><p>Can you now be able to answer the question you were asked at the start i.e Can we predict when this outbreak will be at it’s peak, how many people will get infected, and what interventions could stop it?</p></li>
+</ol>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> (0 minutes 1.245 seconds)</p>
+<div class="sphx-glr-footer sphx-glr-footer-example docutils container" id="sphx-glr-download-gallery-lesson2-plot-epidemic-py">
+<div class="sphx-glr-download sphx-glr-download-jupyter docutils container">
+<p><a class="reference download internal" download="" href="../../_downloads/3bc887b22c53ca12145047ea2d60bfb7/plot_epidemic.ipynb"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Jupyter</span> <span class="pre">notebook:</span> <span class="pre">plot_epidemic.ipynb</span></code></a></p>
+</div>
+<div class="sphx-glr-download sphx-glr-download-python docutils container">
+<p><a class="reference download internal" download="" href="../../_downloads/22c99d08b5c85013aee93ed8d48b011c/plot_epidemic.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">plot_epidemic.py</span></code></a></p>
+</div>
+<div class="sphx-glr-download sphx-glr-download-zip docutils container">
+<p><a class="reference download internal" download="" href="../../_downloads/d556905f5e1e1bcce9384ed7676698e7/plot_epidemic.zip"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">zipped:</span> <span class="pre">plot_epidemic.zip</span></code></a></p>
+</div>
+</div>
+<p class="sphx-glr-signature"><a class="reference external" href="https://sphinx-gallery.github.io">Gallery generated by Sphinx-Gallery</a></p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../lesson1/plot_howtobehappy.html" class="btn btn-neutral float-left" title="What you will learn" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="plot_SEIR.html" class="btn btn-neutral float-right" title="The SEIR model" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, David Sumpter.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

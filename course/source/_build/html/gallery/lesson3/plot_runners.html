@@ -1,0 +1,420 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>What you will learn &mdash; Kujenga  documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/custom.css?v=55fe5824" />
+      <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery.css?v=d2d258e8" />
+      <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-binder.css?v=f4aeca0c" />
+      <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-dataframe.css?v=2082cf3c" />
+      <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-rendered-html.css?v=1277b6f3" />
+
+  
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=5929fcd5"></script>
+      <script src="../../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script>let toggleHintShow = 'Click to show';</script>
+      <script>let toggleHintHide = 'Click to hide';</script>
+      <script>let toggleOpenOnPrint = 'true';</script>
+      <script src="../../_static/togglebutton.js?v=4a39c7ea"></script>
+      <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+      <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+      <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      <script src="https://cdn.bokeh.org/bokeh/release/bokeh-3.2.0.min.js"></script>
+      <script src="https://cdn.bokeh.org/bokeh/release/bokeh-widgets-3.2.0.min.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="What you will learn" href="../lesson4/plot_influencer.html" />
+    <link rel="prev" title="The SEIR model" href="../lesson2/plot_SEIR.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html">
+            
+              <img src="../../_static/CoreAI.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Are healthier people happier people?</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../lesson1/plot_howtobehappy.html">What you will learn</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lesson1/plot_howtobehappy.html#differentiation">Differentiation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lesson1/plot_howtobehappy.html#a-line-through-the-data">A line through the data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lesson1/plot_howtobehappy.html#finding-the-best-fit-line">Finding the best fit line</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lesson1/plot_howtobehappy.html#interpretting-the-data">Interpretting the data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lesson1/plot_howtobehappy.html#exercise-look-for-other-predictors-of-happiness">Exercise: look for other predictors of happiness</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lesson1/plot_howtobehappy.html#using-regression-in-applications">Using regression in applications</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Can we predict a disease outbreak?</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../lesson2/plot_epidemic.html">The SIR model</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lesson2/plot_SEIR.html">The SEIR model</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Are Ethiopian or Kenyan runners the fastest?</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">What you will learn</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#the-problem">The problem</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#the-methods">The methods</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#how-to-use-this-material">How to use this material</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="#why-do-we-need-a-test-at-all">Why Do We Need a Test at All?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#calculating-the-t-statistic-by-hand">Calculating the t-Statistic by Hand</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#doing-it-in-python">Doing it in Python</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#loading-in-the-data-set">Loading in the data set</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#sampling-and-comparing-the-two-groups">Sampling and Comparing the Two Groups</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#running-the-t-test-in-python">Running the t-Test in Python</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#making-a-decision-and-interpreting-the-result">Making a Decision and Interpreting the Result</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#checking-the-critical-value">Checking the Critical Value</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#visualizing-the-distributions">Visualizing the Distributions</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">How did Google make billions of dollars?</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../lesson4/plot_influencer.html">What you will learn</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lesson4/plot_influencer.html#the-mathematics-of-the-pagerank-algorithm">The Mathematics of the PageRank algorithm</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lesson4/plot_influencer.html#working-with-matrices-in-python">Working with matrices in Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lesson4/plot_influencer.html#simulating-pagerank">Simulating PageRank</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lesson4/plot_influencer.html#eigenvalues-and-eigenvectors-of-a-matrix">Eigenvalues and eigenvectors of a matrix</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lesson4/plot_influencer.html#directly-computing-the-pagerank-scores">Directly computing the PageRank scores</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Kujenga</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">What you will learn</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/gallery/lesson3/plot_runners.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <div class="sphx-glr-download-link-note admonition note">
+<p class="admonition-title">Note</p>
+<p><a class="reference internal" href="#sphx-glr-download-gallery-lesson3-plot-runners-py"><span class="std std-ref">Go to the end</span></a>
+to download the full example code.</p>
+</div>
+<section class="sphx-glr-example-title" id="what-you-will-learn">
+<span id="google"></span><span id="sphx-glr-gallery-lesson3-plot-runners-py"></span><h1>What you will learn<a class="headerlink" href="#what-you-will-learn" title="Link to this heading"></a></h1>
+<section id="the-problem">
+<h2>The problem<a class="headerlink" href="#the-problem" title="Link to this heading"></a></h2>
+<p>Ethiopian and Kenyan runners dominate long-distance athletics. Their success has inspired countless studies, documentaries, and debates trying to uncover why runners from these two nations seem to outperform the rest of the world.</p>
+<p><em>But who is faster — Kenyan or Ethiopian runners?</em></p>
+<p>To explore this question, we’ve collected official race data from hundreds of professional 10,000 m runners from both countries. Each record contains the runner’s name, nationality, and finishing time.</p>
+<p>Just by looking at the data, it might seem that Kenyan runners tend to have slightly lower (faster) times — but appearances can be misleading. Random variation, race conditions, or sampling bias could all explain such differences.</p>
+<p>To answer the question rigorously, we need a statistical approach.
+We will use hypothesis testing, specifically, a two-sample t-test, to compare the average times of Kenyan and Ethiopian runners and determine whether the observed difference is likely to be real or just due to chance.</p>
+<p>In this lesson, we’ll move from posing the question to formulating a hypothesis, performing the test by hand, and finally reproducing it with Python on a larger dataset.</p>
+</section>
+<section id="the-methods">
+<h2>The methods<a class="headerlink" href="#the-methods" title="Link to this heading"></a></h2>
+<p>In this lesson, we will learn how to compare two groups of data and decide whether the difference we see between them is real or simply due to chance. This kind of reasoning where you weigh evidence to make decisions based on data is at the heart of both statistics and machine learning.</p>
+<p>We will begin by introducing the idea of hypothesis testing, a structured way of asking:</p>
+<p>“Is there enough evidence in the data to support a particular claim?”</p>
+<p>To do this, we will learn how to:</p>
+<ol class="arabic simple">
+<li><p>Formulate null and alternative hypotheses that describe our assumptions about two groups.</p></li>
+<li><p>Compute summary statistics (means and variances) to describe each group.</p></li>
+<li><p>Use a t-statistic to measure how different two group means are, relative to their variability.</p></li>
+<li><p>Determine whether the observed difference is statistically significant using the concept of a p-value and a significance level (α).</p></li>
+</ol>
+<p>Before we run any Python code, we will first understand these ideas theoretically. You will see how the t-statistic formula arises from comparing two group averages and why it’s a standardized measure of difference.</p>
+<p>Once we’ve established the theory, we’ll move to practice:</p>
+<ol class="arabic simple">
+<li><p>Selina will show you how to compute the t-statistic by hand using small samples of run times.</p></li>
+<li><p>Then, Beimnet will recap the reasoning and demonstrate how to do the same test efficiently in Python, allowing us to analyze much larger datasets and visualize the results.</p></li>
+</ol>
+<p>By the end of this lesson, you’ll not only know how to perform a t-test, but also why we do it and how this same logic underpins the way we evaluate models and decisions in machine learning.</p>
+<p>For more information on the type of test we will look at see <a href="#id1"><span class="problematic" id="id2">`here https://www.khanacademy.org/math/statistics-probability/significance-tests-one-sample`_</span></a>.</p>
+</section>
+<section id="how-to-use-this-material">
+<h2>How to use this material<a class="headerlink" href="#how-to-use-this-material" title="Link to this heading"></a></h2>
+<p><em>update section when course is finalised</em></p>
+<p>This material is taught as part of a 6 hour learning session. Your Kujenga instructor will have booked
+a time for an in-person or online two hour session. This means you have two hours to work to do either side of the
+session. Here is what you should do:</p>
+<p><em>Before coming to the class</em>: You should read through this entire page. At the section on calculating a confidence interval
+for a mean. If you get stuck look
+<a class="reference external" href="https://www.khanacademy.org/math/statistics-probability/confidence-intervals-one-sample/estimating-population-mean/v/introduction-to-t-statistics">here</a>.
+After that section you should simply read through and try to understand what we are doing.</p>
+<p>Once you have read through, you should
+download this page as a Jupyter notebook or as Python code by clicking the links at the bottom of this page.
+You will need to have a Python environment set up on your computer or access via Google Colab (see here for</p>
+<blockquote>
+<div><p>info on how to set that up). Please make sure you have the notebook and a Python environment set up before the class.</p>
+<p><em>During class</em>: Your teacher will start by going through the theory for <a href="#id3"><span class="problematic" id="id4">`the t-test`_</span></a>.
+Please ask them questions and actively engage!</p>
+</div></blockquote>
+</section>
+</section>
+<section id="why-do-we-need-a-test-at-all">
+<h1>Why Do We Need a Test at All?<a class="headerlink" href="#why-do-we-need-a-test-at-all" title="Link to this heading"></a></h1>
+<p>If we collect times from 10 Kenyan and 10 Ethiopian athletes, we might see one group’s average is lower. But averages alone don’t prove much; maybe that difference happened by chance. To reason rigorously, we use hypothesis testing.
+It lets us evaluate whether the difference we observe is likely real or just random variation.</p>
+<p>Here in this lesson, we want to answer the question: Who is faster? Kenyan or Ethiopian runners? And more specifically, since in this lesson we’ll only cover one-sided t-tests, we’ll reframe the question to be: Are Kenyan runners faster than Ethiopian runners?</p>
+<p>We’ll then set our hypothesis to be tested as follows:</p>
+<blockquote>
+<div><p><em>Kenyan runners have a lower average time (are faster) than Ethiopian runners.</em></p>
+</div></blockquote>
+<p>To test this, we set up two competing hypotheses:</p>
+<ol class="arabic simple">
+<li><p><strong>Null Hypothesis (H₀)</strong>: Kenyan and Ethiopian runners have the same average time. Any difference we see is due to random chance.</p></li>
+<li><p><strong>Alternative Hypothesis (H₁)</strong>: Kenyan runners have a lower average time (are faster) than Ethiopian runners.</p></li>
+</ol>
+<p>And mathematically, we can express these hypotheses as:</p>
+<div class="math notranslate nohighlight">
+\[ \begin{align}\begin{aligned}H_0: \mu_{\mathrm{Kenya}} \geq \mu_{\mathrm{Ethiopia}}\\H_1: \mu_{\mathrm{Kenya}} &lt; \mu_{\mathrm{Ethiopia}}\end{aligned}\end{align} \]</div>
+<p>Where <span class="math notranslate nohighlight">\(\mu\)</span> represents the population mean time for each group.</p>
+</section>
+<section id="calculating-the-t-statistic-by-hand">
+<h1>Calculating the t-Statistic by Hand<a class="headerlink" href="#calculating-the-t-statistic-by-hand" title="Link to this heading"></a></h1>
+<p>In the following short video, Selina takes 10 times from each group, computes their averages, and applies the t-statistic formula:</p>
+<div class="math notranslate nohighlight">
+\[t = \frac{\overline{X}_1 - \overline{X}_2} {\sqrt{\frac{s_1^2}{n_1} + \frac{s_2^2}{n_2}}}\]</div>
+<p>She then compares her result to a critical value to decide whether the Kenyan runners are significantly faster.</p>
+<p>Take a few minutes to watch her work through the math, notice how each part of the formula measures either difference in means or variation within each group.</p>
+<div class="video_wrapper align-center" style="padding-bottom: 56.250000%; padding-top: 30px; position: relative; text-align: center; width: 100%">
+<iframe allowfullscreen="true" src="https://www.youtube.com/embed/5p8jcxIs4CA" style="border: 0; height: 100%; left: 0; position: absolute; top: 0; width: 100%">
+</iframe></div></section>
+<section id="doing-it-in-python">
+<h1>Doing it in Python<a class="headerlink" href="#doing-it-in-python" title="Link to this heading"></a></h1>
+<p>Now that you’ve seen how to compute a t-statistic by hand, let’s review what those numbers mean.
+In the next video, Beimnet recaps the reasoning behind the t-test and shows how to implement it in Python.
+This allows us to analyze much larger datasets efficiently.</p>
+<div class="video_wrapper align-center" style="padding-bottom: 56.250000%; padding-top: 30px; position: relative; text-align: center; width: 100%">
+<iframe allowfullscreen="true" src="https://www.youtube.com/embed/kE8KCy1ErWE" style="border: 0; height: 100%; left: 0; position: absolute; top: 0; width: 100%">
+</iframe></div><p>In this video:</p>
+<ol class="arabic simple">
+<li><p>We briefly recap what the null and alternative hypotheses represent,</p></li>
+<li><p>explain why the significance level (α) matters, and</p></li>
+<li><p>show how to perform the same t-test using Python — automating all the calculations Selina did manually.</p></li>
+</ol>
+<p>This notebook complements that video by letting you run and modify the same code yourself.
+You’ll find each step below with explanations so you can experiment freely.</p>
+<section id="loading-in-the-data-set">
+<h2>Loading in the data set<a class="headerlink" href="#loading-in-the-data-set" title="Link to this heading"></a></h2>
+<p>Let’s load our dataset of race times and prepare it for analysis.</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+
+<span class="c1"># Load in times of runners</span>
+<span class="n">ETH_data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;../data/ethiopia_10000m_runners.csv&#39;</span><span class="p">)</span>
+<span class="n">KEN_data</span><span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;../data/kenyan_10000m_runners.csv&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="sampling-and-comparing-the-two-groups">
+<h2>Sampling and Comparing the Two Groups<a class="headerlink" href="#sampling-and-comparing-the-two-groups" title="Link to this heading"></a></h2>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="c1">#  Selina used 10 runners from each group; let’s do the same here.</span>
+
+<span class="n">eth_data</span> <span class="o">=</span> <span class="n">ETH_data</span><span class="o">.</span><span class="n">sample</span><span class="p">(</span><span class="n">n</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">1</span><span class="p">)[</span><span class="s1">&#39;Mark&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">tolist</span><span class="p">()</span>
+<span class="n">ken_data</span> <span class="o">=</span> <span class="n">KEN_data</span><span class="o">.</span><span class="n">sample</span><span class="p">(</span><span class="n">n</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">2</span><span class="p">)[</span><span class="s1">&#39;Mark&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">tolist</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;ETH DATA: </span><span class="si">{</span><span class="n">eth_data</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;KEN DATA: </span><span class="si">{</span><span class="n">ken_data</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="c1"># Now, let’s compare their averages:</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">statistics</span><span class="w"> </span><span class="kn">import</span> <span class="n">mean</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Average Ethiopian time:&quot;</span> <span class="p">,</span><span class="n">mean</span><span class="p">(</span><span class="n">eth_data</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Average Kenyan time&quot;</span><span class="p">,</span> <span class="n">mean</span><span class="p">(</span><span class="n">ken_data</span><span class="p">)</span> <span class="p">)</span>
+<span class="c1"># We see that the Kenyan runners have a lower average time, but is this difference significant?</span>
+<span class="c1"># To answer that, we need to compute the t-statistic and compare it to a critical value.</span>
+</pre></div>
+</div>
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>ETH DATA: [1927.79, 1935.69, 1851.86, 1929.5, 1953.59, 1818.39, 1855.5, 1930.8, 1909.71, 1907.09]
+KEN DATA: [1896.87, 1846.51, 1875.38, 1837.24, 1826.4, 1835.75, 1767.59, 1844.0, 1844.86, 1822.77]
+Average Ethiopian time: 1901.992
+Average Kenyan time 1839.737
+</pre></div>
+</div>
+</section>
+<section id="running-the-t-test-in-python">
+<h2>Running the t-Test in Python<a class="headerlink" href="#running-the-t-test-in-python" title="Link to this heading"></a></h2>
+<p>Now that we’ve set up our two samples and calculated their averages, we’re ready to formally test our hypothesis.
+Just as we did by hand, we’ll now use a t-test, but this time, Python will handle all the calculations for us.</p>
+<p>The function ttest_ind() from the scipy.stats library performs a two-sample t-test.
+We’ll specify that we’re running a one-sided test (since we’re testing whether Kenyan runners are faster, not just different).</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">scipy.stats</span><span class="w"> </span><span class="kn">import</span> <span class="n">ttest_ind</span>
+
+<span class="n">t_stat</span><span class="p">,</span> <span class="n">p_value</span><span class="o">=</span> <span class="n">ttest_ind</span><span class="p">(</span><span class="n">ken_data</span><span class="p">,</span> <span class="n">eth_data</span><span class="p">,</span> <span class="n">alternative</span><span class="o">=</span><span class="s1">&#39;less&#39;</span><span class="p">,</span> <span class="n">equal_var</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;T-statistics:&quot;</span><span class="p">,</span> <span class="n">t_stat</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;P-value:&quot;</span><span class="p">,</span> <span class="n">p_value</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>T-statistics: -3.522139129585767
+P-value: 0.001326622635327722
+</pre></div>
+</div>
+<p>Let’s unpack what this means:</p>
+<ul class="simple">
+<li><p>t-statistic: measures how far apart the two sample means are, relative to the variation within each group.</p></li>
+<li><p>p-value: tells us the probability of observing such a difference (or one more extreme) if the null hypothesis were true. In other words, if there were no real difference between the groups.</p></li>
+</ul>
+<p>The smaller the p-value, the less likely it is that our observed difference happened just by random chance.</p>
+</section>
+<section id="making-a-decision-and-interpreting-the-result">
+<h2>Making a Decision and Interpreting the Result<a class="headerlink" href="#making-a-decision-and-interpreting-the-result" title="Link to this heading"></a></h2>
+<p>In statistics, we need a rule to decide when a difference is significant enough to reject the null hypothesis.
+That’s where the significance level, usually denoted by 𝛼 comes in.
+A common choice is 𝛼 = 0.05, meaning we accept a 5% risk of being wrong when concluding there’s a difference.</p>
+<p>Let’s apply that rule to our result:</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">alpha</span> <span class="o">=</span> <span class="mf">0.05</span>
+
+<span class="k">if</span> <span class="n">p_value</span> <span class="o">&lt;</span> <span class="n">alpha</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Reject the null hypothesis: Kenyan runners are statistically faster.&quot;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Fail to reject the null hypothesis: No significant difference found.&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>Reject the null hypothesis: Kenyan runners are statistically faster.
+</pre></div>
+</div>
+<p>If the p-value is smaller than 0.05, it means the data provide strong evidence against the null hypothesis,
+just as Selina found in her manual example.
+But rather than computing it step by step, Python gives us a fast, reliable result that scales easily to much larger datasets.</p>
+<p>This mirrors exactly what Selina did by hand, just powered by Python. The goal isn’t to replace the math, but to use it at scale and interpret the evidence more efficiently.</p>
+</section>
+<section id="checking-the-critical-value">
+<h2>Checking the Critical Value<a class="headerlink" href="#checking-the-critical-value" title="Link to this heading"></a></h2>
+<p>If you recall, in her video, Selina calculated the t-statistic and compared it to something called a critical value.
+This value acts like a cutoff point: it tells us how extreme our t-statistic must be before we decide the difference between groups is statistically significant.
+In other words, If our calculated t-statistic is more extreme than the critical value, the result is unlikely to have happened by chance — so we reject the null hypothesis.
+We can calculate this value directly in Python using the same logic Selina used by hand.</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">scipy.stats</span><span class="w"> </span><span class="kn">import</span> <span class="n">t</span>
+
+<span class="n">df</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">KEN_data</span><span class="p">)</span> <span class="o">+</span> <span class="nb">len</span><span class="p">(</span><span class="n">ETH_data</span><span class="p">)</span> <span class="o">-</span> <span class="mi">2</span>   <span class="c1"># degrees of freedom (approximation)</span>
+<span class="n">alpha</span> <span class="o">=</span> <span class="mf">0.05</span>                    <span class="c1"># our significance level</span>
+<span class="n">critical_value</span> <span class="o">=</span> <span class="n">t</span><span class="o">.</span><span class="n">ppf</span><span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="n">alpha</span><span class="p">,</span> <span class="n">df</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Critical Value:&quot;</span><span class="p">,</span> <span class="n">critical_value</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Observed t-statistic:&quot;</span><span class="p">,</span> <span class="n">t_stat</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>Critical Value: 1.6525857836172075
+Observed t-statistic: -3.522139129585767
+</pre></div>
+</div>
+<p>Here’s how to interpret what you see:</p>
+<ul class="simple">
+<li><p>Critical Value: the threshold beyond which a result is considered statistically significant.</p></li>
+<li><p>t_statistic: our observed difference between the two groups, scaled by their variability.</p></li>
+</ul>
+<p>If the t-statistic is smaller (more negative) than our critical value, it means our observed difference is strong enough to reject H_0.
+By checking both the p-value and the critical value, we see two sides of the same reasoning:</p>
+<ul class="simple">
+<li><p>The p-value tells us how likely our result is if the null hypothesis were true.</p></li>
+<li><p>The critical value tells us how far our result needs to go before we can call it significant.</p></li>
+</ul>
+<p>Together, they give us both intuition and mathematical confirmation — a solid foundation for making data-driven conclusions.</p>
+</section>
+<section id="visualizing-the-distributions">
+<h2>Visualizing the Distributions<a class="headerlink" href="#visualizing-the-distributions" title="Link to this heading"></a></h2>
+<p>Before we move on, let’s take a moment to see what our data look like.
+Statistics often become much clearer when we visualize them, especially when comparing two groups.</p>
+<p>By plotting the distribution of race times for both Ethiopian and Kenyan runners, we can get a quick visual impression of whether one group tends to have lower (faster) times than the other.</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">ETH_data</span><span class="p">[</span><span class="s1">&#39;Mark&#39;</span><span class="p">],</span> <span class="n">bins</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.6</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Ethiopian Runners&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">KEN_data</span><span class="p">[</span><span class="s1">&#39;Mark&#39;</span><span class="p">],</span> <span class="n">bins</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.6</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Kenyan Runners&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Time (seconds)&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Frequency&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Distribution of 10,000m Race Times&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+<img src="../../_images/sphx_glr_plot_runners_001.png" srcset="../../_images/sphx_glr_plot_runners_001.png" alt="Distribution of 10,000m Race Times" class = "sphx-glr-single-img"/><p>If our hypothesis is correct, we might expect to see the Kenyan distribution slightly shifted to the left, toward smaller times.
+This would visually confirm what our t-test already suggested: that Kenyan runners tend to record faster race times on average.</p>
+<p>In statistics, visualization and computation go hand in hand.
+A plot helps you build intuition for what the numbers are saying.
+The t-test gives you the exact measure of confidence, but the plot gives you a story, it helps you see patterns,
+overlap, and how much the two groups differ in real terms.
+By comparing both, we can move beyond just accepting or rejecting a hypothesis and
+start understanding what the data are actually telling us.</p>
+<p>[segue  to last discussion video on the couch]</p>
+<div class="video_wrapper align-center" style="padding-bottom: 56.250000%; padding-top: 30px; position: relative; text-align: center; width: 100%">
+<iframe allowfullscreen="true" src="https://www.youtube.com/embed/spuHjliHpw0" style="border: 0; height: 100%; left: 0; position: absolute; top: 0; width: 100%">
+</iframe></div><p class="sphx-glr-timing"><strong>Total running time of the script:</strong> (0 minutes 0.156 seconds)</p>
+<div class="sphx-glr-footer sphx-glr-footer-example docutils container" id="sphx-glr-download-gallery-lesson3-plot-runners-py">
+<div class="sphx-glr-download sphx-glr-download-jupyter docutils container">
+<p><a class="reference download internal" download="" href="../../_downloads/48926c7766b5d2aa42c736a9e5a61112/plot_runners.ipynb"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Jupyter</span> <span class="pre">notebook:</span> <span class="pre">plot_runners.ipynb</span></code></a></p>
+</div>
+<div class="sphx-glr-download sphx-glr-download-python docutils container">
+<p><a class="reference download internal" download="" href="../../_downloads/0caf6e5f2063eecae2ddff9ba1f0358a/plot_runners.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">plot_runners.py</span></code></a></p>
+</div>
+<div class="sphx-glr-download sphx-glr-download-zip docutils container">
+<p><a class="reference download internal" download="" href="../../_downloads/9e457ab788dbac20ff27795943c6d21b/plot_runners.zip"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">zipped:</span> <span class="pre">plot_runners.zip</span></code></a></p>
+</div>
+</div>
+<p class="sphx-glr-signature"><a class="reference external" href="https://sphinx-gallery.github.io">Gallery generated by Sphinx-Gallery</a></p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../lesson2/plot_SEIR.html" class="btn btn-neutral float-left" title="The SEIR model" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../lesson4/plot_influencer.html" class="btn btn-neutral float-right" title="What you will learn" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, David Sumpter.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
