@@ -68,12 +68,11 @@ Once we’ve established the theory, we’ll move to practice:
 
 By the end of this lesson, you’ll not only know how to perform a t-test, but also why we do it and how this same logic underpins the way we evaluate models and decisions in machine learning.
 
-For more information on the type of test we will look at see `here https://www.khanacademy.org/math/statistics-probability/significance-tests-one-sample`_. 
+For more information on the type of test we will look at, see `here <https://www.khanacademy.org/math/statistics-probability/significance-tests-one-sample>`_. 
 
 
 How to use this material
 ------------------------
-*update section when course is finalised*
 
 This material is taught as part of a 6 hour learning session. Your Kujenga instructor will have booked 
 a time for an in-person or online two hour session. This means you have two hours to work to do either side of the
@@ -86,11 +85,12 @@ After that section you should simply read through and try to understand what we 
 
 Once you have read through, you should 
 download this page as a Jupyter notebook or as Python code by clicking the links at the bottom of this page.
-You will need to have a Python environment set up on your computer or access via Google Colab (see here for
- info on how to set that up). Please make sure you have the notebook and a Python environment set up before the class.
+You will need to have a Python environment set up on your computer or access via `Google Colab <https://colab.research.google.com/>`_  
+see `here  <https://cloud.google.com/python/docs/setup>`_. for info on how to set that up). 
+Please make sure you have the notebook and a Python environment set up before the class.
 
- *During class*: Your teacher will start by going through the theory for `the t-test`_. 
- Please ask them questions and actively engage! 
+*During class*: Your teacher will start by going through the theory for `the t-test`_. 
+Please ask them questions and actively engage! 
 
 Why Do We Need a Test at All?
 =================
@@ -389,7 +389,7 @@ By plotting the distribution of race times for both Ethiopian and Kenyan runners
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 264-334
+.. GENERATED FROM PYTHON SOURCE LINES 264-343
 
 If our hypothesis is correct, we might expect to see the Kenyan distribution slightly shifted to the left, toward smaller times.
  This would visually confirm what our t-test already suggested: that Kenyan runners tend to record faster race times on average.
@@ -406,24 +406,32 @@ If our hypothesis is correct, we might expect to see the Kenyan distribution sli
  .. youtube:: spuHjliHpw0
     :width: 100% 
     :align: center 
+#########################################################
 
 
- Exercise: Evaluating a Coach's Claim about Training Methods
- =============================================================== 
+ **Exercise: Evaluating a Coach's Claim about Training Methods**
+
  Below is an example that we can attempt. In this exercise you will apply your knowledge of hypothesis testing to evaluate a coaches claim about training methods
 
- * Scenario 
- A running coach believes that training at high altitutde improves athletes' 10,000-meter race performance. According to the coach, athletes who train at higher evaltion have better oxygen-utilisation effeciency, resulting in faster race times
+ **Scenario** 
+
+
+ A running coach believes that training at high altitutde improves athletes' 10,000-meter race performance. 
+ According to the coach, athletes who train at higher elevation have better oxygen-utilisation efficiency, resulting in faster race times
+
  To asses this claim, the coach records the race times (in seconds) for 50 athletes 
  * 35 athletes trained at High Altitude (HA)
  * 25 athletes trained at Low Altitude (SL)
  Your task is to statistically determine whether high-altitude athletes are indeed significantly faster
- Your task 
+
+ **Your task**
+
  *Define your null hypothesis H_0 and teh alternative hypothesis H_1
  * What does the coach's claim imply?
  * Should this be a one sided test or a two sided test?
 ########################################################
  Use the dataset below 
+
  This dataset contains the race times recorded by the coach
 
  High Altitude (HA) Group - 25 athletes
@@ -457,16 +465,17 @@ If our hypothesis is correct, we might expect to see the Kenyan distribution sli
  * Visualize the comparison
 
  Create:
- * A boxplot
- * A histogram
- * Or any plot that helps you compare the distributions
+
+ **A boxplot** , 
+ **A histogram** , 
+ **Or any plot that helps you compare the distributions**
 
  Discuss what you observe visually.
 
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** (0 minutes 2.817 seconds)
+   **Total running time of the script:** (0 minutes 1.037 seconds)
 
 
 .. _sphx_glr_download_gallery_lesson3_plot_runners.py:
