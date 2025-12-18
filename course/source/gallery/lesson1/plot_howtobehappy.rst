@@ -1065,14 +1065,14 @@ Using regression in applications
 We have now seen how to use linear regression to find a line through data points.
 In the video below we talk to several reasearchers who use linear regression in their work.
 
-.. youtube:: jQZ6db0FzQo
+.. youtube::jQZ6db0FzQo
    :width: 100% 
    :align: center 
 
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** (0 minutes 7.183 seconds)
+   **Total running time of the script:** (0 minutes 2.748 seconds)
 
 
 .. _sphx_glr_download_gallery_lesson1_plot_howtobehappy.py:
