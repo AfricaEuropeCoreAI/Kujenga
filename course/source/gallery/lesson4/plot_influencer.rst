@@ -72,13 +72,13 @@ This material is taught as part of a 6-hour learning session. Your Kujenga instr
 a time for an in-person or online 2-hour session. This means you have two hours of work to do on either side of the in-person or online
 session. Here is what you should do:
 
-*Before coming to the class*: You should read through this entire page. In the section on `<LINK NEEDED>`_,
-try to solve the example both by hand and using Python. If you get stuck look `here <LINK NEEDED>`_, but otherwise you should
+*Before coming to the class*: You should read through this entire page. In the section on `The Mathematics of the PageRank algorithm`_,
+try to solve the example both by hand and using Python. If you get stuck look `here <https://medium.com/swlh/a-handwritten-introduction-to-pagerank-7ed2fedddb0d>`_, but otherwise you should
 simply read through and try to understand what we are doing. Once you have read through, you should
 download this page as a Jupyter notebook or as Python code by clicking the links at the bottom of this page.
-You will need to have a Python environment set up on your computer or access via Google Colab (see here for info on how to set that up).
+You will need to have a Python environment set up on your computer or access via Google `Colab <https://colab.research.google.com/>`_ (see `here <https://docs.cloud.google.com/python/docs/setup>`_ for info on how to set that up).
 
-*During class*: Your teacher will start by going through the theory for `<LINK NEEDED>`_.
+*During class*: Your teacher will start by going through the theory for `Working with matrices in Python`_.
 Please ask them questions and actively engage!
 
 .. GENERATED FROM PYTHON SOURCE LINES 69-162
@@ -1162,11 +1162,7 @@ The largest eigenvalue is the first element of the sorted eigenValues array. The
 
  .. code-block:: none
 
-<<<<<<< HEAD
     Largest Eigenvalue: (0.2925587369323658+0j)
-=======
-    Largest Eigenvalue: (0.29255873693236584+0j)
->>>>>>> upstream/main
     Corresponding Eigenvector: [0.51030388+0.j 0.30519189+0.j 0.53571932+0.j 0.35611479+0.j
      0.15671107+0.j 0.15562185+0.j 0.42878715+0.j]
 
@@ -1274,11 +1270,7 @@ Assuming that the eigenvalues are labeled so that :math:`|\lambda_1| > |\lambda_
 
 .. rst-class:: sphx-glr-timing
 
-<<<<<<< HEAD
-   **Total running time of the script:** (0 minutes 0.130 seconds)
-=======
-   **Total running time of the script:** (0 minutes 0.011 seconds)
->>>>>>> upstream/main
+   **Total running time of the script:** (0 minutes 0.032 seconds)
 
 
 .. _sphx_glr_download_gallery_lesson4_plot_influencer.py:

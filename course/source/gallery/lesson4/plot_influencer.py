@@ -54,13 +54,13 @@ This material is taught as part of a 6-hour learning session. Your Kujenga instr
 a time for an in-person or online 2-hour session. This means you have two hours of work to do on either side of the in-person or online
 session. Here is what you should do:
 
-*Before coming to the class*: You should read through this entire page. In the section on `<LINK NEEDED>`_,
-try to solve the example both by hand and using Python. If you get stuck look `here <LINK NEEDED>`_, but otherwise you should
+*Before coming to the class*: You should read through this entire page. In the section on `The Mathematics of the PageRank algorithm`_,
+try to solve the example both by hand and using Python. If you get stuck look `here <https://medium.com/swlh/a-handwritten-introduction-to-pagerank-7ed2fedddb0d>`_, but otherwise you should
 simply read through and try to understand what we are doing. Once you have read through, you should
 download this page as a Jupyter notebook or as Python code by clicking the links at the bottom of this page.
-You will need to have a Python environment set up on your computer or access via Google Colab (see here for info on how to set that up).
+You will need to have a Python environment set up on your computer or access via Google `Colab <https://colab.research.google.com/>`_ (see `here <https://docs.cloud.google.com/python/docs/setup>`_ for info on how to set that up).
 
-*During class*: Your teacher will start by going through the theory for `<LINK NEEDED>`_.
+*During class*: Your teacher will start by going through the theory for `Working with matrices in Python`_.
 Please ask them questions and actively engage!
 
 """
