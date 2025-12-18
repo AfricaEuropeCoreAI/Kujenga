@@ -55,7 +55,8 @@ a time for an in-person or online 2-hour session. This means you have two hours 
 session. Here is what you should do:
 
 *Before coming to the class*: You should read through this entire page. In the section on `The Mathematics of the PageRank algorithm`_,
-try to solve the example both by hand and using Python. If you get stuck look `here <https://medium.com/swlh/a-handwritten-introduction-to-pagerank-7ed2fedddb0d>`_, but otherwise you should
+try to solve the example both by hand and using Python. 
+If you get stuck look `here <https://medium.com/swlh/a-handwritten-introduction-to-pagerank-7ed2fedddb0d>`_, but otherwise you should
 simply read through and try to understand what we are doing. Once you have read through, you should
 download this page as a Jupyter notebook or as Python code by clicking the links at the bottom of this page.
 You will need to have a Python environment set up on your computer or access via Google `Colab <https://colab.research.google.com/>`_ (see `here <https://docs.cloud.google.com/python/docs/setup>`_ for info on how to set that up).
@@ -507,7 +508,7 @@ largest_eigenvector = eigenVectors[:, 0]
 print("Largest Eigenvalue:", largest_eigenvalue)
 print("Corresponding Eigenvector:", largest_eigenvector)
 
-# %%
+
 # Check that the eigenvalue equation holds
 
 print("M @ largest_eigenvector:")

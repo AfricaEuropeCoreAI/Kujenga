@@ -508,7 +508,7 @@ largest_eigenvector = eigenVectors[:, 0]
 print("Largest Eigenvalue:", largest_eigenvalue)
 print("Corresponding Eigenvector:", largest_eigenvector)
 
-# %%
+
 # Check that the eigenvalue equation holds
 
 print("M @ largest_eigenvector:")
