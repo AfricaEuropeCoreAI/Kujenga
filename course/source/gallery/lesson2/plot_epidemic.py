@@ -3,17 +3,25 @@
 
 The SIR model
 =============
+
+What you will learn 
+===================
+
 **Preamble**: 
 Imagine a new virus emerges in your community. At first, only a few people are infected but soon hospitals in your city begin to fill up.
 
 You are asked a critical question: Can we predict when this outbreak will be at it’s peak, how many people will get infected, and what interventions could stop it?
 Did you know that ordinary differential equations (ODEs) are not abstract math but a tool for saving lives in a case like this?
 
-These questions can be answered using the SIR model. The Susceptible Infected Recovered (SIR) model can be described using three differential equations. 
+These questions can be answered using the SIR model. The Susceptible Infected Recovered (SIR) model can be described using three differential equations.
 
 `But, can these ordinary differential equations really describe the story of an outbreak from start to end?`
 
-In the first video, Patience answers this question as she takes us through the mathematical foundations of the SIR model often referred to as `The Math of Epidemics`.
+.. youtube:: P5NlJLTaWFk
+    :width: 100% 
+    :align: center 
+
+In the video above , Patience answers this question as she takes us through the mathematical foundations of the SIR model often referred to as `The Math of Epidemics`.
 
 She explains the total population(N) which consists of 3 populations of individuals often referred to as compartments of the SIR model. The susceptible(S) individuals who are at an increased risk of infection and may require interventions such as vaccination or chemoprophylaxis, social distancing etc. to prevent diseases. They do not have the virus but could catch it. The Infected/Infectious(I) people who have the virus and can spread it to those who are susceptible and the Recovered(R) people who have had the virus, have recovered, and can no longer spread the virus.
 
@@ -29,80 +37,75 @@ The SIR model operates on 4 assumptions:
 
 4.	Both the rate of Infection and the rate of recovery are constant
 
-PATIENCE'S VIDEO HERE
 
-EQUATIONS BY SEUN HERE
+You should  now have a solid understanding of the SIR model at a conceptual level. 
+In the next video, we’ll translate those ideas into differential equations, allowing us to analyze and simulate how epidemics evolve.  
+
+.. youtube:: t-opfUEqUNs
+    :width: 100% 
+    :align: center 
 
 
-What you will learn
-===================
+Deriving the Equations
+======================
 
-**Preamble**: 
-Imagine a new virus emerges in your community. At first, only a few people are infected but soon hospitals in your city begin to fill up.
+In the video, Patience described the three compactment of the SIR model as the susceptible, infective and recovered groups.
+Where the number of Susceptible individual at time :t: is represented as :math:`S(t)`;  the number of infective individuals as :math:`I(t)` 
+and the number of recovered individuals is :math:`R(t)`.
 
-You are asked a critical question: Can we predict when this outbreak will be at it’s peak, how many people will get infected, and what interventions could stop it?
-Did you know that ordinary differential equations (ODEs) are not abstract math but a tool for saving lives in a case like this?
+Also, in the SIR model, we assume that the disease is spread through contact between susceptible and infective individuals and that a recovered individual developed immunity to the disease.
+We also assume that the population is closed, meaning that there are no births, deaths or migration.
+Meaning that if N is the total population, then at any time :math:`t`, we have :math:`S(t) + I(t) + R(t) = N`.
 
-These questions can be answered using the SIR model. The Susceptible Infected Recovered (SIR) model can be described using three differential equations. 
+Thats a lot of assumptions right? I agree, but hang on, it will all come together after we derive the equations.
 
-`But, can these ordinary differential equations really describe the story of an outbreak from start to end?`
+However, we still need to define few extra things we will need.
 
-In the first video, Patience answers this question as she takes us through the mathematical foundations of the SIR model often referred to as `The Math of Epidemics`.
+- Let's define :math:`\\beta` as the transmission rate, which represents the rate at which susceptible individuals become infected through contact with infective individuals. and,
+- :math:`\\gamma` as the recovery rate, which represents the rate at which infective individuals recover from the disease and move to the recovered compartment.
 
-She explains the total population(N) which consists of 3 populations of individuals often referred to as compartments of the SIR model. The susceptible(S) individuals who are at an increased risk of infection and may require interventions such as vaccination or chemoprophylaxis, social distancing etc. to prevent diseases. They do not have the virus but could catch it. The Infected/Infectious(I) people who have the virus and can spread it to those who are susceptible and the Recovered(R) people who have had the virus, have recovered, and can no longer spread the virus.
+Now that we have these definitions, we can start deriving the equations.
 
-She also explains two key variables; β which is the disease transmission rate and γ which is the recovery rate
-
-Assumptions of the SIR Model
-----------------------------
-
-**The SIR model operates on 4 assumptions**: 
-
-1.	The total population N is constant in time i.e No births, deaths or migration
-
-2.	There is a homogeneous mixing of the infected and susceptible populations
-
-3.	Individuals who recover from the disease gain permanent immunity
-
-4.	Both the rate of Infection and the rate of recovery are constant
-
-Deriving the differential equations by hand
-===========================================
-
-PATIENCE'S VIDEO HERE
-
-The 3 differential Equations
-----------------------------
-
-In the SIR model, the rate of change of susceptible individuals is
+To get concerned about an infectious disease spreading, there must have been someone infected,else there is no point of doing all this, therefore we assume :math:`I > 0`. Also, the number of people infected would increase the chances of a susceptible individual coming into contact with an infective individual. Therefore, we can calculate the number of subsceptible indiviudal that will get infected as follows:
 
 .. math::
-   :label: susc
- 
-   \\frac{dS}{dt} = -\\beta S I 
+    \\text{Rate of S} =\\frac{ \\beta S I}{N}
 
-and the rate of change of infectives is 
+Also, the number of recovered individuals can be calculated as follows:
 
 .. math::
-   :label: infect
- 
-   \\frac{dI}{dt} = \\beta S I - \gamma I
+    \\text{Rate of R} =\\gamma I
 
-The constant :math:`\\beta` is the rate of contact between people and :math:`\gamma` is the rate of recovery.
-We can also write down an equation for recovery as follows,
+Now we can estimate the change in each of the groups. To achieve this, we will take the different between the number of individual entered a group and the number that is leaving the group. lets represent this number as:
+
+:math:`\\frac{dS}{dt}` for the subsceptible group,
+
+:math:`\\frac{dI}{dt}` for the infective group and,
+
+:math:`\\frac{dR}{dt}` for the recovered group. We will have the following equations:
 
 .. math::
-   :label: recover
- 
-   \\frac{dR}{dt} = \gamma I
+    :label: dSdt
 
-In this model :math:`S`, :math:`I` and :math:`R` are proportions of the population. Summing them up gives :math:`S+I+R=1`, since 
-everyone in the popultaion is either susceptible, infective or recovered.
+    \\frac{dS}{dt} = | In - Out | = 0 -  \\frac{\\beta S I}{N} = - \\frac{\\beta S I}{N}
+
+Since no individual is entering the subsceptible group.
+
+.. math::
+    :label: dIdt
+
+    \\frac{dI}{dt} = | In - Out | =  \\frac{\\beta S I}{N} -  \\gamma I
+
+.. math::
+    :label: dRdt
+
+    \\frac{dR}{dt} = | In - Out | =  \\gamma I - 0 =  \\gamma I
+
+The out in :eq: `dRdt` is zero since we assume individuals that have recovered from the disease develop immunity and cannot be infected again.
 
 While it is very important to understand this math, python makes it easier for us to solve these equations by importing key python libraries without having to manually do these calculations.
 
 Let’s now solve these equations numerically in python. We start by importing the libraries we need from Python.
-
 
 """
 
@@ -137,7 +140,8 @@ def dXdt(X, t=0):
 ##############################################################################
 # Let's now solve these equations numerically and plot the solution over time. 
 # You can change β to see how changes to the parameters leads to changes in the epidemic curve. 
-# Let’s try it 'here <https://mybinder.org/v2/gh/AfricaEuropeCoreAI/Kujenga/SIRModel?urlpath=%2Fdoc%2Ftree%2Fcourse%2Flessons%2Flesson2%2Fplot_epidemic.ipynb>'_ by changing β values and observe the changes over time.
+# Let’s try it `here <https://mybinder.org/v2/gh/AfricaEuropeCoreAI/Kujenga/SIRModel?urlpath=%2Fdoc%2Ftree%2Fcourse%2Flessons%2Flesson2%2Fplot_epidemic.ipynb>`_ by changing β values and observe the changes over time.
+
 
 def plotEpidemicOverTime(ax,t,S,I,R):
 
@@ -165,7 +169,7 @@ plt.show()
 
 ##############################################################################
 # Phase Planes and nullclines
-# ============
+# ===========================
 # In this section, Emily introduces the concept of **phase planes and nullclines** in the video below, 
 # using the SIR model as an example.
 #
@@ -177,7 +181,7 @@ plt.show()
 # and explanations to help you explore phase planes for yourself.
 #
 # What are Phase Planes, and Why Do We Use Them?
-# ---------------------------------------------
+# ----------------------------------------------
 # A phase plane is a graphical representation of a dynamical system i.e a system described by 
 # differential equations where we plot one variable against another instead of plotting them over time.
 # Phase planes provide a powerful visualization method for dynamic systems.
@@ -325,7 +329,7 @@ plt.show()
 # visualised in this way, by showing how they might shift the trajectory or alter the nullclines.
 #
 # Impact of Parameters
-# ---------------------
+# --------------------
 # Now, we can investigate what happens to the phase planes when we change the
 # values of :math:`\beta` and :math:`\gamma`. In our previous code examples, the
 # :math:`\beta` value was :math:`\frac{1}{2}`, which is the rate of contact between people,

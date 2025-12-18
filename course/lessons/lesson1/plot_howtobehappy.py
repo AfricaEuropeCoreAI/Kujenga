@@ -688,6 +688,6 @@ plt.show()
 # We have now seen how to use linear regression to find a line through data points.
 # In the video below we talk to several reasearchers who use linear regression in their work.
 # 
-# .. youtube:: jQZ6db0FzQo
+# .. youtube::jQZ6db0FzQo
 #    :width: 100% 
 #    :align: center 

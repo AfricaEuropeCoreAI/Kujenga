@@ -69,7 +69,7 @@ From the book
 
 .. raw:: html
 
-    <div class="sphx-glr-thumbcontainer" tooltip="You are asked a critical question: Can we predict when this outbreak will be at it’s peak, how many people will get infected, and what interventions could stop it? Did you know that ordinary differential equations (ODEs) are not abstract math but a tool for saving lives in a case like this?">
+    <div class="sphx-glr-thumbcontainer" tooltip="What you will learn  ===================">
 
 .. only:: html
 
