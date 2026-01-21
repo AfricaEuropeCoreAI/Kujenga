@@ -73,7 +73,8 @@ a time for an in-person or online 2-hour session. This means you have two hours 
 session. Here is what you should do:
 
 *Before coming to the class*: You should read through this entire page. In the section on `The Mathematics of the PageRank algorithm`_,
-try to solve the example both by hand and using Python. If you get stuck look `here <https://medium.com/swlh/a-handwritten-introduction-to-pagerank-7ed2fedddb0d>`_, but otherwise you should
+try to solve the example both by hand and using Python. 
+If you get stuck look `here <https://medium.com/swlh/a-handwritten-introduction-to-pagerank-7ed2fedddb0d>`_, but otherwise you should
 simply read through and try to understand what we are doing. Once you have read through, you should
 download this page as a Jupyter notebook or as Python code by clicking the links at the bottom of this page.
 You will need to have a Python environment set up on your computer or access via Google `Colab <https://colab.research.google.com/>`_ (see `here <https://docs.cloud.google.com/python/docs/setup>`_ for info on how to set that up).
@@ -81,7 +82,7 @@ You will need to have a Python environment set up on your computer or access via
 *During class*: Your teacher will start by going through the theory for `Working with matrices in Python`_.
 Please ask them questions and actively engage!
 
-.. GENERATED FROM PYTHON SOURCE LINES 69-162
+.. GENERATED FROM PYTHON SOURCE LINES 70-163
 
 The Mathematics of the PageRank algorithm
 =====================
@@ -177,7 +178,7 @@ Importing NumPy
 NumPy is a third-party library, so you need to install it separately. If you are using Google Colab, it is already included.
 To load NumPy with the alias np, you can use the following command:
 
-.. GENERATED FROM PYTHON SOURCE LINES 162-165
+.. GENERATED FROM PYTHON SOURCE LINES 163-166
 
 .. code-block:: Python
 
@@ -191,14 +192,14 @@ To load NumPy with the alias np, you can use the following command:
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 166-170
+.. GENERATED FROM PYTHON SOURCE LINES 167-171
 
 Defining a vector (1D Arrays)
 -----------------
 
 A vector can be thought of as a list of numbers. In NumPy, you create it using np.array() with a Python list:
 
-.. GENERATED FROM PYTHON SOURCE LINES 170-176
+.. GENERATED FROM PYTHON SOURCE LINES 171-177
 
 .. code-block:: Python
 
@@ -222,12 +223,12 @@ A vector can be thought of as a list of numbers. In NumPy, you create it using n
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 177-179
+.. GENERATED FROM PYTHON SOURCE LINES 178-180
 
 Check its shape (dimensions)
 Output: (3,) indicates a 1D array with 3 elements
 
-.. GENERATED FROM PYTHON SOURCE LINES 179-181
+.. GENERATED FROM PYTHON SOURCE LINES 180-182
 
 .. code-block:: Python
 
@@ -246,14 +247,14 @@ Output: (3,) indicates a 1D array with 3 elements
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 182-186
+.. GENERATED FROM PYTHON SOURCE LINES 183-187
 
 Creating Matrices (2D Arrays)
 -----------------
 
 A matrix is like a grid of numbers (rows and columns). You create it using np.array() with a list of lists, where each inner list is a row:
 
-.. GENERATED FROM PYTHON SOURCE LINES 186-192
+.. GENERATED FROM PYTHON SOURCE LINES 187-193
 
 .. code-block:: Python
 
@@ -279,12 +280,12 @@ A matrix is like a grid of numbers (rows and columns). You create it using np.ar
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 193-195
+.. GENERATED FROM PYTHON SOURCE LINES 194-196
 
 Check its shape (rows, columns)
 Output: (2, 3) indicates 2 rows and 3 columns
 
-.. GENERATED FROM PYTHON SOURCE LINES 195-197
+.. GENERATED FROM PYTHON SOURCE LINES 196-198
 
 .. code-block:: Python
 
@@ -303,11 +304,11 @@ Output: (2, 3) indicates 2 rows and 3 columns
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 198-199
+.. GENERATED FROM PYTHON SOURCE LINES 199-200
 
 Create a square matrix (same number of rows and columns)
 
-.. GENERATED FROM PYTHON SOURCE LINES 199-204
+.. GENERATED FROM PYTHON SOURCE LINES 200-205
 
 .. code-block:: Python
 
@@ -333,7 +334,7 @@ Create a square matrix (same number of rows and columns)
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 205-210
+.. GENERATED FROM PYTHON SOURCE LINES 206-211
 
 Basic Operations
 -----------------
@@ -341,7 +342,7 @@ Basic Operations
 NumPy makes operating on vectors and matrices straightforward.
 Element-wise Operations: Standard arithmetic operators (+, -, *, /) often work element-by-element if the shapes are compatible.
 
-.. GENERATED FROM PYTHON SOURCE LINES 210-215
+.. GENERATED FROM PYTHON SOURCE LINES 211-216
 
 .. code-block:: Python
 
@@ -357,11 +358,11 @@ Element-wise Operations: Standard arithmetic operators (+, -, *, /) often work e
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 216-217
+.. GENERATED FROM PYTHON SOURCE LINES 217-218
 
 Vector addition (element-wise)
 
-.. GENERATED FROM PYTHON SOURCE LINES 217-219
+.. GENERATED FROM PYTHON SOURCE LINES 218-220
 
 .. code-block:: Python
 
@@ -381,11 +382,11 @@ Vector addition (element-wise)
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 220-221
+.. GENERATED FROM PYTHON SOURCE LINES 221-222
 
 Matrix addition (element-wise)
 
-.. GENERATED FROM PYTHON SOURCE LINES 221-223
+.. GENERATED FROM PYTHON SOURCE LINES 222-224
 
 .. code-block:: Python
 
@@ -406,11 +407,11 @@ Matrix addition (element-wise)
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 224-225
+.. GENERATED FROM PYTHON SOURCE LINES 225-226
 
 Scalar multiplication (multiply every element by a number)
 
-.. GENERATED FROM PYTHON SOURCE LINES 225-228
+.. GENERATED FROM PYTHON SOURCE LINES 226-229
 
 .. code-block:: Python
 
@@ -433,11 +434,11 @@ Scalar multiplication (multiply every element by a number)
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 229-230
+.. GENERATED FROM PYTHON SOURCE LINES 230-231
 
 Dot Product / Matrix Multiplication: This is different from element-wise multiplication (*). It's the standard mathematical operation. Use np.dot() or the @ operator.
 
-.. GENERATED FROM PYTHON SOURCE LINES 230-233
+.. GENERATED FROM PYTHON SOURCE LINES 231-234
 
 .. code-block:: Python
 
@@ -451,11 +452,11 @@ Dot Product / Matrix Multiplication: This is different from element-wise multipl
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 234-235
+.. GENERATED FROM PYTHON SOURCE LINES 235-236
 
 Vector dot product (sum of element-wise products)
 
-.. GENERATED FROM PYTHON SOURCE LINES 235-237
+.. GENERATED FROM PYTHON SOURCE LINES 236-238
 
 .. code-block:: Python
 
@@ -468,11 +469,11 @@ Vector dot product (sum of element-wise products)
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 238-239
+.. GENERATED FROM PYTHON SOURCE LINES 239-240
 
 Or using the @ operator
 
-.. GENERATED FROM PYTHON SOURCE LINES 239-247
+.. GENERATED FROM PYTHON SOURCE LINES 240-248
 
 .. code-block:: Python
 
@@ -499,11 +500,11 @@ Or using the @ operator
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 248-249
+.. GENERATED FROM PYTHON SOURCE LINES 249-250
 
 Matrix multiplication
 
-.. GENERATED FROM PYTHON SOURCE LINES 249-251
+.. GENERATED FROM PYTHON SOURCE LINES 250-252
 
 .. code-block:: Python
 
@@ -516,11 +517,11 @@ Matrix multiplication
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 252-253
+.. GENERATED FROM PYTHON SOURCE LINES 253-254
 
 Or using the @ operator
 
-.. GENERATED FROM PYTHON SOURCE LINES 253-257
+.. GENERATED FROM PYTHON SOURCE LINES 254-258
 
 .. code-block:: Python
 
@@ -546,11 +547,11 @@ Or using the @ operator
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 258-259
+.. GENERATED FROM PYTHON SOURCE LINES 259-260
 
 Matrix-vector multiplication
 
-.. GENERATED FROM PYTHON SOURCE LINES 259-261
+.. GENERATED FROM PYTHON SOURCE LINES 260-262
 
 .. code-block:: Python
 
@@ -563,11 +564,11 @@ Matrix-vector multiplication
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 262-263
+.. GENERATED FROM PYTHON SOURCE LINES 263-264
 
 Or using the @ operator
 
-.. GENERATED FROM PYTHON SOURCE LINES 263-267
+.. GENERATED FROM PYTHON SOURCE LINES 264-268
 
 .. code-block:: Python
 
@@ -589,12 +590,12 @@ Or using the @ operator
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 268-270
+.. GENERATED FROM PYTHON SOURCE LINES 269-271
 
 .. note::
    Simple multiplication :math:`*` is element-wise, not matrix multiplication!
 
-.. GENERATED FROM PYTHON SOURCE LINES 270-272
+.. GENERATED FROM PYTHON SOURCE LINES 271-273
 
 .. code-block:: Python
 
@@ -615,12 +616,12 @@ Or using the @ operator
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 273-275
+.. GENERATED FROM PYTHON SOURCE LINES 274-276
 
 Rule for A @ B: The number of columns in A must equal the number of rows in B.
 Transpose: Swaps rows and columns. Use the .T attribute.
 
-.. GENERATED FROM PYTHON SOURCE LINES 275-281
+.. GENERATED FROM PYTHON SOURCE LINES 276-282
 
 .. code-block:: Python
 
@@ -652,14 +653,14 @@ Transpose: Swaps rows and columns. Use the .T attribute.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 282-286
+.. GENERATED FROM PYTHON SOURCE LINES 283-287
 
 Accessing Elements
 -----------------
 
 You can access elements using zero-based indexing, similar to Python lists. For matrices, use [row, column].
 
-.. GENERATED FROM PYTHON SOURCE LINES 286-289
+.. GENERATED FROM PYTHON SOURCE LINES 287-290
 
 .. code-block:: Python
 
@@ -673,11 +674,11 @@ You can access elements using zero-based indexing, similar to Python lists. For 
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 290-291
+.. GENERATED FROM PYTHON SOURCE LINES 291-292
 
 Get the first element of the vector (index 0)
 
-.. GENERATED FROM PYTHON SOURCE LINES 291-293
+.. GENERATED FROM PYTHON SOURCE LINES 292-294
 
 .. code-block:: Python
 
@@ -697,11 +698,11 @@ Get the first element of the vector (index 0)
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 294-295
+.. GENERATED FROM PYTHON SOURCE LINES 295-296
 
 Get the element at row 1, column 0 of the matrix
 
-.. GENERATED FROM PYTHON SOURCE LINES 295-297
+.. GENERATED FROM PYTHON SOURCE LINES 296-298
 
 .. code-block:: Python
 
@@ -720,11 +721,11 @@ Get the element at row 1, column 0 of the matrix
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 298-299
+.. GENERATED FROM PYTHON SOURCE LINES 299-300
 
 Get an entire row (e.g., row 0)
 
-.. GENERATED FROM PYTHON SOURCE LINES 299-300
+.. GENERATED FROM PYTHON SOURCE LINES 300-301
 
 .. code-block:: Python
 
@@ -742,11 +743,11 @@ Get an entire row (e.g., row 0)
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 301-302
+.. GENERATED FROM PYTHON SOURCE LINES 302-303
 
 Get an entire column (e.g., column 1) using slicing ':'
 
-.. GENERATED FROM PYTHON SOURCE LINES 302-304
+.. GENERATED FROM PYTHON SOURCE LINES 303-305
 
 .. code-block:: Python
 
@@ -765,7 +766,7 @@ Get an entire column (e.g., column 1) using slicing ':'
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 305-409
+.. GENERATED FROM PYTHON SOURCE LINES 306-410
 
 Constructing the transition matrix **M**
 -----------------
@@ -872,7 +873,7 @@ We can again use the network shown in section `The problem`_ to check if if ther
 
 This table can be translated into Python code as a NumPy array:
 
-.. GENERATED FROM PYTHON SOURCE LINES 409-424
+.. GENERATED FROM PYTHON SOURCE LINES 410-425
 
 .. code-block:: Python
 
@@ -917,7 +918,7 @@ This table can be translated into Python code as a NumPy array:
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 425-434
+.. GENERATED FROM PYTHON SOURCE LINES 426-435
 
 .. admonition:: Food for Thought
     :class: food-for-thought
@@ -929,7 +930,7 @@ Simulating PageRank
 
 Let's choose an initial PageRank vector **R**\ (0) and apply the update rule iteratively until convergence.
 
-.. GENERATED FROM PYTHON SOURCE LINES 434-438
+.. GENERATED FROM PYTHON SOURCE LINES 435-439
 
 .. code-block:: Python
 
@@ -951,11 +952,11 @@ Let's choose an initial PageRank vector **R**\ (0) and apply the update rule ite
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 439-440
+.. GENERATED FROM PYTHON SOURCE LINES 440-441
 
 Create a variable t to keep track of the number of iterations performed
 
-.. GENERATED FROM PYTHON SOURCE LINES 440-444
+.. GENERATED FROM PYTHON SOURCE LINES 441-445
 
 .. code-block:: Python
 
@@ -976,11 +977,11 @@ Create a variable t to keep track of the number of iterations performed
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 445-446
+.. GENERATED FROM PYTHON SOURCE LINES 446-447
 
 Create a vector with the county codes which will be used to label the PageRank vector
 
-.. GENERATED FROM PYTHON SOURCE LINES 446-450
+.. GENERATED FROM PYTHON SOURCE LINES 447-451
 
 .. code-block:: Python
 
@@ -1001,11 +1002,11 @@ Create a vector with the county codes which will be used to label the PageRank v
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 451-452
+.. GENERATED FROM PYTHON SOURCE LINES 452-453
 
 Apply the update rule
 
-.. GENERATED FROM PYTHON SOURCE LINES 452-460
+.. GENERATED FROM PYTHON SOURCE LINES 453-461
 
 .. code-block:: Python
 
@@ -1037,7 +1038,7 @@ Apply the update rule
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 461-486
+.. GENERATED FROM PYTHON SOURCE LINES 462-487
 
 Run the cell above multiple times to see how the PageRank vector converges. If you want to start again be sure to rerun all the cells in the `Simulating PageRank`_ section to avoid unexpected behavior.
 
@@ -1065,7 +1066,7 @@ The eigenvalue equation states that when the matrix **M** acts on the eigenvecto
 
 Let's use Python to compute the eigenvalues and the corresponding eigenvectors of the transition matrix **M**. We will use the `numpy.linalg.eig()` function to compute the eigenvalues and eigenvectors of a matrix.
 
-.. GENERATED FROM PYTHON SOURCE LINES 486-490
+.. GENERATED FROM PYTHON SOURCE LINES 487-491
 
 .. code-block:: Python
 
@@ -1088,13 +1089,13 @@ Let's use Python to compute the eigenvalues and the corresponding eigenvectors o
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 491-494
+.. GENERATED FROM PYTHON SOURCE LINES 492-495
 
 Note that some of the eigenvalues are complex, e.g. 0.02227925-0.04471056j.
 
 Let's get the index of the largest eigenvalue by first getting a list of the indices of the sorted eigenValues:
 
-.. GENERATED FROM PYTHON SOURCE LINES 494-497
+.. GENERATED FROM PYTHON SOURCE LINES 495-498
 
 .. code-block:: Python
 
@@ -1114,11 +1115,11 @@ Let's get the index of the largest eigenvalue by first getting a list of the ind
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 498-499
+.. GENERATED FROM PYTHON SOURCE LINES 499-500
 
 Now let's replace the eigenValues and eigenVectors with the sorted versions
 
-.. GENERATED FROM PYTHON SOURCE LINES 499-503
+.. GENERATED FROM PYTHON SOURCE LINES 500-504
 
 .. code-block:: Python
 
@@ -1141,11 +1142,11 @@ Now let's replace the eigenValues and eigenVectors with the sorted versions
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 504-505
+.. GENERATED FROM PYTHON SOURCE LINES 505-506
 
 The largest eigenvalue is the first element of the sorted eigenValues array. The corresponding eigenvector is the first column of the sorted eigenVectors array.
 
-.. GENERATED FROM PYTHON SOURCE LINES 505-510
+.. GENERATED FROM PYTHON SOURCE LINES 506-519
 
 .. code-block:: Python
 
@@ -1155,28 +1156,7 @@ The largest eigenvalue is the first element of the sorted eigenValues array. The
     print("Corresponding Eigenvector:", largest_eigenvector)
 
 
-
-
-
-.. rst-class:: sphx-glr-script-out
-
- .. code-block:: none
-
-    Largest Eigenvalue: (0.2925587369323658+0j)
-    Corresponding Eigenvector: [0.51030388+0.j 0.30519189+0.j 0.53571932+0.j 0.35611479+0.j
-     0.15671107+0.j 0.15562185+0.j 0.42878715+0.j]
-
-
-
-
-.. GENERATED FROM PYTHON SOURCE LINES 511-512
-
-Check that the eigenvalue equation holds
-
-.. GENERATED FROM PYTHON SOURCE LINES 512-518
-
-.. code-block:: Python
-
+    # Check that the eigenvalue equation holds
 
     print("M @ largest_eigenvector:")
     print(np.dot(M, largest_eigenvector))
@@ -1191,6 +1171,9 @@ Check that the eigenvalue equation holds
 
  .. code-block:: none
 
+    Largest Eigenvalue: (0.2925587369323658+0j)
+    Corresponding Eigenvector: [0.51030388+0.j 0.30519189+0.j 0.53571932+0.j 0.35611479+0.j
+     0.15671107+0.j 0.15562185+0.j 0.42878715+0.j]
     M @ largest_eigenvector:
     [0.14929386+0.j 0.08928655+0.j 0.15672937+0.j 0.10418449+0.j
      0.04584719+0.j 0.04552853+0.j 0.12544543+0.j]
@@ -1201,7 +1184,7 @@ Check that the eigenvalue equation holds
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 519-529
+.. GENERATED FROM PYTHON SOURCE LINES 520-530
 
 In the final video Amandine will briefly take you through the computation of the eigenvalues and eigenvalues of the transition matrix **M** including how to sort them to extract the largest eigenvalue and its corresponding eigenvector.
 
@@ -1214,7 +1197,7 @@ Directly computing the PageRank scores
 =====================
 Does this help us predict the PageRank scores? Let's normalize largest_eigenvector and check that the values correspond to the PageRank scores obtained using the iterative method applied in the section `Simulating PageRank`_.
 
-.. GENERATED FROM PYTHON SOURCE LINES 529-536
+.. GENERATED FROM PYTHON SOURCE LINES 530-537
 
 .. code-block:: Python
 
@@ -1245,7 +1228,7 @@ Does this help us predict the PageRank scores? Let's normalize largest_eigenvect
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 537-556
+.. GENERATED FROM PYTHON SOURCE LINES 538-557
 
 What about the other eigenvalues and eigenvectors? Why do we only need to consider the eigenvalue with the largest magnitude and its corresponding eigenvector?
 It turns out that the eigenvalue with the largest magnitude is the only one that matters for the PageRank algorithm.
@@ -1270,7 +1253,7 @@ Assuming that the eigenvalues are labeled so that :math:`|\lambda_1| > |\lambda_
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** (0 minutes 0.032 seconds)
+   **Total running time of the script:** (0 minutes 0.037 seconds)
 
 
 .. _sphx_glr_download_gallery_lesson4_plot_influencer.py:
