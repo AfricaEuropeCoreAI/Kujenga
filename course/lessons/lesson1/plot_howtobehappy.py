@@ -253,8 +253,14 @@ plt.show()
 #   See if you can find a line that lies closer to the data points. OR `Try this link for interactivity  <https://mybinder.org/v2/gh/AfricaEuropeCoreAI/Kujenga/Interactive?urlpath=%2Fdoc%2Ftree%2Fcourse%2Flessons%2Flesson1%2Fplot_howtobehappy.ipynb>`_
 
 ##############################################################################
+#Interactive Line Fitting
+################################################################################
+#Click `here <https://mybinder.org/v2/gh/AfricaEuropeCoreAI/Kujenga/Interactive?urlpath=%2Fdoc%2Ftree%2Fcourse%2Flessons%2Flesson1%2Fplot_howtobehappy.ipynb>`_ for the interactive code. It  is designed to help you better understand how line fitting works. You can adjust the slope and intercept to see how the line shifts and how effectively it matches the data. 
+#As you experiment, you will notice how different values influence the quality of the fit, giving you a practical sense of what makes a regression line “good” and how the optimal line is found.
+#To guide you through using the interactive tool, a demonstration video is also provided. The video walks you step-by-step through the features and shows exactly how to adjust and interpret the graph.
 #
-#
+#[Video here]
+###################################################################################################
 #
 # The sum of squares
 # ------------------
