@@ -265,10 +265,10 @@ plt.show()
 # The sum of squares
 # ------------------
 #
-# Each of the dotted lines above show how far the line – which predicts that happiness is one 
-# twelfth of life expectancy – is from the data for each of the six highlighted countries.
-# For example, the USA has a happiness score of 6.88 and an 
-# average life expectancy of 68.3. The first equation (figure 2b) predicts 
+#Each of the dotted lines above show how far the line – which predicts that happiness is one 
+#twelfth of life expectancy – is from the data for each of the six highlighted countries.
+#For example, the USA has a happiness score of 6.88 and an 
+#average life expectancy of 68.3. The first equation (figure 2b) predicts 
 #
 # .. math::
 #    
