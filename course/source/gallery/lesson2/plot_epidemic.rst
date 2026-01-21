@@ -42,7 +42,7 @@ These questions can be answered using the SIR model. The Susceptible Infected Re
 
 In the video above , Patience answers this question as she takes us through the mathematical foundations of the SIR model often referred to as `The Math of Epidemics`.
 
-She explains the total population(N) which consists of 3 populations of individuals often referred to as compartments of the SIR model. The susceptible(S) individuals who are at an increased risk of infection and may require interventions such as vaccination or chemoprophylaxis, social distancing etc. to prevent diseases. They do not have the virus but could catch it. The Infected/Infectious(I) people who have the virus and can spread it to those who are susceptible and the Recovered(R) people who have had the virus, have recovered, and can no longer spread the virus.
+She explains the total population(N) which consists of 3 populations of individuals often referred to as compartments of the SIR model. The susceptible(S) are the individuals at an increased risk of infection and may require interventions such as vaccination or chemoprophylaxis, social distancing etc, to prevent diseases. These do not have the virus but could catch it. The Infected/Infectious(I) are the people who have the virus and can spread it to those who are susceptible and the Recovered(R) are the people who have had the virus, have recovered, and can no longer spread it.
 
 She also explains two key variables; β which is the disease transmission rate and γ which is the recovery rate
 
@@ -68,11 +68,11 @@ In the next video, we’ll translate those ideas into differential equations, al
 Deriving the Equations
 ======================
 
-In the video, Patience described the three compactment of the SIR model as the susceptible, infective and recovered groups.
-Where the number of Susceptible individual at time :t: is represented as :math:`S(t)`;  the number of infective individuals as :math:`I(t)` 
+In the video, Patience described the three compartment of the SIR model as the susceptible, infected and recovered groups.
+Where the number of Susceptible individual at time :t: is represented as :math:`S(t)`;  the number of infected individuals as :math:`I(t)` 
 and the number of recovered individuals is :math:`R(t)`.
 
-Also, in the SIR model, we assume that the disease is spread through contact between susceptible and infective individuals and that a recovered individual developed immunity to the disease.
+Also, in the SIR model, we assume that the disease is spread through contact between susceptible and infected individuals and that a recovered individual developed immunity to the disease.
 We also assume that the population is closed, meaning that there are no births, deaths or migration.
 Meaning that if N is the total population, then at any time :math:`t`, we have :math:`S(t) + I(t) + R(t) = N`.
 
@@ -80,12 +80,12 @@ Thats a lot of assumptions right? I agree, but hang on, it will all come togethe
 
 However, we still need to define few extra things we will need.
 
-- Let's define :math:`\beta` as the transmission rate, which represents the rate at which susceptible individuals become infected through contact with infective individuals. and,
-- :math:`\gamma` as the recovery rate, which represents the rate at which infective individuals recover from the disease and move to the recovered compartment.
+- Let's define :math:`\beta` as the transmission rate, which represents the rate at which susceptible individuals become infected through contact with infected individuals. and,
+- :math:`\gamma` as the recovery rate, which represents the rate at which infected individuals recover from the disease and move to the recovered compartment.
 
 Now that we have these definitions, we can start deriving the equations.
 
-To get concerned about an infectious disease spreading, there must have been someone infected,else there is no point of doing all this, therefore we assume :math:`I > 0`. Also, the number of people infected would increase the chances of a susceptible individual coming into contact with an infective individual. Therefore, we can calculate the number of subsceptible indiviudal that will get infected as follows:
+To get concerned about an infectious disease spreading, there must have been someone infected,else there is no point of doing all this, therefore we assume :math:`I > 0`. Also, the number of people infected would increase the chances of a susceptible individual coming into contact with an infected individual. Therefore, we can calculate the number of susceptible indiviudals that will get infected as follows:
 
 .. math::
     \text{Rate of S} =\frac{ \beta S I}{N}
@@ -95,11 +95,11 @@ Also, the number of recovered individuals can be calculated as follows:
 .. math::
     \text{Rate of R} =\gamma I
 
-Now we can estimate the change in each of the groups. To achieve this, we will take the different between the number of individual entered a group and the number that is leaving the group. lets represent this number as:
+Now we can estimate the change in each of the groups. To achieve this, we will take the different between the number of individual entering a compartment and the number that is leaving the compartment. lets represent this number as:
 
 :math:`\frac{dS}{dt}` for the subsceptible group,
 
-:math:`\frac{dI}{dt}` for the infective group and,
+:math:`\frac{dI}{dt}` for the infected group and,
 
 :math:`\frac{dR}{dt}` for the recovered group. We will have the following equations:
 
@@ -248,7 +248,7 @@ Phase Planes and nullclines
  Phase planes provide a powerful visualization method for dynamic systems.
 
 Why a dynamic system?
- In mathematics and epidemiology, a system means a set of linked equations that describe how 
+ In mathematics and epidemiology, a dynamic system means a set of linked equations that describe how 
  variables change over time. So the SIR model is a dynamic system because the numbers of S,I and 
  R are continuously changing as the epidemic evolves i.e When there are many susceptibles and 
  few infected, the rate of infection is high, as susceptibles decrease, the rate of infection slows down 
@@ -486,7 +486,7 @@ Additional questions:
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** (0 minutes 0.461 seconds)
+   **Total running time of the script:** (0 minutes 0.720 seconds)
 
 
 .. _sphx_glr_download_gallery_lesson2_plot_epidemic.py:
