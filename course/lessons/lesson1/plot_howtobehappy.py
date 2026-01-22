@@ -437,7 +437,7 @@ print('The model sum of squares is %.4f' % Model_Sum_Of_Squares)
 #  y = k + m \times x
 #
 # We now look at how we can improve the fit of the model by
-# including this intercept.
+# including this intercept. 
 #
 # We start by shifting the data so that it has a mean (average) of zero.
 # To do this we simply take away the mean value from both life expectancy and 
