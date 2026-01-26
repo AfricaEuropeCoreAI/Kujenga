@@ -55,7 +55,7 @@ a time for an in-person or online 2-hour session. This means you have two hours 
 session. Here is what you should do:
 
 *Before coming to the class*: You should read through this entire page. If you get stuck look at `this <https://medium.com/swlh/a-handwritten-introduction-to-pagerank-7ed2fedddb0d>`_ Medium article for an alternative explanation, but otherwise you should
-simply read through and try to understand what we are doing. You should download this page as a Jupyter notebook or as Python code by clicking the links at the bottom of this page. You will need to have a Python environment set up on your computer or access via Google `Colab <https://colab.research.google.com/>`_ (see `here <https://docs.cloud.google.com/python/docs/setup>`_ for info on how to set that up).
+simply read through and try to understand what we are doing. You should download this page as a Jupyter notebook or as Python code by clicking the links at the bottom of this page. You will need to have a Python environment set up on your computer (see `here <https://docs.cloud.google.com/python/docs/setup>`_ for info on how to set that up) or access to `Google Colab <https://colab.research.google.com/>`_.
 
 *During class*: Your teacher will start by going through the theory for `The Mathematics of the PageRank algorithm`_.
 Please ask them questions and actively engage!
@@ -72,19 +72,19 @@ Please ask them questions and actively engage!
 #
 # Let's break down the process mathematically. In this section we will define the key variables and concepts needed to understand the PageRank algorithm.
 #
-# The PageRank Vector (\ :strong:`R`)
+# The PageRank Vector (\ :strong:`R`):
 #
 # .. math::
-#     \mathbf{R} = \begin{pmatrix} r_1 \\ r_2 \\ \vdots \\ r_N \end{pmatrix}
+#     \mathbf{R} = \begin{pmatrix} r_1 \\ r_2 \\ \vdots \\ r_N \end{pmatrix}.
 # This vector \ :strong:`R` represents the PageRank scores for all N=7 pages in the graph.
-# Each element r\ :sub:`i` is the PageRank score of page i.
+# Each element r\ :sub:`i` is the PageRank score of the i-th page.
 # Initially, these scores can be set equally, for example, r\ :sub:`i` = 1/N for all i.
 #
-# The Transition Matrix (\ :strong:`M`)
+# The Transition Matrix (\ :strong:`M`):
 #
 # .. math::
-#     M_{ij} = \begin{cases} 1/L_j^{\text{out}}, & \text{if } j \text{ links to } i \\ 0, & \text{otherwise} \end{cases}
-# This matrix \ :strong:`M` (often called the hyperlink matrix or transition matrix) encodes the link structure of the network.
+#     M_{ij} = \begin{cases} 1/L_j^{\text{out}}, & \text{if } j \text{ links to } i \\ 0, & \text{otherwise.} \end{cases}
+# This matrix \ :strong:`M` (often called the hyperlink matrix or transition matrix) encodes the link structure of the network. We use the following notation:
 #
 # * L\ :sub:`j`\ :sup:`out` is the total number of outgoing links from page j.
 # * \ :strong:`M`\ :sub:`ij` represents the probability of transitioning from page j to page i by following some specific link.
@@ -97,32 +97,34 @@ Please ask them questions and actively engage!
 #
 # .. math::
 #     \mathbf{R}(t + 1) = d\mathbf{M}\mathbf{R}(t) + \frac{1-d}{N} \mathbf{1}
-# This is the core formula for calculating PageRank iteratively.
+# This is the core formula for calculating PageRank iteratively. In the equation above:
 #
 # * \ :strong:`R`\ (t) is the PageRank vector at iteration t, and \ :strong:`R`\ (t+1) is the vector at the next iteration.
-# * d is the "damping factor" (typically around 0.85). It represents the probability that the random surfer will continue following links (as opposed to jumping to a random page). In practice, this is important to handle "dangling nodes", nodes with no outgoing links L\ :sub:`j`\ :sup:`out` = 0.
+# * d is the "damping factor" (typically around 0.85). It represents the probability that the random surfer will continue following links (as opposed to jumping to a random page). In practice, this is important to handle "dangling nodes", nodes with no outgoing links, i.e. L\ :sub:`j`\ :sup:`out` = 0.
 #
-# \ :strong:`M`\ \ :strong:`R`\ (t) calculates how the existing PageRank scores \ :strong:`R`\ (t) are distributed across the network by following links. Element i of this resulting vector is the sum of PageRank contributions from all pages j that link to page i.
+# \ :strong:`M`\ \ :strong:`R`\ (t) calculates how the PageRank scores at time t, \ :strong:`R`\ (t), are distributed across the network by following links. Element i of the resulting vector is the sum of PageRank contributions from all pages j that link to page i. Therefore,
 # d\ \ :strong:`M`\ \ :strong:`R`\ (t) is the portion of the PageRank score derived from surfers following links.
 #
-# 1-d is the probability that the surfer gets bored and jumps to a random page.
+# The probability that the surfer gets bored and jumps to a random page is 1-d. Therefore,
 # (1-d)/N is the probability of landing on any specific page during a random jump (assuming N pages total).
-# **1** is a column vector of size N containing all ones.
-# (1-d)/N **1** represents the PageRank score distributed equally among all pages due to the random jump behavior. This term ensures that all pages receive some minimal rank and helps the algorithm converge. This is especially important for dealing with nodes with no outgoing links L\ :sub:`j`\ :sup:`out` = 0, as mentioned earlier, or disconnected parts of the graph.
+# Let **1** be a column vector of size N containing all ones.
+# Then, (1-d)/N **1** represents the PageRank score distributed equally among all pages due to the random jump behavior. This term ensures that all pages receive some minimal rank and helps the algorithm converge. This is important for dealing with nodes with no outgoing links, i.e. L\ :sub:`j`\ :sup:`out` = 0, as mentioned earlier, or disconnected parts of the graph.
 #
 # Convergence
 # ----------------------
 #
-# .. math::
-#     \mathbf{R}(t + 1) \approx \mathbf{R}(t)
 # The iterative update process is repeated until the PageRank vector **R** stabilizes.
-# Convergence is reached when the difference between the PageRank vector in the current iteration **R**\ (t+1) and the previous iteration **R**\ (t) is very small (below some predefined threshold).
-# The final vector **R** represents the stable probability distribution of the random surfer, indicating the relative importance of each page.
+# Convergence is achieved when
+#
+# .. math::
+#     \mathbf{R}(t + 1) = \mathbf{R}(t).
+# In practice, we check for convergence by monitoring the difference between the PageRank vector in the current iteration **R**\ (t+1) and the previous iteration **R**\ (t). When the difference is very small (below some predefined threshold), we stop the iterations.
+# The final vector **R*** represents the stable probability distribution of the random surfer, indicating the relative importance of each page.
 #
 # Simplified update rule for connected graphs
 # ----------------------
 #
-# Looking at the graph representing our network of Wikipedia pages we can see that the graph is connected, a technical term meaning there is a path between every pair of distinct nodes ignoring the direction of the edges. It is clear that we do not need to take into account any "dangling nodes", nodes with no outgoing links L\ :sub:`j`\ :sup:`out` = 0,  or disconnected parts of the graph.
+# Looking at the graph representing our network of Wikipedia pages we can see that the graph is "connected", a technical term meaning there is a path between every pair of distinct nodes ignoring the direction of the edges. Therefore, we do not need to take into account any "dangling nodes", nodes with no outgoing links L\ :sub:`j`\ :sup:`out` = 0,  or disconnected parts of the graph.
 #
 # Using this observation we can simplify the update rule by setting d = 1. This means that the random surfer will always follow a link and never jump to a random page. The update rule becomes:
 #
@@ -136,7 +138,7 @@ Please ask them questions and actively engage!
 #     \mathbf{M}\mathbf{R} = \lambda \mathbf{R}
 # If not don't worry, we will cover the details in the section `Eigenvalues and eigenvectors of a matrix`_.
 #
-# In the video below Amy discusses the theory above and shows the results of applying the simplified update rule iteratively. You will see how to implement this yourself in the section ``_.
+# In the video below Amy discusses the theory above and shows the results of applying the simplified update rule iteratively. You will see how to implement this yourself in the section `Constructing the transition matrix M`_ and `Simulating PageRank`_.
 #
 # .. youtube:: guf36O9rBXs
 #     :width: 100%
@@ -230,35 +232,31 @@ vec2 = np.array([4, 5, 6])
 # %%
 # Vector dot product (sum of element-wise products)
 dot_product = np.dot(vec1, vec2)  # 1*4 + 2*5 + 3*6 = 4 + 10 + 18 = 32
-
+print("Vector Dot Product:", dot_product)
 # %%
 # Or using the @ operator
 dot_product_alt = vec1 @ vec2
-print("\nVector Dot Product:", dot_product)
 print("Vector Dot Product (@):", dot_product_alt)
-
-mat1 = np.array([[1, 2], [3, 4]])  # 2x2 matrix
-mat2 = np.array([[5, 6], [7, 8]])  # 2x2 matrix
-vec3 = np.array([10, 20])  # 1x2 vector
 
 # %%
 # Matrix multiplication
+mat1 = np.array([[1, 2], [3, 4]])  # 2x2 matrix
+mat2 = np.array([[5, 6], [7, 8]])  # 2x2 matrix
 matrix_product = np.dot(mat1, mat2)
-
+print("Matrix Multiplication:\n", matrix_product)
 # %%
 # Or using the @ operator
 matrix_product_alt = mat1 @ mat2
-print("Matrix Multiplication:\n", matrix_product)
 print("Matrix Multiplication (@):\n", matrix_product_alt)
 
 # %%
+vec3 = np.array([10, 20])  # 1x2 vector
 # Matrix-vector multiplication
 mat_vec_product = np.dot(mat1, vec3)  # Note: Treats vec3 as a column vector here
-
+print("Matrix-Vector Multiplication:", mat_vec_product)
 # %%
 # Or using the @ operator
 mat_vec_product_alt = mat1 @ vec3
-print("Matrix-Vector Multiplication:", mat_vec_product)
 print("Matrix-Vector Multiplication (@):", mat_vec_product_alt)
 
 # %%
@@ -472,12 +470,13 @@ t += 1  # Increment iteration counter
 #     :width: 100%
 #     :align: center
 # |
-# Let's summarize the mathematics shown in the video. The N-by-N matrix **M** has N eigenvectors math:`\mathbf{v}_i`` which obey the equation:
+# Let's summarize the mathematics shown in the video. The N-by-N matrix **M** has N eigenvectors :math:`\mathbf{v}_i` which obey the equation:
 #
-# :math:`\mathbf{M}\mathbf{v}_i = \lambda_i \mathbf{v}_i`
-# where math:`\lambda_i` is the eigenvalue associated with the eigenvector math:`\mathbf{v}_i`.
+# .. math::
+#   \mathbf{M}\mathbf{v}_i = \lambda_i \mathbf{v}_i
+# where :math:`\lambda`\ :sub:`i` is the eigenvalue associated with the eigenvector :math:`\mathbf{v}_i`.
 #
-# The eigenvalue equation states that when the matrix **M** acts on the eigenvector math:`\mathbf{v}_i`, it scales the vector by a factor of math:`\lambda_i` without changing its direction.
+# The eigenvalue equation states that when the matrix **M** acts on the eigenvector :math:`\mathbf{v}_i`, it scales the vector by a factor of :math:`\lambda_i` without changing its direction.
 #
 # Let's use Python to compute the eigenvalues and the corresponding eigenvectors of the transition matrix **M**. We will use the `numpy.linalg.eig()` function to compute the eigenvalues and eigenvectors of a matrix.
 
@@ -485,10 +484,10 @@ eigenValues, eigenVectors = np.linalg.eig(M)
 print("Eigenvalues:", eigenValues)
 
 # %%
-# Note that some of the eigenvalues are complex, e.g. 0.02227925-0.04471056j.
+# Note that some of the eigenvalues are complex, e.g. :math:`0.02227925-0.04471056i` (in Python "j" is used to represent the imaginary unit).
 #
 # Let's get the index of the largest eigenvalue by first getting a list of the indices of the sorted eigenValues:
-idx = eigenValues.argsort()[::-1]  # Sort eigenValues in descending order
+idx = eigenValues.argsort()[::-1]  # eigenValues in descending order
 
 print(idx)
 # %%
@@ -499,19 +498,21 @@ eigenVectors = eigenVectors[:, idx]
 print("Sorted Eigenvalues:", eigenValues)
 # %%
 # The largest eigenvalue is the first element of the sorted eigenValues array. The corresponding eigenvector is the first column of the sorted eigenVectors array.
-largest_eigenvalue = eigenValues[0]
-largest_eigenvector = eigenVectors[:, 0]
-print("Largest Eigenvalue:", largest_eigenvalue)
-print("Corresponding Eigenvector:", largest_eigenvector)
+eigenvalue0 = eigenValues[0]
+eigenvector0 = eigenVectors[:, 0]
+print("Largest Eigenvalue:", eigenvalue0)
+print("Corresponding Eigenvector:", eigenvector0)
 
-
-# Check that the eigenvalue equation holds
-
-print("M @ largest_eigenvector:")
-print(np.dot(M, largest_eigenvector))
-print("largest_eigenvalue * largest_eigenvector:")
-print(largest_eigenvalue * largest_eigenvector)
-
+# %%
+# Check that the eigenvalue equation holds:
+RHS = np.dot(M, eigenvector0)  # Right had side of the eigenvalue equation
+print("M @ eigenvector0:")
+print(RHS)
+LHS = eigenvalue0 * eigenvector0  # Left hand side of the eigenvalue equation
+print("eigenvalue0 * eigenvector0:")
+print(LHS)
+print("Euclidean distance (should be close to zero):")
+print(np.sqrt(np.sum((RHS - LHS) ** 2)))
 # %%
 # In the final video Amandine will briefly take you through the computation of the eigenvalues and eigenvalues of the transition matrix **M** including how to sort them to extract the largest eigenvalue and its corresponding eigenvector.
 #
@@ -522,13 +523,11 @@ print(largest_eigenvalue * largest_eigenvector)
 #
 # Directly computing the PageRank scores
 # =====================
-# Does this help us predict the PageRank scores? Let's normalize largest_eigenvector and check that the values correspond to the PageRank scores obtained using the iterative method applied in the section `Simulating PageRank`_.
-largest_eigenvector_normalized = largest_eigenvector / np.sum(largest_eigenvector) * 100
+# Does this help us predict the PageRank scores? Let's normalize "eigenvector0" and check that the values correspond to the PageRank scores obtained using the iterative method applied in the section `Simulating PageRank`_.
+eigenvector0_normalized = eigenvector0 / np.sum(eigenvector0) * 100
 print(
     f"Normalized largest eigenvector:\n",
-    "\n ".join(
-        [f"{c}: {r:.2f}" for c, r in zip(countries, largest_eigenvector_normalized)]
-    ),
+    "\n ".join([f"{c}: {r:.2f}" for c, r in zip(countries, eigenvector0_normalized)]),
 )
 # %%
 # What about the other eigenvalues and eigenvectors? Why do we only need to consider the eigenvalue with the largest magnitude and its corresponding eigenvector?
@@ -537,16 +536,16 @@ print(
 # Eigenvectors corresponding to distinct eigenvalues are always linearly independent. You can verify that this is the case for our transition matrix **M**. Consequently, it is possible to rewrite any initial state **R**\ (0) as a linear combination of the eigenvectors **v**\ :sub:`i` of **M**,
 #
 # .. math::
-#     \mathbf{R}(0) = \sum_{i=1}^N \lambda_i^t a_i \mathbf{v}_i
+#     \mathbf{R}(0) = \sum_{i=1}^N a_i \mathbf{v}_i.
 #
-# The PageRank vector **R**\ (t) at iteration t can be expressed as a linear combination of the eigenvectors of **M**:
+# The PageRank vector **R**\ (1) at iteration :math:`t=1` can be expressed as a linear combination of the eigenvectors of **M** as:
 #
 # .. math::
-#     \mathbf{R}(1) = \sum_{i=1}^N  a_i \mathbf{M}\mathbf{v}_i = \sum_{i=1}^N  a_i \lambda_i\mathbf{v}_i
+#     \mathbf{R}(1) =\mathbf{M} \mathbf{R}(0) =  \sum_{i=1}^N  a_i \mathbf{M}\mathbf{v}_i = \sum_{i=1}^N  a_i \lambda_i\mathbf{v}_i
 # Applying **M** t times you can convince yourself that
 #
 # .. math::
-#     \mathbf{R}(t) = \sum_{i=1}^N  a_i \mathbf{M}^t\mathbf{v}_i = \sum_{i=1}^N  a_i \lambda_i^t\mathbf{v}_i
+#     \mathbf{R}(t) = \sum_{i=1}^N  a_i \mathbf{M}^t\mathbf{v}_i = \sum_{i=1}^N  a_i \lambda_i^t\mathbf{v}_i,
 #
-# Assuming that the eigenvalues are labeled so that :math:`|\lambda_1| > |\lambda_2| > |\lambda_3| > ... > |\lambda_N|`, the term :math:`\lambda_1^t a_1 \mathbf{v}_1` will dominate the sum as t increases. The other terms will decay to zero as t increases, and the PageRank vector will converge to a multiple of the eigenvector corresponding to the largest eigenvalue.
+# where :math:`a_i` depend on the initial chose of **R**\ (0). Assuming that the eigenvalues are labeled so that :math:`|\lambda_1| > |\lambda_2| \geq |\lambda_3| \geq ... \geq |\lambda_N|`, the term :math:`\lambda_1^t a_1 \mathbf{v}_1` will dominate the sum as t increases, and the PageRank vector will converge to a multiple of the eigenvector corresponding to the largest eigenvalue.
 #
