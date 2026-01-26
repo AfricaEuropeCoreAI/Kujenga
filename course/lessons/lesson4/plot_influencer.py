@@ -549,3 +549,37 @@ print(
 #
 # where :math:`a_i` depend on the initial chose of **R**\ (0). Assuming that the eigenvalues are labeled so that :math:`|\lambda_1| > |\lambda_2| \geq |\lambda_3| \geq ... \geq |\lambda_N|`, the term :math:`\lambda_1^t a_1 \mathbf{v}_1` will dominate the sum as t increases, and the PageRank vector will converge to a multiple of the eigenvector corresponding to the largest eigenvalue.
 #
+#
+# Exercises
+# =====================
+#
+# Complete the following exercises to deepen your understanding of the PageRank algorithm and its behavior under different conditions.
+#
+# Exercise 1: The "Digital Influencer" Challenge
+# ----------------------
+#
+# In this exercise, you will add a additional country to the existing network to see how it affects the rankings.
+#
+# 1. Create a new 8-by-8 matrix called ``M_extended``.
+# 2. Copy the values from the original 7-by-7 matrix ``M`` into the top-left corner of your new matrix.
+# 3. Add an additional (fictional) country as the 8th node (index 7).
+# 4. **Outgoing Links:** You have a "budget" of 3 links. Choose 3 countries from the original list for your country to link to.
+# 5. **Incoming Links:** Assume that **Nigeria (NG)** and **South Africa (ZA)** are impressed by your page and each add a link to your country.
+# 6. Run the iterative simulation. Where does the added country rank? Use the simplified update rule described in section `The Iterative Update Rule`_ with d = 1.
+# 7. How does linking to high- and low-ranked countries affect your country's PageRank score?
+#
+# .. admonition:: Tip
+#     :class: tip
+#
+#     When Nigeria and South Africa add a link to you, their total number of outgoing links (:math:`L_j^{out}`) increases, so you will need to update the matrix accordingly.
+
+# %%
+# Exercise 2: The "Boredom Factor" Sensitivity Test
+# ----------------------
+#
+# The damping factor :math:`d` represents the probability that a surfer continues clicking links. If :math:`d=0`, the surfer is "completely bored" and only ever jumps to random pages. Using the full update rule described in section `The Iterative Update Rule`_:
+#
+# 1. Write a loop that calculates the final PageRank scores for all 7 countries for different values of :math:`d`, ranging from 0.0 to 1.0 in steps of 0.05.
+# 2. Use ``matplotlib.pyplot`` to generate a plot where the **x-axis** is the value of :math:`d` and the **y-axis** is the PageRank score.
+# 3. Plot a separate curve for each country.
+# 4. Comment on the sensitivity of the PageRank scores to changes in the damping factor.
