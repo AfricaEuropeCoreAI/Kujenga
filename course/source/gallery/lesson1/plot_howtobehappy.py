@@ -242,7 +242,6 @@ for country in ['United States','United Kingdom','Croatia','Benin','Finland','Ye
 plt.show()
 
 ##############################################################################
-#[Video here]
 
 ##############################################################################
 # .. admonition:: Try it yourself!
@@ -250,7 +249,7 @@ plt.show()
 #   Download the code by clicking on the link below and 
 #   try changing the slope and the intercept of the line above by 
 #   changing the values 1/12 and replotting the line.
-#   See if you can find a line that lies closer to the data points. OR `Try this link for interactivity  <https://mybinder.org/v2/gh/AfricaEuropeCoreAI/Kujenga/Interactive?urlpath=%2Fdoc%2Ftree%2Fcourse%2Flessons%2Flesson1%2Fplot_howtobehappy.ipynb>`_
+#   See if you can find a line that lies closer to the data points. 
 
 ##############################################################################
 #Interactive Line Fitting
@@ -259,16 +258,19 @@ plt.show()
 #As you experiment, you will notice how different values influence the quality of the fit, giving you a practical sense of what makes a regression line “good” and how the optimal line is found.
 #To guide you through using the interactive tool, a demonstration video is also provided. The video walks you step-by-step through the features and shows exactly how to adjust and interpret the graph.
 #
-#[Video here]
+# .. youtube:: zyrJPSCmrkc
+#    :width: 100% 
+#    :align: center 
+#
 ###################################################################################################
 #
 # The sum of squares
 # ------------------
 #
-# Each of the dotted lines above show how far the line – which predicts that happiness is one 
-# twelfth of life expectancy – is from the data for each of the six highlighted countries.
-# For example, the USA has a happiness score of 6.88 and an 
-# average life expectancy of 68.3. The first equation (figure 2b) predicts 
+#Each of the dotted lines above show how far the line – which predicts that happiness is one 
+#twelfth of life expectancy – is from the data for each of the six highlighted countries.
+#For example, the USA has a happiness score of 6.88 and an 
+#average life expectancy of 68.3. The first equation (figure 2b) predicts 
 #
 # .. math::
 #    
@@ -437,7 +439,7 @@ print('The model sum of squares is %.4f' % Model_Sum_Of_Squares)
 #  y = k + m \times x
 #
 # We now look at how we can improve the fit of the model by
-# including this intercept.
+# including this intercept. 
 #
 # We start by shifting the data so that it has a mean (average) of zero.
 # To do this we simply take away the mean value from both life expectancy and 
@@ -573,7 +575,7 @@ print('The model sum of squares is still %.4f' % Model_Sum_Of_Squares)
 # What we’re doing here is just checking: does `statsmodels` give us the same m and k
 # If they do, that means our manual derivation was spot on!
 #
-# Let’s test it out — and Victoria from Kenya will walk you through the code.
+# Let’s test it out, and Victoria from Kenya will walk you through the code.
 #
 # N.B. Make sure you have `statsmodels` installed in your Python environment  by using:
 # pip install statsmodels or if you are using conda:
