@@ -242,7 +242,6 @@ for country in ['United States','United Kingdom','Croatia','Benin','Finland','Ye
 plt.show()
 
 ##############################################################################
-#[Video here]
 
 ##############################################################################
 # .. admonition:: Try it yourself!
@@ -259,6 +258,9 @@ plt.show()
 #As you experiment, you will notice how different values influence the quality of the fit, giving you a practical sense of what makes a regression line “good” and how the optimal line is found.
 #To guide you through using the interactive tool, a demonstration video is also provided. The video walks you step-by-step through the features and shows exactly how to adjust and interpret the graph.
 #
+# .. youtube:: zyrJPSCmrkc
+#    :width: 100% 
+#    :align: center 
 #
 ###################################################################################################
 #
@@ -573,7 +575,7 @@ print('The model sum of squares is still %.4f' % Model_Sum_Of_Squares)
 # What we’re doing here is just checking: does `statsmodels` give us the same m and k
 # If they do, that means our manual derivation was spot on!
 #
-# Let’s test it out — and Victoria from Kenya will walk you through the code.
+# Let’s test it out, and Victoria from Kenya will walk you through the code.
 #
 # N.B. Make sure you have `statsmodels` installed in your Python environment  by using:
 # pip install statsmodels or if you are using conda:

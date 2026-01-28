@@ -6,7 +6,7 @@
 
 Computation times
 =================
-**00:02.390** total execution time for 1 file **from gallery/lesson1**:
+**00:09.017** total execution time for 1 file **from gallery/lesson1**:
 
 .. container::
 
@@ -33,5 +33,5 @@ Computation times
      - Time
      - Mem (MB)
    * - :ref:`sphx_glr_gallery_lesson1_plot_howtobehappy.py` (``plot_howtobehappy.py``)
-     - 00:02.390
+     - 00:09.017
      - 0.0
