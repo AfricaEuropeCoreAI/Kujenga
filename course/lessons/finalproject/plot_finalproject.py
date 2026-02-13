@@ -19,9 +19,7 @@ In the video above, we walk through what makes a great final project and show yo
 
 What Makes a Great Project?
 ----------------------------
-
 The best projects have three ingredients:
-
 1. **A Question You Actually Care About** 
    
    * "Are electric vehicles becoming more popular in my country?"

@@ -37,9 +37,7 @@ In the video above, we walk through what makes a great final project and show yo
 
 What Makes a Great Project?
 ----------------------------
-
 The best projects have three ingredients:
-
 1. **A Question You Actually Care About** 
    
    * "Are electric vehicles becoming more popular in my country?"
@@ -115,7 +113,7 @@ Cleaning Your Data
 ------------------
 Real-world data is messy. Here's how to clean it:
 
-.. GENERATED FROM PYTHON SOURCE LINES 101-105
+.. GENERATED FROM PYTHON SOURCE LINES 99-103
 
 .. code-block:: Python
 
@@ -130,14 +128,14 @@ Real-world data is messy. Here's how to clean it:
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 106-110
+.. GENERATED FROM PYTHON SOURCE LINES 104-108
 
 Step 1: Load and Inspect
 ^^^^^^^^^^^^^^^^^^^^^^^^
 First, load your data and take a look at what you're working with.
 This helps you understand the structure and identify potential issues.
 
-.. GENERATED FROM PYTHON SOURCE LINES 110-120
+.. GENERATED FROM PYTHON SOURCE LINES 108-118
 
 .. code-block:: Python
 
@@ -158,14 +156,14 @@ This helps you understand the structure and identify potential issues.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 121-125
+.. GENERATED FROM PYTHON SOURCE LINES 119-123
 
 Step 2: Handle Missing Values
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 Missing data is common. You can either remove rows with missing values
 or fill them with appropriate values like the mean or median.
 
-.. GENERATED FROM PYTHON SOURCE LINES 125-135
+.. GENERATED FROM PYTHON SOURCE LINES 123-133
 
 .. code-block:: Python
 
@@ -186,13 +184,13 @@ or fill them with appropriate values like the mean or median.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 136-139
+.. GENERATED FROM PYTHON SOURCE LINES 134-137
 
 Step 3: Remove Duplicates
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
 Duplicate rows can skew your analysis. Check for and remove them.
 
-.. GENERATED FROM PYTHON SOURCE LINES 139-147
+.. GENERATED FROM PYTHON SOURCE LINES 137-145
 
 .. code-block:: Python
 
@@ -211,14 +209,14 @@ Duplicate rows can skew your analysis. Check for and remove them.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 148-152
+.. GENERATED FROM PYTHON SOURCE LINES 146-150
 
 Step 4: Fix Data Types
 ^^^^^^^^^^^^^^^^^^^^^^^
 Make sure each column has the correct data type. Dates should be datetime
 objects, numbers should be numeric types, etc.
 
-.. GENERATED FROM PYTHON SOURCE LINES 152-158
+.. GENERATED FROM PYTHON SOURCE LINES 150-156
 
 .. code-block:: Python
 
@@ -235,14 +233,14 @@ objects, numbers should be numeric types, etc.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 159-163
+.. GENERATED FROM PYTHON SOURCE LINES 157-161
 
 Step 5: Filter Outliers (if needed)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 Extreme values can distort your results. Use the interquartile range (IQR)
 method to identify and remove outliers.
 
-.. GENERATED FROM PYTHON SOURCE LINES 163-173
+.. GENERATED FROM PYTHON SOURCE LINES 161-171
 
 .. code-block:: Python
 
@@ -263,7 +261,7 @@ method to identify and remove outliers.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 174-230
+.. GENERATED FROM PYTHON SOURCE LINES 172-228
 
 Need more help? Check out the `Pandas documentation <https://pandas.pydata.org/docs/>`_ or this `data cleaning tutorial <https://realpython.com/python-data-cleaning-numpy-pandas/>`_.
 
@@ -326,7 +324,7 @@ Have Any Questions? Ask your instructor.
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** (0 minutes 0.971 seconds)
+   **Total running time of the script:** (0 minutes 0.930 seconds)
 
 
 .. _sphx_glr_download_gallery_finalproject_plot_finalproject.py:
