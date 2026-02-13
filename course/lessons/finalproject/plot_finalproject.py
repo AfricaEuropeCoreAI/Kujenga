@@ -203,7 +203,7 @@ import pandas as pd
 #
 #
 #Tips for Success
-# ----------------
+#----------------
 #
 # * **Start simple** - Better to do one thing well than many things poorly
 # * **Tell a story** - Guide your reader through your thinking
@@ -213,7 +213,7 @@ import pandas as pd
 #
 #
 #Getting Started
-# ---------------
+#---------------
 #
 # 1. Pick a question that excites you
 # 2. Find a dataset (start with Kaggle or Our World in Data)
@@ -222,6 +222,7 @@ import pandas as pd
 # 5. Create visualizations that tell your story
 # 6. Share your findings
 # 7. Celebrate your hard work and new skills!
-#  Remember: The best projects are the ones where you learn something new about a topic you care about.
+#
+#Remember: The best projects are the ones where you learn something new about a topic you care about.
 #
 #Questions? Ask your instructor.
