@@ -194,6 +194,7 @@ import pandas as pd
 #
 #Submission Format
 #-----------------
+#Depending on your instructor's requirements, you may submit either a Jupyter notebook or a Python script. However, we highly recommend using a Jupyter notebook for its ability to combine code, visualizations, and narrative in one place.
 #Submit a Jupyter notebook that includes:
 #* Markdown cells explaining your thinking
 #* Code cells showing your analysis
