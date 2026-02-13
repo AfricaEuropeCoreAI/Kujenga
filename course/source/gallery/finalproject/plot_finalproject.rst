@@ -29,7 +29,7 @@ You've learned some powerful mathematical and computational tools. Now it's time
 
 Your final project is straightforward: **Pick a real-world question, find data to answer it, and use the techniques you've learned to tell a compelling story.**
 
-.. youtube:: dQw4w9WgXcQ
+.. youtube:: QQ0YYR2BhFk
     :width: 100% 
     :align: center
 
@@ -82,6 +82,7 @@ Not sure where to begin? Here are some ideas:
 * What factors predict a team's success in your favorite sport?
 * Do movie budgets correlate with box office success?
 * Can you model the spread of a viral trend on social media?
+*Do NFL kickers make more field goals when the crowd is louder? 
 
 **Technology & Innovation**
 * How has internet access grown globally?
@@ -114,7 +115,7 @@ Cleaning Your Data
 ------------------
 Real-world data is messy. Here's how to clean it:
 
-.. GENERATED FROM PYTHON SOURCE LINES 100-104
+.. GENERATED FROM PYTHON SOURCE LINES 101-105
 
 .. code-block:: Python
 
@@ -129,14 +130,14 @@ Real-world data is messy. Here's how to clean it:
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 105-109
+.. GENERATED FROM PYTHON SOURCE LINES 106-110
 
 Step 1: Load and Inspect
 ^^^^^^^^^^^^^^^^^^^^^^^^
 First, load your data and take a look at what you're working with.
 This helps you understand the structure and identify potential issues.
 
-.. GENERATED FROM PYTHON SOURCE LINES 109-119
+.. GENERATED FROM PYTHON SOURCE LINES 110-120
 
 .. code-block:: Python
 
@@ -157,14 +158,14 @@ This helps you understand the structure and identify potential issues.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 120-124
+.. GENERATED FROM PYTHON SOURCE LINES 121-125
 
 Step 2: Handle Missing Values
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 Missing data is common. You can either remove rows with missing values
 or fill them with appropriate values like the mean or median.
 
-.. GENERATED FROM PYTHON SOURCE LINES 124-134
+.. GENERATED FROM PYTHON SOURCE LINES 125-135
 
 .. code-block:: Python
 
@@ -185,13 +186,13 @@ or fill them with appropriate values like the mean or median.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 135-138
+.. GENERATED FROM PYTHON SOURCE LINES 136-139
 
 Step 3: Remove Duplicates
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
 Duplicate rows can skew your analysis. Check for and remove them.
 
-.. GENERATED FROM PYTHON SOURCE LINES 138-146
+.. GENERATED FROM PYTHON SOURCE LINES 139-147
 
 .. code-block:: Python
 
@@ -210,14 +211,14 @@ Duplicate rows can skew your analysis. Check for and remove them.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 147-151
+.. GENERATED FROM PYTHON SOURCE LINES 148-152
 
 Step 4: Fix Data Types
 ^^^^^^^^^^^^^^^^^^^^^^^
 Make sure each column has the correct data type. Dates should be datetime
 objects, numbers should be numeric types, etc.
 
-.. GENERATED FROM PYTHON SOURCE LINES 151-157
+.. GENERATED FROM PYTHON SOURCE LINES 152-158
 
 .. code-block:: Python
 
@@ -234,14 +235,14 @@ objects, numbers should be numeric types, etc.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 158-162
+.. GENERATED FROM PYTHON SOURCE LINES 159-163
 
 Step 5: Filter Outliers (if needed)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 Extreme values can distort your results. Use the interquartile range (IQR)
 method to identify and remove outliers.
 
-.. GENERATED FROM PYTHON SOURCE LINES 162-172
+.. GENERATED FROM PYTHON SOURCE LINES 163-173
 
 .. code-block:: Python
 
@@ -262,7 +263,7 @@ method to identify and remove outliers.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 173-227
+.. GENERATED FROM PYTHON SOURCE LINES 174-230
 
 Need more help? Check out the `Pandas documentation <https://pandas.pydata.org/docs/>`_ or this `data cleaning tutorial <https://realpython.com/python-data-cleaning-numpy-pandas/>`_.
 
@@ -287,6 +288,7 @@ Your final project should include:
 
 Submission Format
 -----------------
+Depending on your instructor's requirements, you may submit either a Jupyter notebook or a Python script. However, we highly recommend using a Jupyter notebook for its ability to combine code, visualizations, and narrative in one place.
 Submit a Jupyter notebook that includes:
 * Markdown cells explaining your thinking
 * Code cells showing your analysis
@@ -297,7 +299,7 @@ Submit a Jupyter notebook that includes:
 
 
 Tips for Success
- ----------------
+----------------
 
  * **Start simple** - Better to do one thing well than many things poorly
  * **Tell a story** - Guide your reader through your thinking
@@ -307,7 +309,7 @@ Tips for Success
 
 
 Getting Started
- ---------------
+---------------
 
  1. Pick a question that excites you
  2. Find a dataset (start with Kaggle or Our World in Data)
@@ -316,14 +318,15 @@ Getting Started
  5. Create visualizations that tell your story
  6. Share your findings
  7. Celebrate your hard work and new skills!
-  Remember: The best projects are the ones where you learn something new about a topic you care about.
 
-Questions? Ask your instructor.
+Remember: The best projects are the ones where you learn something new about a topic you care about.
+
+Have Any Questions? Ask your instructor.
 
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** (0 minutes 0.978 seconds)
+   **Total running time of the script:** (0 minutes 0.971 seconds)
 
 
 .. _sphx_glr_download_gallery_finalproject_plot_finalproject.py:
