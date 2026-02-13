@@ -7,7 +7,7 @@ Final Project
 
 Your Mission
 ------------
-You've learned some powerful mathematical and computational tools. Now it's time to put them to work on something you care about.
+Congratulations for making it this far :)! You've learned some powerful mathematical and computational tools. Now it's time to put them to work on something you care about.
 
 Your final project is straightforward: **Pick a real-world question, find data to answer it, and use the techniques you've learned to tell a compelling story.**
 
