@@ -1,12 +1,12 @@
 
 :orphan:
 
-.. _sphx_glr_gallery_lesson2_sg_execution_times:
+.. _sphx_glr_gallery_finalproject_sg_execution_times:
 
 
 Computation times
 =================
-**00:01.865** total execution time for 4 files **from gallery/lesson2**:
+**00:00.978** total execution time for 1 file **from gallery/finalproject**:
 
 .. container::
 
@@ -32,15 +32,6 @@ Computation times
    * - Example
      - Time
      - Mem (MB)
-   * - :ref:`sphx_glr_gallery_lesson2_plot_epidemic.py` (``plot_epidemic.py``)
-     - 00:01.865
-     - 0.0
-   * - :ref:`sphx_glr_gallery_lesson2_plot_SEIR.py` (``plot_SEIR.py``)
-     - 00:00.000
-     - 0.0
-   * - :ref:`sphx_glr_gallery_lesson2_plot_SEIR_exercise.py` (``plot_SEIR_exercise.py``)
-     - 00:00.000
-     - 0.0
-   * - :ref:`sphx_glr_gallery_lesson2_plot_cts2D.py` (``plot_cts2D.py``)
-     - 00:00.000
+   * - :ref:`sphx_glr_gallery_finalproject_plot_finalproject.py` (``plot_finalproject.py``)
+     - 00:00.978
      - 0.0

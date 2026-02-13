@@ -17,7 +17,7 @@ course means that you are considered 'PhD ready' for the Doctoral School in Comp
 on the PhD Programme, but it does mean that you have built the skills to apply. 
 
 We run this course in October every year. To participate you will need to find a study group. Local study groups are located 
-in Nairobi, Lagos, Stellenbosch, Makarere, and Addis Ababa. If you are not near one of these locations, you can join an online 
+in Nairobi, Kigali , Lagos, Stellenbosch, Makarere, and Addis Ababa. If you are not near one of these locations, you can join an online 
 study group. In either case, you need to fill in the `following form <https://forms.gle/>`_ to apply to join. 
 
 Experience with programming is required, but we have added a section to get you started there too. 
@@ -60,6 +60,13 @@ Contents
 .. toctree::
    :maxdepth: 1
    :caption: Taking control of your life using data.
+
+.. toctree::
+   :maxdepth: 1
+   :caption: Final Project
+   
+   gallery/finalproject/plot_finalproject
+   
 
 **This course was supported by the 
 `Equal Opportunities Group at the Information Technology Department, Uppasala University <https://www2.it.uu.se/about_us/equality>`_

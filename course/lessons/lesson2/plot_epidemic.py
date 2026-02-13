@@ -4,6 +4,17 @@
 The SIR model
 =============
 
+How to use this material
+================================
+
+This material is part of a 6 hour learning module with a 2 hour instructor-led session in the middle. Here's how to approach it:
+*Before class*: Watch the videos to understand the SIR model concept and read through the equation derivations. Set up Python on your computer or use Google Colab. 
+Download the Jupyter notebook or Python code from the links at the bottom of this page and run the examples, experimenting with different β and γ values.
+*During class*: Your instructor will guide you through the mathematical foundations and help you interpret phase planes and nullclines. 
+This is your opportunity to ask questions and deepen your understanding of epidemic dynamics.
+*After class*: Work through the parameter exploration exercises and practice using the model to predict outbreak peaks and evaluate interventions. Submit your completed work to your instructor as directed.
+
+
 What you will learn 
 ===================
 
@@ -44,7 +55,6 @@ In the next video, we’ll translate those ideas into differential equations, al
 .. youtube:: t-opfUEqUNs
     :width: 100% 
     :align: center 
-
 
 Deriving the Equations
 ======================

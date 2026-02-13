@@ -69,7 +69,7 @@ From the book
 
 .. raw:: html
 
-    <div class="sphx-glr-thumbcontainer" tooltip="What you will learn  ===================">
+    <div class="sphx-glr-thumbcontainer" tooltip="How to use this material ================================">
 
 .. only:: html
 
