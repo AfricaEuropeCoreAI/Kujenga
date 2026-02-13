@@ -64,6 +64,7 @@ Not sure where to begin? Here are some ideas:
 * What factors predict a team's success in your favorite sport?
 * Do movie budgets correlate with box office success?
 * Can you model the spread of a viral trend on social media?
+*Do NFL kickers make more field goals when the crowd is louder? 
 
 **Technology & Innovation**
 * How has internet access grown globally?
