@@ -7,11 +7,11 @@ Final Project
 
 Your Mission
 ------------
-You've learned some powerful mathematical and computational tools. Now it's time to put them to work on something you care about.
+Congratulations for making it this far :)! You've learned some powerful mathematical and computational tools. Now it's time to put them to work on something you care about.
 
 Your final project is straightforward: **Pick a real-world question, find data to answer it, and use the techniques you've learned to tell a compelling story.**
 
-.. youtube:: dQw4w9WgXcQ
+.. youtube:: QQ0YYR2BhFk
     :width: 100% 
     :align: center
 
@@ -19,9 +19,7 @@ In the video above, we walk through what makes a great final project and show yo
 
 What Makes a Great Project?
 ----------------------------
-
 The best projects have three ingredients:
-
 1. **A Question You Actually Care About** 
    
    * "Are electric vehicles becoming more popular in my country?"
@@ -64,6 +62,7 @@ Not sure where to begin? Here are some ideas:
 * What factors predict a team's success in your favorite sport?
 * Do movie budgets correlate with box office success?
 * Can you model the spread of a viral trend on social media?
+*Do NFL kickers make more field goals when the crowd is louder? 
 
 **Technology & Innovation**
 * How has internet access grown globally?
@@ -193,6 +192,7 @@ import pandas as pd
 #
 #Submission Format
 #-----------------
+#Depending on your instructor's requirements, you may submit either a Jupyter notebook or a Python script. However, we highly recommend using a Jupyter notebook for its ability to combine code, visualizations, and narrative in one place.
 #Submit a Jupyter notebook that includes:
 #* Markdown cells explaining your thinking
 #* Code cells showing your analysis
@@ -203,7 +203,7 @@ import pandas as pd
 #
 #
 #Tips for Success
-# ----------------
+#----------------
 #
 # * **Start simple** - Better to do one thing well than many things poorly
 # * **Tell a story** - Guide your reader through your thinking
@@ -213,7 +213,7 @@ import pandas as pd
 #
 #
 #Getting Started
-# ---------------
+#---------------
 #
 # 1. Pick a question that excites you
 # 2. Find a dataset (start with Kaggle or Our World in Data)
@@ -222,6 +222,7 @@ import pandas as pd
 # 5. Create visualizations that tell your story
 # 6. Share your findings
 # 7. Celebrate your hard work and new skills!
-#  Remember: The best projects are the ones where you learn something new about a topic you care about.
 #
-#Questions? Ask your instructor.
+#Remember: The best projects are the ones where you learn something new about a topic you care about.
+#
+#Have Any Questions? Ask your instructor.
