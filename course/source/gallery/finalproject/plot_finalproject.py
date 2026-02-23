@@ -7,30 +7,23 @@ Final Project
 
 Your Mission
 ------------
-You've learned some powerful mathematical and computational tools. Now it's time to put them to work on something you care about.
+Congratulations for making it this far :)! You've learned some powerful mathematical and computational tools. Now it's time to put them to work on something you care about.
 
 Your final project is straightforward: **Pick a real-world question, find data to answer it, and use the techniques you've learned to tell a compelling story.**
 
-.. youtube:: QQ0YYR2BhFk
-    :width: 100% 
-    :align: center
+[VIDEO COMING SOON HERE]
 
 In the video above, we walk through what makes a great final project and show you examples from past students who have successfully applied what they've learned to answer questions they cared about.
 
 What Makes a Great Project?
 ----------------------------
 The best projects have three ingredients:
+
 1. **A Question You Actually Care About** 
-   
-   * "Are electric vehicles becoming more popular in my country?"
-   * "Does coffee consumption correlate with productivity?"
-   * "Can I predict which football team will win based on past performance?"
-   * "How has air quality changed in major cities over the past decade?"
-
+ It doesn't have to be earth-shattering. It just has to be something that matters to you and your community.
+ The more specific and local, the better. The best questions are the ones you see in your daily life.  
 2. **Data You Can Get Your Hands On**
-   
-   * More on this below - but don't worry, we'll show you where to look!
-
+ More on this below - but don't worry, we'll show you where to look!
 3. **At Least One Technique From This Course**
    
    * Linear regression (like the happiness-health analysis)
@@ -40,39 +33,32 @@ The best projects have three ingredients:
 
 Project Ideas to Get You Started
 ---------------------------------
-Not sure where to begin? Here are some ideas:
+Not sure where to begin? Start with a question that genuinely matters to you and your community. The most powerful machine learning projects are not the ones that sound impressive, they are the ones that solve real problems close to home.
+For this course, we encourage you to focus on **African challenges and local realities**. Think about the issues you see every day. Flood prediction in informal settlements. Crop disease detection for smallholder farmers. 
+Electricity outage patterns in your county. Traffic congestion in your city. Air quality near busy roads. Youth unemployment trends in your area.
 
-**Health & Lifestyle**
-* Does screen time affect sleep quality in students?
-* Is there a relationship between exercise frequency and mental health?
-* Do vaccination rates correlate with disease incidence?
+For example, let’s say you’re from Kenya and you’ve noticed how loud matatu music can be during long commutes. You might ask: Is there a correlation between prolonged exposure to high-decibel matatu music and hearing issues among commuters? That question can turn into a real machine learning project — collecting survey data, measuring exposure time, analysing patterns, and testing whether there is correlation (and carefully exploring whether causation might be possible to infer).
 
-**Economics & Social Issues**
-* How do education levels relate to income in different countries?
-* Is there a gender pay gap in certain industries?
-* Do crime rates correlate with unemployment?
-
-**Environment & Climate**
-* How has temperature changed in your city over the past 50 years?
-*Can you predict flood risk based on rainfall, elevation, and river discharge data? 
-* Does air pollution correlate with respiratory diseases?
-* Can you model population growth in your region?
-
-**Sports & Entertainment**
-* What factors predict a team's success in your favorite sport?
-* Do movie budgets correlate with box office success?
-* Can you model the spread of a viral trend on social media?
-*Do NFL kickers make more field goals when the crowd is louder? 
-
-**Technology & Innovation**
-* How has internet access grown globally?
-* Is there a relationship between smartphone adoption and economic development?
-* Can you predict tech stock prices using trends?
+This is exactly the spirit of the Kujenga course:
+Start with what you see.
+Ask a meaningful question.
+Use data to investigate it.
+Your project does not have to be perfect. It just has to be relevant and thoughtful.
 
 Where to Find Data
 ------------------
-The internet is full of free, accessible datasets! Here are the best places to start:
+The internet is full of free, accessible datasets, but don’t limit yourself to global sources only. Some of the most impactful projects come from local African datasets.
+You can explore:
 
+* Government open data portals (for example, national statistics offices, health ministries, meteorological departments).
+* African research institutions and NGOs.
+* County-level public records.
+* International datasets with African coverage (World Bank, UN data, etc.).
+* Community-collected surveys and field data.
+
+And remember: you are not restricted to pre-existing datasets. You can collect your own data through surveys, simple measurements, interviews, or partnerships with local organisations.
+If you ever feel stuck, these repositories below can be your starting point.
+The goal is to find data that helps you answer a question you genuinely care about.
 **General Data Repositories**
 
 * `Kaggle Datasets <https://www.kaggle.com/datasets>`_ - Thousands of clean, ready-to-use datasets
@@ -80,16 +66,6 @@ The internet is full of free, accessible datasets! Here are the best places to s
 * `Our World in Data <https://ourworldindata.org/>`_ - Beautiful, clean data on global issues
 * `Data.gov <https://data.gov/>`_ - US government open data
 * `UCI Machine Learning Repository <https://archive.ics.uci.edu/>`_ - Classic datasets
-
-**Specific Topics**
-
-* **Health**: `WHO Data <https://www.who.int/data>`_, `CDC Data <https://data.cdc.gov/>`_
-* **Economics**: `World Bank <https://data.worldbank.org/>`_, `IMF Data <https://www.imf.org/en/Data>`_
-* **Sports**: `Sports Reference <https://www.sports-reference.com/>`_, `Kaggle Sports <https://www.kaggle.com/search?q=sports+in%3Adatasets>`_
-* **Climate**: `NASA Climate Data <https://climate.nasa.gov/vital-signs/carbon-dioxide/>`_, `NOAA <https://www.noaa.gov/>`_
-* **Social Media**: `Twitter API <https://developer.twitter.com/>`_, `Reddit API <https://www.reddit.com/dev/api/>`_
-
-**Tip**: Start with Kaggle or Our World in Data - they have clean, well-documented datasets that work well for learning.
 
 Cleaning Your Data
 ------------------
@@ -173,7 +149,6 @@ import pandas as pd
 #
 #Project Requirements
 #--------------------
-#
 #Your final project should include:
 #
 #1. **A Clear Question** - What are you trying to find out?
@@ -199,7 +174,7 @@ import pandas as pd
 #* Visualizations
 #* A final conclusion section
 #
-#**File naming**: ``yourname_final_project.ipynb``
+#**File naming**: ``yourname_yourcountry_final_project.ipynb``
 #
 #
 #Tips for Success

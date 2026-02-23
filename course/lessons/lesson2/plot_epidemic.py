@@ -179,7 +179,7 @@ plt.show()
 
 ##############################################################################
 # Phase Planes and nullclines
-# ===========================
+# ===============================
 # In this section, Emily introduces the concept of **phase planes and nullclines** in the video below, 
 # using the SIR model as an example.
 #
@@ -196,7 +196,7 @@ plt.show()
 # differential equations where we plot one variable against another instead of plotting them over time.
 # Phase planes provide a powerful visualization method for dynamic systems.
 #
-#Why a dynamic system?
+# Why a dynamic system?
 # In mathematics and epidemiology, a dynamic system means a set of linked equations that describe how 
 # variables change over time. So the SIR model is a dynamic system because the numbers of S,I and 
 # R are continuously changing as the epidemic evolves i.e When there are many susceptibles and 
@@ -273,7 +273,7 @@ plt.show()
 
 ##############################################
 # Equilibrium Points and Nullclines
-# ---------------------------------
+# ===================================
 # One essential element of phase planes is the determination of equilibrium points. These 
 # points occur where the rates of change for both Susceptible (S) and Infected (I) are zero. 
 # The lines where the rate of change of a variable is equal to zero are called **nullclines**.
