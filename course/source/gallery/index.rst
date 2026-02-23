@@ -46,7 +46,7 @@ From the book
   .. image:: /gallery/lesson1/images/thumb/sphx_glr_plot_howtobehappy_thumb.png
     :alt:
 
-  :ref:`sphx_glr_gallery_lesson1_plot_howtobehappy.py`
+  :doc:`/gallery/lesson1/plot_howtobehappy`
 
 .. raw:: html
 
@@ -76,6 +76,23 @@ From the book
 
 .. raw:: html
 
+    <div class="sphx-glr-thumbcontainer" tooltip="This material is part of a 6-8 hour learning module with a 2 hour instructor-led session in the middle.  Here&#x27;s how to approach it:">
+
+.. only:: html
+
+  .. image:: /gallery/lesson2/images/thumb/sphx_glr_plot_epidemic_thumb.png
+    :alt:
+
+  :doc:`/gallery/lesson2/plot_epidemic`
+
+.. raw:: html
+
+      <div class="sphx-glr-thumbnail-title">How to use this material</div>
+    </div>
+
+
+.. raw:: html
+
     <div class="sphx-glr-thumbcontainer" tooltip="Building the model ------------------">
 
 .. only:: html
@@ -83,7 +100,7 @@ From the book
   .. image:: /gallery/lesson2/images/thumb/sphx_glr_plot_cts2D_thumb.png
     :alt:
 
-  :ref:`sphx_glr_gallery_lesson2_plot_cts2D.py`
+  :doc:`/gallery/lesson2/plot_cts2D`
 
 .. raw:: html
 
@@ -100,7 +117,7 @@ From the book
   .. image:: /gallery/lesson2/images/thumb/sphx_glr_plot_SEIR_exercise_thumb.png
     :alt:
 
-  :ref:`sphx_glr_gallery_lesson2_plot_SEIR_exercise.py`
+  :doc:`/gallery/lesson2/plot_SEIR_exercise`
 
 .. raw:: html
 
@@ -117,28 +134,11 @@ From the book
   .. image:: /gallery/lesson2/images/thumb/sphx_glr_plot_SEIR_thumb.png
     :alt:
 
-  :ref:`sphx_glr_gallery_lesson2_plot_SEIR.py`
+  :doc:`/gallery/lesson2/plot_SEIR`
 
 .. raw:: html
 
       <div class="sphx-glr-thumbnail-title">The SEIR model</div>
-    </div>
-
-
-.. raw:: html
-
-    <div class="sphx-glr-thumbcontainer" tooltip="How to use this material ================================">
-
-.. only:: html
-
-  .. image:: /gallery/lesson2/images/thumb/sphx_glr_plot_epidemic_thumb.png
-    :alt:
-
-  :ref:`sphx_glr_gallery_lesson2_plot_epidemic.py`
-
-.. raw:: html
-
-      <div class="sphx-glr-thumbnail-title">The SIR model</div>
     </div>
 
 
@@ -171,7 +171,7 @@ From the book
   .. image:: /gallery/lesson3/images/thumb/sphx_glr_plot_runners_thumb.png
     :alt:
 
-  :ref:`sphx_glr_gallery_lesson3_plot_runners.py`
+  :doc:`/gallery/lesson3/plot_runners`
 
 .. raw:: html
 
@@ -208,7 +208,7 @@ From the book
   .. image:: /gallery/lesson4/images/thumb/sphx_glr_plot_influencer_thumb.png
     :alt:
 
-  :ref:`sphx_glr_gallery_lesson4_plot_influencer.py`
+  :doc:`/gallery/lesson4/plot_influencer`
 
 .. raw:: html
 
@@ -244,7 +244,7 @@ Welcome to the final project.
   .. image:: /gallery/finalproject/images/thumb/sphx_glr_plot_finalproject_thumb.png
     :alt:
 
-  :ref:`sphx_glr_gallery_finalproject_plot_finalproject.py`
+  :doc:`/gallery/finalproject/plot_finalproject`
 
 .. raw:: html
 

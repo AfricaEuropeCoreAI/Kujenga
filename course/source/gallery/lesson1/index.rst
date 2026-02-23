@@ -29,7 +29,7 @@ From the book
   .. image:: /gallery/lesson1/images/thumb/sphx_glr_plot_howtobehappy_thumb.png
     :alt:
 
-  :ref:`sphx_glr_gallery_lesson1_plot_howtobehappy.py`
+  :doc:`/gallery/lesson1/plot_howtobehappy`
 
 .. raw:: html
 

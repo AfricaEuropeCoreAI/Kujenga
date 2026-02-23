@@ -24,7 +24,7 @@ Welcome to the final project.
   .. image:: /gallery/finalproject/images/thumb/sphx_glr_plot_finalproject_thumb.png
     :alt:
 
-  :ref:`sphx_glr_gallery_finalproject_plot_finalproject.py`
+  :doc:`/gallery/finalproject/plot_finalproject`
 
 .. raw:: html
 
