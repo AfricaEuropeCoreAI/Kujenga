@@ -139,9 +139,11 @@ We already discussed looked at how the `World Happiness Report <https://worldhap
 documents the happiness of people across the world. Now, let's load in that data to Python. In this video, 
 David Sumpter steps through the code. Watch it first then try running the code yourself.
 
+
+
 [VIDEO HERE]
 
-
+You will need to download the data file `HappinessData.csv` from the `data folder <https://github.com/AfricaEuropeCoreAI/Kujenga/blob/main/course/lessons/data/HappinessData.csv>`_.
 
 """
 
@@ -150,6 +152,11 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import matplotlib
 import numpy as np
+
+# Use this to load when in Colab
+# from google.colab import drive
+# drive.mount('/content/drive')
+# happy = pd.read_csv('/content/drive/MyDrive/Kujenga/HappinessData.csv',delimiter=';')
 
 # Read in the data, we shorten the variable names 
 happy = pd.read_csv("../data/HappinessData.csv",delimiter=';') 
@@ -696,6 +703,8 @@ plt.show()
 # We have now seen how to use linear regression to find a line through data points.
 # In the video below we talk to several reasearchers who use linear regression in their work.
 # 
-# .. youtube::jQZ6db0FzQo
+# .. youtube:: jQZ6db0FzQo
 #    :width: 100% 
 #    :align: center 
+#
+# Thank you for reading, watching and solving problems. We hope you have enjoyed this lesson. 
