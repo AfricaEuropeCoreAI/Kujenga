@@ -17,7 +17,7 @@ Welcome to the final project.
 
 .. raw:: html
 
-    <div class="sphx-glr-thumbcontainer" tooltip="Your Mission ------------ You&#x27;ve learned some powerful mathematical and computational tools. Now it&#x27;s time to put them to work on something you care about.">
+    <div class="sphx-glr-thumbcontainer" tooltip="Your Mission ------------ Congratulations for making it this far :)! You&#x27;ve learned some powerful mathematical and computational tools. Now it&#x27;s time to put them to work on something you care about.">
 
 .. only:: html
 
