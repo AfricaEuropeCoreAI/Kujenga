@@ -139,9 +139,9 @@ We already discussed looked at how the `World Happiness Report <https://worldhap
 documents the happiness of people across the world. Now, let's load in that data to Python. In this video, 
 David Sumpter steps through the code. Watch it first then try running the code yourself.
 
-
-
-[VIDEO HERE]
+.. youtube:: hjCpHqL8EVw
+    :width: 100% 
+    :align: center 
 
 You will need to download the data file `HappinessData.csv` from the `data folder <https://github.com/AfricaEuropeCoreAI/Kujenga/blob/main/course/lessons/data/HappinessData.csv>`_.
 
