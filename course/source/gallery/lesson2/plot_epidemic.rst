@@ -240,66 +240,66 @@ Let’s try it `here <https://mybinder.org/v2/gh/AfricaEuropeCoreAI/Kujenga/SIRM
 .. GENERATED FROM PYTHON SOURCE LINES 181-242
 
 Phase Planes and nullclines
- ===========================
- In this section, Emily introduces the concept of **phase planes and nullclines** in the video below, 
- using the SIR model as an example.
+===============================
+In this section, Emily introduces the concept of **phase planes and nullclines** in the video below, 
+using the SIR model as an example.
 
- .. youtube:: oYcNqe9KlDk
-     :width: 100%
-     :align: center
+.. youtube:: oYcNqe9KlDk
+    :width: 100%
+    :align: center
 
- The material that follows recaps what is covered in the video, with supporting code 
- and explanations to help you explore phase planes for yourself.
+The material that follows recaps what is covered in the video, with supporting code 
+and explanations to help you explore phase planes for yourself.
 
- What are Phase Planes, and Why Do We Use Them?
- ----------------------------------------------
- A phase plane is a graphical representation of a dynamical system i.e a system described by 
- differential equations where we plot one variable against another instead of plotting them over time.
- Phase planes provide a powerful visualization method for dynamic systems.
+What are Phase Planes, and Why Do We Use Them?
+----------------------------------------------
+A phase plane is a graphical representation of a dynamical system i.e a system described by 
+differential equations where we plot one variable against another instead of plotting them over time.
+Phase planes provide a powerful visualization method for dynamic systems.
 
 Why a dynamic system?
- In mathematics and epidemiology, a dynamic system means a set of linked equations that describe how 
- variables change over time. So the SIR model is a dynamic system because the numbers of S,I and 
- R are continuously changing as the epidemic evolves i.e When there are many susceptibles and 
- few infected, the rate of infection is high, as susceptibles decrease, the rate of infection slows down 
- and when almost everyone is recovered, the infection fades away. The trajectory of the epidemic 
- (rise, peak, decline) is a dynamic response to how the parts of the system interact over time
- Instead of observing each variable separately over time, phase planes plot one variable
- against another. In our case, a common representation for the SIR model is the interaction 
- between the Susceptible (S) and Infected (I) groups. This is used both in in Emily's video, and
- further below in the code examples.
+In mathematics and epidemiology, a dynamic system means a set of linked equations that describe how 
+variables change over time. So the SIR model is a dynamic system because the numbers of S,I and 
+R are continuously changing as the epidemic evolves i.e When there are many susceptibles and 
+few infected, the rate of infection is high, as susceptibles decrease, the rate of infection slows down 
+and when almost everyone is recovered, the infection fades away. The trajectory of the epidemic 
+(rise, peak, decline) is a dynamic response to how the parts of the system interact over time
+Instead of observing each variable separately over time, phase planes plot one variable
+against another. In our case, a common representation for the SIR model is the interaction 
+between the Susceptible (S) and Infected (I) groups. This is used both in in Emily's video, and
+further below in the code examples.
 
- This visualization allows us to better understand complex system behaviors, such as:
+This visualization allows us to better understand complex system behaviors, such as:
 
- 1. The spread of disease over time
+1. The spread of disease over time
 
- 2. Stabilization points (equilibrium)
+2. Stabilization points (equilibrium)
 
- 3. The eventual decline or extinction of an epidemic
+3. The eventual decline or extinction of an epidemic
 
- Phase planes highlight crucial relationships, equilibrium points, and system behavior
- that can inform predictions about the long-term outcomes of an epidemic.
+Phase planes highlight crucial relationships, equilibrium points, and system behavior
+that can inform predictions about the long-term outcomes of an epidemic.
 
- Key Components of Phase Planes
- ------------------------------
- To fully understand phase planes, let’s examine their key components:
+Key Components of Phase Planes
+------------------------------
+To fully understand phase planes, let’s examine their key components:
 
- **Axes**:
-     The axes of a phase plane represent the system variables, which is Susceptible (S) and Infected (I) in this case.
-     By plotting one variable against another, we can see how these groups interact directly, rather than just observing 
-     their individual changes over time.
+**Axes**:
+    The axes of a phase plane represent the system variables, which is Susceptible (S) and Infected (I) in this case.
+    By plotting one variable against another, we can see how these groups interact directly, rather than just observing 
+    their individual changes over time.
 
- **Trajectories**:
-     Trajectories portray the state of the system as it evolves. 
-     For the SIR model in particular, the trajectory describes how the numbers of susceptible and infected individuals change in relation 
-     to one another as the epidemic progresses over time.
+**Trajectories**:
+    Trajectories portray the state of the system as it evolves. 
+    For the SIR model in particular, the trajectory describes how the numbers of susceptible and infected individuals change in relation 
+    to one another as the epidemic progresses over time.
 
- **Directional Arrows**:
-     These arrows on the phase plane indicate the direction of movement over time, showing how the system transitions between states.
-     They guide us through the epidemic's progression, pointing from higher susceptibility toward states of greater infection or recovery.
+**Directional Arrows**:
+    These arrows on the phase plane indicate the direction of movement over time, showing how the system transitions between states.
+    They guide us through the epidemic's progression, pointing from higher susceptibility toward states of greater infection or recovery.
 
- Below is the first example of a phase plane showing how the SIR system evolves over time, 
- with Susceptible (S) on the x-axis and Infected (I) on the y-axis. 
+Below is the first example of a phase plane showing how the SIR system evolves over time, 
+with Susceptible (S) on the x-axis and Infected (I) on the y-axis. 
 
 .. GENERATED FROM PYTHON SOURCE LINES 242-274
 
@@ -352,7 +352,7 @@ Why a dynamic system?
 .. GENERATED FROM PYTHON SOURCE LINES 275-309
 
 Equilibrium Points and Nullclines
----------------------------------
+===================================
 One essential element of phase planes is the determination of equilibrium points. These 
 points occur where the rates of change for both Susceptible (S) and Infected (I) are zero. 
 The lines where the rate of change of a variable is equal to zero are called **nullclines**.
@@ -496,7 +496,7 @@ Additional questions:
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** (0 minutes 1.865 seconds)
+   **Total running time of the script:** (0 minutes 0.762 seconds)
 
 
 .. _sphx_glr_download_gallery_lesson2_plot_epidemic.py:
