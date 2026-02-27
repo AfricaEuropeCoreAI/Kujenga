@@ -157,13 +157,9 @@ We already discussed looked at how the `World Happiness Report <https://worldhap
 documents the happiness of people across the world. Now, let's load in that data to Python. In this video, 
 David Sumpter steps through the code. Watch it first then try running the code yourself.
 
-.. youtube:: hjCpHqL8EVw
-    :width: 100% 
-    :align: center 
+[VIDEO HERE]
 
-You will need to download the data file `HappinessData.csv` from the `data folder <https://github.com/AfricaEuropeCoreAI/Kujenga/blob/main/course/lessons/data/HappinessData.csv>`_.
-
-.. GENERATED FROM PYTHON SOURCE LINES 149-174
+.. GENERATED FROM PYTHON SOURCE LINES 147-167
 
 .. code-block:: Python
 
@@ -173,11 +169,6 @@ You will need to download the data file `HappinessData.csv` from the `data folde
     import matplotlib.pyplot as plt
     import matplotlib
     import numpy as np
-
-    # Use this to load when in Colab
-    # from google.colab import drive
-    # drive.mount('/content/drive')
-    # happy = pd.read_csv('/content/drive/MyDrive/Kujenga/HappinessData.csv',delimiter=';')
 
     # Read in the data, we shorten the variable names 
     happy = pd.read_csv("../data/HappinessData.csv",delimiter=';') 
@@ -218,7 +209,7 @@ You will need to download the data file `HappinessData.csv` from the `data folde
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 175-180
+.. GENERATED FROM PYTHON SOURCE LINES 168-173
 
 Creating the plot 
 -----------------
@@ -226,7 +217,7 @@ The code below plots the average life expectancy of
 each of these countries against their happiness (life ladder) scores. 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 181-208
+.. GENERATED FROM PYTHON SOURCE LINES 174-201
 
 .. code-block:: Python
 
@@ -269,7 +260,7 @@ each of these countries against their happiness (life ladder) scores.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 209-234
+.. GENERATED FROM PYTHON SOURCE LINES 202-227
 
 Each circle in the plot is a country. 
 The x-axis shows the life expectancy in the country and 
@@ -297,7 +288,7 @@ If the life expectancy is 78 then average happiness is predicted to be 78/12=6.5
 We can draw this equation in the form of a straight line going 
 through the cloud of country points, as shown below.
 
-.. GENERATED FROM PYTHON SOURCE LINES 234-251
+.. GENERATED FROM PYTHON SOURCE LINES 227-244
 
 .. code-block:: Python
 
@@ -330,17 +321,30 @@ through the cloud of country points, as shown below.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 254-282
+.. GENERATED FROM PYTHON SOURCE LINES 247-253
 
 .. admonition:: Try it yourself!
 
-   Download the code by clicking on the link below and 
-   try changing the slope and the intercept of the line above by 
-   changing the values 1/12 and replotting the line.
-   See if you can find a line that lies closer to the data points. 
+  Download the code by clicking on the link below and 
+  try changing the slope and the intercept of the line above by 
+  changing the values 1/12 and replotting the line.
+  See if you can find a line that lies closer to the data points. 
 
- The sum of squares
- ==================
+.. GENERATED FROM PYTHON SOURCE LINES 255-287
+
+Interactive Line Fitting
+###############################################################################
+Click `here <https://mybinder.org/v2/gh/AfricaEuropeCoreAI/Kujenga/Interactive?urlpath=%2Fdoc%2Ftree%2Fcourse%2Flessons%2Flesson1%2Fplot_howtobehappy.ipynb>`_ for the interactive code. It  is designed to help you better understand how line fitting works. You can adjust the slope and intercept to see how the line shifts and how effectively it matches the data. 
+As you experiment, you will notice how different values influence the quality of the fit, giving you a practical sense of what makes a regression line “good” and how the optimal line is found.
+To guide you through using the interactive tool, a demonstration video is also provided. The video walks you step-by-step through the features and shows exactly how to adjust and interpret the graph.
+
+ .. youtube:: zyrJPSCmrkc
+    :width: 100% 
+    :align: center 
+
+##################################################################################################
+
+ **The sum of squares**
 
 Each of the dotted lines above show how far the line – which predicts that happiness is one 
 twelfth of life expectancy – is from the data for each of the six highlighted countries.
@@ -361,7 +365,7 @@ average life expectancy of 68.3. The first equation (figure 2b) predicts
  prediction and reality for each country. We then sum these squared distances 
  to get an overall measure of how far our predictions our from reality. This is done below.
 
-.. GENERATED FROM PYTHON SOURCE LINES 282-291
+.. GENERATED FROM PYTHON SOURCE LINES 287-296
 
 .. code-block:: Python
 
@@ -401,37 +405,19 @@ average life expectancy of 68.3. The first equation (figure 2b) predicts
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 292-307
-
-Interactive Line Fitting
-========================
-Before you go on try Axsumit's interactive line fitting tool!
-Click `here <https://mybinder.org/v2/gh/AfricaEuropeCoreAI/Kujenga/Interactive?urlpath=%2Fdoc%2Ftree%2Fcourse%2Flessons%2Flesson1%2Fplot_howtobehappy.ipynb>`_ for the interactive code. 
-It  is designed to help you better understand how line fitting works. 
-You can adjust the slope and intercept to see how the line shifts and how effectively it matches the data. 
-As you experiment, you will notice how different values influence the quality of the fit, giving you a 
-practical sense of what makes a regression line “good” and how the optimal line is found.
-To guide you through using the interactive tool, Axsumit walks you step-by-step through the features 
-and shows exactly how to adjust and interpret the graph.
-
-.. youtube:: zyrJPSCmrkc
-   :width: 100% 
-   :align: center 
-
-
-.. GENERATED FROM PYTHON SOURCE LINES 309-407
+.. GENERATED FROM PYTHON SOURCE LINES 297-395
 
 Finding the best fit line 
 =========================
-We have drawn a line. We have looked at the sum of squared distances
-But the question is what the ‘best’ line is? 
-Blessing now goes through the theory 
+We have drawn a line. But the question is what the ‘best’ line is? Blessing goes through the theory 
 below and then we will calculate the best fitting line for the data above.
 
 .. youtube:: 1dsTGNywCjc
    :width: 100% 
    :align: center 
 
+Sum of squares
+--------------
 
 Let’s start by formulating this problem mathematically. 
 For each country :math:`i`, 
@@ -520,7 +506,7 @@ Moving the :math:`m` to the left hand side gives
 
 Let's use our newly found equation to calculate the line that best fits the data.
 
-.. GENERATED FROM PYTHON SOURCE LINES 407-414
+.. GENERATED FROM PYTHON SOURCE LINES 395-402
 
 .. code-block:: Python
 
@@ -544,14 +530,14 @@ Let's use our newly found equation to calculate the line that best fits the data
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 415-419
+.. GENERATED FROM PYTHON SOURCE LINES 403-407
 
 Our intial guess of :math:`m = 1/12 = 0.0833` wasn't so far away from the best fitting value. 
 But this new slope is slightly closer to the data. We can now plot this and recalculate 
 the model sum of squares
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 419-437
+.. GENERATED FROM PYTHON SOURCE LINES 407-425
 
 .. code-block:: Python
 
@@ -591,7 +577,7 @@ the model sum of squares
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 438-458
+.. GENERATED FROM PYTHON SOURCE LINES 426-446
 
 Again, this sum of squares is slightly smaller than the value we got above 
 for :math:`m = 1/12` 
@@ -614,7 +600,7 @@ We start by shifting the data so that it has a mean (average) of zero.
 To do this we simply take away the mean value from both life expectancy and 
 from happiness. Then replot the data 
 
-.. GENERATED FROM PYTHON SOURCE LINES 458-471
+.. GENERATED FROM PYTHON SOURCE LINES 446-459
 
 .. code-block:: Python
 
@@ -643,7 +629,7 @@ from happiness. Then replot the data
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 472-482
+.. GENERATED FROM PYTHON SOURCE LINES 460-470
 
 This graph shows us that, for example, Yemen is almost -2.5 points below the world 
 average for happiness and has a life expectency 8 years shorter than the average over
@@ -656,7 +642,7 @@ of seeing between country differences.
 
 Let's now try to find the best fit line which goes through these data points.
 
-.. GENERATED FROM PYTHON SOURCE LINES 482-503
+.. GENERATED FROM PYTHON SOURCE LINES 470-491
 
 .. code-block:: Python
 
@@ -699,14 +685,14 @@ Let's now try to find the best fit line which goes through these data points.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 504-508
+.. GENERATED FROM PYTHON SOURCE LINES 492-496
 
 This line appears to fit better than the one we fitted earlier! It lies 
 closer to the points and better capture the relationship in the data.
 To test whether this is indeed the case we can calculate the sum of squares
 between this new line and the shifted data. This is as follows
 
-.. GENERATED FROM PYTHON SOURCE LINES 508-515
+.. GENERATED FROM PYTHON SOURCE LINES 496-503
 
 .. code-block:: Python
 
@@ -730,7 +716,7 @@ between this new line and the shifted data. This is as follows
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 516-545
+.. GENERATED FROM PYTHON SOURCE LINES 504-533
 
 This new line through the data is better! It has a smaller sum of squares. 
 
@@ -762,7 +748,7 @@ Notice that this is an equation for a straight line, so we can write
 
 Let's apply this to data and plot the line again
 
-.. GENERATED FROM PYTHON SOURCE LINES 545-568
+.. GENERATED FROM PYTHON SOURCE LINES 533-556
 
 .. code-block:: Python
 
@@ -809,13 +795,13 @@ Let's apply this to data and plot the line again
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 569-572
+.. GENERATED FROM PYTHON SOURCE LINES 557-560
 
 Now we have it. By shifting back to the original co-ordinates we
 can find the best fitting line through the data. Notice that the sum of squares is unaffected by
 shifting the line back again, since the distances from the points to the line are unaffected. 
 
-.. GENERATED FROM PYTHON SOURCE LINES 574-602
+.. GENERATED FROM PYTHON SOURCE LINES 562-590
 
 Too Much Math? There’s a Shortcut for That
 --------------------------------------------------
@@ -846,7 +832,7 @@ conda install statsmodels
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 602-620
+.. GENERATED FROM PYTHON SOURCE LINES 590-608
 
 .. code-block:: Python
 
@@ -885,7 +871,7 @@ conda install statsmodels
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 621-670
+.. GENERATED FROM PYTHON SOURCE LINES 609-658
 
 We can say (roughly speaking) that for every 8 years of life expectancy
 country citizens are about 1 point happier on a scale of 0 to 10. It isn't 
@@ -937,7 +923,7 @@ these in the dataframe under LogGDP, SocialSupport, Freedom, Generosity and Corr
 Full definitions can be found on the `World Happiness Report <https://data.worldhappiness.report/map>`_ website.
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 671-674
+.. GENERATED FROM PYTHON SOURCE LINES 659-662
 
 .. code-block:: Python
 
@@ -1031,17 +1017,18 @@ Full definitions can be found on the `World Happiness Report <https://data.world
     <br />
     <br />
 
-.. GENERATED FROM PYTHON SOURCE LINES 675-682
+.. GENERATED FROM PYTHON SOURCE LINES 663-671
 
 Choose one of the variables and go through the steps we have done for life expectancy above, applying 
 them to your chosen variable. Find a different variable that predicts happiness. Make a plot with
 a fitted line through the data.
 
-Once you have shown the relationship in the data then write 
+Once you have shown the relationship in the data,
 Give one argument why it might be correlated with but does not cause happiness.
 In the code below we have plotted the relationship between happiness and perceived corruption in countries, as an example.
+Now upload your work here (give your name and the country that you work in). Then the tutors can access the work.
 
-.. GENERATED FROM PYTHON SOURCE LINES 682-704
+.. GENERATED FROM PYTHON SOURCE LINES 671-693
 
 .. code-block:: Python
 
@@ -1079,23 +1066,21 @@ In the code below we have plotted the relationship between happiness and perceiv
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 705-715
+.. GENERATED FROM PYTHON SOURCE LINES 694-702
 
 Using regression in applications
 ================================
 We have now seen how to use linear regression to find a line through data points.
 In the video below we talk to several reasearchers who use linear regression in their work.
 
-.. youtube:: jQZ6db0FzQo
+.. youtube::jQZ6db0FzQo
    :width: 100% 
    :align: center 
-
-Thank you for reading, watching and solving problems. We hope you have enjoyed this lesson. 
 
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** (0 minutes 2.015 seconds)
+   **Total running time of the script:** (0 minutes 2.282 seconds)
 
 
 .. _sphx_glr_download_gallery_lesson1_plot_howtobehappy.py:

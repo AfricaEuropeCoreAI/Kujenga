@@ -61,7 +61,7 @@ Here we see a link to Kenya, meaning we should count this as a connection from E
 The methods
 -----------------
 
-We have seen a graphical representation of a network in `The problem`_ but in order to use the PageRank algorithm we will need to represent the network mathematically as a matrix. In the following section, we will learn how to work with matrices as well as some basic concepts of linear algebra. The most useful concepts for understanding PageRank will be the notions of an eigenvector and eigenvalue of a matrix which we cover in `Defining a matrix`_.
+We have seen a graphical representation of a network in `The problem`_ but in order to use the PageRank algorithm we will need to represent the network mathematically as a matrix. In the following section, we will learn how to work with matrices as well as some basic concepts of linear algebra. The most useful concepts for understanding PageRank will be the notions of an eigenvector and eigenvalue of a matrix which we cover in Defining a matrix.
 
 
 """
@@ -140,7 +140,7 @@ We have seen a graphical representation of a network in `The problem`_ but in or
 #     \mathbf{M}\mathbf{R} = \lambda \mathbf{R}
 # If not don't worry, we will cover the details in the section `Eigenvalues and eigenvectors of a matrix`_.
 #
-# In the video below Amy discusses the theory above and shows the results of applying the simplified update rule iteratively. You will see how to implement this yourself in the section ``_.
+# In the video below Amy discusses the theory above and shows the results of applying the simplified update rule iteratively. You will see how to implement this yourself in the section below.
 #
 # .. youtube:: guf36O9rBXs
 #     :width: 100%

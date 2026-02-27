@@ -158,7 +158,7 @@ KEN_data= pd.read_csv('../data/kenyan_10000m_runners.csv')
 # Sampling and Comparing the Two Groups
 # -------------------
 
-#  Selina used 10 runners from each group; let’s do the same here.
+# Selina used 10 runners from each group; let’s do the same here.
 
 eth_data = ETH_data.sample(n=10, random_state=1)['Mark'].tolist()
 ken_data = KEN_data.sample(n=10, random_state=2)['Mark'].tolist()
@@ -274,8 +274,8 @@ plt.show()
 # 
 # 
 # .. youtube:: spuHjliHpw0
-#    :width: 100% 
-#    :align: center 
+# :width: 100% 
+# :align: center 
 ##########################################################
 #
 #
@@ -300,26 +300,26 @@ plt.show()
 # * What does the coach's claim imply?
 # * Should this be a one sided test or a two sided test?
 #
-#  **Use the dataset below**
+# **Use the dataset below**
 #
 # This dataset contains the race times recorded by the coach
 #
 # High Altitude (HA) Group - 25 athletes
 # HA = [
-#     1931.2, 1928.4, 1942.1, 1919.7, 1935.3,
-#     1922.8, 1917.4, 1940.9, 1938.2, 1926.5,
-#     1933.1, 1924.6, 1930.4, 1918.9, 1936.7,
-#     1921.3, 1941.5, 1934.2, 1916.8, 1929.9,
-#     1937.4, 1923.1, 1932.8, 1927.6, 1919.3
+# 1931.2, 1928.4, 1942.1, 1919.7, 1935.3,
+# 1922.8, 1917.4, 1940.9, 1938.2, 1926.5,
+# 1933.1, 1924.6, 1930.4, 1918.9, 1936.7,
+# 1921.3, 1941.5, 1934.2, 1916.8, 1929.9,
+# 1937.4, 1923.1, 1932.8, 1927.6, 1919.3
 # ]
 #
 # Sea Altitude (SL) Group - 25 athletes
 # SL = [
-#     1958.6, 1961.9, 1949.5, 1965.2, 1953.8,
-#     1962.3, 1947.9, 1956.7, 1970.1, 1959.4,
-#     1963.8, 1950.7, 1966.4, 1948.8, 1961.2,
-#     1957.9, 1972.6, 1960.5, 1954.1, 1968.3,
-#     1952.7, 1971.4, 1955.9, 1964.8, 1958.1
+# 1958.6, 1961.9, 1949.5, 1965.2, 1953.8,
+# 1962.3, 1947.9, 1956.7, 1970.1, 1959.4,
+# 1963.8, 1950.7, 1966.4, 1948.8, 1961.2,
+# 1957.9, 1972.6, 1960.5, 1954.1, 1968.3,
+# 1952.7, 1971.4, 1955.9, 1964.8, 1958.1
 # ]
 #
 # Perform a t-test

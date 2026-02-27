@@ -139,11 +139,9 @@ We already discussed looked at how the `World Happiness Report <https://worldhap
 documents the happiness of people across the world. Now, let's load in that data to Python. In this video, 
 David Sumpter steps through the code. Watch it first then try running the code yourself.
 
-.. youtube:: hjCpHqL8EVw
-    :width: 100% 
-    :align: center 
+[VIDEO HERE]
 
-You will need to download the data file `HappinessData.csv` from the `data folder <https://github.com/AfricaEuropeCoreAI/Kujenga/blob/main/course/lessons/data/HappinessData.csv>`_.
+
 
 """
 
@@ -152,11 +150,6 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import matplotlib
 import numpy as np
-
-# Use this to load when in Colab
-# from google.colab import drive
-# drive.mount('/content/drive')
-# happy = pd.read_csv('/content/drive/MyDrive/Kujenga/HappinessData.csv',delimiter=';')
 
 # Read in the data, we shorten the variable names 
 happy = pd.read_csv("../data/HappinessData.csv",delimiter=';') 
@@ -257,9 +250,21 @@ plt.show()
 #   try changing the slope and the intercept of the line above by 
 #   changing the values 1/12 and replotting the line.
 #   See if you can find a line that lies closer to the data points. 
+
+##############################################################################
+#Interactive Line Fitting
+################################################################################
+#Click `here <https://mybinder.org/v2/gh/AfricaEuropeCoreAI/Kujenga/Interactive?urlpath=%2Fdoc%2Ftree%2Fcourse%2Flessons%2Flesson1%2Fplot_howtobehappy.ipynb>`_ for the interactive code. It  is designed to help you better understand how line fitting works. You can adjust the slope and intercept to see how the line shifts and how effectively it matches the data. 
+#As you experiment, you will notice how different values influence the quality of the fit, giving you a practical sense of what makes a regression line “good” and how the optimal line is found.
+#To guide you through using the interactive tool, a demonstration video is also provided. The video walks you step-by-step through the features and shows exactly how to adjust and interpret the graph.
 #
-# The sum of squares
-# ==================
+# .. youtube:: zyrJPSCmrkc
+#    :width: 100% 
+#    :align: center 
+#
+###################################################################################################
+#
+# **The sum of squares**
 #
 #Each of the dotted lines above show how far the line – which predicts that happiness is one 
 #twelfth of life expectancy – is from the data for each of the six highlighted countries.
@@ -289,34 +294,17 @@ print('The model sum of squares is %.4f' % Model_Sum_Of_Squares)
 
 
 ##############################################################################
-# Interactive Line Fitting
-# ========================
-# Before you go on try Axsumit's interactive line fitting tool!
-# Click `here <https://mybinder.org/v2/gh/AfricaEuropeCoreAI/Kujenga/Interactive?urlpath=%2Fdoc%2Ftree%2Fcourse%2Flessons%2Flesson1%2Fplot_howtobehappy.ipynb>`_ for the interactive code. 
-# It  is designed to help you better understand how line fitting works. 
-# You can adjust the slope and intercept to see how the line shifts and how effectively it matches the data. 
-# As you experiment, you will notice how different values influence the quality of the fit, giving you a 
-# practical sense of what makes a regression line “good” and how the optimal line is found.
-# To guide you through using the interactive tool, Axsumit walks you step-by-step through the features 
-# and shows exactly how to adjust and interpret the graph.
-#
-# .. youtube:: zyrJPSCmrkc
-#    :width: 100% 
-#    :align: center 
-#
-
-##############################################################################
 # Finding the best fit line 
 # =========================
-# We have drawn a line. We have looked at the sum of squared distances
-# But the question is what the ‘best’ line is? 
-# Blessing now goes through the theory 
+# We have drawn a line. But the question is what the ‘best’ line is? Blessing goes through the theory 
 # below and then we will calculate the best fitting line for the data above.
 #
 # .. youtube:: 1dsTGNywCjc
 #    :width: 100% 
 #    :align: center 
 #
+# Sum of squares
+# --------------
 #
 # Let’s start by formulating this problem mathematically. 
 # For each country :math:`i`, 
@@ -676,9 +664,10 @@ df[['Country name','LogGDP','SocialSupport','Freedom','Generosity','Corruption']
 # them to your chosen variable. Find a different variable that predicts happiness. Make a plot with
 # a fitted line through the data.
 #
-# Once you have shown the relationship in the data then write 
+# Once you have shown the relationship in the data,
 # Give one argument why it might be correlated with but does not cause happiness.
 # In the code below we have plotted the relationship between happiness and perceived corruption in countries, as an example.
+# Now upload your work here (give your name and the country that you work in). Then the tutors can access the work.
 
 def plotData(df,x,y): 
     fig,ax=plt.subplots(num=1)
@@ -707,8 +696,6 @@ plt.show()
 # We have now seen how to use linear regression to find a line through data points.
 # In the video below we talk to several reasearchers who use linear regression in their work.
 # 
-# .. youtube:: jQZ6db0FzQo
+# .. youtube::jQZ6db0FzQo
 #    :width: 100% 
 #    :align: center 
-#
-# Thank you for reading, watching and solving problems. We hope you have enjoyed this lesson. 

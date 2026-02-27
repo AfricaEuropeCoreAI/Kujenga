@@ -20,7 +20,7 @@ Welcome to the course.
     </div>
 
 
-------
+--------
 Class II
 --------
 
@@ -46,7 +46,7 @@ From the book
   .. image:: /gallery/lesson1/images/thumb/sphx_glr_plot_howtobehappy_thumb.png
     :alt:
 
-  :doc:`/gallery/lesson1/plot_howtobehappy`
+  :ref:`sphx_glr_gallery_lesson1_plot_howtobehappy.py`
 
 .. raw:: html
 
@@ -83,7 +83,7 @@ From the book
   .. image:: /gallery/lesson2/images/thumb/sphx_glr_plot_epidemic_thumb.png
     :alt:
 
-  :doc:`/gallery/lesson2/plot_epidemic`
+  :ref:`sphx_glr_gallery_lesson2_plot_epidemic.py`
 
 .. raw:: html
 
@@ -100,45 +100,11 @@ From the book
   .. image:: /gallery/lesson2/images/thumb/sphx_glr_plot_cts2D_thumb.png
     :alt:
 
-  :doc:`/gallery/lesson2/plot_cts2D`
+  :ref:`sphx_glr_gallery_lesson2_plot_cts2D.py`
 
 .. raw:: html
 
       <div class="sphx-glr-thumbnail-title">Rabbits and foxes</div>
-    </div>
-
-
-.. raw:: html
-
-    <div class="sphx-glr-thumbcontainer" tooltip="  .. math::">
-
-.. only:: html
-
-  .. image:: /gallery/lesson2/images/thumb/sphx_glr_plot_SEIR_exercise_thumb.png
-    :alt:
-
-  :doc:`/gallery/lesson2/plot_SEIR_exercise`
-
-.. raw:: html
-
-      <div class="sphx-glr-thumbnail-title">The SEIR model</div>
-    </div>
-
-
-.. raw:: html
-
-    <div class="sphx-glr-thumbcontainer" tooltip="Now you should study a model yourself! Download the page as a  Python notebook and fill in the missing code according to the instructions.">
-
-.. only:: html
-
-  .. image:: /gallery/lesson2/images/thumb/sphx_glr_plot_SEIR_thumb.png
-    :alt:
-
-  :doc:`/gallery/lesson2/plot_SEIR`
-
-.. raw:: html
-
-      <div class="sphx-glr-thumbnail-title">The SEIR model</div>
     </div>
 
 
@@ -171,7 +137,7 @@ From the book
   .. image:: /gallery/lesson3/images/thumb/sphx_glr_plot_runners_thumb.png
     :alt:
 
-  :doc:`/gallery/lesson3/plot_runners`
+  :ref:`sphx_glr_gallery_lesson3_plot_runners.py`
 
 .. raw:: html
 
@@ -208,7 +174,7 @@ From the book
   .. image:: /gallery/lesson4/images/thumb/sphx_glr_plot_influencer_thumb.png
     :alt:
 
-  :doc:`/gallery/lesson4/plot_influencer`
+  :ref:`sphx_glr_gallery_lesson4_plot_influencer.py`
 
 .. raw:: html
 
@@ -223,7 +189,7 @@ From the book
     </div>
 
 Project
-======
+========
 
 Welcome to the final project.
 
@@ -244,7 +210,7 @@ Welcome to the final project.
   .. image:: /gallery/finalproject/images/thumb/sphx_glr_plot_finalproject_thumb.png
     :alt:
 
-  :doc:`/gallery/finalproject/plot_finalproject`
+  :ref:`sphx_glr_gallery_finalproject_plot_finalproject.py`
 
 .. raw:: html
 

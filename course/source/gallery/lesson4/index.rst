@@ -25,7 +25,7 @@ From the book
   .. image:: /gallery/lesson4/images/thumb/sphx_glr_plot_influencer_thumb.png
     :alt:
 
-  :doc:`/gallery/lesson4/plot_influencer`
+  :ref:`sphx_glr_gallery_lesson4_plot_influencer.py`
 
 .. raw:: html
 

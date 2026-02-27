@@ -3,7 +3,7 @@
 .. _sphx_glr_gallery_finalproject:
 
 Project
-======
+========
 
 Welcome to the final project.
 
@@ -24,7 +24,7 @@ Welcome to the final project.
   .. image:: /gallery/finalproject/images/thumb/sphx_glr_plot_finalproject_thumb.png
     :alt:
 
-  :doc:`/gallery/finalproject/plot_finalproject`
+  :ref:`sphx_glr_gallery_finalproject_plot_finalproject.py`
 
 .. raw:: html
 
