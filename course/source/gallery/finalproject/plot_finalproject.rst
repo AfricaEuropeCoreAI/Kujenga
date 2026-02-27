@@ -29,7 +29,9 @@ Congratulations for making it this far :)! You've learned some powerful mathemat
 
 Your final project is straightforward: **Pick a real-world question, find data to answer it, and use the techniques you've learned to tell a compelling story.**
 
-[VIDEO HERE]
+.. youtube:: 6611n9Y_iHE
+    :width: 100% 
+    :align: center 
 
 In the video above, we walk through what makes a great final project and show you examples from past students who have successfully applied what they've learned to answer questions they cared about.
 
@@ -90,7 +92,7 @@ Cleaning Your Data
 ------------------
 Real-world data is messy. Here's how to clean it:
 
-.. GENERATED FROM PYTHON SOURCE LINES 76-80
+.. GENERATED FROM PYTHON SOURCE LINES 78-82
 
 .. code-block:: Python
 
@@ -105,14 +107,14 @@ Real-world data is messy. Here's how to clean it:
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 81-85
+.. GENERATED FROM PYTHON SOURCE LINES 83-87
 
 Step 1: Load and Inspect
 ^^^^^^^^^^^^^^^^^^^^^^^^
 First, load your data and take a look at what you're working with.
 This helps you understand the structure and identify potential issues.
 
-.. GENERATED FROM PYTHON SOURCE LINES 85-95
+.. GENERATED FROM PYTHON SOURCE LINES 87-97
 
 .. code-block:: Python
 
@@ -133,14 +135,14 @@ This helps you understand the structure and identify potential issues.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 96-100
+.. GENERATED FROM PYTHON SOURCE LINES 98-102
 
 Step 2: Handle Missing Values
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 Missing data is common. You can either remove rows with missing values
 or fill them with appropriate values like the mean or median.
 
-.. GENERATED FROM PYTHON SOURCE LINES 100-110
+.. GENERATED FROM PYTHON SOURCE LINES 102-112
 
 .. code-block:: Python
 
@@ -161,13 +163,13 @@ or fill them with appropriate values like the mean or median.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 111-114
+.. GENERATED FROM PYTHON SOURCE LINES 113-116
 
 Step 3: Remove Duplicates
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
 Duplicate rows can skew your analysis. Check for and remove them.
 
-.. GENERATED FROM PYTHON SOURCE LINES 114-122
+.. GENERATED FROM PYTHON SOURCE LINES 116-124
 
 .. code-block:: Python
 
@@ -186,14 +188,14 @@ Duplicate rows can skew your analysis. Check for and remove them.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 123-127
+.. GENERATED FROM PYTHON SOURCE LINES 125-129
 
 Step 4: Fix Data Types
 ^^^^^^^^^^^^^^^^^^^^^^^
 Make sure each column has the correct data type. Dates should be datetime
 objects, numbers should be numeric types, etc.
 
-.. GENERATED FROM PYTHON SOURCE LINES 127-133
+.. GENERATED FROM PYTHON SOURCE LINES 129-135
 
 .. code-block:: Python
 
@@ -210,14 +212,14 @@ objects, numbers should be numeric types, etc.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 134-138
+.. GENERATED FROM PYTHON SOURCE LINES 136-140
 
 Step 5: Filter Outliers (if needed)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 Extreme values can distort your results. Use the interquartile range (IQR)
 method to identify and remove outliers.
 
-.. GENERATED FROM PYTHON SOURCE LINES 138-148
+.. GENERATED FROM PYTHON SOURCE LINES 140-150
 
 .. code-block:: Python
 
@@ -238,7 +240,7 @@ method to identify and remove outliers.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 149-206
+.. GENERATED FROM PYTHON SOURCE LINES 151-208
 
 Need more help? Check out the `Pandas documentation <https://pandas.pydata.org/docs/>`_ or this `data cleaning tutorial <https://realpython.com/python-data-cleaning-numpy-pandas/>`_.
 
@@ -288,7 +290,7 @@ Getting Started
 ---------------
 
  1. Pick a question that excites you
- 2. Find a dataset (start with Kaggle or Our World in Data)
+ 2. Find a dataset
  3. Download the data and start exploring
  4. Clean it up and apply what you've learned
  5. Create visualizations that tell your story
@@ -302,7 +304,7 @@ Have Any Questions? Ask your instructor.
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** (0 minutes 0.058 seconds)
+   **Total running time of the script:** (0 minutes 0.321 seconds)
 
 
 .. _sphx_glr_download_gallery_finalproject_plot_finalproject.py:
