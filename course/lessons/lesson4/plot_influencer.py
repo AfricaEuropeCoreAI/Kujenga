@@ -17,7 +17,7 @@ As Otema explains in the video below the PageRank algorithm is the additional in
 |
 
 How to use this material
-------------------------
+==========================
 
 This material is taught as part of a 6-hour learning session. Your Kujenga instructor will have booked
 a time for an in-person or online 2-hour session. This means you have two hours of work to do on either side of the in-person or online
