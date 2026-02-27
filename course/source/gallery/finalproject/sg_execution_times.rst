@@ -6,7 +6,7 @@
 
 Computation times
 =================
-**00:00.318** total execution time for 1 file **from gallery/finalproject**:
+**00:00.050** total execution time for 1 file **from gallery/finalproject**:
 
 .. container::
 
@@ -33,5 +33,5 @@ Computation times
      - Time
      - Mem (MB)
    * - :ref:`sphx_glr_gallery_finalproject_plot_finalproject.py` (``plot_finalproject.py``)
-     - 00:00.318
+     - 00:00.050
      - 0.0

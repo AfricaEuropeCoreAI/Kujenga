@@ -39,11 +39,11 @@ You will need to have a Python environment set up on your computer or access via
 see `here  <https://cloud.google.com/python/docs/setup>`_. for info on how to set that up). 
 Please make sure you have the notebook and a Python environment set up before the class.
 
-*During class*: Your teacher will start by going through the theory for `the t-test`_. 
+*During class*: Your teacher will start by going through the theory for the t-test 
 Please ask them questions and actively engage! 
 
 The methods
------------------
+-----------
 
 In this lesson, we will learn how to compare two groups of data and decide whether the difference we see between them is real or simply due to chance. This kind of reasoning where you weigh evidence to make decisions based on data is at the heart of both statistics and machine learning.
 
@@ -299,8 +299,8 @@ plt.show()
 # *Define your null hypothesis H_0 and teh alternative hypothesis H_1
 # * What does the coach's claim imply?
 # * Should this be a one sided test or a two sided test?
-#########################################################
-# Use the dataset below 
+#
+#  **Use the dataset below**
 #
 # This dataset contains the race times recorded by the coach
 #

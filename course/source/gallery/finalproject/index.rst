@@ -3,7 +3,7 @@
 .. _sphx_glr_gallery_finalproject:
 
 Project
-======
+========
 
 Welcome to the final project.
 

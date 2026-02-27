@@ -14,7 +14,6 @@ As Otema explains in the video below the PageRank algorithm is the additional in
     :width: 100%
     :align: center
 
-|
 
 How to use this material
 ==========================
@@ -41,7 +40,7 @@ In this lesson we will work with a small network built from Wikipedia pages of `
 .. youtube:: HO-I-6vHEY4
     :width: 100%
     :align: center
-|
+
 We represent our network of Wikipedia pages as a directed graph where each node represents a country, shown as labeled country flags in the video. In order to construct the connections between nodes in the graph we check on each country's page for links to the other 6 countries. For example, in the first paragraph of the page for `Ethiopia <https://en.wikipedia.org/wiki/Ethiopia>`_ we read:
 
 *Ethiopia, officially the Federal Democratic Republic of Ethiopia, is a landlocked country located in the Horn of Africa region of East Africa. It shares borders with Eritrea to the north, Djibouti to the northeast, Somalia to the east,* `Kenya <https://en.wikipedia.org/wiki/Kenya>`_ *to the south, South Sudan to the west, and Sudan to the northwest.*

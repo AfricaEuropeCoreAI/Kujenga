@@ -264,8 +264,7 @@ plt.show()
 #
 ###################################################################################################
 #
-# The sum of squares
-# ------------------
+# **The sum of squares**
 #
 #Each of the dotted lines above show how far the line – which predicts that happiness is one 
 #twelfth of life expectancy – is from the data for each of the six highlighted countries.
@@ -665,9 +664,10 @@ df[['Country name','LogGDP','SocialSupport','Freedom','Generosity','Corruption']
 # them to your chosen variable. Find a different variable that predicts happiness. Make a plot with
 # a fitted line through the data.
 #
-# Once you have shown the relationship in the data then write 
+# Once you have shown the relationship in the data,
 # Give one argument why it might be correlated with but does not cause happiness.
 # In the code below we have plotted the relationship between happiness and perceived corruption in countries, as an example.
+# Now upload your work here (give your name and the country that you work in). Then the tutors can access the work.
 
 def plotData(df,x,y): 
     fig,ax=plt.subplots(num=1)

@@ -10,15 +10,15 @@
     .. note::
         :class: sphx-glr-download-link-note
 
-        Click :ref:`here <sphx_glr_download_gallery_lesson2_plot_SEIR_exercise.py>`
-        to download the full example code
+        :ref:`Go to the end <sphx_glr_download_gallery_lesson2_plot_SEIR_exercise.py>`
+        to download the full example code.
 
 .. rst-class:: sphx-glr-example-title
 
 .. _sphx_glr_gallery_lesson2_plot_SEIR_exercise.py:
 
 
-.. _epidemic:
+.. _epidemicExercise:
 
 The SEIR model
 =============
@@ -46,7 +46,7 @@ Simulating the model
 
 .. GENERATED FROM PYTHON SOURCE LINES 28-78
 
-.. code-block:: default
+.. code-block:: Python
 
 
     import numpy as np
@@ -107,13 +107,6 @@ Simulating the model
    :class: sphx-glr-single-img
 
 
-.. rst-class:: sphx-glr-script-out
-
- .. code-block:: none
-
-    /Users/davidsumpter/Documents/GitHub/Kujenga/course/lessons/lesson2/plot_SEIR_exercise.py:76: UserWarning: FigureCanvasAgg is non-interactive, and thus cannot be shown
-      plt.show()
-
 
 
 
@@ -137,7 +130,7 @@ Make plots of :math:`R(t)` for different :math:`T` values
 
 .. GENERATED FROM PYTHON SOURCE LINES 97-124
 
-.. code-block:: default
+.. code-block:: Python
 
 
 
@@ -175,13 +168,6 @@ Make plots of :math:`R(t)` for different :math:`T` values
    :class: sphx-glr-single-img
 
 
-.. rst-class:: sphx-glr-script-out
-
- .. code-block:: none
-
-    /Users/davidsumpter/Documents/GitHub/Kujenga/course/lessons/lesson2/plot_SEIR_exercise.py:122: UserWarning: FigureCanvasAgg is non-interactive, and thus cannot be shown
-      plt.show()
-
 
 
 
@@ -194,7 +180,7 @@ The following command will help you find then :math:`I(t) \geq 0.01`
 
 .. GENERATED FROM PYTHON SOURCE LINES 129-135
 
-.. code-block:: default
+.. code-block:: Python
 
 
     I = np.array([0.001, 0.0025, 0.005, 0.01, 0.02, 0.05])
@@ -221,7 +207,7 @@ The following code concatenates two arrays
 
 .. GENERATED FROM PYTHON SOURCE LINES 138-148
 
-.. code-block:: default
+.. code-block:: Python
 
 
     X1 = np.array([[1, 2],[2,3],[3,6]])
@@ -264,7 +250,7 @@ Add a text box below and describe (in words) how :math:`\delta` affects the outc
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  0.174 seconds)
+   **Total running time of the script:** (0 minutes 0.667 seconds)
 
 
 .. _sphx_glr_download_gallery_lesson2_plot_SEIR_exercise.py:
@@ -273,14 +259,17 @@ Add a text box below and describe (in words) how :math:`\delta` affects the outc
 
   .. container:: sphx-glr-footer sphx-glr-footer-example
 
+    .. container:: sphx-glr-download sphx-glr-download-jupyter
+
+      :download:`Download Jupyter notebook: plot_SEIR_exercise.ipynb <plot_SEIR_exercise.ipynb>`
 
     .. container:: sphx-glr-download sphx-glr-download-python
 
       :download:`Download Python source code: plot_SEIR_exercise.py <plot_SEIR_exercise.py>`
 
-    .. container:: sphx-glr-download sphx-glr-download-jupyter
+    .. container:: sphx-glr-download sphx-glr-download-zip
 
-      :download:`Download Jupyter notebook: plot_SEIR_exercise.ipynb <plot_SEIR_exercise.ipynb>`
+      :download:`Download zipped: plot_SEIR_exercise.zip <plot_SEIR_exercise.zip>`
 
 
 .. only:: html

@@ -21,7 +21,7 @@
 .. _project:
 
 Final Project
-=============
+==============
 
 Your Mission
 ------------
@@ -302,7 +302,7 @@ Have Any Questions? Ask your instructor.
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** (0 minutes 0.318 seconds)
+   **Total running time of the script:** (0 minutes 0.050 seconds)
 
 
 .. _sphx_glr_download_gallery_finalproject_plot_finalproject.py:

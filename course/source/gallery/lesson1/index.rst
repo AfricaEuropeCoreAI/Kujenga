@@ -3,7 +3,7 @@
 .. _sphx_glr_gallery_lesson1:
 
 
-------
+--------
 Class II
 --------
 

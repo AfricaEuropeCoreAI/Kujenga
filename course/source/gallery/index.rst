@@ -20,7 +20,7 @@ Welcome to the course.
     </div>
 
 
-------
+--------
 Class II
 --------
 
@@ -223,7 +223,7 @@ From the book
     </div>
 
 Project
-======
+========
 
 Welcome to the final project.
 

@@ -3,7 +3,7 @@
 .. _project:
 
 Final Project
-=============
+==============
 
 Your Mission
 ------------
