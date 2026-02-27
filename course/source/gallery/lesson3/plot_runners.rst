@@ -39,8 +39,29 @@ We will use hypothesis testing, specifically, a two-sample t-test, to compare th
 
 In this lesson, we’ll move from posing the question to formulating a hypothesis, performing the test by hand, and finally reproducing it with Python on a larger dataset.
 
+How to use this material
+------------------------
+
+This material is taught as part of a 6 hour learning session. Your Kujenga instructor will have booked 
+a time for an in-person or online two hour session. This means you have two hours to work to do either side of the
+session. Here is what you should do:
+
+*Before coming to the class*: You should read through this entire page. At the section on calculating a confidence interval
+for a mean. If you get stuck look 
+`here <https://www.khanacademy.org/math/statistics-probability/confidence-intervals-one-sample/estimating-population-mean/v/introduction-to-t-statistics>`_. 
+After that section you should simply read through and try to understand what we are doing. 
+
+Once you have read through, you should 
+download this page as a Jupyter notebook or as Python code by clicking the links at the bottom of this page.
+You will need to have a Python environment set up on your computer or access via `Google Colab <https://colab.research.google.com/>`_  
+see `here  <https://cloud.google.com/python/docs/setup>`_. for info on how to set that up). 
+Please make sure you have the notebook and a Python environment set up before the class.
+
+*During class*: Your teacher will start by going through the theory for the t-test 
+Please ask them questions and actively engage! 
+
 The methods
------------------
+-----------
 
 In this lesson, we will learn how to compare two groups of data and decide whether the difference we see between them is real or simply due to chance. This kind of reasoning where you weigh evidence to make decisions based on data is at the heart of both statistics and machine learning.
 
@@ -70,27 +91,6 @@ By the end of this lesson, you’ll not only know how to perform a t-test, but a
 
 For more information on the type of test we will look at, see `here <https://www.khanacademy.org/math/statistics-probability/significance-tests-one-sample>`_. 
 
-
-How to use this material
-------------------------
-
-This material is taught as part of a 6 hour learning session. Your Kujenga instructor will have booked 
-a time for an in-person or online two hour session. This means you have two hours to work to do either side of the
-session. Here is what you should do:
-
-*Before coming to the class*: You should read through this entire page. At the section on calculating a confidence interval
-for a mean. If you get stuck look 
-`here <https://www.khanacademy.org/math/statistics-probability/confidence-intervals-one-sample/estimating-population-mean/v/introduction-to-t-statistics>`_. 
-After that section you should simply read through and try to understand what we are doing. 
-
-Once you have read through, you should 
-download this page as a Jupyter notebook or as Python code by clicking the links at the bottom of this page.
-You will need to have a Python environment set up on your computer or access via `Google Colab <https://colab.research.google.com/>`_  
-see `here  <https://cloud.google.com/python/docs/setup>`_. for info on how to set that up). 
-Please make sure you have the notebook and a Python environment set up before the class.
-
-*During class*: Your teacher will start by going through the theory for `the t-test`_. 
-Please ask them questions and actively engage! 
 
 Why Do We Need a Test at All?
 =================
@@ -193,7 +193,7 @@ Sampling and Comparing the Two Groups
 .. code-block:: Python
 
 
-    #  Selina used 10 runners from each group; let’s do the same here.
+    # Selina used 10 runners from each group; let’s do the same here.
 
     eth_data = ETH_data.sample(n=10, random_state=1)['Mark'].tolist()
     ken_data = KEN_data.sample(n=10, random_state=2)['Mark'].tolist()
@@ -404,8 +404,8 @@ If our hypothesis is correct, we might expect to see the Kenyan distribution sli
 
 
  .. youtube:: spuHjliHpw0
-    :width: 100% 
-    :align: center 
+ :width: 100% 
+ :align: center 
 #########################################################
 
 
@@ -429,27 +429,27 @@ If our hypothesis is correct, we might expect to see the Kenyan distribution sli
  *Define your null hypothesis H_0 and teh alternative hypothesis H_1
  * What does the coach's claim imply?
  * Should this be a one sided test or a two sided test?
-########################################################
- Use the dataset below 
+
+ **Use the dataset below**
 
  This dataset contains the race times recorded by the coach
 
  High Altitude (HA) Group - 25 athletes
  HA = [
-     1931.2, 1928.4, 1942.1, 1919.7, 1935.3,
-     1922.8, 1917.4, 1940.9, 1938.2, 1926.5,
-     1933.1, 1924.6, 1930.4, 1918.9, 1936.7,
-     1921.3, 1941.5, 1934.2, 1916.8, 1929.9,
-     1937.4, 1923.1, 1932.8, 1927.6, 1919.3
+ 1931.2, 1928.4, 1942.1, 1919.7, 1935.3,
+ 1922.8, 1917.4, 1940.9, 1938.2, 1926.5,
+ 1933.1, 1924.6, 1930.4, 1918.9, 1936.7,
+ 1921.3, 1941.5, 1934.2, 1916.8, 1929.9,
+ 1937.4, 1923.1, 1932.8, 1927.6, 1919.3
  ]
 
  Sea Altitude (SL) Group - 25 athletes
  SL = [
-     1958.6, 1961.9, 1949.5, 1965.2, 1953.8,
-     1962.3, 1947.9, 1956.7, 1970.1, 1959.4,
-     1963.8, 1950.7, 1966.4, 1948.8, 1961.2,
-     1957.9, 1972.6, 1960.5, 1954.1, 1968.3,
-     1952.7, 1971.4, 1955.9, 1964.8, 1958.1
+ 1958.6, 1961.9, 1949.5, 1965.2, 1953.8,
+ 1962.3, 1947.9, 1956.7, 1970.1, 1959.4,
+ 1963.8, 1950.7, 1966.4, 1948.8, 1961.2,
+ 1957.9, 1972.6, 1960.5, 1954.1, 1968.3,
+ 1952.7, 1971.4, 1955.9, 1964.8, 1958.1
  ]
 
  Perform a t-test
@@ -475,7 +475,7 @@ If our hypothesis is correct, we might expect to see the Kenyan distribution sli
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** (0 minutes 1.037 seconds)
+   **Total running time of the script:** (0 minutes 4.288 seconds)
 
 
 .. _sphx_glr_download_gallery_lesson3_plot_runners.py:

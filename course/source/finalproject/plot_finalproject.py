@@ -7,7 +7,6 @@ Final Project
 
 Your Mission
 ------------
-HIiiiiiiiiiiiii:)
 You've learned some powerful mathematical and computational tools. Now it's time to put them to work on something you care about.
 
 Your final project is straightforward: **Pick a real-world question, find data to answer it, and use the techniques you've learned to tell a compelling story.**
@@ -203,7 +202,7 @@ data_clean = data[(data['column'] >= Q1 - 1.5*IQR) &
 #Submission Format
 #-----------------
 #
-#Submit a Jupyter notebook that includes:
+#Submit a Jupyter notebook `here <https://forms.gle/ecgbkuMMyZZKmhnH6>`_   that includes:
 #
 #* Markdown cells explaining your thinking
 #* Code cells showing your analysis

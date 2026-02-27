@@ -1,13 +1,4 @@
 {
- "LHS": [
-  {
-   "is_class": false,
-   "is_explicit": false,
-   "module": "numpy",
-   "module_short": "numpy",
-   "name": "ndarray"
-  }
- ],
  "M": [
   {
    "is_class": false,
@@ -18,15 +9,6 @@
   }
  ],
  "R": [
-  {
-   "is_class": false,
-   "is_explicit": false,
-   "module": "numpy",
-   "module_short": "numpy",
-   "name": "ndarray"
-  }
- ],
- "RHS": [
   {
    "is_class": false,
    "is_explicit": false,
@@ -89,7 +71,16 @@
    "name": "ndarray"
   }
  ],
- "eigenvalue0": [
+ "idx": [
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "numpy",
+   "module_short": "numpy",
+   "name": "ndarray"
+  }
+ ],
+ "largest_eigenvalue": [
   {
    "is_class": false,
    "is_explicit": false,
@@ -98,7 +89,7 @@
    "name": "complex128"
   }
  ],
- "eigenvector0": [
+ "largest_eigenvector": [
   {
    "is_class": false,
    "is_explicit": false,
@@ -107,16 +98,7 @@
    "name": "ndarray"
   }
  ],
- "eigenvector0_normalized": [
-  {
-   "is_class": false,
-   "is_explicit": false,
-   "module": "numpy",
-   "module_short": "numpy",
-   "name": "ndarray"
-  }
- ],
- "idx": [
+ "largest_eigenvector_normalized": [
   {
    "is_class": false,
    "is_explicit": false,
@@ -315,22 +297,6 @@
    "module": "numpy.linalg",
    "module_short": "numpy.linalg",
    "name": "eig"
-  }
- ],
- "np.sqrt": [
-  {
-   "is_class": false,
-   "is_explicit": false,
-   "module": "numpy",
-   "module_short": "numpy",
-   "name": "ufunc"
-  },
-  {
-   "is_class": false,
-   "is_explicit": false,
-   "module": "numpy",
-   "module_short": "numpy",
-   "name": "sqrt"
   }
  ],
  "np.sum": [

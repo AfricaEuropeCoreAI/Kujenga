@@ -16,9 +16,9 @@ computer science, physics, mathematics, economics, bioinformatics, engineering, 
 course means that you are considered 'PhD ready' for the Doctoral School in Computational Thinking and AI. This doesn't mean we give you a place 
 on the PhD Programme, but it does mean that you have built the skills to apply. 
 
-We run this course in Fenruary as a hypdrid course. To participate you will need to find a study group. Local study groups are located 
+We run this course in February as a hybrid course. To participate you will need to find a study group. Local study groups are located 
 in Nairobi, Kigali , Lagos, Stellenbosch, Makarere, and Addis Ababa. If you are not near one of these locations, you can join an online 
-study group. In either case, you need to fill in the `following form <https://forms.gle/>`_ to apply to join. 
+study group. In either case, you need to fill in the `following form <https://forms.gle/yc62tqjTZT7QTPne6>`_ to apply to join. 
 
 Once you are registed watch this video where David introduces how to use the course materials.
 

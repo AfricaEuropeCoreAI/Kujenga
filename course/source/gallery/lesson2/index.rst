@@ -25,7 +25,7 @@ From the book
   .. image:: /gallery/lesson2/images/thumb/sphx_glr_plot_epidemic_thumb.png
     :alt:
 
-  :doc:`/gallery/lesson2/plot_epidemic`
+  :ref:`sphx_glr_gallery_lesson2_plot_epidemic.py`
 
 .. raw:: html
 
@@ -42,45 +42,11 @@ From the book
   .. image:: /gallery/lesson2/images/thumb/sphx_glr_plot_cts2D_thumb.png
     :alt:
 
-  :doc:`/gallery/lesson2/plot_cts2D`
+  :ref:`sphx_glr_gallery_lesson2_plot_cts2D.py`
 
 .. raw:: html
 
       <div class="sphx-glr-thumbnail-title">Rabbits and foxes</div>
-    </div>
-
-
-.. raw:: html
-
-    <div class="sphx-glr-thumbcontainer" tooltip="  .. math::">
-
-.. only:: html
-
-  .. image:: /gallery/lesson2/images/thumb/sphx_glr_plot_SEIR_exercise_thumb.png
-    :alt:
-
-  :doc:`/gallery/lesson2/plot_SEIR_exercise`
-
-.. raw:: html
-
-      <div class="sphx-glr-thumbnail-title">The SEIR model</div>
-    </div>
-
-
-.. raw:: html
-
-    <div class="sphx-glr-thumbcontainer" tooltip="Now you should study a model yourself! Download the page as a  Python notebook and fill in the missing code according to the instructions.">
-
-.. only:: html
-
-  .. image:: /gallery/lesson2/images/thumb/sphx_glr_plot_SEIR_thumb.png
-    :alt:
-
-  :doc:`/gallery/lesson2/plot_SEIR`
-
-.. raw:: html
-
-      <div class="sphx-glr-thumbnail-title">The SEIR model</div>
     </div>
 
 
@@ -96,6 +62,4 @@ From the book
 
    /gallery/lesson2/plot_epidemic
    /gallery/lesson2/plot_cts2D
-   /gallery/lesson2/plot_SEIR_exercise
-   /gallery/lesson2/plot_SEIR
 
