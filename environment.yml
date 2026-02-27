@@ -23,6 +23,7 @@ dependencies:
   - pyreadstat  
   - termcolor
   - time  
+  - panel
   - pip:
       - setuptools
       - lxml
