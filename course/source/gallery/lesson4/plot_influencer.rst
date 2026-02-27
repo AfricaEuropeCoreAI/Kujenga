@@ -32,23 +32,7 @@ As Otema explains in the video below the PageRank algorithm is the additional in
     :width: 100%
     :align: center
 
-
-How to use this material
-==========================
-
-This material is taught as part of a 6-hour learning session. Your Kujenga instructor will have booked
-a time for an in-person or online 2-hour session. This means you have two hours of work to do on either side of the in-person or online
-session. Here is what you should do:
-
-*Before coming to the class*: You should read through this entire page. In the section on `The Mathematics of the PageRank algorithm`_,
-try to solve the example both by hand and using Python. 
-If you get stuck look `here <https://medium.com/swlh/a-handwritten-introduction-to-pagerank-7ed2fedddb0d>`_, but otherwise you should
-simply read through and try to understand what we are doing. Once you have read through, you should
-download this page as a Jupyter notebook or as Python code by clicking the links at the bottom of this page.
-You will need to have a Python environment set up on your computer or access via Google `Colab <https://colab.research.google.com/>`_ (see `here <https://docs.cloud.google.com/python/docs/setup>`_ for info on how to set that up).
-
-*During class*: Your teacher will start by going through the theory for `Working with matrices in Python`_.
-Please ask them questions and actively engage!
+|
 
 The problem
 -----------
@@ -58,7 +42,7 @@ In this lesson we will work with a small network built from Wikipedia pages of `
 .. youtube:: HO-I-6vHEY4
     :width: 100%
     :align: center
-
+|
 We represent our network of Wikipedia pages as a directed graph where each node represents a country, shown as labeled country flags in the video. In order to construct the connections between nodes in the graph we check on each country's page for links to the other 6 countries. For example, in the first paragraph of the page for `Ethiopia <https://en.wikipedia.org/wiki/Ethiopia>`_ we read:
 
 *Ethiopia, officially the Federal Democratic Republic of Ethiopia, is a landlocked country located in the Horn of Africa region of East Africa. It shares borders with Eritrea to the north, Djibouti to the northeast, Somalia to the east,* `Kenya <https://en.wikipedia.org/wiki/Kenya>`_ *to the south, South Sudan to the west, and Sudan to the northwest.*
@@ -79,9 +63,22 @@ Here we see a link to Kenya, meaning we should count this as a connection from E
 The methods
 -----------------
 
-We have seen a graphical representation of a network in `The problem`_ but in order to use the PageRank algorithm we will need to represent the network mathematically as a matrix. In the following section, we will learn how to work with matrices as well as some basic concepts of linear algebra. The most useful concepts for understanding PageRank will be the notions of an eigenvector and eigenvalue of a matrix which we cover in `Defining a matrix`_.
+We have seen a graphical representation of a network in `The problem`_ but in order to use the PageRank algorithm we will need to represent the network mathematically as a matrix. In the following section, we will learn how to work with matrices as well as some basic concepts of linear algebra. The most useful concepts for understanding PageRank will be the notions of an eigenvector and eigenvalue of a matrix which we cover in `Eigenvalues and eigenvectors of a matrix`_.
 
-.. GENERATED FROM PYTHON SOURCE LINES 70-163
+How to use this material
+------------------------
+
+This material is taught as part of a 6-hour learning session. Your Kujenga instructor will have booked
+a time for an in-person or online 2-hour session. This means you have two hours of work to do on either side of the in-person or online
+session. Here is what you should do:
+
+*Before coming to the class*: You should read through this entire page. If you get stuck look at `this <https://medium.com/swlh/a-handwritten-introduction-to-pagerank-7ed2fedddb0d>`_ Medium article for an alternative explanation, but otherwise you should
+simply read through and try to understand what we are doing. You should download this page as a Jupyter notebook or as Python code by clicking the links at the bottom of this page. You will need to have a Python environment set up on your computer (see `here <https://docs.cloud.google.com/python/docs/setup>`_ for info on how to set that up) or access to `Google Colab <https://colab.research.google.com/>`_.
+
+*During class*: Your teacher will start by going through the theory for `The Mathematics of the PageRank algorithm`_.
+Please ask them questions and actively engage!
+
+.. GENERATED FROM PYTHON SOURCE LINES 66-161
 
 The Mathematics of the PageRank algorithm
 =====================
@@ -90,21 +87,21 @@ The PageRank algorithm can be understood as modeling the behavior of a "random s
 Preliminaries
 ----------------------
 
-Let's break down the process using some mathematical formulas.
+Let's break down the process mathematically. In this section we will define the key variables and concepts needed to understand the PageRank algorithm.
 
-The PageRank Vector (\ :strong:`R`)
+The PageRank Vector (\ :strong:`R`):
 
 .. math::
-    \mathbf{R} = \begin{pmatrix} r_1 \\ r_2 \\ \vdots \\ r_N \end{pmatrix}
+    \mathbf{R} = \begin{pmatrix} r_1 \\ r_2 \\ \vdots \\ r_N \end{pmatrix}.
 This vector \ :strong:`R` represents the PageRank scores for all N=7 pages in the graph.
-Each element r\ :sub:`i` is the PageRank score of page i.
+Each element r\ :sub:`i` is the PageRank score of the i-th page.
 Initially, these scores can be set equally, for example, r\ :sub:`i` = 1/N for all i.
 
-The Transition Matrix (\ :strong:`M`)
+The Transition Matrix (\ :strong:`M`):
 
 .. math::
-    M_{ij} = \begin{cases} 1/L_j^{\text{out}}, & \text{if } j \text{ links to } i \\ 0, & \text{otherwise} \end{cases}
-This matrix \ :strong:`M` (often called the hyperlink matrix or transition matrix) encodes the link structure of the network.
+    M_{ij} = \begin{cases} 1/L_j^{\text{out}}, & \text{if } j \text{ links to } i \\ 0, & \text{otherwise.} \end{cases}
+This matrix \ :strong:`M` (often called the hyperlink matrix or transition matrix) encodes the link structure of the network. We use the following notation:
 
 * L\ :sub:`j`\ :sup:`out` is the total number of outgoing links from page j.
 * \ :strong:`M`\ :sub:`ij` represents the probability of transitioning from page j to page i by following some specific link.
@@ -117,32 +114,34 @@ The Iterative Update Rule
 
 .. math::
     \mathbf{R}(t + 1) = d\mathbf{M}\mathbf{R}(t) + \frac{1-d}{N} \mathbf{1}
-This is the core formula for calculating PageRank iteratively.
+This is the core formula for calculating PageRank iteratively. In the equation above:
 
 * \ :strong:`R`\ (t) is the PageRank vector at iteration t, and \ :strong:`R`\ (t+1) is the vector at the next iteration.
-* d is the "damping factor" (typically around 0.85). It represents the probability that the random surfer will continue following links (as opposed to jumping to a random page). In practice, this is important to handle "dangling nodes", nodes with no outgoing links L\ :sub:`j`\ :sup:`out` = 0.
+* d is the "damping factor" (typically around 0.85). It represents the probability that the random surfer will continue following links (as opposed to jumping to a random page). In practice, this is important to handle "dangling nodes", nodes with no outgoing links, i.e. L\ :sub:`j`\ :sup:`out` = 0.
 
-\ :strong:`M`\ \ :strong:`R`\ (t) calculates how the existing PageRank scores \ :strong:`R`\ (t) are distributed across the network by following links. Element i of this resulting vector is the sum of PageRank contributions from all pages j that link to page i.
+\ :strong:`M`\ \ :strong:`R`\ (t) calculates how the PageRank scores at time t, \ :strong:`R`\ (t), are distributed across the network by following links. Element i of the resulting vector is the sum of PageRank contributions from all pages j that link to page i. Therefore,
 d\ \ :strong:`M`\ \ :strong:`R`\ (t) is the portion of the PageRank score derived from surfers following links.
 
-1-d is the probability that the surfer gets bored and jumps to a random page.
+The probability that the surfer gets bored and jumps to a random page is 1-d. Therefore,
 (1-d)/N is the probability of landing on any specific page during a random jump (assuming N pages total).
-**1** is a column vector of size N containing all ones.
-(1-d)/N **1** represents the PageRank score distributed equally among all pages due to the random jump behavior. This term ensures that all pages receive some minimal rank and helps the algorithm converge. This is especially important for dealing with nodes with no outgoing links L\ :sub:`j`\ :sup:`out` = 0, as mentioned earlier, or disconnected parts of the graph.
+Let **1** be a column vector of size N containing all ones.
+Then, (1-d)/N **1** represents the PageRank score distributed equally among all pages due to the random jump behavior. This term ensures that all pages receive some minimal rank and helps the algorithm converge. This is important for dealing with nodes with no outgoing links, i.e. L\ :sub:`j`\ :sup:`out` = 0, as mentioned earlier, or disconnected parts of the graph.
 
 Convergence
 ----------------------
 
-.. math::
-    \mathbf{R}(t + 1) \approx \mathbf{R}(t)
 The iterative update process is repeated until the PageRank vector **R** stabilizes.
-Convergence is reached when the difference between the PageRank vector in the current iteration **R**\ (t+1) and the previous iteration **R**\ (t) is very small (below some predefined threshold).
-The final vector **R** represents the stable probability distribution of the random surfer, indicating the relative importance of each page.
+Convergence is achieved when
+
+.. math::
+    \mathbf{R}(t + 1) = \mathbf{R}(t).
+In practice, we check for convergence by monitoring the difference between the PageRank vector in the current iteration **R**\ (t+1) and the previous iteration **R**\ (t). When the difference is very small (below some predefined threshold), we stop the iterations.
+The final vector **R*** represents the stable probability distribution of the random surfer, indicating the relative importance of each page.
 
 Simplified update rule for connected graphs
 ----------------------
 
-Looking at the graph representing our network of Wikipedia pages we can see that the graph is connected, a technical term meaning there is a path between every pair of distinct nodes ignoring the direction of the edges. It is clear that we do not need to take into account any "dangling nodes", nodes with no outgoing links L\ :sub:`j`\ :sup:`out` = 0,  or disconnected parts of the graph.
+Looking at the graph representing our network of Wikipedia pages we can see that the graph is "connected", a technical term meaning there is a path between every pair of distinct nodes ignoring the direction of the edges. Therefore, we do not need to take into account any "dangling nodes", nodes with no outgoing links L\ :sub:`j`\ :sup:`out` = 0,  or disconnected parts of the graph.
 
 Using this observation we can simplify the update rule by setting d = 1. This means that the random surfer will always follow a link and never jump to a random page. The update rule becomes:
 
@@ -156,7 +155,7 @@ Assuming the algorithm has converged, **R**\ (t + 1) = **R**\ (t), you might alr
     \mathbf{M}\mathbf{R} = \lambda \mathbf{R}
 If not don't worry, we will cover the details in the section `Eigenvalues and eigenvectors of a matrix`_.
 
-In the video below Amy discusses the theory above and shows the results of applying the simplified update rule iteratively. You will see how to implement this yourself in the section ``_.
+In the video below Amy discusses the theory above and shows the results of applying the simplified update rule iteratively. You will see how to implement this yourself in the section `Constructing the transition matrix M`_ and `Simulating PageRank`_.
 
 .. youtube:: guf36O9rBXs
     :width: 100%
@@ -177,7 +176,7 @@ Importing NumPy
 NumPy is a third-party library, so you need to install it separately. If you are using Google Colab, it is already included.
 To load NumPy with the alias np, you can use the following command:
 
-.. GENERATED FROM PYTHON SOURCE LINES 163-166
+.. GENERATED FROM PYTHON SOURCE LINES 161-164
 
 .. code-block:: Python
 
@@ -191,14 +190,14 @@ To load NumPy with the alias np, you can use the following command:
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 167-171
+.. GENERATED FROM PYTHON SOURCE LINES 165-169
 
 Defining a vector (1D Arrays)
 -----------------
 
 A vector can be thought of as a list of numbers. In NumPy, you create it using np.array() with a Python list:
 
-.. GENERATED FROM PYTHON SOURCE LINES 171-177
+.. GENERATED FROM PYTHON SOURCE LINES 169-175
 
 .. code-block:: Python
 
@@ -222,12 +221,12 @@ A vector can be thought of as a list of numbers. In NumPy, you create it using n
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 178-180
+.. GENERATED FROM PYTHON SOURCE LINES 176-178
 
 Check its shape (dimensions)
 Output: (3,) indicates a 1D array with 3 elements
 
-.. GENERATED FROM PYTHON SOURCE LINES 180-182
+.. GENERATED FROM PYTHON SOURCE LINES 178-180
 
 .. code-block:: Python
 
@@ -246,14 +245,14 @@ Output: (3,) indicates a 1D array with 3 elements
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 183-187
+.. GENERATED FROM PYTHON SOURCE LINES 181-185
 
 Creating Matrices (2D Arrays)
 -----------------
 
 A matrix is like a grid of numbers (rows and columns). You create it using np.array() with a list of lists, where each inner list is a row:
 
-.. GENERATED FROM PYTHON SOURCE LINES 187-193
+.. GENERATED FROM PYTHON SOURCE LINES 185-191
 
 .. code-block:: Python
 
@@ -279,12 +278,12 @@ A matrix is like a grid of numbers (rows and columns). You create it using np.ar
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 194-196
+.. GENERATED FROM PYTHON SOURCE LINES 192-194
 
 Check its shape (rows, columns)
 Output: (2, 3) indicates 2 rows and 3 columns
 
-.. GENERATED FROM PYTHON SOURCE LINES 196-198
+.. GENERATED FROM PYTHON SOURCE LINES 194-196
 
 .. code-block:: Python
 
@@ -303,11 +302,11 @@ Output: (2, 3) indicates 2 rows and 3 columns
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 199-200
+.. GENERATED FROM PYTHON SOURCE LINES 197-198
 
 Create a square matrix (same number of rows and columns)
 
-.. GENERATED FROM PYTHON SOURCE LINES 200-205
+.. GENERATED FROM PYTHON SOURCE LINES 198-203
 
 .. code-block:: Python
 
@@ -333,7 +332,7 @@ Create a square matrix (same number of rows and columns)
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 206-211
+.. GENERATED FROM PYTHON SOURCE LINES 204-209
 
 Basic Operations
 -----------------
@@ -341,7 +340,7 @@ Basic Operations
 NumPy makes operating on vectors and matrices straightforward.
 Element-wise Operations: Standard arithmetic operators (+, -, *, /) often work element-by-element if the shapes are compatible.
 
-.. GENERATED FROM PYTHON SOURCE LINES 211-216
+.. GENERATED FROM PYTHON SOURCE LINES 209-214
 
 .. code-block:: Python
 
@@ -357,11 +356,11 @@ Element-wise Operations: Standard arithmetic operators (+, -, *, /) often work e
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 217-218
+.. GENERATED FROM PYTHON SOURCE LINES 215-216
 
 Vector addition (element-wise)
 
-.. GENERATED FROM PYTHON SOURCE LINES 218-220
+.. GENERATED FROM PYTHON SOURCE LINES 216-218
 
 .. code-block:: Python
 
@@ -381,11 +380,11 @@ Vector addition (element-wise)
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 221-222
+.. GENERATED FROM PYTHON SOURCE LINES 219-220
 
 Matrix addition (element-wise)
 
-.. GENERATED FROM PYTHON SOURCE LINES 222-224
+.. GENERATED FROM PYTHON SOURCE LINES 220-222
 
 .. code-block:: Python
 
@@ -406,11 +405,11 @@ Matrix addition (element-wise)
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 225-226
+.. GENERATED FROM PYTHON SOURCE LINES 223-224
 
 Scalar multiplication (multiply every element by a number)
 
-.. GENERATED FROM PYTHON SOURCE LINES 226-229
+.. GENERATED FROM PYTHON SOURCE LINES 224-227
 
 .. code-block:: Python
 
@@ -433,11 +432,11 @@ Scalar multiplication (multiply every element by a number)
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 230-231
+.. GENERATED FROM PYTHON SOURCE LINES 228-229
 
 Dot Product / Matrix Multiplication: This is different from element-wise multiplication (*). It's the standard mathematical operation. Use np.dot() or the @ operator.
 
-.. GENERATED FROM PYTHON SOURCE LINES 231-234
+.. GENERATED FROM PYTHON SOURCE LINES 229-232
 
 .. code-block:: Python
 
@@ -451,38 +450,39 @@ Dot Product / Matrix Multiplication: This is different from element-wise multipl
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 235-236
+.. GENERATED FROM PYTHON SOURCE LINES 233-234
 
 Vector dot product (sum of element-wise products)
 
-.. GENERATED FROM PYTHON SOURCE LINES 236-238
+.. GENERATED FROM PYTHON SOURCE LINES 234-236
 
 .. code-block:: Python
 
     dot_product = np.dot(vec1, vec2)  # 1*4 + 2*5 + 3*6 = 4 + 10 + 18 = 32
+    print("Vector Dot Product:", dot_product)
 
 
 
 
+.. rst-class:: sphx-glr-script-out
+
+ .. code-block:: none
+
+    Vector Dot Product: 32
 
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 239-240
+.. GENERATED FROM PYTHON SOURCE LINES 237-238
 
 Or using the @ operator
 
-.. GENERATED FROM PYTHON SOURCE LINES 240-248
+.. GENERATED FROM PYTHON SOURCE LINES 238-241
 
 .. code-block:: Python
 
     dot_product_alt = vec1 @ vec2
-    print("\nVector Dot Product:", dot_product)
     print("Vector Dot Product (@):", dot_product_alt)
-
-    mat1 = np.array([[1, 2], [3, 4]])  # 2x2 matrix
-    mat2 = np.array([[5, 6], [7, 8]])  # 2x2 matrix
-    vec3 = np.array([10, 20])  # 1x2 vector
 
 
 
@@ -492,42 +492,23 @@ Or using the @ operator
 
  .. code-block:: none
 
-
-    Vector Dot Product: 32
     Vector Dot Product (@): 32
 
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 249-250
+.. GENERATED FROM PYTHON SOURCE LINES 242-243
 
 Matrix multiplication
 
-.. GENERATED FROM PYTHON SOURCE LINES 250-252
+.. GENERATED FROM PYTHON SOURCE LINES 243-247
 
 .. code-block:: Python
 
+    mat1 = np.array([[1, 2], [3, 4]])  # 2x2 matrix
+    mat2 = np.array([[5, 6], [7, 8]])  # 2x2 matrix
     matrix_product = np.dot(mat1, mat2)
-
-
-
-
-
-
-
-
-.. GENERATED FROM PYTHON SOURCE LINES 253-254
-
-Or using the @ operator
-
-.. GENERATED FROM PYTHON SOURCE LINES 254-258
-
-.. code-block:: Python
-
-    matrix_product_alt = mat1 @ mat2
     print("Matrix Multiplication:\n", matrix_product)
-    print("Matrix Multiplication (@):\n", matrix_product_alt)
-
 
 
 
@@ -539,6 +520,29 @@ Or using the @ operator
     Matrix Multiplication:
      [[19 22]
      [43 50]]
+
+
+
+
+.. GENERATED FROM PYTHON SOURCE LINES 248-249
+
+Or using the @ operator
+
+.. GENERATED FROM PYTHON SOURCE LINES 249-252
+
+.. code-block:: Python
+
+    matrix_product_alt = mat1 @ mat2
+    print("Matrix Multiplication (@):\n", matrix_product_alt)
+
+
+
+
+
+.. rst-class:: sphx-glr-script-out
+
+ .. code-block:: none
+
     Matrix Multiplication (@):
      [[19 22]
      [43 50]]
@@ -546,33 +550,36 @@ Or using the @ operator
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 259-260
-
-Matrix-vector multiplication
-
-.. GENERATED FROM PYTHON SOURCE LINES 260-262
+.. GENERATED FROM PYTHON SOURCE LINES 253-257
 
 .. code-block:: Python
 
+    vec3 = np.array([10, 20])  # 1x2 vector
+    # Matrix-vector multiplication
     mat_vec_product = np.dot(mat1, vec3)  # Note: Treats vec3 as a column vector here
+    print("Matrix-Vector Multiplication:", mat_vec_product)
 
 
 
 
+.. rst-class:: sphx-glr-script-out
+
+ .. code-block:: none
+
+    Matrix-Vector Multiplication: [ 50 110]
 
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 263-264
+.. GENERATED FROM PYTHON SOURCE LINES 258-259
 
 Or using the @ operator
 
-.. GENERATED FROM PYTHON SOURCE LINES 264-268
+.. GENERATED FROM PYTHON SOURCE LINES 259-262
 
 .. code-block:: Python
 
     mat_vec_product_alt = mat1 @ vec3
-    print("Matrix-Vector Multiplication:", mat_vec_product)
     print("Matrix-Vector Multiplication (@):", mat_vec_product_alt)
 
 
@@ -583,18 +590,17 @@ Or using the @ operator
 
  .. code-block:: none
 
-    Matrix-Vector Multiplication: [ 50 110]
     Matrix-Vector Multiplication (@): [ 50 110]
 
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 269-271
+.. GENERATED FROM PYTHON SOURCE LINES 263-265
 
 .. note::
    Simple multiplication :math:`*` is element-wise, not matrix multiplication!
 
-.. GENERATED FROM PYTHON SOURCE LINES 271-273
+.. GENERATED FROM PYTHON SOURCE LINES 265-267
 
 .. code-block:: Python
 
@@ -615,12 +621,12 @@ Or using the @ operator
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 274-276
+.. GENERATED FROM PYTHON SOURCE LINES 268-270
 
 Rule for A @ B: The number of columns in A must equal the number of rows in B.
 Transpose: Swaps rows and columns. Use the .T attribute.
 
-.. GENERATED FROM PYTHON SOURCE LINES 276-282
+.. GENERATED FROM PYTHON SOURCE LINES 270-276
 
 .. code-block:: Python
 
@@ -652,14 +658,14 @@ Transpose: Swaps rows and columns. Use the .T attribute.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 283-287
+.. GENERATED FROM PYTHON SOURCE LINES 277-281
 
 Accessing Elements
 -----------------
 
 You can access elements using zero-based indexing, similar to Python lists. For matrices, use [row, column].
 
-.. GENERATED FROM PYTHON SOURCE LINES 287-290
+.. GENERATED FROM PYTHON SOURCE LINES 281-284
 
 .. code-block:: Python
 
@@ -673,11 +679,11 @@ You can access elements using zero-based indexing, similar to Python lists. For 
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 291-292
+.. GENERATED FROM PYTHON SOURCE LINES 285-286
 
 Get the first element of the vector (index 0)
 
-.. GENERATED FROM PYTHON SOURCE LINES 292-294
+.. GENERATED FROM PYTHON SOURCE LINES 286-288
 
 .. code-block:: Python
 
@@ -697,11 +703,11 @@ Get the first element of the vector (index 0)
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 295-296
+.. GENERATED FROM PYTHON SOURCE LINES 289-290
 
 Get the element at row 1, column 0 of the matrix
 
-.. GENERATED FROM PYTHON SOURCE LINES 296-298
+.. GENERATED FROM PYTHON SOURCE LINES 290-292
 
 .. code-block:: Python
 
@@ -720,11 +726,11 @@ Get the element at row 1, column 0 of the matrix
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 299-300
+.. GENERATED FROM PYTHON SOURCE LINES 293-294
 
 Get an entire row (e.g., row 0)
 
-.. GENERATED FROM PYTHON SOURCE LINES 300-301
+.. GENERATED FROM PYTHON SOURCE LINES 294-295
 
 .. code-block:: Python
 
@@ -742,11 +748,11 @@ Get an entire row (e.g., row 0)
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 302-303
+.. GENERATED FROM PYTHON SOURCE LINES 296-297
 
 Get an entire column (e.g., column 1) using slicing ':'
 
-.. GENERATED FROM PYTHON SOURCE LINES 303-305
+.. GENERATED FROM PYTHON SOURCE LINES 297-299
 
 .. code-block:: Python
 
@@ -765,7 +771,7 @@ Get an entire column (e.g., column 1) using slicing ':'
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 306-410
+.. GENERATED FROM PYTHON SOURCE LINES 300-404
 
 Constructing the transition matrix **M**
 -----------------
@@ -872,7 +878,7 @@ We can again use the network shown in section `The problem`_ to check if if ther
 
 This table can be translated into Python code as a NumPy array:
 
-.. GENERATED FROM PYTHON SOURCE LINES 410-425
+.. GENERATED FROM PYTHON SOURCE LINES 404-419
 
 .. code-block:: Python
 
@@ -917,7 +923,7 @@ This table can be translated into Python code as a NumPy array:
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 426-435
+.. GENERATED FROM PYTHON SOURCE LINES 420-429
 
 .. admonition:: Food for Thought
     :class: food-for-thought
@@ -929,7 +935,7 @@ Simulating PageRank
 
 Let's choose an initial PageRank vector **R**\ (0) and apply the update rule iteratively until convergence.
 
-.. GENERATED FROM PYTHON SOURCE LINES 435-439
+.. GENERATED FROM PYTHON SOURCE LINES 429-433
 
 .. code-block:: Python
 
@@ -951,11 +957,11 @@ Let's choose an initial PageRank vector **R**\ (0) and apply the update rule ite
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 440-441
+.. GENERATED FROM PYTHON SOURCE LINES 434-435
 
 Create a variable t to keep track of the number of iterations performed
 
-.. GENERATED FROM PYTHON SOURCE LINES 441-445
+.. GENERATED FROM PYTHON SOURCE LINES 435-439
 
 .. code-block:: Python
 
@@ -976,11 +982,11 @@ Create a variable t to keep track of the number of iterations performed
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 446-447
+.. GENERATED FROM PYTHON SOURCE LINES 440-441
 
 Create a vector with the county codes which will be used to label the PageRank vector
 
-.. GENERATED FROM PYTHON SOURCE LINES 447-451
+.. GENERATED FROM PYTHON SOURCE LINES 441-445
 
 .. code-block:: Python
 
@@ -1001,11 +1007,11 @@ Create a vector with the county codes which will be used to label the PageRank v
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 452-453
+.. GENERATED FROM PYTHON SOURCE LINES 446-447
 
 Apply the update rule
 
-.. GENERATED FROM PYTHON SOURCE LINES 453-461
+.. GENERATED FROM PYTHON SOURCE LINES 447-455
 
 .. code-block:: Python
 
@@ -1037,7 +1043,7 @@ Apply the update rule
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 462-487
+.. GENERATED FROM PYTHON SOURCE LINES 456-482
 
 Run the cell above multiple times to see how the PageRank vector converges. If you want to start again be sure to rerun all the cells in the `Simulating PageRank`_ section to avoid unexpected behavior.
 
@@ -1056,16 +1062,17 @@ In the video below Amandine and Amy give a brief introduction to eigenvalues and
     :width: 100%
     :align: center
 |
-Let's summarize the mathematics shown in the video. The N-by-N matrix **M** has N eigenvectors math:`\mathbf{v}_i`` which obey the equation:
+Let's summarize the mathematics shown in the video. The N-by-N matrix **M** has N eigenvectors :math:`\mathbf{v}_i` which obey the equation:
 
-:math:`\mathbf{M}\mathbf{v}_i = \lambda_i \mathbf{v}_i`
-where math:`\lambda_i` is the eigenvalue associated with the eigenvector math:`\mathbf{v}_i`.
+.. math::
+  \mathbf{M}\mathbf{v}_i = \lambda_i \mathbf{v}_i
+where :math:`\lambda`\ :sub:`i` is the eigenvalue associated with the eigenvector :math:`\mathbf{v}_i`.
 
-The eigenvalue equation states that when the matrix **M** acts on the eigenvector math:`\mathbf{v}_i`, it scales the vector by a factor of math:`\lambda_i` without changing its direction.
+The eigenvalue equation states that when the matrix **M** acts on the eigenvector :math:`\mathbf{v}_i`, it scales the vector by a factor of :math:`\lambda_i` without changing its direction.
 
 Let's use Python to compute the eigenvalues and the corresponding eigenvectors of the transition matrix **M**. We will use the `numpy.linalg.eig()` function to compute the eigenvalues and eigenvectors of a matrix.
 
-.. GENERATED FROM PYTHON SOURCE LINES 487-491
+.. GENERATED FROM PYTHON SOURCE LINES 482-486
 
 .. code-block:: Python
 
@@ -1088,17 +1095,17 @@ Let's use Python to compute the eigenvalues and the corresponding eigenvectors o
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 492-495
+.. GENERATED FROM PYTHON SOURCE LINES 487-490
 
-Note that some of the eigenvalues are complex, e.g. 0.02227925-0.04471056j.
+Note that some of the eigenvalues are complex, e.g. :math:`0.02227925-0.04471056i` (in Python "j" is used to represent the imaginary unit).
 
 Let's get the index of the largest eigenvalue by first getting a list of the indices of the sorted eigenValues:
 
-.. GENERATED FROM PYTHON SOURCE LINES 495-498
+.. GENERATED FROM PYTHON SOURCE LINES 490-493
 
 .. code-block:: Python
 
-    idx = eigenValues.argsort()[::-1]  # Sort eigenValues in descending order
+    idx = eigenValues.argsort()[::-1]  # eigenValues in descending order
 
     print(idx)
 
@@ -1114,11 +1121,11 @@ Let's get the index of the largest eigenvalue by first getting a list of the ind
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 499-500
+.. GENERATED FROM PYTHON SOURCE LINES 494-495
 
 Now let's replace the eigenValues and eigenVectors with the sorted versions
 
-.. GENERATED FROM PYTHON SOURCE LINES 500-504
+.. GENERATED FROM PYTHON SOURCE LINES 495-499
 
 .. code-block:: Python
 
@@ -1141,26 +1148,18 @@ Now let's replace the eigenValues and eigenVectors with the sorted versions
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 505-506
+.. GENERATED FROM PYTHON SOURCE LINES 500-501
 
 The largest eigenvalue is the first element of the sorted eigenValues array. The corresponding eigenvector is the first column of the sorted eigenVectors array.
 
-.. GENERATED FROM PYTHON SOURCE LINES 506-519
+.. GENERATED FROM PYTHON SOURCE LINES 501-506
 
 .. code-block:: Python
 
-    largest_eigenvalue = eigenValues[0]
-    largest_eigenvector = eigenVectors[:, 0]
-    print("Largest Eigenvalue:", largest_eigenvalue)
-    print("Corresponding Eigenvector:", largest_eigenvector)
-
-
-    # Check that the eigenvalue equation holds
-
-    print("M @ largest_eigenvector:")
-    print(np.dot(M, largest_eigenvector))
-    print("largest_eigenvalue * largest_eigenvector:")
-    print(largest_eigenvalue * largest_eigenvector)
+    eigenvalue0 = eigenValues[0]
+    eigenvector0 = eigenVectors[:, 0]
+    print("Largest Eigenvalue:", eigenvalue0)
+    print("Corresponding Eigenvector:", eigenvector0)
 
 
 
@@ -1173,17 +1172,47 @@ The largest eigenvalue is the first element of the sorted eigenValues array. The
     Largest Eigenvalue: (0.2925587369323658+0j)
     Corresponding Eigenvector: [0.51030388+0.j 0.30519189+0.j 0.53571932+0.j 0.35611479+0.j
      0.15671107+0.j 0.15562185+0.j 0.42878715+0.j]
-    M @ largest_eigenvector:
+
+
+
+
+.. GENERATED FROM PYTHON SOURCE LINES 507-508
+
+Check that the eigenvalue equation holds:
+
+.. GENERATED FROM PYTHON SOURCE LINES 508-516
+
+.. code-block:: Python
+
+    RHS = np.dot(M, eigenvector0)  # Right had side of the eigenvalue equation
+    print("M @ eigenvector0:")
+    print(RHS)
+    LHS = eigenvalue0 * eigenvector0  # Left hand side of the eigenvalue equation
+    print("eigenvalue0 * eigenvector0:")
+    print(LHS)
+    print("Euclidean distance (should be close to zero):")
+    print(np.sqrt(np.sum((RHS - LHS) ** 2)))
+
+
+
+
+.. rst-class:: sphx-glr-script-out
+
+ .. code-block:: none
+
+    M @ eigenvector0:
     [0.14929386+0.j 0.08928655+0.j 0.15672937+0.j 0.10418449+0.j
      0.04584719+0.j 0.04552853+0.j 0.12544543+0.j]
-    largest_eigenvalue * largest_eigenvector:
+    eigenvalue0 * eigenvector0:
     [0.14929386+0.j 0.08928655+0.j 0.15672937+0.j 0.10418449+0.j
      0.04584719+0.j 0.04552853+0.j 0.12544543+0.j]
+    Euclidean distance (should be close to zero):
+    (1.6911552168311002e-16+0j)
 
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 520-530
+.. GENERATED FROM PYTHON SOURCE LINES 517-527
 
 In the final video Amandine will briefly take you through the computation of the eigenvalues and eigenvalues of the transition matrix **M** including how to sort them to extract the largest eigenvalue and its corresponding eigenvector.
 
@@ -1194,18 +1223,16 @@ In the final video Amandine will briefly take you through the computation of the
 
 Directly computing the PageRank scores
 =====================
-Does this help us predict the PageRank scores? Let's normalize largest_eigenvector and check that the values correspond to the PageRank scores obtained using the iterative method applied in the section `Simulating PageRank`_.
+Does this help us predict the PageRank scores? Let's normalize "eigenvector0" and check that the values correspond to the PageRank scores obtained using the iterative method applied in the section `Simulating PageRank`_.
 
-.. GENERATED FROM PYTHON SOURCE LINES 530-537
+.. GENERATED FROM PYTHON SOURCE LINES 527-532
 
 .. code-block:: Python
 
-    largest_eigenvector_normalized = largest_eigenvector / np.sum(largest_eigenvector) * 100
+    eigenvector0_normalized = eigenvector0 / np.sum(eigenvector0) * 100
     print(
         f"Normalized largest eigenvector:\n",
-        "\n ".join(
-            [f"{c}: {r:.2f}" for c, r in zip(countries, largest_eigenvector_normalized)]
-        ),
+        "\n ".join([f"{c}: {r:.2f}" for c, r in zip(countries, eigenvector0_normalized)]),
     )
 
 
@@ -1227,7 +1254,7 @@ Does this help us predict the PageRank scores? Let's normalize largest_eigenvect
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 538-557
+.. GENERATED FROM PYTHON SOURCE LINES 533-575
 
 What about the other eigenvalues and eigenvectors? Why do we only need to consider the eigenvalue with the largest magnitude and its corresponding eigenvector?
 It turns out that the eigenvalue with the largest magnitude is the only one that matters for the PageRank algorithm.
@@ -1235,24 +1262,59 @@ It turns out that the eigenvalue with the largest magnitude is the only one that
 Eigenvectors corresponding to distinct eigenvalues are always linearly independent. You can verify that this is the case for our transition matrix **M**. Consequently, it is possible to rewrite any initial state **R**\ (0) as a linear combination of the eigenvectors **v**\ :sub:`i` of **M**,
 
 .. math::
-    \mathbf{R}(0) = \sum_{i=1}^N \lambda_i^t a_i \mathbf{v}_i
+    \mathbf{R}(0) = \sum_{i=1}^N a_i \mathbf{v}_i.
 
-The PageRank vector **R**\ (t) at iteration t can be expressed as a linear combination of the eigenvectors of **M**:
+The PageRank vector **R**\ (1) at iteration :math:`t=1` can be expressed as a linear combination of the eigenvectors of **M** as:
 
 .. math::
-    \mathbf{R}(1) = \sum_{i=1}^N  a_i \mathbf{M}\mathbf{v}_i = \sum_{i=1}^N  a_i \lambda_i\mathbf{v}_i
+    \mathbf{R}(1) =\mathbf{M} \mathbf{R}(0) =  \sum_{i=1}^N  a_i \mathbf{M}\mathbf{v}_i = \sum_{i=1}^N  a_i \lambda_i\mathbf{v}_i
 Applying **M** t times you can convince yourself that
 
 .. math::
-    \mathbf{R}(t) = \sum_{i=1}^N  a_i \mathbf{M}^t\mathbf{v}_i = \sum_{i=1}^N  a_i \lambda_i^t\mathbf{v}_i
+    \mathbf{R}(t) = \sum_{i=1}^N  a_i \mathbf{M}^t\mathbf{v}_i = \sum_{i=1}^N  a_i \lambda_i^t\mathbf{v}_i,
 
-Assuming that the eigenvalues are labeled so that :math:`|\lambda_1| > |\lambda_2| > |\lambda_3| > ... > |\lambda_N|`, the term :math:`\lambda_1^t a_1 \mathbf{v}_1` will dominate the sum as t increases. The other terms will decay to zero as t increases, and the PageRank vector will converge to a multiple of the eigenvector corresponding to the largest eigenvalue.
+where :math:`a_i` depend on the initial chose of **R**\ (0). Assuming that the eigenvalues are labeled so that :math:`|\lambda_1| > |\lambda_2| \geq |\lambda_3| \geq ... \geq |\lambda_N|`, the term :math:`\lambda_1^t a_1 \mathbf{v}_1` will dominate the sum as t increases, and the PageRank vector will converge to a multiple of the eigenvector corresponding to the largest eigenvalue.
 
+
+Exercises
+=====================
+
+Complete the following exercises to deepen your understanding of the PageRank algorithm and its behavior under different conditions.
+
+Exercise 1: The "Digital Influencer" Challenge
+----------------------
+
+In this exercise, you will add a additional country to the existing network to see how it affects the rankings.
+
+1. Create a new 8-by-8 matrix called ``M_extended``.
+2. Copy the values from the original 7-by-7 matrix ``M`` into the top-left corner of your new matrix.
+3. Add an additional (fictional) country as the 8th node (index 7).
+4. **Outgoing Links:** You have a "budget" of 3 links. Choose 3 countries from the original list for your country to link to.
+5. **Incoming Links:** Assume that **Nigeria (NG)** and **South Africa (ZA)** are impressed by your page and each add a link to your country.
+6. Run the iterative simulation. Where does the added country rank? Use the simplified update rule described in section `The Iterative Update Rule`_ with d = 1.
+7. How does linking to high- and low-ranked countries affect your country's PageRank score?
+
+.. admonition:: Tip
+    :class: tip
+
+    When Nigeria and South Africa add a link to you, their total number of outgoing links (:math:`L_j^{out}`) increases, so you will need to update the matrix accordingly.
+
+.. GENERATED FROM PYTHON SOURCE LINES 577-586
+
+Exercise 2: The "Boredom Factor" Sensitivity Test
+----------------------
+
+The damping factor :math:`d` represents the probability that a surfer continues clicking links. If :math:`d=0`, the surfer is "completely bored" and only ever jumps to random pages. Using the full update rule described in section `The Iterative Update Rule`_:
+
+1. Write a loop that calculates the final PageRank scores for all 7 countries for different values of :math:`d`, ranging from 0.0 to 1.0 in steps of 0.05.
+2. Use ``matplotlib.pyplot`` to generate a plot where the **x-axis** is the value of :math:`d` and the **y-axis** is the PageRank score.
+3. Plot a separate curve for each country.
+4. Comment on the sensitivity of the PageRank scores to changes in the damping factor.
 
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** (0 minutes 0.024 seconds)
+   **Total running time of the script:** (0 minutes 0.012 seconds)
 
 
 .. _sphx_glr_download_gallery_lesson4_plot_influencer.py:

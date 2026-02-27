@@ -39,29 +39,8 @@ We will use hypothesis testing, specifically, a two-sample t-test, to compare th
 
 In this lesson, we’ll move from posing the question to formulating a hypothesis, performing the test by hand, and finally reproducing it with Python on a larger dataset.
 
-How to use this material
-------------------------
-
-This material is taught as part of a 6 hour learning session. Your Kujenga instructor will have booked 
-a time for an in-person or online two hour session. This means you have two hours to work to do either side of the
-session. Here is what you should do:
-
-*Before coming to the class*: You should read through this entire page. At the section on calculating a confidence interval
-for a mean. If you get stuck look 
-`here <https://www.khanacademy.org/math/statistics-probability/confidence-intervals-one-sample/estimating-population-mean/v/introduction-to-t-statistics>`_. 
-After that section you should simply read through and try to understand what we are doing. 
-
-Once you have read through, you should 
-download this page as a Jupyter notebook or as Python code by clicking the links at the bottom of this page.
-You will need to have a Python environment set up on your computer or access via `Google Colab <https://colab.research.google.com/>`_  
-see `here  <https://cloud.google.com/python/docs/setup>`_. for info on how to set that up). 
-Please make sure you have the notebook and a Python environment set up before the class.
-
-*During class*: Your teacher will start by going through the theory for the t-test 
-Please ask them questions and actively engage! 
-
 The methods
------------
+-----------------
 
 In this lesson, we will learn how to compare two groups of data and decide whether the difference we see between them is real or simply due to chance. This kind of reasoning where you weigh evidence to make decisions based on data is at the heart of both statistics and machine learning.
 
@@ -91,6 +70,27 @@ By the end of this lesson, you’ll not only know how to perform a t-test, but a
 
 For more information on the type of test we will look at, see `here <https://www.khanacademy.org/math/statistics-probability/significance-tests-one-sample>`_. 
 
+
+How to use this material
+------------------------
+
+This material is taught as part of a 6 hour learning session. Your Kujenga instructor will have booked 
+a time for an in-person or online two hour session. This means you have two hours to work to do either side of the
+session. Here is what you should do:
+
+*Before coming to the class*: You should read through this entire page. At the section on calculating a confidence interval
+for a mean. If you get stuck look 
+`here <https://www.khanacademy.org/math/statistics-probability/confidence-intervals-one-sample/estimating-population-mean/v/introduction-to-t-statistics>`_. 
+After that section you should simply read through and try to understand what we are doing. 
+
+Once you have read through, you should 
+download this page as a Jupyter notebook or as Python code by clicking the links at the bottom of this page.
+You will need to have a Python environment set up on your computer or access via `Google Colab <https://colab.research.google.com/>`_  
+see `here  <https://cloud.google.com/python/docs/setup>`_. for info on how to set that up). 
+Please make sure you have the notebook and a Python environment set up before the class.
+
+*During class*: Your teacher will start by going through the theory for `the t-test`_. 
+Please ask them questions and actively engage! 
 
 Why Do We Need a Test at All?
 =================
@@ -429,8 +429,8 @@ If our hypothesis is correct, we might expect to see the Kenyan distribution sli
  *Define your null hypothesis H_0 and teh alternative hypothesis H_1
  * What does the coach's claim imply?
  * Should this be a one sided test or a two sided test?
-
-  **Use the dataset below**
+########################################################
+ Use the dataset below 
 
  This dataset contains the race times recorded by the coach
 
@@ -475,7 +475,7 @@ If our hypothesis is correct, we might expect to see the Kenyan distribution sli
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** (0 minutes 0.177 seconds)
+   **Total running time of the script:** (0 minutes 1.037 seconds)
 
 
 .. _sphx_glr_download_gallery_lesson3_plot_runners.py:

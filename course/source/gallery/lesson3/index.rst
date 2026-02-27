@@ -25,7 +25,7 @@ From the book
   .. image:: /gallery/lesson3/images/thumb/sphx_glr_plot_runners_thumb.png
     :alt:
 
-  :ref:`sphx_glr_gallery_lesson3_plot_runners.py`
+  :doc:`/gallery/lesson3/plot_runners`
 
 .. raw:: html
 

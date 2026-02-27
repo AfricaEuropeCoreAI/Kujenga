@@ -1,28 +1,40 @@
 """
 .. _epidemic:
 
-The SIR model
-=============
-
 How to use this material
 ================================
 
-This material is part of a 6 hour learning module with a 2 hour instructor-led session in the middle. Here's how to approach it:
-*Before class*: Watch the videos to understand the SIR model concept and read through the equation derivations. Set up Python on your computer or use Google Colab. 
-Download the Jupyter notebook or Python code from the links at the bottom of this page and run the examples, experimenting with different β and γ values.
-*During class*: Your instructor will guide you through the mathematical foundations and help you interpret phase planes and nullclines. 
-This is your opportunity to ask questions and deepen your understanding of epidemic dynamics.
-*After class*: Work through the parameter exploration exercises and practice using the model to predict outbreak peaks and evaluate interventions. Submit your completed work to your instructor as directed.
+This material is part of a 6-8 hour learning module with a 2 hour instructor-led session in the middle. 
+Here's how to approach it:
+
+*Before class*: Watch the videos to understand the SIR model concept and read 
+through the equation derivations. Set up Python on your computer or use Google Colab. 
+Download the Jupyter notebook or Python code from the links at the bottom of this 
+page and run the examples, experimenting with different β and γ values.
+
+*During class*: Your instructor will guide you through the mathematical 
+foundations and help you interpret phase planes and nullclines. 
+This is your opportunity to ask questions and deepen your understanding of 
+epidemic dynamics.
+
+*After class*: Work through the parameter exploration exercises and practice 
+using the model to predict outbreak peaks and evaluate interventions. Submit your 
+completed work to your instructor as directed.
 
 
 What you will learn 
 ===================
 
 **Preamble**: 
-Imagine a new virus emerges in your community. At first, only a few people are infected but soon hospitals in your city begin to fill up.
+Imagine a new virus emerges in your community. At first, 
+only a few people are infected but soon hospitals in your city begin to fill up.
 
-You are asked a critical question: Can we predict when this outbreak will be at it’s peak, how many people will get infected, and what interventions could stop it?
-Did you know that ordinary differential equations (ODEs) are not abstract math but a tool for saving lives in a case like this?
+You are asked a critical question: Can we predict when this outbreak 
+will be at it’s peak, how many people will get infected, and what 
+interventions could stop it?
+
+Did you know that ordinary differential equations (ODEs) are not 
+abstract math but a tool for saving lives in a case like this?
 
 These questions can be answered using the SIR model. The Susceptible Infected Recovered (SIR) model can be described using three differential equations.
 
@@ -60,7 +72,7 @@ Deriving the Equations
 ======================
 
 In the video, Patience described the three compartment of the SIR model as the susceptible, infected and recovered groups.
-Where the number of Susceptible individual at time :t: is represented as :math:`S(t)`;  the number of infected individuals as :math:`I(t)` 
+Where the number of Susceptible individual at time :math:`t` is represented as :math:`S(t)`;  the number of infected individuals as :math:`I(t)` 
 and the number of recovered individuals is :math:`R(t)`.
 
 Also, in the SIR model, we assume that the disease is spread through contact between susceptible and infected individuals and that a recovered individual developed immunity to the disease.
@@ -111,7 +123,7 @@ Since no individual is entering the subsceptible group.
 
     \\frac{dR}{dt} = | In - Out | =  \\gamma I - 0 =  \\gamma I
 
-The out in :eq: `dRdt` is zero since we assume individuals that have recovered from the disease develop immunity and cannot be infected again.
+The out in :eq:`dRdt` is zero since we assume individuals that have recovered from the disease develop immunity and cannot be infected again.
 
 While it is very important to understand this math, python makes it easier for us to solve these equations by importing key python libraries without having to manually do these calculations.
 
@@ -179,7 +191,7 @@ plt.show()
 
 ##############################################################################
 # Phase Planes and nullclines
-# ===============================
+# ===========================
 # In this section, Emily introduces the concept of **phase planes and nullclines** in the video below, 
 # using the SIR model as an example.
 #
@@ -273,7 +285,7 @@ plt.show()
 
 ##############################################
 # Equilibrium Points and Nullclines
-# ===================================
+# ---------------------------------
 # One essential element of phase planes is the determination of equilibrium points. These 
 # points occur where the rates of change for both Susceptible (S) and Infected (I) are zero. 
 # The lines where the rate of change of a variable is equal to zero are called **nullclines**.

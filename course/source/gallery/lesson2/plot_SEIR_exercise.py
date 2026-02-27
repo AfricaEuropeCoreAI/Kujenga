@@ -1,5 +1,5 @@
 """
-.. _epidemicExercise:
+.. _epidemic:
 
 The SEIR model
 =============

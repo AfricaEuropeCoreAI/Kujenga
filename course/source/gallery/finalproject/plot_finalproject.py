@@ -3,7 +3,7 @@
 .. _project:
 
 Final Project
-==============
+=============
 
 Your Mission
 ------------
@@ -59,7 +59,6 @@ You can explore:
 And remember: you are not restricted to pre-existing datasets. You can collect your own data through surveys, simple measurements, interviews, or partnerships with local organisations.
 If you ever feel stuck, these repositories below can be your starting point.
 The goal is to find data that helps you answer a question you genuinely care about.
-
 **General Data Repositories**
 
 * `Kaggle Datasets <https://www.kaggle.com/datasets>`_ - Thousands of clean, ready-to-use datasets
@@ -169,16 +168,14 @@ import pandas as pd
 #Submission Format
 #-----------------
 #Depending on your instructor's requirements, you may submit either a Jupyter notebook or a Python script. However, we highly recommend using a Jupyter notebook for its ability to combine code, visualizations, and narrative in one place.
-#
-#Submit a Jupyter notebook `HERE <https://forms.gle/bbs9TB6aB97MdLU16>`_ 
-#that includes:
-#
+#Submit a Jupyter notebook that includes:
 #* Markdown cells explaining your thinking
 #* Code cells showing your analysis
 #* Visualizations
 #* A final conclusion section
 #
 #**File naming**: ``yourname_yourcountry_final_project.ipynb``
+#
 #
 #Tips for Success
 #----------------
