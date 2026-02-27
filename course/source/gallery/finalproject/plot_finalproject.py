@@ -11,7 +11,9 @@ Congratulations for making it this far :)! You've learned some powerful mathemat
 
 Your final project is straightforward: **Pick a real-world question, find data to answer it, and use the techniques you've learned to tell a compelling story.**
 
-[VIDEO HERE]
+.. youtube:: 6611n9Y_iHE
+    :width: 100% 
+    :align: center 
 
 In the video above, we walk through what makes a great final project and show you examples from past students who have successfully applied what they've learned to answer questions they cared about.
 
@@ -194,7 +196,7 @@ import pandas as pd
 #---------------
 #
 # 1. Pick a question that excites you
-# 2. Find a dataset (start with Kaggle or Our World in Data)
+# 2. Find a dataset
 # 3. Download the data and start exploring
 # 4. Clean it up and apply what you've learned
 # 5. Create visualizations that tell your story
