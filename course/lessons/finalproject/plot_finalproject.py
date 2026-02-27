@@ -11,7 +11,7 @@ Congratulations for making it this far :)! You've learned some powerful mathemat
 
 Your final project is straightforward: **Pick a real-world question, find data to answer it, and use the techniques you've learned to tell a compelling story.**
 
-[VIDEO COMING SOON HERE]
+[VIDEO HERE]
 
 In the video above, we walk through what makes a great final project and show you examples from past students who have successfully applied what they've learned to answer questions they cared about.
 
