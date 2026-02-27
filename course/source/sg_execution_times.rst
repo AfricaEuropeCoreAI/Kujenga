@@ -6,7 +6,7 @@
 
 Computation times
 =================
-**00:00.300** total execution time for 8 files **from all galleries**:
+**00:01.439** total execution time for 8 files **from all galleries**:
 
 .. container::
 
@@ -32,8 +32,14 @@ Computation times
    * - Example
      - Time
      - Mem (MB)
+   * - :ref:`sphx_glr_gallery_lesson3_plot_runners.py` (``../lessons/lesson3/plot_runners.py``)
+     - 00:01.401
+     - 0.0
+   * - :ref:`sphx_glr_gallery_lesson4_plot_influencer.py` (``../lessons/lesson4/plot_influencer.py``)
+     - 00:00.038
+     - 0.0
    * - :ref:`sphx_glr_gallery_finalproject_plot_finalproject.py` (``../lessons/finalproject/plot_finalproject.py``)
-     - 00:00.300
+     - 00:00.000
      - 0.0
    * - :ref:`sphx_glr_gallery_lesson1_plot_howtobehappy.py` (``../lessons/lesson1/plot_howtobehappy.py``)
      - 00:00.000
@@ -48,11 +54,5 @@ Computation times
      - 00:00.000
      - 0.0
    * - :ref:`sphx_glr_gallery_lesson2_plot_epidemic.py` (``../lessons/lesson2/plot_epidemic.py``)
-     - 00:00.000
-     - 0.0
-   * - :ref:`sphx_glr_gallery_lesson3_plot_runners.py` (``../lessons/lesson3/plot_runners.py``)
-     - 00:00.000
-     - 0.0
-   * - :ref:`sphx_glr_gallery_lesson4_plot_influencer.py` (``../lessons/lesson4/plot_influencer.py``)
      - 00:00.000
      - 0.0

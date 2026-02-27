@@ -18,7 +18,7 @@ on the PhD Programme, but it does mean that you have built the skills to apply.
 
 We run this course in October every year. To participate you will need to find a study group. Local study groups are located 
 in Nairobi, Kigali , Lagos, Stellenbosch, Makarere, and Addis Ababa. If you are not near one of these locations, you can join an online 
-study group. In either case, you need to fill in the `following form <https://forms.gle/>`_ to apply to join. 
+study group. In either case, you need to fill in the `following form <https://forms.gle/9orX5du39yxabYR19>`_ to apply to join. 
 
 Experience with programming is required, but we have added a section to get you started there too. 
 Many of the examples include code in Python. We recommend you either download 

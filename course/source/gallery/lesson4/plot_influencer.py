@@ -16,6 +16,23 @@ As Otema explains in the video below the PageRank algorithm is the additional in
 
 |
 
+How to use this material
+------------------------
+
+This material is taught as part of a 6-hour learning session. Your Kujenga instructor will have booked
+a time for an in-person or online 2-hour session. This means you have two hours of work to do on either side of the in-person or online
+session. Here is what you should do:
+
+*Before coming to the class*: You should read through this entire page. In the section on `The Mathematics of the PageRank algorithm`_,
+try to solve the example both by hand and using Python. 
+If you get stuck look `here <https://medium.com/swlh/a-handwritten-introduction-to-pagerank-7ed2fedddb0d>`_, but otherwise you should
+simply read through and try to understand what we are doing. Once you have read through, you should
+download this page as a Jupyter notebook or as Python code by clicking the links at the bottom of this page.
+You will need to have a Python environment set up on your computer or access via Google `Colab <https://colab.research.google.com/>`_ (see `here <https://docs.cloud.google.com/python/docs/setup>`_ for info on how to set that up).
+
+*During class*: Your teacher will start by going through the theory for `Working with matrices in Python`_.
+Please ask them questions and actively engage!
+
 The problem
 -----------
 
@@ -47,22 +64,6 @@ The methods
 
 We have seen a graphical representation of a network in `The problem`_ but in order to use the PageRank algorithm we will need to represent the network mathematically as a matrix. In the following section, we will learn how to work with matrices as well as some basic concepts of linear algebra. The most useful concepts for understanding PageRank will be the notions of an eigenvector and eigenvalue of a matrix which we cover in `Defining a matrix`_.
 
-How to use this material
-------------------------
-
-This material is taught as part of a 6-hour learning session. Your Kujenga instructor will have booked
-a time for an in-person or online 2-hour session. This means you have two hours of work to do on either side of the in-person or online
-session. Here is what you should do:
-
-*Before coming to the class*: You should read through this entire page. In the section on `The Mathematics of the PageRank algorithm`_,
-try to solve the example both by hand and using Python. 
-If you get stuck look `here <https://medium.com/swlh/a-handwritten-introduction-to-pagerank-7ed2fedddb0d>`_, but otherwise you should
-simply read through and try to understand what we are doing. Once you have read through, you should
-download this page as a Jupyter notebook or as Python code by clicking the links at the bottom of this page.
-You will need to have a Python environment set up on your computer or access via Google `Colab <https://colab.research.google.com/>`_ (see `here <https://docs.cloud.google.com/python/docs/setup>`_ for info on how to set that up).
-
-*During class*: Your teacher will start by going through the theory for `Working with matrices in Python`_.
-Please ask them questions and actively engage!
 
 """
 

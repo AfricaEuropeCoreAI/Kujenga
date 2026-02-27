@@ -77,6 +77,7 @@ You can explore:
 And remember: you are not restricted to pre-existing datasets. You can collect your own data through surveys, simple measurements, interviews, or partnerships with local organisations.
 If you ever feel stuck, these repositories below can be your starting point.
 The goal is to find data that helps you answer a question you genuinely care about.
+
 **General Data Repositories**
 
 * `Kaggle Datasets <https://www.kaggle.com/datasets>`_ - Thousands of clean, ready-to-use datasets
@@ -89,7 +90,7 @@ Cleaning Your Data
 ------------------
 Real-world data is messy. Here's how to clean it:
 
-.. GENERATED FROM PYTHON SOURCE LINES 75-79
+.. GENERATED FROM PYTHON SOURCE LINES 76-80
 
 .. code-block:: Python
 
@@ -104,14 +105,14 @@ Real-world data is messy. Here's how to clean it:
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 80-84
+.. GENERATED FROM PYTHON SOURCE LINES 81-85
 
 Step 1: Load and Inspect
 ^^^^^^^^^^^^^^^^^^^^^^^^
 First, load your data and take a look at what you're working with.
 This helps you understand the structure and identify potential issues.
 
-.. GENERATED FROM PYTHON SOURCE LINES 84-94
+.. GENERATED FROM PYTHON SOURCE LINES 85-95
 
 .. code-block:: Python
 
@@ -132,14 +133,14 @@ This helps you understand the structure and identify potential issues.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 95-99
+.. GENERATED FROM PYTHON SOURCE LINES 96-100
 
 Step 2: Handle Missing Values
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 Missing data is common. You can either remove rows with missing values
 or fill them with appropriate values like the mean or median.
 
-.. GENERATED FROM PYTHON SOURCE LINES 99-109
+.. GENERATED FROM PYTHON SOURCE LINES 100-110
 
 .. code-block:: Python
 
@@ -160,13 +161,13 @@ or fill them with appropriate values like the mean or median.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 110-113
+.. GENERATED FROM PYTHON SOURCE LINES 111-114
 
 Step 3: Remove Duplicates
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
 Duplicate rows can skew your analysis. Check for and remove them.
 
-.. GENERATED FROM PYTHON SOURCE LINES 113-121
+.. GENERATED FROM PYTHON SOURCE LINES 114-122
 
 .. code-block:: Python
 
@@ -185,14 +186,14 @@ Duplicate rows can skew your analysis. Check for and remove them.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 122-126
+.. GENERATED FROM PYTHON SOURCE LINES 123-127
 
 Step 4: Fix Data Types
 ^^^^^^^^^^^^^^^^^^^^^^^
 Make sure each column has the correct data type. Dates should be datetime
 objects, numbers should be numeric types, etc.
 
-.. GENERATED FROM PYTHON SOURCE LINES 126-132
+.. GENERATED FROM PYTHON SOURCE LINES 127-133
 
 .. code-block:: Python
 
@@ -209,14 +210,14 @@ objects, numbers should be numeric types, etc.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 133-137
+.. GENERATED FROM PYTHON SOURCE LINES 134-138
 
 Step 5: Filter Outliers (if needed)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 Extreme values can distort your results. Use the interquartile range (IQR)
 method to identify and remove outliers.
 
-.. GENERATED FROM PYTHON SOURCE LINES 137-147
+.. GENERATED FROM PYTHON SOURCE LINES 138-148
 
 .. code-block:: Python
 
@@ -237,7 +238,7 @@ method to identify and remove outliers.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 148-203
+.. GENERATED FROM PYTHON SOURCE LINES 149-206
 
 Need more help? Check out the `Pandas documentation <https://pandas.pydata.org/docs/>`_ or this `data cleaning tutorial <https://realpython.com/python-data-cleaning-numpy-pandas/>`_.
 
@@ -262,14 +263,16 @@ Your final project should include:
 Submission Format
 -----------------
 Depending on your instructor's requirements, you may submit either a Jupyter notebook or a Python script. However, we highly recommend using a Jupyter notebook for its ability to combine code, visualizations, and narrative in one place.
-Submit a Jupyter notebook that includes:
+
+Submit a Jupyter notebook `HERE <https://forms.gle/bbs9TB6aB97MdLU16>`_ 
+that includes:
+
 * Markdown cells explaining your thinking
 * Code cells showing your analysis
 * Visualizations
 * A final conclusion section
 
 **File naming**: ``yourname_yourcountry_final_project.ipynb``
-
 
 Tips for Success
 ----------------
@@ -299,7 +302,7 @@ Have Any Questions? Ask your instructor.
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** (0 minutes 0.300 seconds)
+   **Total running time of the script:** (0 minutes 0.318 seconds)
 
 
 .. _sphx_glr_download_gallery_finalproject_plot_finalproject.py:
