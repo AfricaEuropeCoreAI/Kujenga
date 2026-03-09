@@ -33,7 +33,7 @@ Your final project is straightforward: **Pick a real-world question, find data t
     :width: 100% 
     :align: center 
 
-In the video above, we walk through what makes a great final project and show you examples from past students who have successfully applied what they've learned to answer questions they cared about.
+In the video above, we walk through what makes a great final project and show you an example of how to successfully apply what you have learned.
 
 What Makes a Great Project?
 ----------------------------
@@ -304,7 +304,7 @@ Have Any Questions? Ask your instructor.
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** (0 minutes 0.321 seconds)
+   **Total running time of the script:** (0 minutes 0.159 seconds)
 
 
 .. _sphx_glr_download_gallery_finalproject_plot_finalproject.py:

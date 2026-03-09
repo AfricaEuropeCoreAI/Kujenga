@@ -15,7 +15,7 @@ Your final project is straightforward: **Pick a real-world question, find data t
     :width: 100% 
     :align: center 
 
-In the video above, we walk through what makes a great final project and show you examples from past students who have successfully applied what they've learned to answer questions they cared about.
+In the video above, we walk through what makes a great final project and show you an example of how to successfully apply what you have learned.
 
 What Makes a Great Project?
 ----------------------------

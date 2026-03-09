@@ -383,7 +383,7 @@ print('The model sum of squares is %.4f' % Model_Sum_Of_Squares)
 #
 # .. math::
 #
-#  \sum_i^n 2 x_i y_i - \sum_i^n 2 \cdot x_i)^2 m = 0 \Rightarrow \sum_i^n 2 x_i y_i = \sum_i^n 2 \cdot x_i^2 m \Rightarrow \sum_i^n x_i y_i = \sum_i^n x_i^2
+#  \sum_i^n 2 x_i y_i - \sum_i^n 2 \cdot x_i)^2 m = 0 \Rightarrow \sum_i^n 2 x_i y_i = \sum_i^n 2 \cdot x_i^2 m \Rightarrow \sum_i^n x_i y_i = \sum_i^n x_i^2m
 #
 # Moving the :math:`m` to the left hand side gives
 #
