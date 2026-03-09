@@ -496,7 +496,7 @@ and we solve equal to zero (to find the point at which it is minimized, and the 
 
 .. math::
 
- \sum_i^n 2 x_i y_i - \sum_i^n 2 \cdot x_i)^2 m = 0 \Rightarrow \sum_i^n 2 x_i y_i = \sum_i^n 2 \cdot x_i^2 m \Rightarrow \sum_i^n x_i y_i = \sum_i^n x_i^2
+ \sum_i^n 2 x_i y_i - \sum_i^n 2 \cdot x_i)^2 m = 0 \Rightarrow \sum_i^n 2 x_i y_i = \sum_i^n 2 \cdot x_i^2 m \Rightarrow \sum_i^n x_i y_i = \sum_i^n x_i^2m
 
 Moving the :math:`m` to the left hand side gives
 
@@ -1080,7 +1080,7 @@ In the video below we talk to several reasearchers who use linear regression in 
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** (0 minutes 2.282 seconds)
+   **Total running time of the script:** (0 minutes 5.252 seconds)
 
 
 .. _sphx_glr_download_gallery_lesson1_plot_howtobehappy.py:
