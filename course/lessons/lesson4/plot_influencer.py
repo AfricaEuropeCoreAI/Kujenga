@@ -554,3 +554,4 @@ print(
 #
 # Assuming that the eigenvalues are labeled so that :math:`|\lambda_1| > |\lambda_2| > |\lambda_3| > ... > |\lambda_N|`, the term :math:`\lambda_1^t a_1 \mathbf{v}_1` will dominate the sum as t increases. The other terms will decay to zero as t increases, and the PageRank vector will converge to a multiple of the eigenvector corresponding to the largest eigenvalue.
 #
+# YOU CAN SUBMIT YOUR ASSIGNMENT `HERE <https://classroom.google.com/c/ODUwNTUwNTA2ODc3?cjc=dpqm4fl7>`_

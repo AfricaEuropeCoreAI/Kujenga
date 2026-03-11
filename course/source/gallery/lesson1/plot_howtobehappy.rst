@@ -1026,7 +1026,7 @@ a fitted line through the data.
 Once you have shown the relationship in the data,
 Give one argument why it might be correlated with but does not cause happiness.
 In the code below we have plotted the relationship between happiness and perceived corruption in countries, as an example.
-Now upload your work here (give your name and the country that you work in). Then the tutors can access the work.
+Now upload your work `here <https://classroom.google.com/c/ODUwNTUwNTA2ODc3?cjc=dpqm4fl7>`_  (give your name and the country that you work in). Then the tutors can access the work.
 
 .. GENERATED FROM PYTHON SOURCE LINES 671-693
 
@@ -1080,7 +1080,7 @@ In the video below we talk to several reasearchers who use linear regression in 
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** (0 minutes 5.252 seconds)
+   **Total running time of the script:** (0 minutes 3.076 seconds)
 
 
 .. _sphx_glr_download_gallery_lesson1_plot_howtobehappy.py:

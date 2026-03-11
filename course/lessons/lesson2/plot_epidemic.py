@@ -403,3 +403,5 @@ plt.show()
 # 6. How can we estimate how long it will take for the epidemic to be at its peak and how long it will stay at its peak? This question is answered using phase planes and nullclines in Emily’s video
 # 7. How can the SIR model help governments decide when to lift restrictions?
 # 8. Can you now be able to answer the question you were asked at the start i.e Can we predict when this outbreak will be at it’s peak, how many people will get infected, and what interventions could stop it?
+#
+# YOU CAN SUBMIT YOUR ASSIGNMENT `HERE <https://classroom.google.com/c/ODUwNTUwNTA2ODc3?cjc=dpqm4fl7>`_
