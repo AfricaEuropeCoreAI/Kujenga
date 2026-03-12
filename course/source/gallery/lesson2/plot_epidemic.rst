@@ -492,7 +492,7 @@ Answer:
    This is because the quicker recovery of individuals causes the epidemic to peak and decline more quickly, 
    leaving a larger proportion of the population susceptible at the point of equilibrium.
 
-.. GENERATED FROM PYTHON SOURCE LINES 396-405
+.. GENERATED FROM PYTHON SOURCE LINES 396-407
 
 Additional questions:
 
@@ -505,10 +505,12 @@ Additional questions:
 7. How can the SIR model help governments decide when to lift restrictions?
 8. Can you now be able to answer the question you were asked at the start i.e Can we predict when this outbreak will be at it’s peak, how many people will get infected, and what interventions could stop it?
 
+YOU CAN SUBMIT YOUR ASSIGNMENT `HERE <https://classroom.google.com/c/ODUwNTUwNTA2ODc3?cjc=dpqm4fl7>`_
+
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** (0 minutes 0.492 seconds)
+   **Total running time of the script:** (0 minutes 0.564 seconds)
 
 
 .. _sphx_glr_download_gallery_lesson2_plot_epidemic.py:
