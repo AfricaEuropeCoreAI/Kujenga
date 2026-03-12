@@ -389,7 +389,7 @@ By plotting the distribution of race times for both Ethiopian and Kenyan runners
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 264-343
+.. GENERATED FROM PYTHON SOURCE LINES 264-346
 
 If our hypothesis is correct, we might expect to see the Kenyan distribution slightly shifted to the left, toward smaller times.
  This would visually confirm what our t-test already suggested: that Kenyan runners tend to record faster race times on average.
@@ -472,10 +472,12 @@ If our hypothesis is correct, we might expect to see the Kenyan distribution sli
 
  Discuss what you observe visually.
 
+ YOU CAN SUBMIT YOUR ASSIGNMENT `HERE <https://classroom.google.com/c/ODUwNTUwNTA2ODc3?cjc=dpqm4fl7>`_
+
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** (0 minutes 4.288 seconds)
+   **Total running time of the script:** (0 minutes 0.649 seconds)
 
 
 .. _sphx_glr_download_gallery_lesson3_plot_runners.py:
