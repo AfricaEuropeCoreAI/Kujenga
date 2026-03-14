@@ -1299,7 +1299,7 @@ In this exercise, you will add a additional country to the existing network to s
 
     When Nigeria and South Africa add a link to you, their total number of outgoing links (:math:`L_j^{out}`) increases, so you will need to update the matrix accordingly.
 
-.. GENERATED FROM PYTHON SOURCE LINES 577-585
+.. GENERATED FROM PYTHON SOURCE LINES 577-587
 
 Exercise 2: The "Boredom Factor" Sensitivity Test
 ----------------------
@@ -1311,10 +1311,12 @@ The damping factor :math:`d` represents the probability that a surfer continues 
 3. Plot a separate curve for each country.
 4. Comment on the sensitivity of the PageRank scores to changes in the damping factor.
 
+YOU CAN SUBMIT YOUR ASSIGNMENT `HERE <https://classroom.google.com/c/ODUwNTUwNTA2ODc3?cjc=dpqm4fl7>`_
+
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** (0 minutes 0.032 seconds)
+   **Total running time of the script:** (0 minutes 0.044 seconds)
 
 
 .. _sphx_glr_download_gallery_lesson4_plot_influencer.py:

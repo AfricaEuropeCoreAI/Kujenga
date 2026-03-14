@@ -38,6 +38,8 @@ download this page as a Jupyter notebook or as Python code by clicking the links
 You will need to have a Python environment set up on your computer or access via `Google Colab <https://colab.research.google.com/>`_  
 see `here  <https://cloud.google.com/python/docs/setup>`_. for info on how to set that up). 
 Please make sure you have the notebook and a Python environment set up before the class.
+You should also download the `Ethiopian data <https://github.com/AfricaEuropeCoreAI/Kujenga/blob/main/course/lessons/data/ethiopia_10000m_runners.csv>`_ 
+and the `Kenyan data <https://github.com/AfricaEuropeCoreAI/Kujenga/blob/main/course/lessons/data/kenyan_10000m_runners.csv>`_ here.
 
 *During class*: Your teacher will start by going through the theory for the t-test 
 Please ask them questions and actively engage! 

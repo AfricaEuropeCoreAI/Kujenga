@@ -56,6 +56,8 @@ download this page as a Jupyter notebook or as Python code by clicking the links
 You will need to have a Python environment set up on your computer or access via `Google Colab <https://colab.research.google.com/>`_  
 see `here  <https://cloud.google.com/python/docs/setup>`_. for info on how to set that up). 
 Please make sure you have the notebook and a Python environment set up before the class.
+You should also download the `Ethiopian data <https://github.com/AfricaEuropeCoreAI/Kujenga/blob/main/course/lessons/data/ethiopia_10000m_runners.csv>`_ 
+and the `Kenyan data <https://github.com/AfricaEuropeCoreAI/Kujenga/blob/main/course/lessons/data/kenyan_10000m_runners.csv>`_ here.
 
 *During class*: Your teacher will start by going through the theory for the t-test 
 Please ask them questions and actively engage! 
@@ -164,7 +166,7 @@ Loading in the data set
 -----------------------
 Let’s load our dataset of race times and prepare it for analysis.
 
-.. GENERATED FROM PYTHON SOURCE LINES 149-157
+.. GENERATED FROM PYTHON SOURCE LINES 151-159
 
 .. code-block:: Python
 
@@ -183,12 +185,12 @@ Let’s load our dataset of race times and prepare it for analysis.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 158-160
+.. GENERATED FROM PYTHON SOURCE LINES 160-162
 
 Sampling and Comparing the Two Groups
 -------------------
 
-.. GENERATED FROM PYTHON SOURCE LINES 160-174
+.. GENERATED FROM PYTHON SOURCE LINES 162-176
 
 .. code-block:: Python
 
@@ -222,7 +224,7 @@ Sampling and Comparing the Two Groups
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 175-182
+.. GENERATED FROM PYTHON SOURCE LINES 177-184
 
 Running the t-Test in Python
 --------------------------
@@ -232,7 +234,7 @@ Just as we did by hand, we’ll now use a t-test, but this time, Python will han
 The function ttest_ind() from the scipy.stats library performs a two-sample t-test.
 We’ll specify that we’re running a one-sided test (since we’re testing whether Kenyan runners are faster, not just different).
 
-.. GENERATED FROM PYTHON SOURCE LINES 182-188
+.. GENERATED FROM PYTHON SOURCE LINES 184-190
 
 .. code-block:: Python
 
@@ -256,7 +258,7 @@ We’ll specify that we’re running a one-sided test (since we’re testing whe
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 189-196
+.. GENERATED FROM PYTHON SOURCE LINES 191-198
 
 Let’s unpack what this means:
 
@@ -266,7 +268,7 @@ Let’s unpack what this means:
 
 The smaller the p-value, the less likely it is that our observed difference happened just by random chance.
 
-.. GENERATED FROM PYTHON SOURCE LINES 198-205
+.. GENERATED FROM PYTHON SOURCE LINES 200-207
 
 Making a Decision and Interpreting the Result
 --------------------------
@@ -276,7 +278,7 @@ A common choice is 𝛼 = 0.05, meaning we accept a 5% risk of being wrong when 
 
 Let’s apply that rule to our result:
 
-.. GENERATED FROM PYTHON SOURCE LINES 205-212
+.. GENERATED FROM PYTHON SOURCE LINES 207-214
 
 .. code-block:: Python
 
@@ -300,7 +302,7 @@ Let’s apply that rule to our result:
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 213-225
+.. GENERATED FROM PYTHON SOURCE LINES 215-227
 
 If the p-value is smaller than 0.05, it means the data provide strong evidence against the null hypothesis,
 just as Selina found in her manual example.
@@ -315,7 +317,7 @@ This value acts like a cutoff point: it tells us how extreme our t-statistic mus
 In other words, If our calculated t-statistic is more extreme than the critical value, the result is unlikely to have happened by chance — so we reject the null hypothesis.
 We can calculate this value directly in Python using the same logic Selina used by hand.
 
-.. GENERATED FROM PYTHON SOURCE LINES 225-233
+.. GENERATED FROM PYTHON SOURCE LINES 227-235
 
 .. code-block:: Python
 
@@ -341,7 +343,7 @@ We can calculate this value directly in Python using the same logic Selina used 
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 234-254
+.. GENERATED FROM PYTHON SOURCE LINES 236-256
 
 Here’s how to interpret what you see:
 
@@ -364,7 +366,7 @@ Statistics often become much clearer when we visualize them, especially when com
 
 By plotting the distribution of race times for both Ethiopian and Kenyan runners, we can get a quick visual impression of whether one group tends to have lower (faster) times than the other.
 
-.. GENERATED FROM PYTHON SOURCE LINES 254-263
+.. GENERATED FROM PYTHON SOURCE LINES 256-265
 
 .. code-block:: Python
 
@@ -389,7 +391,7 @@ By plotting the distribution of race times for both Ethiopian and Kenyan runners
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 264-346
+.. GENERATED FROM PYTHON SOURCE LINES 266-348
 
 If our hypothesis is correct, we might expect to see the Kenyan distribution slightly shifted to the left, toward smaller times.
  This would visually confirm what our t-test already suggested: that Kenyan runners tend to record faster race times on average.
@@ -477,7 +479,7 @@ If our hypothesis is correct, we might expect to see the Kenyan distribution sli
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** (0 minutes 0.649 seconds)
+   **Total running time of the script:** (0 minutes 0.834 seconds)
 
 
 .. _sphx_glr_download_gallery_lesson3_plot_runners.py:
