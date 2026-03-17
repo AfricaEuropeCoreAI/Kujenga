@@ -172,7 +172,7 @@ import pandas as pd
 #-----------------
 #Depending on your instructor's requirements, you may submit either a Jupyter notebook or a Python script. However, we highly recommend using a Jupyter notebook for its ability to combine code, visualizations, and narrative in one place.
 #
-#Submit a Jupyter notebook `HERE <https://forms.gle/bbs9TB6aB97MdLU16>`_ 
+#Submit a Jupyter notebook `HERE <https://classroom.google.com/c/ODUwNTUwNTA2ODc3/a/Nzk2NTc5NDE1NDky/details>`_ 
 #that includes:
 #
 #* Markdown cells explaining your thinking

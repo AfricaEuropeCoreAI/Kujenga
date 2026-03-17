@@ -150,8 +150,4 @@ print(X)
 
 
 ############################################################################## 
-# Conclusions
-# -----------
-#
-# Add a text box below and describe (in words) how :math:`\delta` affects the outcome.
 #
