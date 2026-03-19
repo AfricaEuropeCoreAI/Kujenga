@@ -393,7 +393,9 @@ plt.show()
 #    leaving a larger proportion of the population susceptible at the point of equilibrium.
 
 #####################################################################
-# Additional questions:
+# SIR Exercise 
+# --------------------
+# (Please NOTE that the SEIR chapter that follows this SIR chapter is optional, and the associated questions do not need to be formally submitted.)
 # 
 # 1. When a high :math:`\gamma` or low :math:`\beta` value is used, the trajectory does not return to the x-axis after peaking. Why might this be happening?
 # 2. We have been initialising the models with 99.99\% of the population as susceptible, and only 0.01\% infected. How are the phase planes affected when changing this proportion?
