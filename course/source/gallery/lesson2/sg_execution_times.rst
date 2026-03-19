@@ -6,7 +6,7 @@
 
 Computation times
 =================
-**00:00.564** total execution time for 2 files **from gallery/lesson2**:
+**00:01.631** total execution time for 2 files **from gallery/lesson2**:
 
 .. container::
 
@@ -33,7 +33,7 @@ Computation times
      - Time
      - Mem (MB)
    * - :ref:`sphx_glr_gallery_lesson2_plot_epidemic.py` (``plot_epidemic.py``)
-     - 00:00.564
+     - 00:01.631
      - 0.0
    * - :ref:`sphx_glr_gallery_lesson2_plot_cts2D.py` (``plot_cts2D.py``)
      - 00:00.000
