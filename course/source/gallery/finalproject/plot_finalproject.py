@@ -26,12 +26,8 @@ The best projects have three ingredients:
  The more specific and local, the better. The best questions are the ones you see in your daily life.  
 2. **Data You Can Get Your Hands On**
  More on this below - but don't worry, we'll show you where to look!
-3. **At Least One Technique From This Course**
-   
-   * Linear regression (like the happiness-health analysis)
-   * Statistical testing (like the Ethiopian vs Kenyan runners)
-   * Differential equations (like the SIR model)
-   * Network analysis (like PageRank)
+3. **Either use one technique from this course, or explore more advanced methods** 
+    Especially if they help answer your question better. The goal of this project is not to restrict you to course tools, but to help you use data science to answer a meaningful real-world question.
 
 Project Ideas to Get You Started
 ---------------------------------
@@ -168,9 +164,23 @@ import pandas as pd
 #
 #7. **Code** - Submit your Jupyter notebook or Python script
 #
-#Submission Format
-#-----------------
-#Depending on your instructor's requirements, you may submit either a Jupyter notebook or a Python script. However, we highly recommend using a Jupyter notebook for its ability to combine code, visualizations, and narrative in one place.
+#
+#Submission Instructions
+#--------------------------------------
+#In addition to submitting your Jupyter notebook, you are also required to create a **GitHub repository** for your final project.
+#
+#**Why?** Because when tutors run your notebook, the data should load easily and automatically. The best way to do this is to store your dataset inside your GitHub repository and load it directly from there in your notebook.
+#
+#**What you should submit:**
+#
+#1. A **Jupyter Notebook (.ipynb)** - File naming: ``yourname_yourcountry_final_project.ipynb``
+#
+#2. A **GitHub repository link to your project** containing:
+#
+#   - Your notebook
+#   - Your dataset (or a link to the dataset)
+#   - A short README explaining your project
+#   - Any other files you see fit to submit(requirements file,  etc)
 #
 #Submit a Jupyter notebook `HERE <https://classroom.google.com/c/ODUwNTUwNTA2ODc3/a/Nzk2NTc5NDE1NDky/details>`_ 
 #that includes:
@@ -180,7 +190,7 @@ import pandas as pd
 #* Visualizations
 #* A final conclusion section
 #
-#**File naming**: ``yourname_yourcountry_final_project.ipynb``
+#
 #
 #Tips for Success
 #----------------
