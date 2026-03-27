@@ -44,12 +44,8 @@ The best projects have three ingredients:
  The more specific and local, the better. The best questions are the ones you see in your daily life.  
 2. **Data You Can Get Your Hands On**
  More on this below - but don't worry, we'll show you where to look!
-3. **At Least One Technique From This Course**
-   
-   * Linear regression (like the happiness-health analysis)
-   * Statistical testing (like the Ethiopian vs Kenyan runners)
-   * Differential equations (like the SIR model)
-   * Network analysis (like PageRank)
+3. **Either use one technique from this course, or explore more advanced methods** 
+    Especially if they help answer your question better. The goal of this project is not to restrict you to course tools, but to help you use data science to answer a meaningful real-world question.
 
 Project Ideas to Get You Started
 ---------------------------------
@@ -92,7 +88,7 @@ Cleaning Your Data
 ------------------
 Real-world data is messy. Here's how to clean it:
 
-.. GENERATED FROM PYTHON SOURCE LINES 78-82
+.. GENERATED FROM PYTHON SOURCE LINES 74-78
 
 .. code-block:: Python
 
@@ -107,14 +103,14 @@ Real-world data is messy. Here's how to clean it:
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 83-87
+.. GENERATED FROM PYTHON SOURCE LINES 79-83
 
 Step 1: Load and Inspect
 ^^^^^^^^^^^^^^^^^^^^^^^^
 First, load your data and take a look at what you're working with.
 This helps you understand the structure and identify potential issues.
 
-.. GENERATED FROM PYTHON SOURCE LINES 87-97
+.. GENERATED FROM PYTHON SOURCE LINES 83-93
 
 .. code-block:: Python
 
@@ -135,14 +131,14 @@ This helps you understand the structure and identify potential issues.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 98-102
+.. GENERATED FROM PYTHON SOURCE LINES 94-98
 
 Step 2: Handle Missing Values
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 Missing data is common. You can either remove rows with missing values
 or fill them with appropriate values like the mean or median.
 
-.. GENERATED FROM PYTHON SOURCE LINES 102-112
+.. GENERATED FROM PYTHON SOURCE LINES 98-108
 
 .. code-block:: Python
 
@@ -163,13 +159,13 @@ or fill them with appropriate values like the mean or median.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 113-116
+.. GENERATED FROM PYTHON SOURCE LINES 109-112
 
 Step 3: Remove Duplicates
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
 Duplicate rows can skew your analysis. Check for and remove them.
 
-.. GENERATED FROM PYTHON SOURCE LINES 116-124
+.. GENERATED FROM PYTHON SOURCE LINES 112-120
 
 .. code-block:: Python
 
@@ -188,14 +184,14 @@ Duplicate rows can skew your analysis. Check for and remove them.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 125-129
+.. GENERATED FROM PYTHON SOURCE LINES 121-125
 
 Step 4: Fix Data Types
 ^^^^^^^^^^^^^^^^^^^^^^^
 Make sure each column has the correct data type. Dates should be datetime
 objects, numbers should be numeric types, etc.
 
-.. GENERATED FROM PYTHON SOURCE LINES 129-135
+.. GENERATED FROM PYTHON SOURCE LINES 125-131
 
 .. code-block:: Python
 
@@ -212,14 +208,14 @@ objects, numbers should be numeric types, etc.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 136-140
+.. GENERATED FROM PYTHON SOURCE LINES 132-136
 
 Step 5: Filter Outliers (if needed)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 Extreme values can distort your results. Use the interquartile range (IQR)
 method to identify and remove outliers.
 
-.. GENERATED FROM PYTHON SOURCE LINES 140-150
+.. GENERATED FROM PYTHON SOURCE LINES 136-146
 
 .. code-block:: Python
 
@@ -240,7 +236,7 @@ method to identify and remove outliers.
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 151-208
+.. GENERATED FROM PYTHON SOURCE LINES 147-218
 
 Need more help? Check out the `Pandas documentation <https://pandas.pydata.org/docs/>`_ or this `data cleaning tutorial <https://realpython.com/python-data-cleaning-numpy-pandas/>`_.
 
@@ -262,9 +258,23 @@ Your final project should include:
 
 7. **Code** - Submit your Jupyter notebook or Python script
 
-Submission Format
------------------
-Depending on your instructor's requirements, you may submit either a Jupyter notebook or a Python script. However, we highly recommend using a Jupyter notebook for its ability to combine code, visualizations, and narrative in one place.
+
+Submission Instructions
+--------------------------------------
+In addition to submitting your Jupyter notebook, you are also required to create a **GitHub repository** for your final project.
+
+**Why?** Because when tutors run your notebook, the data should load easily and automatically. The best way to do this is to store your dataset inside your GitHub repository and load it directly from there in your notebook.
+
+**What you should submit:**
+
+1. A **Jupyter Notebook (.ipynb)** - File naming: ``yourname_yourcountry_final_project.ipynb``
+
+2. A **GitHub repository link to your project** containing:
+
+   - Your notebook
+   - Your dataset (or a link to the dataset)
+   - A short README explaining your project
+   - Any other files you see fit to submit(requirements file,  etc)
 
 Submit a Jupyter notebook `HERE <https://classroom.google.com/c/ODUwNTUwNTA2ODc3/a/Nzk2NTc5NDE1NDky/details>`_ 
 that includes:
@@ -274,7 +284,7 @@ that includes:
 * Visualizations
 * A final conclusion section
 
-**File naming**: ``yourname_yourcountry_final_project.ipynb``
+
 
 Tips for Success
 ----------------
@@ -304,7 +314,7 @@ Have Any Questions? Ask your instructor.
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** (0 minutes 1.970 seconds)
+   **Total running time of the script:** (0 minutes 1.157 seconds)
 
 
 .. _sphx_glr_download_gallery_finalproject_plot_finalproject.py:
