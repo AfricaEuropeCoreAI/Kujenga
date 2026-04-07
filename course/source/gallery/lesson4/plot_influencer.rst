@@ -20,6 +20,19 @@
 
 .. _google:
 
+How to use this material
+===========================
+
+This material is taught as part of a 6-hour learning session. Your Kujenga instructor will have booked
+a time for an in-person or online 2-hour session. This means you have two hours of work to do on either side of the in-person or online
+session. Here is what you should do:
+
+*Before coming to the class*: You should read through this entire page. If you get stuck look at `this <https://medium.com/swlh/a-handwritten-introduction-to-pagerank-7ed2fedddb0d>`_ Medium article for an alternative explanation, but otherwise you should
+simply read through and try to understand what we are doing. You should download this page as a Jupyter notebook or as Python code by clicking the links at the bottom of this page. You will need to have a Python environment set up on your computer (see `here <https://docs.cloud.google.com/python/docs/setup>`_ for info on how to set that up) or access to `Google Colab <https://colab.research.google.com/>`_.
+
+*During class*: Your teacher will start by going through the theory for `The Mathematics of the PageRank algorithm`_.
+Please ask them questions and actively engage!
+
 What you will learn
 ===================
 
@@ -64,19 +77,6 @@ The methods
 -----------------
 
 We have seen a graphical representation of a network in `The problem`_ but in order to use the PageRank algorithm we will need to represent the network mathematically as a matrix. In the following section, we will learn how to work with matrices as well as some basic concepts of linear algebra. The most useful concepts for understanding PageRank will be the notions of an eigenvector and eigenvalue of a matrix which we cover in `Eigenvalues and eigenvectors of a matrix`_.
-
-How to use this material
-------------------------
-
-This material is taught as part of a 6-hour learning session. Your Kujenga instructor will have booked
-a time for an in-person or online 2-hour session. This means you have two hours of work to do on either side of the in-person or online
-session. Here is what you should do:
-
-*Before coming to the class*: You should read through this entire page. If you get stuck look at `this <https://medium.com/swlh/a-handwritten-introduction-to-pagerank-7ed2fedddb0d>`_ Medium article for an alternative explanation, but otherwise you should
-simply read through and try to understand what we are doing. You should download this page as a Jupyter notebook or as Python code by clicking the links at the bottom of this page. You will need to have a Python environment set up on your computer (see `here <https://docs.cloud.google.com/python/docs/setup>`_ for info on how to set that up) or access to `Google Colab <https://colab.research.google.com/>`_.
-
-*During class*: Your teacher will start by going through the theory for `The Mathematics of the PageRank algorithm`_.
-Please ask them questions and actively engage!
 
 .. GENERATED FROM PYTHON SOURCE LINES 66-161
 
@@ -803,7 +803,7 @@ From the network shown in section `The problem`_ we can count up the number of o
     * - KE
       - 20
     * - ET
-      - 18
+      - 7
 
 We can again use the network shown in section `The problem`_ to check if if there is a link from country j to country i. For example, we can see that there is a link from Ethiopia to Kenya but not from Ethiopia to South Africa. Combining these two pieces of information we can construct the transition matrix \ :strong:`M` as shown in the table below.
 
@@ -1316,7 +1316,7 @@ YOU CAN SUBMIT YOUR ASSIGNMENT `HERE <https://classroom.google.com/c/ODUwNTUwNTA
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** (0 minutes 0.044 seconds)
+   **Total running time of the script:** (0 minutes 0.031 seconds)
 
 
 .. _sphx_glr_download_gallery_lesson4_plot_influencer.py:
