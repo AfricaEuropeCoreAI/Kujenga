@@ -443,14 +443,20 @@ countries = ["ZA", "GH", "NG", "RW", "UG", "KE", "ET"]
 print("Countries:", countries)
 
 # %%
-# Apply the update rule
-R = np.dot(M, R)  # Update PageRank vector using matrix multiplication
-R = R / np.sum(R) * 100  # Normalize the PageRank vector to sum to 100
-print(
-    f"Updated PageRank vector R({t+1}):\n",
-    "\n ".join([f"{c}: {r:.2f}" for c, r in zip(countries, R)]),
-)
-t += 1  # Increment iteration counter
+# Apply the update rule iteratively until convergence
+tolerance = 1e-6  # Convergence threshold
+while True:
+    R_new = np.dot(M, R)  # Update PageRank vector using matrix multiplication
+    R_new = R_new / np.sum(R_new) * 100  # Normalize the PageRank vector to sum to 100
+    t += 1  # Increment iteration counter
+    print(
+        f"Updated PageRank vector R({t}):\n",
+        "\n ".join([f"{c}: {r:.2f}" for c, r in zip(countries, R_new)]),
+    )
+    if np.linalg.norm(R_new - R) < tolerance:  # Check for convergence
+        print(f"\nConverged after {t} iterations!")
+        break
+    R = R_new
 
 # %%
 # Run the cell above multiple times to see how the PageRank vector converges. If you want to start again be sure to rerun all the cells in the `Simulating PageRank`_ section to avoid unexpected behavior.

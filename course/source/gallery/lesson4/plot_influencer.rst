@@ -1009,19 +1009,25 @@ Create a vector with the county codes which will be used to label the PageRank v
 
 .. GENERATED FROM PYTHON SOURCE LINES 446-447
 
-Apply the update rule
+Apply the update rule iteratively until convergence
 
-.. GENERATED FROM PYTHON SOURCE LINES 447-455
+.. GENERATED FROM PYTHON SOURCE LINES 447-461
 
 .. code-block:: Python
 
-    R = np.dot(M, R)  # Update PageRank vector using matrix multiplication
-    R = R / np.sum(R) * 100  # Normalize the PageRank vector to sum to 100
-    print(
-        f"Updated PageRank vector R({t+1}):\n",
-        "\n ".join([f"{c}: {r:.2f}" for c, r in zip(countries, R)]),
-    )
-    t += 1  # Increment iteration counter
+    tolerance = 1e-6  # Convergence threshold
+    while True:
+        R_new = np.dot(M, R)  # Update PageRank vector using matrix multiplication
+        R_new = R_new / np.sum(R_new) * 100  # Normalize the PageRank vector to sum to 100
+        t += 1  # Increment iteration counter
+        print(
+            f"Updated PageRank vector R({t}):\n",
+            "\n ".join([f"{c}: {r:.2f}" for c, r in zip(countries, R_new)]),
+        )
+        if np.linalg.norm(R_new - R) < tolerance:  # Check for convergence
+            print(f"\nConverged after {t} iterations!")
+            break
+        R = R_new
 
 
 
@@ -1039,11 +1045,157 @@ Apply the update rule
      UG: 7.76
      KE: 7.64
      ET: 17.76
+    Updated PageRank vector R(2):
+     ZA: 20.66
+     GH: 13.26
+     NG: 21.32
+     RW: 15.17
+     UG: 6.47
+     KE: 6.43
+     ET: 16.68
+    Updated PageRank vector R(3):
+     ZA: 20.94
+     GH: 12.17
+     NG: 22.06
+     RW: 14.34
+     UG: 6.35
+     KE: 6.31
+     ET: 17.83
+    Updated PageRank vector R(4):
+     ZA: 20.78
+     GH: 12.56
+     NG: 21.83
+     RW: 14.63
+     UG: 6.42
+     KE: 6.38
+     ET: 17.41
+    Updated PageRank vector R(5):
+     ZA: 20.87
+     GH: 12.44
+     NG: 21.89
+     RW: 14.51
+     UG: 6.40
+     KE: 6.35
+     ET: 17.54
+    Updated PageRank vector R(6):
+     ZA: 20.83
+     GH: 12.47
+     NG: 21.88
+     RW: 14.56
+     UG: 6.40
+     KE: 6.35
+     ET: 17.51
+    Updated PageRank vector R(7):
+     ZA: 20.85
+     GH: 12.47
+     NG: 21.88
+     RW: 14.54
+     UG: 6.40
+     KE: 6.36
+     ET: 17.51
+    Updated PageRank vector R(8):
+     ZA: 20.84
+     GH: 12.46
+     NG: 21.88
+     RW: 14.55
+     UG: 6.40
+     KE: 6.35
+     ET: 17.51
+    Updated PageRank vector R(9):
+     ZA: 20.84
+     GH: 12.47
+     NG: 21.88
+     RW: 14.54
+     UG: 6.40
+     KE: 6.36
+     ET: 17.51
+    Updated PageRank vector R(10):
+     ZA: 20.84
+     GH: 12.46
+     NG: 21.88
+     RW: 14.54
+     UG: 6.40
+     KE: 6.36
+     ET: 17.51
+    Updated PageRank vector R(11):
+     ZA: 20.84
+     GH: 12.46
+     NG: 21.88
+     RW: 14.54
+     UG: 6.40
+     KE: 6.36
+     ET: 17.51
+    Updated PageRank vector R(12):
+     ZA: 20.84
+     GH: 12.46
+     NG: 21.88
+     RW: 14.54
+     UG: 6.40
+     KE: 6.36
+     ET: 17.51
+    Updated PageRank vector R(13):
+     ZA: 20.84
+     GH: 12.46
+     NG: 21.88
+     RW: 14.54
+     UG: 6.40
+     KE: 6.36
+     ET: 17.51
+    Updated PageRank vector R(14):
+     ZA: 20.84
+     GH: 12.46
+     NG: 21.88
+     RW: 14.54
+     UG: 6.40
+     KE: 6.36
+     ET: 17.51
+    Updated PageRank vector R(15):
+     ZA: 20.84
+     GH: 12.46
+     NG: 21.88
+     RW: 14.54
+     UG: 6.40
+     KE: 6.36
+     ET: 17.51
+    Updated PageRank vector R(16):
+     ZA: 20.84
+     GH: 12.46
+     NG: 21.88
+     RW: 14.54
+     UG: 6.40
+     KE: 6.36
+     ET: 17.51
+    Updated PageRank vector R(17):
+     ZA: 20.84
+     GH: 12.46
+     NG: 21.88
+     RW: 14.54
+     UG: 6.40
+     KE: 6.36
+     ET: 17.51
+    Updated PageRank vector R(18):
+     ZA: 20.84
+     GH: 12.46
+     NG: 21.88
+     RW: 14.54
+     UG: 6.40
+     KE: 6.36
+     ET: 17.51
+    Updated PageRank vector R(19):
+     ZA: 20.84
+     GH: 12.46
+     NG: 21.88
+     RW: 14.54
+     UG: 6.40
+     KE: 6.36
+     ET: 17.51
+
+    Converged after 19 iterations!
 
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 456-482
+.. GENERATED FROM PYTHON SOURCE LINES 462-488
 
 Run the cell above multiple times to see how the PageRank vector converges. If you want to start again be sure to rerun all the cells in the `Simulating PageRank`_ section to avoid unexpected behavior.
 
@@ -1072,7 +1224,7 @@ The eigenvalue equation states that when the matrix **M** acts on the eigenvecto
 
 Let's use Python to compute the eigenvalues and the corresponding eigenvectors of the transition matrix **M**. We will use the `numpy.linalg.eig()` function to compute the eigenvalues and eigenvectors of a matrix.
 
-.. GENERATED FROM PYTHON SOURCE LINES 482-486
+.. GENERATED FROM PYTHON SOURCE LINES 488-492
 
 .. code-block:: Python
 
@@ -1095,13 +1247,13 @@ Let's use Python to compute the eigenvalues and the corresponding eigenvectors o
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 487-490
+.. GENERATED FROM PYTHON SOURCE LINES 493-496
 
 Note that some of the eigenvalues are complex, e.g. :math:`0.02227925-0.04471056i` (in Python "j" is used to represent the imaginary unit).
 
 Let's get the index of the largest eigenvalue by first getting a list of the indices of the sorted eigenValues:
 
-.. GENERATED FROM PYTHON SOURCE LINES 490-493
+.. GENERATED FROM PYTHON SOURCE LINES 496-499
 
 .. code-block:: Python
 
@@ -1121,11 +1273,11 @@ Let's get the index of the largest eigenvalue by first getting a list of the ind
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 494-495
+.. GENERATED FROM PYTHON SOURCE LINES 500-501
 
 Now let's replace the eigenValues and eigenVectors with the sorted versions
 
-.. GENERATED FROM PYTHON SOURCE LINES 495-499
+.. GENERATED FROM PYTHON SOURCE LINES 501-505
 
 .. code-block:: Python
 
@@ -1148,11 +1300,11 @@ Now let's replace the eigenValues and eigenVectors with the sorted versions
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 500-501
+.. GENERATED FROM PYTHON SOURCE LINES 506-507
 
 The largest eigenvalue is the first element of the sorted eigenValues array. The corresponding eigenvector is the first column of the sorted eigenVectors array.
 
-.. GENERATED FROM PYTHON SOURCE LINES 501-506
+.. GENERATED FROM PYTHON SOURCE LINES 507-512
 
 .. code-block:: Python
 
@@ -1176,11 +1328,11 @@ The largest eigenvalue is the first element of the sorted eigenValues array. The
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 507-508
+.. GENERATED FROM PYTHON SOURCE LINES 513-514
 
 Check that the eigenvalue equation holds:
 
-.. GENERATED FROM PYTHON SOURCE LINES 508-516
+.. GENERATED FROM PYTHON SOURCE LINES 514-522
 
 .. code-block:: Python
 
@@ -1212,7 +1364,7 @@ Check that the eigenvalue equation holds:
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 517-527
+.. GENERATED FROM PYTHON SOURCE LINES 523-533
 
 In the final video Amandine will briefly take you through the computation of the eigenvalues and eigenvalues of the transition matrix **M** including how to sort them to extract the largest eigenvalue and its corresponding eigenvector.
 
@@ -1225,7 +1377,7 @@ Directly computing the PageRank scores
 =====================
 Does this help us predict the PageRank scores? Let's normalize "eigenvector0" and check that the values correspond to the PageRank scores obtained using the iterative method applied in the section `Simulating PageRank`_.
 
-.. GENERATED FROM PYTHON SOURCE LINES 527-532
+.. GENERATED FROM PYTHON SOURCE LINES 533-538
 
 .. code-block:: Python
 
@@ -1254,7 +1406,7 @@ Does this help us predict the PageRank scores? Let's normalize "eigenvector0" an
 
 
 
-.. GENERATED FROM PYTHON SOURCE LINES 533-575
+.. GENERATED FROM PYTHON SOURCE LINES 539-581
 
 What about the other eigenvalues and eigenvectors? Why do we only need to consider the eigenvalue with the largest magnitude and its corresponding eigenvector?
 It turns out that the eigenvalue with the largest magnitude is the only one that matters for the PageRank algorithm.
@@ -1299,7 +1451,7 @@ In this exercise, you will add a additional country to the existing network to s
 
     When Nigeria and South Africa add a link to you, their total number of outgoing links (:math:`L_j^{out}`) increases, so you will need to update the matrix accordingly.
 
-.. GENERATED FROM PYTHON SOURCE LINES 577-587
+.. GENERATED FROM PYTHON SOURCE LINES 583-593
 
 Exercise 2: The "Boredom Factor" Sensitivity Test
 ----------------------
@@ -1316,7 +1468,7 @@ YOU CAN SUBMIT YOUR ASSIGNMENT `HERE <https://classroom.google.com/c/ODUwNTUwNTA
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** (0 minutes 0.031 seconds)
+   **Total running time of the script:** (0 minutes 0.032 seconds)
 
 
 .. _sphx_glr_download_gallery_lesson4_plot_influencer.py:

@@ -35,6 +35,15 @@
    "name": "ndarray"
   }
  ],
+ "R_new": [
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "numpy",
+   "module_short": "numpy",
+   "name": "ndarray"
+  }
+ ],
  "countries": [
   {
    "is_class": false,
@@ -317,6 +326,22 @@
    "name": "eig"
   }
  ],
+ "np.linalg.norm": [
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "numpy",
+   "module_short": "numpy",
+   "name": "_ArrayFunctionDispatcher"
+  },
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "numpy.linalg",
+   "module_short": "numpy.linalg",
+   "name": "norm"
+  }
+ ],
  "np.sqrt": [
   {
    "is_class": false,
@@ -374,6 +399,15 @@
    "module": "builtins",
    "module_short": "builtins",
    "name": "int"
+  }
+ ],
+ "tolerance": [
+  {
+   "is_class": false,
+   "is_explicit": false,
+   "module": "builtins",
+   "module_short": "builtins",
+   "name": "float"
   }
  ],
  "vec1": [
